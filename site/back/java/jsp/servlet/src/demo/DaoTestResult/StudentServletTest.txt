@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+Content-Type: application/json;charset=utf-8
+Content-Length: 103
+Date: Sun, 23 Apr 2023 04:42:37 GMT
+Connection: close
+
+{
+  "code": 0,
+  "message": "null",
+  "data": {
+    "no": "X5",
+    "name": "X5",
+    "gender": "X5",
+    "age": 2,
+    "dept": "X2"
+  }
+}

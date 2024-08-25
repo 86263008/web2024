@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script type="text/javascript">
+    function changeLink() {
+      document.getElementById('myAnchor').innerHTML = "搜狐";
+      document.getElementById('myAnchor').href = "http://www.sohu.com";
+    }
+  </script>
+  <title>DOM结构</title>
+</head>
+
+<body>
+  <a id="myAnchor" href="http://www.taobao.com">淘宝</a>
+  <input type="button" onclick="changeLink()" value="使用DOM改变链接">
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+HelloFreemarker:.
+│  HELP.md
+│  mvnw
+│  mvnw.cmd
+│  pom.xml  // Maven配置文件
+└─src
+    ├─main
+    │  ├─java
+    │  │  └─com
+    │  │      └─example
+    │  │          └─demo
+    │  │                  Hi1Controller.java //Hi1Controller
+    │  │                  Hi2Controller.java //Hi2Controller
+    │  │                  HelloFreemarkerApplication.java //主程序入口
+    │  │
+    │  └─resources
+    │      │  application.properties  //配置文件
+    │      ├─static
+    │      └─templates
+    └─test
+        └─java
+            └─com
+                └─example
+                    └─demo
+                            HelloFreemarkerApplicationTests.java  

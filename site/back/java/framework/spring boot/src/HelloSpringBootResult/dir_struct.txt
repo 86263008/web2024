@@ -1,0 +1,24 @@
+HelloSpringBoot:.
+│  HELP.md
+│  mvnw
+│  mvnw.cmd
+│  pom.xml  // Maven配置文件
+└─src
+    ├─main
+    │  ├─java
+    │  │  └─com
+    │  │      └─example
+    │  │          └─demo
+    │  │                  GreetingController.java //GreetingController
+    │  │                  HelloSpringBootApplication.java //主程序入口
+    │  │
+    │  └─resources
+    │      │  application.properties  //配置文件
+    │      ├─static
+    │      └─templates
+    └─test
+        └─java
+            └─com
+                └─example
+                    └─demo
+                            HelloSpringBootApplicationTests.java  

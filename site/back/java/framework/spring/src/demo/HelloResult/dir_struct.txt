@@ -1,0 +1,29 @@
+Hello:.
+│  HELP.md
+│  pom.xml
+└─src
+    ├─main
+    │  ├─java
+    │  │  └─com
+    │  │      └─example
+    │  │          └─demo
+    │  │              │  HelloApplication.java   //主入口
+    │  │              │  HelloController.java    //HelloController
+    │  │              └─demos
+    │  │                  └─web
+    │  │                          BasicController.java
+    │  │                          PathVariableController.java
+    │  │                          User.java
+    │  └─resources
+    │      │  application-dev.properties  //Spring配置dev
+    │      │  application.properties      //Spring配置
+    │      ├─static
+    │      │      index.html
+    │      └─webapp
+    │              hi.ftl
+    └─test
+        └─java
+            └─com
+                └─example
+                    └─demo
+                            HelloApplicationTests.java  //测试类

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/vue.js"></script>
+  <script src="./js/element-plus.js"></script>
+  <title>Element Plus demo</title>
+</head>
+
+<body>
+  <div id="app" data-v-app="">
+    <button class="el-button" aria-disabled="false" type="button">
+      <!--v-if--><span class="">Hello Element Plus</span>
+    </button>
+  </div>
+  <script>
+    const App = {
+      data() {
+        return {
+          message: "Hello Element Plus",
+        };
+      },
+    };
+    const app = Vue.createApp(App);
+    app.use(ElementPlus);
+    app.mount("#app");
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<script src="vue.global.js"></script>
+
+<!-- 定义View -->
+<div id="app">{{ message }}</div>
+
+<script>
+  const { createApp } = Vue
+
+  //创建ViewModel
+  createApp({
+    data() {//定义Model
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')//绑定
+</script>

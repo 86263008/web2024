@@ -1,0 +1,8 @@
+GET http://127.0.0.1:8000/ HTTP/1.1
+
+### 载荷
+GET http://127.0.0.1:8000/items/555?q=go&s=222 HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/docs HTTP/1.1
+

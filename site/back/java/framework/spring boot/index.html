@@ -1,0 +1,2627 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mvc/index.html">
+      
+      
+        <link rel="next" href="../maven/index.html">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Spring Boot - 基于WEB的应用程序开发</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spring-boot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../index.html" title="基于WEB的应用程序开发" class="md-header__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            基于WEB的应用程序开发
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spring Boot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="日间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="日间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="夜间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../introduction/index.html" class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../front/html/syllabus/index.html" class="md-tabs__link">
+          
+  
+  前端-基础
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../front/framework/jquery/index.html" class="md-tabs__link">
+          
+  
+  前端-框架
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../jsp/basic/index.html" class="md-tabs__link">
+          
+  
+  后端-JSP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mvc/index.html" class="md-tabs__link">
+          
+  
+  后端-框架
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../introduction/syllabus/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  大纲
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../index.html" title="基于WEB的应用程序开发" class="md-nav__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    基于WEB的应用程序开发
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本信息
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/hello/java/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World-Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/http/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP协议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    前端-基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            前端-基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Html
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/html/syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/html/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/html/%E6%A0%87%E7%AD%BE/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见标签
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/html/case/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    综合案例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/css/syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/css/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见样式属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    应用方式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/css/case/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    综合案例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/gramma/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DOM编程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            DOM编程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/dom/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DOM模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/dom/window/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/dom/document/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/dom/special/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    特效
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/dom/validation/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    表单验证
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    进阶
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            进阶
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/advanced/canvas/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    画图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/advanced/regular/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    正则表达式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/advanced/json/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/js/advanced/ajax/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ajax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    前端-框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            前端-框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/framework/jquery/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jQuery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/framework/bootstrap/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bootstrap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/framework/vue/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/framework/element/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    后端-JSP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            后端-JSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsp/basic/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSP简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsp/implicit%20object/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内置对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsp/jdbc/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JDBC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsp/java%20bean/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Bean
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsp/servlet/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servlet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jsp/filter/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    过滤器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    后端-框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            后端-框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mvc/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MVC设计模式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Spring Boot
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Spring Boot
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label=" ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+       
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Boot组件及第三方库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      动机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      发展历程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见注解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello World!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hello World!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      开发环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建Spring Boot Web工程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maven/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring%20mvc/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring MVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../freemarker/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freemarker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spring/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mybatis/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MyBatis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    操作指南
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            操作指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/remote%20repo/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    修改远程仓库地址
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大纲
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label=" ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+       
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spring Boot组件及第三方库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      动机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      发展历程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见注解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello World!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hello World!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      开发环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spring-boot-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建Spring Boot Web工程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="spring-boot">Spring Boot<a href="plan.html" title="教案"><sub>&#11216;</sub></a></h1>
+<h2 id="_1">简介</h2>
+<p>Spring Boot是一个基于Spring框架的快速开发框架，旨在简化Spring应用程序的开发和部署。<strong>（方便使用第三方框架的框架）</strong></p>
+<p>它提供了一系列的自动配置和约定，可以帮助开发者快速搭建一个基于Spring的应用程序，减少了开发者的工作量和时间成本。</p>
+<p>Spring Boot还提供了一种简单的方式来配置应用程序，开发者只需要在配置文件中定义一些基本的属性，就可以完成大部分的配置工作。</p>
+<p>此外，Spring Boot还提供了一系列的starter，可以帮助开发者快速集成常用的第三方库，例如数据库、消息队列、缓存等。</p>
+<p>Spring Boot应用程序可以打包成一个可执行的JAR文件，可以方便地部署到各种环境中，例如本地开发环境、测试环境、生产环境等。</p>
+<p>总之，Spring Boot可以帮助开发者快速构建高效、可靠、安全的应用程序，提高开发效率和应用程序的质量。</p>
+<hr />
+<h3 id="spring-boot_1">Spring Boot组件及第三方库</h3>
+<p>在STS或Spring Boot Initializer创建工程向导中，支持的框架集成可以分为以下几类：</p>
+<table>
+<thead>
+<tr>
+<th>框架分类</th>
+<th>框架名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web框架</td>
+<td><strong>Spring MVC</strong>、Spring WebFlux、Spring Boot Actuator、Spring Security、Spring Session</td>
+</tr>
+<tr>
+<td>数据库框架</td>
+<td><strong>MyBatis</strong>、Spring Data JPA、Spring Data MongoDB、Spring Data Redis、Spring Data JDBC</td>
+</tr>
+<tr>
+<td>模板引擎框架</td>
+<td><strong>FreeMarker</strong>、Thymeleaf、Velocity、Beetl、Pebble</td>
+</tr>
+<tr>
+<td>依赖管理工具</td>
+<td><strong>Maven</strong>、Gradle-Groovy、Gradle-Kotlin</td>
+</tr>
+<tr>
+<td>消息队列框架</td>
+<td>Spring for Apache Kafka、Spring AMQP、Spring Integration、Spring Cloud Stream、Spring Cloud Bus</td>
+</tr>
+<tr>
+<td>缓存框架</td>
+<td>Spring Cache、Spring Data Redis、Ehcache、Hazelcast、Infinispan</td>
+</tr>
+<tr>
+<td>安全框架</td>
+<td>Spring Security、Apache Shiro、Spring Vault、Spring Cloud Security、Keycloak</td>
+</tr>
+<tr>
+<td>日志框架</td>
+<td>Log4j、Logback、Slf4j、Java Util Logging、Apache Commons Logging</td>
+</tr>
+<tr>
+<td>测试框架</td>
+<td>JUnit、Mockito、Spring Test、Selenium、TestNG</td>
+</tr>
+<tr>
+<td>分布式框架</td>
+<td>Spring Cloud、Dubbo、Zookeeper、Consul、Etcd</td>
+</tr>
+<tr>
+<td>任务调度框架</td>
+<td>Quartz、Spring Batch、Elastic Job、xxl-job、TBSchedule</td>
+</tr>
+<tr>
+<td>RPC框架</td>
+<td>Dubbo、gRPC、Thrift、Hessian、Spring Remoting</td>
+</tr>
+<tr>
+<td>API文档框架</td>
+<td>Swagger、Springfox、Spring REST Docs、Apiary、RAML</td>
+</tr>
+<tr>
+<td>消息推送框架</td>
+<td>Spring WebSockets、SockJS、STOMP、Atmosphere、CometD</td>
+</tr>
+</tbody>
+</table>
+<p>以上仅是一些常见的框架，实际上还有很多其他的框架可以选择。</p>
+<hr />
+<h3 id="_2">动机</h3>
+<p>使用Spring Boot的动机主要有以下几点：</p>
+<ol>
+<li>
+<p>快速开发</p>
+<ul>
+<li>Spring Boot提供了一系列的自动配置和约定，可以帮助开发者快速搭建一个基于Spring的应用程序，减少了开发者的工作量和时间成本。</li>
+</ul>
+</li>
+<li>
+<p>简化配置</p>
+<ul>
+<li>Spring Boot提供了一种简单的方式来配置应用程序，开发者只需要在配置文件中定义一些基本的属性，就可以完成大部分的配置工作。</li>
+</ul>
+</li>
+<li>
+<p>集成第三方库</p>
+<ul>
+<li>Spring Boot提供了一系列的starter，可以帮助开发者快速集成常用的第三方库，例如数据库、消息队列、缓存等。</li>
+</ul>
+</li>
+<li>
+<p>易于部署</p>
+<ul>
+<li>Spring Boot应用程序可以打包成一个可执行的JAR文件，可以方便地部署到各种环境中，例如本地开发环境、测试环境、生产环境等。</li>
+</ul>
+</li>
+<li>
+<p>易于维护</p>
+<ul>
+<li>Spring Boot提供了一系列的监控和管理工具，可以帮助开发者快速定位和解决问题，提高应用程序的可维护性和可靠性。</li>
+</ul>
+</li>
+</ol>
+<p>综上所述，使用Spring Boot可以帮助开发者快速构建高效、可靠、安全的应用程序，提高开发效率和应用程序的质量。</p>
+<hr />
+<h3 id="_3">原理</h3>
+<p>Spring Boot的基本原理可以概括为以下几点：</p>
+<ol>
+<li>
+<p>自动配置</p>
+<ul>
+<li>Spring Boot通过自动配置来简化应用程序的开发和部署。它会根据应用程序的依赖关系和配置文件中的属性，自动配置应用程序的各种组件和功能，例如数据源、Web服务器、消息队列等。</li>
+</ul>
+</li>
+<li>
+<p>起步依赖</p>
+<ul>
+<li>Spring Boot通过起步依赖来简化应用程序的依赖管理。它会根据应用程序的需求，自动引入所需的依赖库和版本，避免了手动管理依赖的繁琐和错误。</li>
+</ul>
+</li>
+<li>
+<p>约定优于配置</p>
+<ul>
+<li>Spring Boot通过约定优于配置来简化应用程序的配置。它会根据应用程序的结构和命名规范，自动识别和配置应用程序的各种组件和功能，避免了手动配置的繁琐和错误。</li>
+</ul>
+</li>
+<li>
+<p>基于Spring框架</p>
+<ul>
+<li>Spring Boot是基于Spring框架的，它继承了Spring框架的优秀特性和生态系统，例如IoC容器、AOP、JDBC、ORM等。同时，它还扩展了Spring框架的功能和应用范围，例如WebFlux、Actuator、Spring Cloud等。</li>
+</ul>
+</li>
+<li>
+<p>可扩展性</p>
+<ul>
+<li>Spring Boot提供了丰富的扩展点和插件机制，可以方便地扩展和定制应用程序的功能和行为。例如，开发者可以通过自定义starter来扩展Spring Boot的功能，或者通过自定义自动配置来定制应用程序的行为。</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="_4">发展历程</h3>
+<p>Spring Boot的发展历程可以分为以下几个阶段：</p>
+<ol>
+<li>
+<p>2013年：Spring Boot项目正式启动，旨在简化Spring应用程序的开发和部署。</p>
+</li>
+<li>
+<p>2014年：Spring Boot 1.0版本发布，引入了自动配置、起步依赖等特性，大大简化了Spring应用程序的开发和部署。</p>
+</li>
+<li>
+<p>2015年：Spring Boot 1.2版本发布，引入了Actuator、Devtools等特性，增强了应用程序的监控和管理能力。</p>
+</li>
+<li>
+<p>2016年：Spring Boot 1.4版本发布，引入了多种新特性，例如Spring Cloud、Spring Security等，进一步扩展了Spring Boot的功能和应用范围。</p>
+</li>
+<li>
+<p>2017年：Spring Boot 2.0版本发布，引入了对Java 9和Java EE 8的支持，同时升级了多个依赖库，提高了应用程序的性能和稳定性。</p>
+</li>
+<li>
+<p>2018年：Spring Boot 2.1版本发布，引入了多种新特性，例如WebFlux、Kotlin支持等，进一步提高了应用程序的性能和开发效率。</p>
+</li>
+<li>
+<p>2019年：Spring Boot 2.2版本发布，引入了多种新特性，例如Micrometer、RSocket支持等，进一步扩展了Spring Boot的功能和应用范围。</p>
+</li>
+</ol>
+<hr />
+<h3 id="_5">常见注解</h3>
+<p>以下是常用的注解及其功能：</p>
+<table>
+<thead>
+<tr>
+<th>注解名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@SpringBootApplication</td>
+<td>声明一个Spring Boot应用程序</td>
+</tr>
+<tr>
+<td>@Controller</td>
+<td>声明一个控制器类</td>
+</tr>
+<tr>
+<td>@RestController</td>
+<td>声明一个控制器类，并将其所有方法的返回值转换为JSON格式</td>
+</tr>
+<tr>
+<td>@RequestMapping</td>
+<td>映射请求路径和请求方法</td>
+</tr>
+<tr>
+<td>@GetMapping</td>
+<td>映射HTTP GET请求路径和请求方法</td>
+</tr>
+<tr>
+<td>@PostMapping</td>
+<td>映射HTTP POST请求路径和请求方法</td>
+</tr>
+<tr>
+<td>@RequestParam</td>
+<td>获取请求参数</td>
+</tr>
+<tr>
+<td>@PathVariable</td>
+<td>获取路径变量</td>
+</tr>
+<tr>
+<td>@ResponseBody</td>
+<td>将返回值转换为JSON格式</td>
+</tr>
+<tr>
+<td>@RequestBody</td>
+<td>将请求体转换为对象</td>
+</tr>
+<tr>
+<td>@Valid</td>
+<td>验证请求参数</td>
+</tr>
+<tr>
+<td>@Autowired</td>
+<td>自动装配Bean</td>
+</tr>
+<tr>
+<td>@Service</td>
+<td>声明一个服务类</td>
+</tr>
+<tr>
+<td>@Mapper</td>
+<td>声明一个MyBatis Mapper接口</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="hello-world">Hello World!</h2>
+<h3 id="_6">开发环境</h3>
+<ol>
+<li>
+<p>使用<strong>Eclipse</strong>开发；默认支持Java Web应用</p>
+<blockquote>
+<p>需要额外安装Spring Boot等插件</p>
+</blockquote>
+</li>
+<li>
+<p>使用<strong>STS</strong>（Spring Tool Suite）默认支持Spring Boot应用</p>
+<blockquote>
+<p>STS是一个专为Spring开发定制的Eclipse，方便创建、调试、运行及维护Spring应用。通过该工具，可以很方便地生成一个Spring工程，比如Web工程。</p>
+</blockquote>
+</li>
+</ol>
+<div style="background-color: teal;padding:5px;">
+  <img src="./img/java_logo.png" style="height:120px;"/>
+  <img src="./img/tomcat_logo.png" style="height:120px;"/>
+  <img src="./img/eclipse_logo.svg" style="height:120px;"/>
+  <img src="./img/spring-tool_logo.svg" style="height:120px;"/>
+</div>
+
+<hr />
+<h3 id="spring-boot-web">创建Spring Boot Web工程</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">选择向导</label><label for="__tabbed_1_2">输入工程信息</label><label for="__tabbed_1_3">选择依赖</label><label for="__tabbed_1_4">目录结构</label><label for="__tabbed_1_5">pom.xml</label><label for="__tabbed_1_6">创建HiController</label><label for="__tabbed_1_7">启动</label><label for="__tabbed_1_8">运行</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在STS中创建新工程，选择<code>Spring Starter Project</code>向导</p>
+<p><img alt="Spring Starter Project" src="img/hello_wizard.png" /></p>
+</div>
+<div class="tabbed-block">
+<p>输入工程基本信息：</p>
+<ul>
+<li><strong>Service URL</strong>: https://start.aliyun.com</li>
+<li><strong>Name</strong>: HelloSpringBoot</li>
+</ul>
+<p><img alt="Project info" src="img/hello_project.png" /></p>
+</div>
+<div class="tabbed-block">
+<p>为工程选择<code>Spring Web</code>依赖，支持Spring及Spring MVC</p>
+<p><img alt="Dependences" src="img/hello_dependences.png" /></p>
+</div>
+<div class="tabbed-block">
+<p>向导完成后生成的目录结构如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>HelloSpringBoot:.
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>│<span class="w">  </span>HELP.md
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>│<span class="w">  </span>mvnw
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>│<span class="w">  </span>mvnw.cmd
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>│<span class="w">  </span>pom.xml<span class="w">  </span>//<span class="w"> </span>Maven配置文件
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>└─src
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span>├─main
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span>│<span class="w">  </span>├─java
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">  </span>└─com
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">      </span>└─example
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">          </span>└─demo
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>GreetingController.java<span class="w"> </span>//GreetingController
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>HelloSpringBootApplication.java<span class="w"> </span>//主程序入口
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span>│<span class="w">  </span>│
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span>│<span class="w">  </span>└─resources
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span>│<span class="w">      </span>│<span class="w">  </span>application.properties<span class="w">  </span>//配置文件
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span>│<span class="w">      </span>├─static
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span>│<span class="w">      </span>└─templates
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span>└─test
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span>└─java
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">            </span>└─com
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">                </span>└─example
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">                    </span>└─demo
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">                            </span>HelloSpringBootApplicationTests.java<span class="w">  </span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>工程创建向导完成后，Mavan配置文件<code>pom.xml</code>的关键依赖如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HelloSpringBoot/pom.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span>
+<span class="normal"><a href="#__codelineno-2-34">34</a></span>
+<span class="normal"><a href="#__codelineno-2-35">35</a></span>
+<span class="normal"><a href="#__codelineno-2-36">36</a></span>
+<span class="normal"><a href="#__codelineno-2-37">37</a></span>
+<span class="normal"><a href="#__codelineno-2-38">38</a></span>
+<span class="normal"><a href="#__codelineno-2-39">39</a></span>
+<span class="normal"><a href="#__codelineno-2-40">40</a></span>
+<span class="normal"><a href="#__codelineno-2-41">41</a></span>
+<span class="normal"><a href="#__codelineno-2-42">42</a></span>
+<span class="normal"><a href="#__codelineno-2-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>3.0.7<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="nt">&lt;relativePath/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- lookup parent from repository --&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>HelloSpringBoot<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>HelloSpringBoot<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="nt">&lt;description&gt;</span>Demo<span class="w"> </span>project<span class="w"> </span>for<span class="w"> </span>Spring<span class="w"> </span>Boot<span class="nt">&lt;/description&gt;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>17<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">  </span><span class="cm">&lt;!-- --8&lt;-- [start:dependency]&quot; --&gt;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">  </span><span class="cm">&lt;!-- --8&lt;-- [end:dependency]&quot; --&gt;</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42"></a>
+<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="nt">&lt;/project&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="tabbed-block">
+<p>在<code>com.example.demo</code>下创建类<code>HiController</code>：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// http://localhost:8080/hi</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nd">@RestController</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HiController</span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;/hi&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hi</span><span class="p">(){</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hello Spring Boot！&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HelloSpringBoot/src/main/java/com/example/demo/HiController.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.demo</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// --8&lt;-- [start:hi]</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="nd">@RestController</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HiController</span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;/hi&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hi</span><span class="p">(){</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hello Spring Boot！&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="c1">// --8&lt;-- [start:hi]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="tabbed-block">
+<p><strong>开发模式</strong></p>
+<p>在<code>Boot Dashboard</code>中启动<code>HelloSpringBoot</code></p>
+<p><strong>生产模式</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>java<span class="w"> </span>-jar<span class="w"> </span>HelloSpringBoot.jar
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>在浏览器访问<code>http://localhost:8080/hi</code>，结果如下：</p>
+<p><iframe src="./src/HelloSpringBootResult/hi.html" frameborder="0" width="100%" height="200"></iframe></p>
+</div>
+</div>
+</div>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

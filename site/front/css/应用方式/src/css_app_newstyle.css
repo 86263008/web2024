@@ -1,0 +1,24 @@
+P {
+  /*设置段落<P>的样式：字体和背景色*/
+  font-family: System;
+  font-size: 18px;
+  color: #FF00CC;
+}
+
+H2 {
+  /*设置<H2>的样式：背景色和对齐方式*/
+  background-color: #CCFF33;
+  text-align: center;
+}
+
+A {
+  /*设置超链接不带下划线，text-decoration 表示文本修饰*/
+  color: blue;
+  text-decoration: none;
+}
+
+A:hover {
+  /*鼠标在超链接上悬停，带下划线*/
+  color: red;
+  text-decoration: underline;
+}

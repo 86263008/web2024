@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/fonts.css" rel="stylesheet">
+  <link href="css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="css/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-card class="mx-auto" max-width="500">
+          <v-toolbar color="deep-purple accent-4" dark>
+            <v-toolbar-title>数据的双向绑定示例：加法器----Vuetify的实现</v-toolbar-title>
+          </v-toolbar>
+
+          <v-card-text>
+            <v-text-field label="数1：" :rules="rules" hide-details="auto" v-model="d1"></v-text-field>
+            <v-text-field label="数2：" :rules="rules" hide-details="auto" v-model="d2"></v-text-field>
+            <v-text-field label="结果：" v-model="result" readonly></v-text-field>
+          </v-card-text>
+        </v-card>
+
+      </v-main>
+    </v-app>
+
+
+  </div>
+</body>
+
+</html>
+
+<script src="js/vue.js"></script>
+<script src="js/vuetify.js"></script>
+
+<script>
+  new Vue({
+    el: '#app',
+    vuetify: new Vuetify(),
+    data() {
+      return {
+        d1: null,
+        d2: null,
+        result: null,
+        rules: [
+          value => !!value || '必填项.'
+        ],
+      }
+    },
+    watch: {
+      d1() {
+        this.onInput();
+      },
+      d2() {
+        this.onInput();
+      }
+    },
+    methods: {
+      onInput() {
+        var $d1_value = parseFloat(this.d1);
+        var $d2_value = parseFloat(this.d2);
+
+        if (!isNaN($d1_value) && !isNaN($d2_value)) {
+          //反馈数据
+          this.result = $d1_value + $d2_value;
+        } else {
+          this.result = null;
+        }
+      }
+    }
+  })
+</script>
+
+<style>
+  .item {
+    margin: 10px;
+  }
+
+  .show {
+    display: block
+  }
+
+  .hide {
+    display: none
+  }
+
+  .observer1 {
+    background-color: dimgray;
+    color: white;
+    margin: 40px;
+    font-size: 20px;
+    padding: 40px;
+  }
+
+  .observer2 {
+    background-color: bisque;
+    color: black;
+    margin: 40px;
+    padding: 40px;
+    font-size: 20px;
+  }
+</style>

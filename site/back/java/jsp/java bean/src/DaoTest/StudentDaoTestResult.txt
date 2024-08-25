@@ -1,0 +1,6 @@
+init=1
+create=0
+update=0
+delete=0
+{"no": "X2", "name": "X2", "gender": "X2", "age": 2, "dept": "X2"}
+{"no": "X1", "name": "X1", "gender": "X1", "age": 1, "dept": "X1"}

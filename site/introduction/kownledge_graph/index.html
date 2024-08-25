@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>jsMind</title>
+  <link type="text/css" rel="stylesheet" href="style/jsmind.css" />
+  <style type="text/css">
+    html, body {
+      overflow: hidden;
+    }
+
+    #jsmind_container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f4f4f4;
+    }
+  </style>
+</head>
+
+<body onload="load_data()">
+  <div id="jsmind_container"></div>
+  <script src="js/jsmind.js"></script>
+  <script src="js/jsmind.draggable-node.js"></script>
+  <script type="text/javascript">
+    function load_data() {
+      fetch('data.json')
+        .then(response => response.json())
+        .then(json => {
+          var options = {
+            container: 'jsmind_container',
+            editable: false,
+            theme: 'primary',
+          };
+          var jm = new jsMind(options);
+          console.debug(json);
+          jm.show(json);
+          // jm.set_readonly(true);
+          // var mind_data = jm.get_data();
+          // alert(mind_data);
+          jm.add_node('sub2', 'sub23', 'new node', { 'background-color': 'red' });
+          jm.set_node_color('sub21', 'green', '#ccc');
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  </script>
+</body>
+
+</html>

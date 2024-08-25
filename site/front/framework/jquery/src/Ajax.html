@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ajax示例</title>
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <script src="jquery-3.6.1.min.js">
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $.get("http://127.0.0.1:8888/minus", { a: 1, b: 2 }, function (res) {
+          $("#a_b").val(res);
+        })
+      });
+
+    });
+    function minus_done(res) {
+      alert(res);
+      $("#a_b").val(data);
+    }
+  </script>
+</head>
+
+<body>
+  <span>a: </span>
+  <input id="a" type="text" />
+  <span>b: </span>
+  <input id="b" type="text" />
+  <button>a-b</button>
+  <input id="a_b" type="text" />
+</body>
+
+</html>

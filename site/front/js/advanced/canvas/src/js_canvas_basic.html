@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Html5 Canvas</title>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。
+  </canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas");  //获取canvas元素
+    var ctx = c.getContext("2d"); //获取绘图上下文
+    ctx.rect(20, 20, 150, 100); //绘图
+    ctx.stroke();
+  </script>
+</body>
+
+</html>

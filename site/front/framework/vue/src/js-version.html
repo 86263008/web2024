@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="onInput()">
+  <div id="app">
+    <h4>数据的双向绑定示例：加法器----js的实现</h4>
+    <div class="item">
+      <span>数1：</span>
+      <input id="d1" type="number" onchange="onInput()" />
+    </div>
+
+    <div class="item">
+      <span>数2：</span>
+      <input id="d2" type="number" onchange="onInput()" />
+    </div>
+
+    <div class="item">
+      <span>结果：</span>
+      <span id="result"></span>
+    </div>
+
+    <div id="observer1">
+      <span>用户操作：</span>数1：<span id="observer1_d1"></span>，数2：<span id="observer1_d2"></span>，结果是：<span
+        id="observer1_result"></span>
+    </div>
+
+    <div id="observer2">
+      <span>也就是说：</span><span id="observer2_d1"></span>+<span id="observer2_d2"></span>=<span
+        id="observer2_result"></span>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  function onInput() {
+    //提取数据
+    var $d1 = document.getElementById("d1");
+    var $d2 = document.getElementById("d2");
+
+    //观察者
+    var $result = document.getElementById("result");
+
+    var $observer1 = document.getElementById("observer1");
+    var $observer1_d1 = document.getElementById("observer1_d1");
+    var $observer1_d2 = document.getElementById("observer1_d2");
+    var $observer1_result = document.getElementById("observer1_result");
+
+    var $observer2 = document.getElementById("observer2");
+    var $observer2_d1 = document.getElementById("observer2_d1");
+    var $observer2_d2 = document.getElementById("observer2_d2");
+    var $observer2_result = document.getElementById("observer2_result");
+
+    var $d1_value = parseFloat($d1.value);
+    var $d2_value = parseFloat($d2.value);
+
+    if (!isNaN($d1_value) && !isNaN($d2_value)) {
+      //反馈数据
+      var $result_value = $d1_value + $d2_value;
+      $result.innerText = $result_value;
+
+      $observer1.setAttribute("class", "show observer1");
+      $observer1_d1.innerText = $d1_value;
+      $observer1_d2.innerText = $d2_value;
+      $observer1_result.innerText = $result_value;
+
+      $observer2.setAttribute("class", "show observer2");
+      $observer2_d1.innerText = $d1_value;
+      $observer2_d2.innerText = $d2_value;
+      $observer2_result.innerText = $result_value;
+    } else {
+      $result.innerText = "";
+      $observer1.setAttribute("class", "hide");
+      $observer2.setAttribute("class", "hide");
+    }
+  }
+
+</script>
+
+<style>
+  .item {
+    margin: 10px;
+  }
+
+  .show {
+    display: block
+  }
+
+  .hide {
+    display: none
+  }
+
+  .observer1 {
+    background-color: dimgray;
+    color: white;
+    margin: 40px;
+    font-size: 20px;
+    padding: 40px;
+  }
+
+  .observer2 {
+    background-color: bisque;
+    color: black;
+    margin: 40px;
+    padding: 40px;
+    font-size: 20px;
+  }
+</style>

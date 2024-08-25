@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="./vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h4>数据的双向绑定示例：加法器----Vue.js的实现</h4>
+    <div class="item">
+      <span>数1：</span>
+      <input type="number" v-model="d1" />
+    </div>
+    <div class="item">
+      <span>数2：</span>
+      <input type="number" v-model="d2" />
+    </div>
+
+    <div class="item">
+      <span>结果：</span>
+      <span>{{result}}</span>
+    </div>
+
+    <div v-if="result" class="observer1">
+      <span>用户操作：</span>数1：<span>{{d1}}</span>，数2：<span>{{d2}}</span>，结果是：<span>{{result}}</span>
+    </div>
+
+    <div v-if="result" class="observer2">
+      <span>也就是说：</span><span>{{d1}}</span>+<span>{{d2}}</span>=<span>{{result}}</span>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const { createApp } = Vue
+  createApp({
+    el: '#app',
+    data() {
+      return {
+        d1: null,
+        d2: null,
+        result: null
+      }
+    },
+    watch: {
+      d1() {
+        this.onInput();
+      },
+      d2() {
+        this.onInput();
+      }
+    },
+    methods: {
+      onInput() {
+        var $d1_value = parseFloat(this.d1);
+        var $d2_value = parseFloat(this.d2);
+
+        if (!isNaN($d1_value) && !isNaN($d2_value)) {
+          //反馈数据
+          this.result = $d1_value + $d2_value;
+        } else {
+          this.result = null;
+        }
+      }
+    }
+  }).mount("#app")
+</script>
+
+<style>
+  .item {
+    margin: 10px;
+  }
+
+  .show {
+    display: block
+  }
+
+  .hide {
+    display: none
+  }
+
+  .observer1 {
+    background-color: dimgray;
+    color: white;
+    margin: 40px;
+    font-size: 20px;
+    padding: 40px;
+  }
+
+  .observer2 {
+    background-color: bisque;
+    color: black;
+    margin: 40px;
+    padding: 40px;
+    font-size: 20px;
+  }
+</style>

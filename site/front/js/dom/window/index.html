@@ -1,0 +1,3316 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../index.html">
+      
+      
+        <link rel="next" href="../document/index.html">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Window - 基于WEB的应用程序开发</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#widnow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../index.html" title="基于WEB的应用程序开发" class="md-header__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            基于WEB的应用程序开发
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Window
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="日间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="日间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="夜间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../introduction/index.html" class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../html/syllabus/index.html" class="md-tabs__link">
+          
+  
+  前端-基础
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../framework/jquery/index.html" class="md-tabs__link">
+          
+  
+  前端-框架
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../back/java/jsp/basic/index.html" class="md-tabs__link">
+          
+  
+  后端-JSP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../back/java/framework/mvc/index.html" class="md-tabs__link">
+          
+  
+  后端-框架
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../introduction/syllabus/index.html" class="md-tabs__link">
+        
+  
+    
+  
+  大纲
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../index.html" title="基于WEB的应用程序开发" class="md-nav__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    基于WEB的应用程序开发
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本信息
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/hello/java/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World-Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/http/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP协议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    前端-基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            前端-基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Html
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Html
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html/syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html/%E6%A0%87%E7%AD%BE/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见标签
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../html/case/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    综合案例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../css/syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../css/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见样式属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    应用方式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../css/case/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    综合案例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    目标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gramma/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DOM编程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            DOM编程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DOM模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Window
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Window
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label=" ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+       
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#window" class="md-nav__link">
+    <span class="md-ellipsis">
+      window对象操作示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="window对象操作示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态打开窗口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open" class="md-nav__link">
+    <span class="md-ellipsis">
+      open函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用超链接调用方法来打开注册新窗口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onload" class="md-nav__link">
+    <span class="md-ellipsis">
+      onLoad事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      模式窗口
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date对象做时钟显示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Date对象做时钟显示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#date_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date成员方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      显示当前时间
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态时钟显示
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historylocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      history和location对象
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../document/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Document
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../special/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    特效
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    表单验证
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    进阶
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            进阶
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/canvas/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    画图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/regular/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    正则表达式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/json/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/ajax/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ajax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    前端-框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            前端-框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../framework/jquery/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jQuery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../framework/bootstrap/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bootstrap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../framework/vue/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue.js
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../framework/element/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Element+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    后端-JSP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            后端-JSP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/jsp/basic/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSP简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/jsp/implicit%20object/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内置对象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/jsp/jdbc/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JDBC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/jsp/java%20bean/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Bean
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/jsp/servlet/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servlet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/jsp/filter/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    过滤器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    后端-框架
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            后端-框架
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/mvc/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MVC设计模式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/spring%20boot/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring Boot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/maven/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/spring%20mvc/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring MVC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/freemarker/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Freemarker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/spring/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/mybatis/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MyBatis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    操作指南
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            操作指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/java/framework/guide/remote%20repo/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    修改远程仓库地址
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introduction/syllabus/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大纲
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label=" ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+       
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#window" class="md-nav__link">
+    <span class="md-ellipsis">
+      window对象操作示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="window对象操作示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态打开窗口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open" class="md-nav__link">
+    <span class="md-ellipsis">
+      open函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用超链接调用方法来打开注册新窗口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onload" class="md-nav__link">
+    <span class="md-ellipsis">
+      onLoad事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      模式窗口
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date对象做时钟显示
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Date对象做时钟显示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#date_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date成员方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      显示当前时间
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态时钟显示
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historylocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      history和location对象
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="widnow">Widnow对象</h1>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td>指定浏览器状态栏中显示的临时消息</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>有关客户端的屏幕和显示性能的信息。</td>
+</tr>
+<tr>
+<td>history</td>
+<td>有关客户访问过的URL的信息。</td>
+</tr>
+<tr>
+<td>location</td>
+<td>有关当前 URL 的信息。</td>
+</tr>
+<tr>
+<td>document</td>
+<td>表示浏览器窗口中的HTML文档</td>
+</tr>
+<tr>
+<td>alert ("提示信息")</td>
+<td>显示一个带有提示信息和确定按钮的对话框</td>
+</tr>
+<tr>
+<td>confirm("提示信息“)</td>
+<td>显示一个带有提示信息、确定和取消按钮的对话框</td>
+</tr>
+<tr>
+<td>open ("url","name")</td>
+<td>打开具有指定名称的新窗口，并加载给定 URL 所指定的文档；如果没有提供 URL，则打开一个空白文档</td>
+</tr>
+<tr>
+<td>close ( )</td>
+<td>关闭当前窗口</td>
+</tr>
+<tr>
+<td>showModalDialog( )</td>
+<td>在一个模式窗口中显示指定的HTML文档</td>
+</tr>
+<tr>
+<td>setTimeout("函数",毫秒数)</td>
+<td>设置定时器：经过指定毫秒值后执行某个函数</td>
+</tr>
+<tr>
+<td>onLoad</td>
+<td>在窗口或框架完成文档加载时触发</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="window">window对象操作示例</h2>
+<h3 id="_1">动态打开窗口</h3>
+<iframe src="./src/js_window_open1.html" frameborder="0" width="100%" height="500"></iframe>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="c1">//在窗口状态栏中设置文本</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;系统当前状态：您正在注册用户......&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">//获取窗口的高度</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">768</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="c1">//使用open方法打开新窗口</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;register.html&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">else</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">      </span><span class="c1">//弹出警告对话框</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;请设置分辨率为1024x768，然后再打开&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">closewindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="c1">//弹出确认对话框</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s2">&quot;您确认要退出系统吗？&quot;</span><span class="p">))</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span><span class="c1">//关闭当前窗口</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js_window_open1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>window对象<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">      </span><span class="c1">//在窗口状态栏中设置文本</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;系统当前状态：您正在注册用户......&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">      </span><span class="c1">//获取窗口的高度</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">768</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="c1">//使用open方法打开新窗口</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;register.html&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">      </span><span class="k">else</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="c1">//弹出警告对话框</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;请设置分辨率为1024x768，然后再打开&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">closewindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">      </span><span class="c1">//弹出确认对话框</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s2">&quot;您确认要退出系统吗？&quot;</span><span class="p">))</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="c1">//关闭当前窗口</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&quot;#CCCCCC&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>  <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>      <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/head.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;761&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;389&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>      <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/foot.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;502&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;90&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a>        <span class="cm">&lt;!-- 添加单击事件 --&gt;</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;regButton&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot; 用户注册 &quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;openwindow( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a>        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;exitButton&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot; 退 出 &quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;closewindow( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>      <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a>    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a>  <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 id="open">open函数</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">open函数</label><label for="__tabbed_1_2">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>open("打开窗口的url"，"窗口名"，"窗口特征")</strong></p>
+<p>窗口的特征如下，可以任意组合：</p>
+<ul>
+<li>height： 窗口高度； </li>
+<li>width： 窗口宽度； </li>
+<li>top： 窗口距离屏幕上方的象素值； </li>
+<li>left：窗口距离屏幕左侧的象素值； </li>
+<li>toolbar： 是否显示工具栏，yes为显示； </li>
+<li>menubar，scrollbars 表示菜单栏和滚动栏。 </li>
+<li>resizable： 是否允许改变窗口大小，yes或1为允许 </li>
+<li>location： 是否显示地址栏，yes或1为允许 </li>
+<li>status：是否显示状态栏内的信息，yes或1为允许；</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><iframe src="./src/js_window_open2.html" frameborder="0" width="100%" height="500"></iframe>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;系统当前状态：您正在注册用户......&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">768</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">      </span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;register.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;注册窗口&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbars=0, location=0, statusbars=0, menubars=0,width=700,height=550,scrollbars=1&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">else</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;请设置分辨率为1024x768，然后再打开&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;regButton&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot; 用户注册 &quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;openwindow( )&quot;</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js_window_open2.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span>
+<span class="normal"><a href="#__codelineno-3-42">42</a></span>
+<span class="normal"><a href="#__codelineno-3-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>window对象<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;系统当前状态：您正在注册用户......&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">768</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;register.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;注册窗口&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbars=0, location=0, statusbars=0, menubars=0,width=700,height=550,scrollbars=1&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">      </span><span class="k">else</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;请设置分辨率为1024x768，然后再打开&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">closewindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s2">&quot;您确认要退出系统吗？&quot;</span><span class="p">))</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="o">&lt;!</span><span class="nt">--</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#CCCCCC</span><span class="p">;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="nt">--</span><span class="o">&gt;</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a>  <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a>    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a>      <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/head.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;761&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;389&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a>    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a>    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a>      <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/foot.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;502&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;90&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a>        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;regButton&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot; 用户注册 &quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;openwindow( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a>        <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;exitButton&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot; 退 出 &quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;closewindow( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a>      <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a>    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a>  <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42"></a>
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="_2">使用超链接调用方法来打开注册新窗口</h3>
+<iframe src="./src/js_window_open3.html" frameborder="0" width="100%" height="500"></iframe>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: openwindow( ) &quot;</span><span class="p">&gt;</span>用户注册 <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js_window_open3.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span>
+<span class="normal"><a href="#__codelineno-5-38">38</a></span>
+<span class="normal"><a href="#__codelineno-5-39">39</a></span>
+<span class="normal"><a href="#__codelineno-5-40">40</a></span>
+<span class="normal"><a href="#__codelineno-5-41">41</a></span>
+<span class="normal"><a href="#__codelineno-5-42">42</a></span>
+<span class="normal"><a href="#__codelineno-5-43">43</a></span>
+<span class="normal"><a href="#__codelineno-5-44">44</a></span>
+<span class="normal"><a href="#__codelineno-5-45">45</a></span>
+<span class="normal"><a href="#__codelineno-5-46">46</a></span>
+<span class="normal"><a href="#__codelineno-5-47">47</a></span>
+<span class="normal"><a href="#__codelineno-5-48">48</a></span>
+<span class="normal"><a href="#__codelineno-5-49">49</a></span>
+<span class="normal"><a href="#__codelineno-5-50">50</a></span>
+<span class="normal"><a href="#__codelineno-5-51">51</a></span>
+<span class="normal"><a href="#__codelineno-5-52">52</a></span>
+<span class="normal"><a href="#__codelineno-5-53">53</a></span>
+<span class="normal"><a href="#__codelineno-5-54">54</a></span>
+<span class="normal"><a href="#__codelineno-5-55">55</a></span>
+<span class="normal"><a href="#__codelineno-5-56">56</a></span>
+<span class="normal"><a href="#__codelineno-5-57">57</a></span>
+<span class="normal"><a href="#__codelineno-5-58">58</a></span>
+<span class="normal"><a href="#__codelineno-5-59">59</a></span>
+<span class="normal"><a href="#__codelineno-5-60">60</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>window对象<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;系统当前状态：您正在注册用户......&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">768</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;register.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;注册窗口&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbars=0, location=0, statusbars=0, menubars=0,width=700,height=550,scrollbars=1&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">      </span><span class="k">else</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;请设置分辨率为1024x768，然后再打开&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">closewindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s2">&quot;您确认要退出系统吗？&quot;</span><span class="p">))</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="o">&lt;!</span><span class="nt">--</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">    </span><span class="c">/*设置无下划线的超连接样式*/</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">    </span><span class="nt">A</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">      </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">    </span><span class="nt">A</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">      </span><span class="c">/*鼠标在超链接上悬停时变为颜色*/</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">    </span><span class="nt">--</span><span class="o">&gt;</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&quot;#CCCCCC&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a>  <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a>      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span> <span class="na">valign</span><span class="o">=</span><span class="s">&quot;middle&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a>        <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a>          <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a>            <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/head.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;761&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;389&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a>          <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43"></a>          <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44"></a>            <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;502&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45"></a>              <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/foot.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;502&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;90&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46"></a>            <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47"></a>            <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;86&quot;</span> <span class="na">valign</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48"></a>              <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: openwindow( ) &quot;</span><span class="p">&gt;</span>用户注册 <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-5-49" name="__codelineno-5-49"></a>            <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50"></a>            <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;263&quot;</span> <span class="na">valign</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-51" name="__codelineno-5-51"></a>              <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: closewindow( ) &quot;</span><span class="p">&gt;</span>退 出<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-5-52" name="__codelineno-5-52"></a>            <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-5-53" name="__codelineno-5-53"></a>          <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-5-54" name="__codelineno-5-54"></a>        <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-5-55" name="__codelineno-5-55"></a>      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-5-56" name="__codelineno-5-56"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-57" name="__codelineno-5-57"></a>  <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-5-59" name="__codelineno-5-59"></a>
+<a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 id="onload">onLoad事件</h3>
+<iframe src="./src/js_window_open4.html" frameborder="0" width="100%" height="500"></iframe>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;openwindow( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js_window_open4.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">      </span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;adv.htm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;这是一个广告&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbars=0, scrollbars=0, location=0, statusbars=0, menubars=0, resizable=0, width=700, height=250&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="o">&lt;!</span><span class="nt">--</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">      </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">images/index_image.jpg</span><span class="p">);</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="nt">--</span><span class="o">&gt;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;openwindow( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 id="_3">模式窗口</h3>
+<iframe src="./src/js_window_open5.html" frameborder="0" width="100%" height="500"></iframe>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;系统当前状态：您正在注册用户......&quot;</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">768</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">showModalDialog</span><span class="p">(</span><span class="s2">&quot;register.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;注册窗口&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbars=0, location=0, statusbars=0, menubars=0,width=700,height=550,scrollbars=1&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">      </span><span class="k">else</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;请设置分辨率为1024x768，然后再打开&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">closewindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s2">&quot;您确认要退出系统吗？&quot;</span><span class="p">))</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js_window_open5.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span>
+<span class="normal"><a href="#__codelineno-9-31">31</a></span>
+<span class="normal"><a href="#__codelineno-9-32">32</a></span>
+<span class="normal"><a href="#__codelineno-9-33">33</a></span>
+<span class="normal"><a href="#__codelineno-9-34">34</a></span>
+<span class="normal"><a href="#__codelineno-9-35">35</a></span>
+<span class="normal"><a href="#__codelineno-9-36">36</a></span>
+<span class="normal"><a href="#__codelineno-9-37">37</a></span>
+<span class="normal"><a href="#__codelineno-9-38">38</a></span>
+<span class="normal"><a href="#__codelineno-9-39">39</a></span>
+<span class="normal"><a href="#__codelineno-9-40">40</a></span>
+<span class="normal"><a href="#__codelineno-9-41">41</a></span>
+<span class="normal"><a href="#__codelineno-9-42">42</a></span>
+<span class="normal"><a href="#__codelineno-9-43">43</a></span>
+<span class="normal"><a href="#__codelineno-9-44">44</a></span>
+<span class="normal"><a href="#__codelineno-9-45">45</a></span>
+<span class="normal"><a href="#__codelineno-9-46">46</a></span>
+<span class="normal"><a href="#__codelineno-9-47">47</a></span>
+<span class="normal"><a href="#__codelineno-9-48">48</a></span>
+<span class="normal"><a href="#__codelineno-9-49">49</a></span>
+<span class="normal"><a href="#__codelineno-9-50">50</a></span>
+<span class="normal"><a href="#__codelineno-9-51">51</a></span>
+<span class="normal"><a href="#__codelineno-9-52">52</a></span>
+<span class="normal"><a href="#__codelineno-9-53">53</a></span>
+<span class="normal"><a href="#__codelineno-9-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>window对象<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">openwindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;系统当前状态：您正在注册用户......&quot;</span><span class="p">;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1024</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">screen</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">768</span><span class="p">)</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">showModalDialog</span><span class="p">(</span><span class="s2">&quot;register.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;注册窗口&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;toolbars=0, location=0, statusbars=0, menubars=0,width=700,height=550,scrollbars=1&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">      </span><span class="k">else</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;请设置分辨率为1024x768，然后再打开&quot;</span><span class="p">);</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">closewindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">confirm</span><span class="p">(</span><span class="s2">&quot;您确认要退出系统吗？&quot;</span><span class="p">))</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="o">&lt;!</span><span class="nt">--</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">    </span><span class="c">/*设置无下划线的超连接样式*/</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">    </span><span class="nt">A</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">      </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">    </span><span class="nt">A</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">      </span><span class="c">/*鼠标在超链接上悬停时变为颜色*/</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">    </span><span class="nt">--</span><span class="o">&gt;</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a>
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&quot;#CCCCCC&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a>  <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a>    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38"></a>      <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/head.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;761&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;389&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39"></a>    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40"></a>    <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a>      <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;502&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-42" name="__codelineno-9-42"></a>        <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/foot.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;502&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;90&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43"></a>      <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-44" name="__codelineno-9-44"></a>      <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;86&quot;</span> <span class="na">valign</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-45" name="__codelineno-9-45"></a>        <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: openwindow( ) &quot;</span><span class="p">&gt;</span>用户注册 <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-9-46" name="__codelineno-9-46"></a>      <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-47" name="__codelineno-9-47"></a>      <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;263&quot;</span> <span class="na">valign</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-48" name="__codelineno-9-48"></a>        <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: closewindow( ) &quot;</span><span class="p">&gt;</span>退 出<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-9-49" name="__codelineno-9-49"></a>      <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-50" name="__codelineno-9-50"></a>    <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-9-51" name="__codelineno-9-51"></a>  <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-9-53" name="__codelineno-9-53"></a>
+<a id="__codelineno-9-54" name="__codelineno-9-54"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h2 id="date">Date对象做时钟显示</h2>
+<p>Date 对象存储的日期为自 1970 年 1 月 1 日 00:00:00 以来的毫秒数</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">日期对象</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="w"> </span><span class="p">(</span><span class="nx">年</span><span class="err">、</span><span class="nx">月</span><span class="err">、</span><span class="nx">日等参数</span><span class="p">)</span>
+</code></pre></div>
+<p>例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">var</span><span class="w">  </span><span class="nx">mydate</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">&quot;July 29, 2007,10:30:00&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<p>如果没有参数，表示当前日期和时间
+例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">today</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="w">  </span><span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<hr />
+<h3 id="date_1">Date成员方法</h3>
+<p><strong>Date 方法的分组</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法分组</th>
+<th>说 明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setXxx</td>
+<td>这些方法用于设置时间和日期值</td>
+</tr>
+<tr>
+<td>getXxx</td>
+<td>这些方法用于获取时间和日期值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>用作Date方法的参数的整数范围</strong>： </p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>整 数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seconds 和 minutes</td>
+<td>0 至 59</td>
+</tr>
+<tr>
+<td>Hours</td>
+<td>0 至 23</td>
+</tr>
+<tr>
+<td>Day</td>
+<td>0 至 6（星期几）</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>1 至 31（月份中的天数）</td>
+</tr>
+<tr>
+<td>Months</td>
+<td>0 至 11（一月至十二月）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_4">示例</h3>
+<h4 id="_5">显示当前时间</h4>
+<iframe src="./src/js_window_date.html" frameborder="0" width="100%" height="180"></iframe>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javaScript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">disptime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hour</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;上午好!&lt;/H2&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hour</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;下午好!&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hour</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">24</span><span class="p">)</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;晚上好!&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;今天日期:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getYear</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;年&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;月&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;日&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;现在时间:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;点&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;分&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;disptime( )&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js_window_date.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>date对象<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javaScript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">disptime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="hll"><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+</span><a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hour</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;上午好!&lt;/H2&gt;&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hour</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">12</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;下午好!&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hour</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">24</span><span class="p">)</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;晚上好!&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;今天日期:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getYear</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;年&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;月&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;日&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;H2&gt;现在时间:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;点&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;分&lt;/H2&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;disptime( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h4 id="_6">动态时钟显示</h4>
+<p>setTimeout的用法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nx">setTimeout</span><span class="err">（“</span><span class="nx">调用的函数</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="nx">定时的时间</span><span class="err">”）</span>
+</code></pre></div>
+<p>例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">myTime</span><span class="err">＝</span><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;disptime( )&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+<iframe src="./src/js_window_settimeout1.html" frameborder="0" width="100%" height="380"></iframe>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">disptime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span><span class="w"> </span><span class="c1">//获得当前时间</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span><span class="w">  </span><span class="c1">//获得小时、分钟、秒</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">minute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">();</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">();</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">    </span><span class="cm">/*设置文本框的内容为当前时间*/</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">myform</span><span class="p">.</span><span class="nx">myclock</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">minute</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">second</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">    </span><span class="cm">/*设置定时器每隔1秒（1000毫秒），调用函数disptime()执行，刷新时钟显示*/</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;disptime()&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;myclock&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js_window_settimeout1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span>
+<span class="normal"><a href="#__codelineno-18-13">13</a></span>
+<span class="normal"><a href="#__codelineno-18-14">14</a></span>
+<span class="normal"><a href="#__codelineno-18-15">15</a></span>
+<span class="normal"><a href="#__codelineno-18-16">16</a></span>
+<span class="normal"><a href="#__codelineno-18-17">17</a></span>
+<span class="normal"><a href="#__codelineno-18-18">18</a></span>
+<span class="normal"><a href="#__codelineno-18-19">19</a></span>
+<span class="normal"><a href="#__codelineno-18-20">20</a></span>
+<span class="normal"><a href="#__codelineno-18-21">21</a></span>
+<span class="normal"><a href="#__codelineno-18-22">22</a></span>
+<span class="normal"><a href="#__codelineno-18-23">23</a></span>
+<span class="normal"><a href="#__codelineno-18-24">24</a></span>
+<span class="normal"><a href="#__codelineno-18-25">25</a></span>
+<span class="normal"><a href="#__codelineno-18-26">26</a></span>
+<span class="normal"><a href="#__codelineno-18-27">27</a></span>
+<span class="normal"><a href="#__codelineno-18-28">28</a></span>
+<span class="normal"><a href="#__codelineno-18-29">29</a></span>
+<span class="normal"><a href="#__codelineno-18-30">30</a></span>
+<span class="normal"><a href="#__codelineno-18-31">31</a></span>
+<span class="normal"><a href="#__codelineno-18-32">32</a></span>
+<span class="normal"><a href="#__codelineno-18-33">33</a></span>
+<span class="normal"><a href="#__codelineno-18-34">34</a></span>
+<span class="normal"><a href="#__codelineno-18-35">35</a></span>
+<span class="normal"><a href="#__codelineno-18-36">36</a></span>
+<span class="normal"><a href="#__codelineno-18-37">37</a></span>
+<span class="normal"><a href="#__codelineno-18-38">38</a></span>
+<span class="normal"><a href="#__codelineno-18-39">39</a></span>
+<span class="normal"><a href="#__codelineno-18-40">40</a></span>
+<span class="normal"><a href="#__codelineno-18-41">41</a></span>
+<span class="normal"><a href="#__codelineno-18-42">42</a></span>
+<span class="normal"><a href="#__codelineno-18-43">43</a></span>
+<span class="normal"><a href="#__codelineno-18-44">44</a></span>
+<span class="normal"><a href="#__codelineno-18-45">45</a></span>
+<span class="normal"><a href="#__codelineno-18-46">46</a></span>
+<span class="normal"><a href="#__codelineno-18-47">47</a></span>
+<span class="normal"><a href="#__codelineno-18-48">48</a></span>
+<span class="normal"><a href="#__codelineno-18-49">49</a></span>
+<span class="normal"><a href="#__codelineno-18-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>settimeout方法<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">disptime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span><span class="w"> </span><span class="c1">//获得当前时间</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span><span class="w">  </span><span class="c1">//获得小时、分钟、秒</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">minute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">();</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">();</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a><span class="w">      </span><span class="cm">/*设置文本框的内容为当前时间*/</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">myform</span><span class="p">.</span><span class="nx">myclock</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hour</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">minute</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">second</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">;</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a><span class="w">      </span><span class="cm">/*设置定时器每隔1秒（1000毫秒），调用函数disptime()执行，刷新时钟显示*/</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="hll"><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">myTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;disptime()&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+</span><a id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="w">    </span><span class="o">&lt;!</span><span class="nt">--</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="w">    </span><span class="c">/*设置样式：无边框的文本框*/</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22"></a><span class="w">    </span><span class="nt">INPUT</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23"></a><span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24"></a><span class="w">      </span><span class="k">border-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25"></a><span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FF8B3B</span><span class="p">;</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27"></a><span class="w">    </span><span class="nt">--</span><span class="o">&gt;</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30"></a>
+<a id="__codelineno-18-31" name="__codelineno-18-31"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;disptime( )&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32"></a>  <span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;myform&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-33" name="__codelineno-18-33"></a>    <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-18-35" name="__codelineno-18-35"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/mosou.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;1001&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;457&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-18-36" name="__codelineno-18-36"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-18-38" name="__codelineno-18-38"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;37%&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-18-39" name="__codelineno-18-39"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;41%&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-40" name="__codelineno-18-40"></a>          <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>当前时间：
+<a id="__codelineno-18-41" name="__codelineno-18-41"></a>            <span class="p">&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;myclock&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-42" name="__codelineno-18-42"></a>          <span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<a id="__codelineno-18-43" name="__codelineno-18-43"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-18-44" name="__codelineno-18-44"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;22%&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-18-45" name="__codelineno-18-45"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-18-46" name="__codelineno-18-46"></a>    <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-18-47" name="__codelineno-18-47"></a>  <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+<a id="__codelineno-18-48" name="__codelineno-18-48"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-18-49" name="__codelineno-18-49"></a>
+<a id="__codelineno-18-50" name="__codelineno-18-50"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<!-- history对象常用的属性 -->
+<h2 id="historylocation">history和location对象</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">history和location对象</label><label for="__tabbed_2_2">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>back( )</td>
+<td>加载 History 列表中的上一个 URL。</td>
+</tr>
+<tr>
+<td>forward( )</td>
+<td>加载 History 列表中的下一个 URL。</td>
+</tr>
+<tr>
+<td>go("url" or number)</td>
+<td>加载 History 列表中的一个 URL，或要求浏览器移动指定的页面数。</td>
+</tr>
+</tbody>
+</table>
+<p>**Location对象 **</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>设置或检索位置或 URL 的主机名和端口号</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>设置或检索位置或 URL 的主机名部分</td>
+</tr>
+<tr>
+<td>href</td>
+<td>设置或检索完整的 URL 字符串</td>
+</tr>
+<tr>
+<td>assign("url")</td>
+<td>加载 URL 指定的新的 HTML 文档。</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>重新加载当前页</td>
+</tr>
+<tr>
+<td>replace("url")</td>
+<td>通过加载 URL 指定的文档来替换当前文档</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><iframe src="./src/js_window_education.html" frameborder="0" width="100%" height="250"></iframe></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;4%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: history.back( )&quot;</span><span class="p">&gt;</span>返回 <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;4%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: history.forward( )&quot;</span><span class="p">&gt;</span>前进<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;4%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: location.reload( )&quot;</span><span class="p">&gt;</span>刷新<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span>
+<span class="normal"><a href="#__codelineno-20-11">11</a></span>
+<span class="normal"><a href="#__codelineno-20-12">12</a></span>
+<span class="normal"><a href="#__codelineno-20-13">13</a></span>
+<span class="normal"><a href="#__codelineno-20-14">14</a></span>
+<span class="normal"><a href="#__codelineno-20-15">15</a></span>
+<span class="normal"><a href="#__codelineno-20-16">16</a></span>
+<span class="normal"><a href="#__codelineno-20-17">17</a></span>
+<span class="normal"><a href="#__codelineno-20-18">18</a></span>
+<span class="normal"><a href="#__codelineno-20-19">19</a></span>
+<span class="normal"><a href="#__codelineno-20-20">20</a></span>
+<span class="normal"><a href="#__codelineno-20-21">21</a></span>
+<span class="normal"><a href="#__codelineno-20-22">22</a></span>
+<span class="normal"><a href="#__codelineno-20-23">23</a></span>
+<span class="normal"><a href="#__codelineno-20-24">24</a></span>
+<span class="normal"><a href="#__codelineno-20-25">25</a></span>
+<span class="normal"><a href="#__codelineno-20-26">26</a></span>
+<span class="normal"><a href="#__codelineno-20-27">27</a></span>
+<span class="normal"><a href="#__codelineno-20-28">28</a></span>
+<span class="normal"><a href="#__codelineno-20-29">29</a></span>
+<span class="normal"><a href="#__codelineno-20-30">30</a></span>
+<span class="normal"><a href="#__codelineno-20-31">31</a></span>
+<span class="normal"><a href="#__codelineno-20-32">32</a></span>
+<span class="normal"><a href="#__codelineno-20-33">33</a></span>
+<span class="normal"><a href="#__codelineno-20-34">34</a></span>
+<span class="normal"><a href="#__codelineno-20-35">35</a></span>
+<span class="normal"><a href="#__codelineno-20-36">36</a></span>
+<span class="normal"><a href="#__codelineno-20-37">37</a></span>
+<span class="normal"><a href="#__codelineno-20-38">38</a></span>
+<span class="normal"><a href="#__codelineno-20-39">39</a></span>
+<span class="normal"><a href="#__codelineno-20-40">40</a></span>
+<span class="normal"><a href="#__codelineno-20-41">41</a></span>
+<span class="normal"><a href="#__codelineno-20-42">42</a></span>
+<span class="normal"><a href="#__codelineno-20-43">43</a></span>
+<span class="normal"><a href="#__codelineno-20-44">44</a></span>
+<span class="normal"><a href="#__codelineno-20-45">45</a></span>
+<span class="normal"><a href="#__codelineno-20-46">46</a></span>
+<span class="normal"><a href="#__codelineno-20-47">47</a></span>
+<span class="normal"><a href="#__codelineno-20-48">48</a></span>
+<span class="normal"><a href="#__codelineno-20-49">49</a></span>
+<span class="normal"><a href="#__codelineno-20-50">50</a></span>
+<span class="normal"><a href="#__codelineno-20-51">51</a></span>
+<span class="normal"><a href="#__codelineno-20-52">52</a></span>
+<span class="normal"><a href="#__codelineno-20-53">53</a></span>
+<span class="normal"><a href="#__codelineno-20-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>教育<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">    </span><span class="o">&lt;!</span><span class="nt">--</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">    </span><span class="c">/*设置无下划线的超连接样式*/</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">    </span><span class="nt">A</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">      </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13"></a>
+<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="w">    </span><span class="nt">A</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15"></a><span class="w">      </span><span class="c">/*鼠标在超链接上悬停时变为颜色*/</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18"></a><span class="w">    </span><span class="nt">--</span><span class="o">&gt;</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-21" name="__codelineno-20-21"></a>
+<a id="__codelineno-20-22" name="__codelineno-20-22"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-20-23" name="__codelineno-20-23"></a>  <span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;form1&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-24" name="__codelineno-20-24"></a>    <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-25" name="__codelineno-20-25"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-20-26" name="__codelineno-20-26"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;7&quot;</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./images/head1.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;994&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;37&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-27" name="__codelineno-20-27"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-20-28" name="__codelineno-20-28"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-20-29" name="__codelineno-20-29"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;15%&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-30" name="__codelineno-20-30"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;32%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>2<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
+<a id="__codelineno-20-31" name="__codelineno-20-31"></a>            <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>3<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>4<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>5<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
+<a id="__codelineno-20-32" name="__codelineno-20-32"></a>            <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>6<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span>下一页<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-33" name="__codelineno-20-33"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;4%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: history.back( )&quot;</span><span class="p">&gt;</span>返回 <span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><a id="__codelineno-20-34" name="__codelineno-20-34"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;4%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: history.forward( )&quot;</span><span class="p">&gt;</span>前进<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><a id="__codelineno-20-35" name="__codelineno-20-35"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;4%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascript: location.reload( )&quot;</span><span class="p">&gt;</span>刷新<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><a id="__codelineno-20-36" name="__codelineno-20-36"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;6%&quot;</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;./index.html&quot;</span><span class="p">&gt;</span>首页<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-37" name="__codelineno-20-37"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;35%&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-38" name="__codelineno-20-38"></a>          跳转到其他版块
+<a id="__codelineno-20-39" name="__codelineno-20-39"></a>          <span class="p">&lt;</span><span class="nt">SELECT</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selTopic&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;selPTopic&quot;</span> <span class="na">onChange</span><span class="o">=</span><span class="s">&quot;javascript: location=this.value&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-20-40" name="__codelineno-20-40"></a>            <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;news.html&quot;</span><span class="p">&gt;</span>新闻贴图<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+<a id="__codelineno-20-41" name="__codelineno-20-41"></a>            <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;gard.html&quot;</span><span class="p">&gt;</span>网上谈兵<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+<a id="__codelineno-20-42" name="__codelineno-20-42"></a>            <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;IT.html&quot;</span><span class="p">&gt;</span>IT茶馆<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+<a id="__codelineno-20-43" name="__codelineno-20-43"></a>            <span class="p">&lt;</span><span class="nt">OPTION</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;education.html&quot;</span> <span class="na">selected</span><span class="p">&gt;</span>教育大家谈<span class="p">&lt;/</span><span class="nt">OPTION</span><span class="p">&gt;</span>
+<a id="__codelineno-20-44" name="__codelineno-20-44"></a>          <span class="p">&lt;/</span><span class="nt">SELECT</span><span class="p">&gt;</span>
+<a id="__codelineno-20-45" name="__codelineno-20-45"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-46" name="__codelineno-20-46"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-20-47" name="__codelineno-20-47"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-20-48" name="__codelineno-20-48"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;7&quot;</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./images/content1.jpg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;995&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;576&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-20-49" name="__codelineno-20-49"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-20-50" name="__codelineno-20-50"></a>    <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-20-51" name="__codelineno-20-51"></a>  <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+<a id="__codelineno-20-52" name="__codelineno-20-52"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-20-53" name="__codelineno-20-53"></a>
+<a id="__codelineno-20-54" name="__codelineno-20-54"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>rect</title>
+</head>
+
+<body>
+  <script>
+    var code = "123456"
+    alert(check1(code));
+    alert(check2(code));
+
+    //使用传统方法
+    function check1(s) {
+      if (s.length != 6) return false;
+      var numbers = "0123456789";
+      for (var i = 0; i < 6; i++) {
+        var ch = s.substr(i, 1);
+        if (numbers.indexOf(ch) == -1) return false;
+      }
+      return true;
+    }
+
+    //使用正则表达式
+    function check2(s) {
+      return /^\d{6}$/.test(s);
+    }
+  </script>
+</body>
+
+</html>
