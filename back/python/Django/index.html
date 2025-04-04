@@ -1,1996 +1,840 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-      
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
-    
-    
-      
-        <title>Django框架基础 - 基于WEB的应用程序开发</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
-      
-        
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
-      
-      
+<!DOCTYPE html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
-    
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#django" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.10" name="generator"/>
+<title>Django框架基础 - 基于WEB的应用程序开发</title>
+<link href="../../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#django">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../index.html" title="基于WEB的应用程序开发" class="md-header__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="基于WEB的应用程序开发" class="md-header__button md-logo" data-md-component="logo" href="../../../index.html" title="基于WEB的应用程序开发">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             基于WEB的应用程序开发
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Django框架基础
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="日间模式"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="日间模式" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="夜间模式"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="夜间模式" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="浅色" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="浅色">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+<input aria-label="深色" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="深色">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
 </form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-    
-    
-  </nav>
-  
+</div>
+</div>
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../index.html">
         
   
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../index.html" class="md-tabs__link">
-        
   
     
   
   首页
 
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../introduction/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../introduction/index.html">
           
+  
   
   简介
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../front/html/syllabus/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../front/html/syllabus/index.html">
           
+  
   
   前端-基础
 
         </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../front/framework/jquery/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../front/framework/jquery/index.html">
           
+  
   
   前端-框架
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../java/jsp/basic/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../java/jsp/basic/index.html">
           
+  
   
   后端-JSP
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../java/framework/mvc/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../java/framework/mvc/index.html">
           
+  
   
   后端-框架
 
         </a>
-      </li>
-    
-  
-
-      
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../introduction/syllabus/index.html">
         
   
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../introduction/syllabus/index.html" class="md-tabs__link">
-        
   
     
   
   大纲
 
       </a>
-    </li>
-  
-
-      
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../introduction/kownledge_graph/index.html">
         
   
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../introduction/kownledge_graph/index.html" class="md-tabs__link">
-        
   
     
   
   知识图谱
 
       </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
+</li>
+</ul>
+</div>
 </nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../../index.html" title="基于WEB的应用程序开发" class="md-nav__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="基于WEB的应用程序开发" class="md-nav__button md-logo" data-md-component="logo" href="../../../index.html" title="基于WEB的应用程序开发">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
     基于WEB的应用程序开发
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../index.html">
+<span class="md-ellipsis">
     首页
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
     简介
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             简介
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/index.html">
+<span class="md-ellipsis">
     基本信息
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/hello/java/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/hello/java/index.html">
+<span class="md-ellipsis">
     Hello World-Java
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/http/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/http/index.html">
+<span class="md-ellipsis">
     HTTP协议
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
     前端-基础
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
             前端-基础
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
     Html
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
             Html
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/html/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/html/syllabus/index.html">
+<span class="md-ellipsis">
     目标
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/html/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/html/%E7%AE%80%E4%BB%8B/index.html">
+<span class="md-ellipsis">
     简介
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/html/%E6%A0%87%E7%AD%BE/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/html/%E6%A0%87%E7%AD%BE/index.html">
+<span class="md-ellipsis">
     常见标签
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/html/case/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/html/case/index.html">
+<span class="md-ellipsis">
     综合案例
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
     CSS
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
             CSS
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/css/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/css/syllabus/index.html">
+<span class="md-ellipsis">
     目标
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/css/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/css/%E7%AE%80%E4%BB%8B/index.html">
+<span class="md-ellipsis">
     简介
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html">
+<span class="md-ellipsis">
     常见样式属性
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html">
+<span class="md-ellipsis">
     应用方式
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/css/case/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/css/case/index.html">
+<span class="md-ellipsis">
     综合案例
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
     Javascript
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
             Javascript
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/syllabus/index.html">
+<span class="md-ellipsis">
     目标
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/gramma/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/gramma/index.html">
+<span class="md-ellipsis">
     基本语法
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+<span class="md-ellipsis">
     DOM编程
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_3">
+<span class="md-nav__icon md-icon"></span>
             DOM编程
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/dom/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/dom/index.html">
+<span class="md-ellipsis">
     DOM模型
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/dom/window/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/dom/window/index.html">
+<span class="md-ellipsis">
     Window
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/dom/document/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/dom/document/index.html">
+<span class="md-ellipsis">
     Document
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/dom/special/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/dom/special/index.html">
+<span class="md-ellipsis">
     特效
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/dom/validation/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/dom/validation/index.html">
+<span class="md-ellipsis">
     表单验证
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+<span class="md-ellipsis">
     进阶
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_4">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_4">
+<span class="md-nav__icon md-icon"></span>
             进阶
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/advanced/canvas/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/advanced/canvas/index.html">
+<span class="md-ellipsis">
     画图
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/advanced/regular/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/advanced/regular/index.html">
+<span class="md-ellipsis">
     正则表达式
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/advanced/json/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/advanced/json/index.html">
+<span class="md-ellipsis">
     JSON
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/js/advanced/ajax/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/js/advanced/ajax/index.html">
+<span class="md-ellipsis">
     Ajax
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
     前端-框架
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
             前端-框架
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/framework/jquery/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/framework/jquery/index.html">
+<span class="md-ellipsis">
     jQuery
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/framework/bootstrap/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/framework/bootstrap/index.html">
+<span class="md-ellipsis">
     Bootstrap
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/framework/vue/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/framework/vue/index.html">
+<span class="md-ellipsis">
     Vue.js
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../front/framework/element/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../front/framework/element/index.html">
+<span class="md-ellipsis">
     Element+
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
     后端-JSP
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
             后端-JSP
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/jsp/basic/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/jsp/basic/index.html">
+<span class="md-ellipsis">
     JSP简介
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/jsp/implicit%20object/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/jsp/implicit%20object/index.html">
+<span class="md-ellipsis">
     内置对象
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/jsp/jdbc/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/jsp/jdbc/index.html">
+<span class="md-ellipsis">
     JDBC
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/jsp/java%20bean/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/jsp/java%20bean/index.html">
+<span class="md-ellipsis">
     Java Bean
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/jsp/servlet/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/jsp/servlet/index.html">
+<span class="md-ellipsis">
     Servlet
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/jsp/filter/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/jsp/filter/index.html">
+<span class="md-ellipsis">
     过滤器
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
     后端-框架
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
             后端-框架
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/mvc/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/mvc/index.html">
+<span class="md-ellipsis">
     MVC设计模式
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/spring%20boot/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/spring%20boot/index.html">
+<span class="md-ellipsis">
     Spring Boot
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/maven/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/maven/index.html">
+<span class="md-ellipsis">
     Maven
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/spring%20mvc/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/spring%20mvc/index.html">
+<span class="md-ellipsis">
     Spring MVC
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/freemarker/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/freemarker/index.html">
+<span class="md-ellipsis">
     Freemarker
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/spring/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/spring/index.html">
+<span class="md-ellipsis">
     Spring
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/mybatis/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/mybatis/index.html">
+<span class="md-ellipsis">
     MyBatis
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+<span class="md-ellipsis">
     操作指南
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_8">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_8">
+<span class="md-nav__icon md-icon"></span>
             操作指南
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../java/framework/guide/remote%20repo/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../java/framework/guide/remote%20repo/index.html">
+<span class="md-ellipsis">
     修改远程仓库地址
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/syllabus/index.html">
+<span class="md-ellipsis">
     大纲
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/kownledge_graph/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/kownledge_graph/index.html">
+<span class="md-ellipsis">
     知识图谱
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label=" ">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-       
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#81-django" class="md-nav__link">
-    <span class="md-ellipsis">
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label=" " class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#81-django">
+<span class="md-ellipsis">
       8.1 Django框架简介
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#82" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#82">
+<span class="md-ellipsis">
       8.2 创建项目
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#83" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#83">
+<span class="md-ellipsis">
       8.3 创建应用
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#84" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#84">
+<span class="md-ellipsis">
       8.4 数据模型
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#85" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#85">
+<span class="md-ellipsis">
       8.5 管理后台
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#86" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#86">
+<span class="md-ellipsis">
       8.6 路由
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#87" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#87">
+<span class="md-ellipsis">
       8.7 视图
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#88-django" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#88-django">
+<span class="md-ellipsis">
       8.8 Django模板
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#89" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#89">
+<span class="md-ellipsis">
       8.9 表单
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#810" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#810">
+<span class="md-ellipsis">
       8.10 小结
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="django">Django框架基础</h1>
 <p>Django是基于Python的重量级开源Web框架。Django拥有高度定制的ORM和大量的API，简单灵活的视图编写，优雅的URL，适于快速开发的模板，以及强大的管理后台，这使得它在Python Web开发领域有着无法撼动的地位。</p>
-<hr />
+<hr/>
 <h2 id="81-django">8.1  Django框架简介</h2>
 <p>Django是一款用于开发 Web 应用程序的高级Python框架，很多知名网站都是使用该框架编写的。虽然Django一直占据着Python Web开发界的重要地位，但其早期版本中不支持异步。
 最新发布的Django 3.0 版本中，已经可以支持ASGI异步编程了。</p>
@@ -2002,24 +846,24 @@
 <p>安装Django Web框架</p>
 </li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">安装Django</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">安装Django</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>django
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>django
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
-<hr />
+</input></div>
+<hr/>
 <h2 id="82">8.2  创建项目</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">创建项目</label><label for="__tabbed_2_2">目录结构</label><label for="__tabbed_2_3">运行项目</label><label for="__tabbed_2_4">访问<code>127.0.0.1:8000</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">创建项目</label><label for="__tabbed_2_2">目录结构</label><label for="__tabbed_2_3">运行项目</label><label for="__tabbed_2_4">访问<code>127.0.0.1:8000</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>django-admin<span class="w"> </span>startproject<span class="w"> </span>blog
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>django-admin<span class="w"> </span>startproject<span class="w"> </span>blog
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -2043,27 +887,27 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>py<span class="w"> </span>manage.py<span class="w"> </span>runserver
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>py<span class="w"> </span>manage.py<span class="w"> </span>runserver
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="运行项目" src="assets/images/Django%E9%A6%96%E9%A1%B5.png" /></p>
+<p><img alt="运行项目" src="assets/images/Django%E9%A6%96%E9%A1%B5.png"/></p>
 </div>
 </div>
-</div>
-<hr />
+</input></input></input></input></div>
+<hr/>
 <h2 id="83">8.3  创建应用</h2>
 <p>在Django项目中，推荐使用应用来完成不同模块的任务。一个项目中可以包含多个应用，一个应用也可以在多个项目中使用。在Django中，每个应用都是一个Python包，并且遵循着相同的约定。Django自带的工具可以生成应用的基础目录结构，这样开发者就能专心写代码，而不需要创建目录了。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">创建应用</label><label for="__tabbed_3_2">目录结构</label><label for="__tabbed_3_3">完整目录</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">创建应用</label><label for="__tabbed_3_2">目录结构</label><label for="__tabbed_3_3">完整目录</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">#进入工程目录</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>py<span class="w"> </span>manage.py<span class="w"> </span>startapp<span class="w"> </span>article
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
@@ -2085,7 +929,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
@@ -2145,11 +989,11 @@
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
-<hr />
+</input></input></input></div>
+<hr/>
 <h2 id="84">8.4  数据模型</h2>
 <p>使用Django编写一个数据库驱动的Web应用时，第一步就是定义模型（models），也就是数据库结构设计和附加的其他元数据。Django支持ORM（对象关系映射），所以可以使用模型类来操作关系型数据库。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:12"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><input id="__tabbed_4_5" name="__tabbed_4" type="radio" /><input id="__tabbed_4_6" name="__tabbed_4" type="radio" /><input id="__tabbed_4_7" name="__tabbed_4" type="radio" /><input id="__tabbed_4_8" name="__tabbed_4" type="radio" /><input id="__tabbed_4_9" name="__tabbed_4" type="radio" /><input id="__tabbed_4_10" name="__tabbed_4" type="radio" /><input id="__tabbed_4_11" name="__tabbed_4" type="radio" /><input id="__tabbed_4_12" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Django数据模型中常见的字段</label><label for="__tabbed_4_2">创建模型</label><label for="__tabbed_4_3">激活模型</label><label for="__tabbed_4_4">生成迁移文件</label><label for="__tabbed_4_5">创建数据表</label><label for="__tabbed_4_6">加入后台管理页面</label><label for="__tabbed_4_7">查看创建的数据表</label><label for="__tabbed_4_8">进入交互模式</label><label for="__tabbed_4_9">新增数据命令</label><label for="__tabbed_4_10">新增数据效果</label><label for="__tabbed_4_11">遍历User表中所有记录</label><label for="__tabbed_4_12">修改user表记录</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:12"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><input id="__tabbed_4_4" name="__tabbed_4" type="radio"><input id="__tabbed_4_5" name="__tabbed_4" type="radio"><input id="__tabbed_4_6" name="__tabbed_4" type="radio"><input id="__tabbed_4_7" name="__tabbed_4" type="radio"><input id="__tabbed_4_8" name="__tabbed_4" type="radio"><input id="__tabbed_4_9" name="__tabbed_4" type="radio"/><input id="__tabbed_4_10" name="__tabbed_4" type="radio"/><input id="__tabbed_4_11" name="__tabbed_4" type="radio"/><input id="__tabbed_4_12" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Django数据模型中常见的字段</label><label for="__tabbed_4_2">创建模型</label><label for="__tabbed_4_3">激活模型</label><label for="__tabbed_4_4">生成迁移文件</label><label for="__tabbed_4_5">创建数据表</label><label for="__tabbed_4_6">加入后台管理页面</label><label for="__tabbed_4_7">查看创建的数据表</label><label for="__tabbed_4_8">进入交互模式</label><label for="__tabbed_4_9">新增数据命令</label><label for="__tabbed_4_10">新增数据效果</label><label for="__tabbed_4_11">遍历User表中所有记录</label><label for="__tabbed_4_12">修改user表记录</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -2236,7 +1080,7 @@
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article/models.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article/models.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
@@ -2257,17 +1101,17 @@
 <span class="normal"><a href="#__codelineno-7-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.db</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>  <span class="c1"># 引入django.db.models模块</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="sd">"""</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="sd">  User模型类，数据模型应该继承于models.Model或其子类</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="sd">  &quot;&quot;&quot;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="sd">  """</span>
 <a id="__codelineno-7-7" name="__codelineno-7-7"></a>  <span class="nb">id</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 主键</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>  <span class="n">username</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>  <span class="c1"># 用户名，字符串类型</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a>  <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>     <span class="c1"># 邮箱，字符串类型</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10"></a>
 <a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="k">class</span><span class="w"> </span><span class="nc">Article</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">  </span><span class="sd">"""</span>
 <a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="sd">  Article模型类，数据模型应该继承于models.Model或其子类</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="sd">  &quot;&quot;&quot;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="sd">  """</span>
 <a id="__codelineno-7-15" name="__codelineno-7-15"></a>  <span class="nb">id</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 主键</span>
 <a id="__codelineno-7-16" name="__codelineno-7-16"></a>  <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>    <span class="c1"># 标题，字符串类型</span>
 <a id="__codelineno-7-17" name="__codelineno-7-17"></a>  <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>                <span class="c1"># 内容，文本类型</span>
@@ -2276,7 +1120,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/settings.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/settings.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
@@ -2292,21 +1136,21 @@
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1"># Application definition</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>    <span class="s1">&#39;article.apps.ArticleConfig&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="s1">'django.contrib.admin'</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="s1">'django.contrib.auth'</span><span class="p">,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="s1">'django.contrib.contenttypes'</span><span class="p">,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="s1">'django.contrib.sessions'</span><span class="p">,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>    <span class="s1">'django.contrib.messages'</span><span class="p">,</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="s1">'django.contrib.staticfiles'</span><span class="p">,</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>    <span class="s1">'article.apps.ArticleConfig'</span><span class="p">,</span>
 <a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="p">]</span>
 <a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>makemigrations
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>makemigrations
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article/migrations/0001_initial.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article/migrations/0001_initial.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
@@ -2351,32 +1195,32 @@
 <a id="__codelineno-10-12" name="__codelineno-10-12"></a>
 <a id="__codelineno-10-13" name="__codelineno-10-13"></a>  <span class="n">operations</span> <span class="o">=</span> <span class="p">[</span>
 <a id="__codelineno-10-14" name="__codelineno-10-14"></a>    <span class="n">migrations</span><span class="o">.</span><span class="n">CreateModel</span><span class="p">(</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a>      <span class="n">name</span><span class="o">=</span><span class="s1">&#39;User&#39;</span><span class="p">,</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a>      <span class="n">name</span><span class="o">=</span><span class="s1">'User'</span><span class="p">,</span>
 <a id="__codelineno-10-16" name="__codelineno-10-16"></a>      <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17"></a>          <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">serialize</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18"></a>          <span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)),</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19"></a>          <span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)),</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a>          <span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">serialize</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>          <span class="p">(</span><span class="s1">'username'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)),</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a>          <span class="p">(</span><span class="s1">'email'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)),</span>
 <a id="__codelineno-10-20" name="__codelineno-10-20"></a>      <span class="p">],</span>
 <a id="__codelineno-10-21" name="__codelineno-10-21"></a>    <span class="p">),</span>
 <a id="__codelineno-10-22" name="__codelineno-10-22"></a>    <span class="n">migrations</span><span class="o">.</span><span class="n">CreateModel</span><span class="p">(</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23"></a>      <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Article&#39;</span><span class="p">,</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a>      <span class="n">name</span><span class="o">=</span><span class="s1">'Article'</span><span class="p">,</span>
 <a id="__codelineno-10-24" name="__codelineno-10-24"></a>      <span class="n">fields</span><span class="o">=</span><span class="p">[</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25"></a>          <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">serialize</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
-<a id="__codelineno-10-26" name="__codelineno-10-26"></a>          <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">120</span><span class="p">)),</span>
-<a id="__codelineno-10-27" name="__codelineno-10-27"></a>          <span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()),</span>
-<a id="__codelineno-10-28" name="__codelineno-10-28"></a>          <span class="p">(</span><span class="s1">&#39;publish_date&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()),</span>
-<a id="__codelineno-10-29" name="__codelineno-10-29"></a>          <span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">on_delete</span><span class="o">=</span><span class="n">django</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">deletion</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">&#39;article.User&#39;</span><span class="p">)),</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a>          <span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">serialize</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a>          <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">120</span><span class="p">)),</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a>          <span class="p">(</span><span class="s1">'content'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()),</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a>          <span class="p">(</span><span class="s1">'publish_date'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()),</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a>          <span class="p">(</span><span class="s1">'user'</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">on_delete</span><span class="o">=</span><span class="n">django</span><span class="o">.</span><span class="n">db</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">deletion</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s1">'article.User'</span><span class="p">)),</span>
 <a id="__codelineno-10-30" name="__codelineno-10-30"></a>      <span class="p">],</span>
 <a id="__codelineno-10-31" name="__codelineno-10-31"></a>    <span class="p">),</span>
 <a id="__codelineno-10-32" name="__codelineno-10-32"></a>  <span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article/admin.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article/admin.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
@@ -2408,26 +1252,26 @@
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">article.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span><span class="p">,</span><span class="n">Article</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3"></a>
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">UserAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="sd">"""</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="sd">  创建UserAdmin类，继承于admin.ModelAdmin</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="sd">  &quot;&quot;&quot;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="sd">  """</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8"></a>  <span class="c1">#  配置展示列表，在User版块下的列表展示</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a>  <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>  <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'username'</span><span class="p">,</span> <span class="s1">'email'</span><span class="p">)</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10"></a>  <span class="c1"># 配置过滤查询字段，在User版块下右侧过滤框</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a>  <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>  <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'username'</span><span class="p">,</span> <span class="s1">'email'</span><span class="p">)</span>
 <a id="__codelineno-12-12" name="__codelineno-12-12"></a>  <span class="c1"># 配置可以搜索的字段，在User版块下右侧搜索框</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a>  <span class="n">search_fields</span> <span class="o">=</span> <span class="p">([</span><span class="s1">&#39;username&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">])</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>  <span class="n">search_fields</span> <span class="o">=</span> <span class="p">([</span><span class="s1">'username'</span><span class="p">,</span><span class="s1">'email'</span><span class="p">])</span>
 <a id="__codelineno-12-14" name="__codelineno-12-14"></a>
 <a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="k">class</span><span class="w"> </span><span class="nc">ArticleAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">  </span><span class="sd">"""</span>
 <a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="sd">  创建UserAdmin类，继承于admin.ModelAdmin</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="sd">  &quot;&quot;&quot;</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="sd">  """</span>
 <a id="__codelineno-12-19" name="__codelineno-12-19"></a>  <span class="c1">#  配置展示列表，在User版块下的列表展示</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20"></a>  <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">,</span><span class="s1">&#39;publish_date&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a>  <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">,</span><span class="s1">'publish_date'</span><span class="p">)</span>
 <a id="__codelineno-12-21" name="__codelineno-12-21"></a>  <span class="c1"># 配置过滤查询字段，在User版块下右侧过滤框</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22"></a>  <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,)</span>  <span class="c1"># list_filter应该是列表或元组</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a>  <span class="n">list_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,)</span>  <span class="c1"># list_filter应该是列表或元组</span>
 <a id="__codelineno-12-23" name="__codelineno-12-23"></a>  <span class="c1"># 配置可以搜索的字段，在User版块下右侧搜索框</span>
-<a id="__codelineno-12-24" name="__codelineno-12-24"></a>  <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,)</span> <span class="c1"># search_fields应该是列表或元组</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a>  <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,)</span> <span class="c1"># search_fields应该是列表或元组</span>
 <a id="__codelineno-12-25" name="__codelineno-12-25"></a>
 <a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="c1"># 绑定User模型到UserAdmin管理后台</span>
 <a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">UserAdmin</span><span class="p">)</span>
@@ -2436,33 +1280,33 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="查看创建的数据表" src="assets/images/%E6%9F%A5%E7%9C%8B%E5%88%9B%E5%BB%BA%E7%9A%84%E6%95%B0%E6%8D%AE%E8%A1%A8.png" /></p>
+<p><img alt="查看创建的数据表" src="assets/images/%E6%9F%A5%E7%9C%8B%E5%88%9B%E5%BB%BA%E7%9A%84%E6%95%B0%E6%8D%AE%E8%A1%A8.png"/></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>shell
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>shell
 </code></pre></div></td></tr></table></div>
-<p><img alt="进入交互模式" src="assets/images/%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png" /></p>
+<p><img alt="进入交互模式" src="assets/images/%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="新增数据命令" src="assets/images/%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE%E5%91%BD%E4%BB%A4.png" /></p>
+<p><img alt="新增数据命令" src="assets/images/%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE%E5%91%BD%E4%BB%A4.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="新增数据效果" src="assets/images/%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE%E6%95%88%E6%9E%9C.png" /></p>
+<p><img alt="新增数据效果" src="assets/images/%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE%E6%95%88%E6%9E%9C.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="遍历User表中所有记录" src="assets/images/%E9%81%8D%E5%8E%86User%E8%A1%A8%E4%B8%AD%E6%89%80%E6%9C%89%E8%AE%B0%E5%BD%95.png" /></p>
+<p><img alt="遍历User表中所有记录" src="assets/images/%E9%81%8D%E5%8E%86User%E8%A1%A8%E4%B8%AD%E6%89%80%E6%9C%89%E8%AE%B0%E5%BD%95.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="修改user表记录" src="assets/images/%E4%BF%AE%E6%94%B9user%E8%A1%A8%E8%AE%B0%E5%BD%95.png" /></p>
+<p><img alt="修改user表记录" src="assets/images/%E4%BF%AE%E6%94%B9user%E8%A1%A8%E8%AE%B0%E5%BD%95.png"/></p>
 </div>
 </div>
-</div>
-<hr />
+</input></input></input></input></input></input></input></input></div>
+<hr/>
 <h2 id="85">8.5  管理后台</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:5"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">为Django项目管理员创建账户和密码</label><label for="__tabbed_5_2">Django项目后台登录页面</label><label for="__tabbed_5_3">Django项目后台管理界面</label><label for="__tabbed_5_4">后台配置模型</label><label for="__tabbed_5_5">新增文章</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:5"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><input id="__tabbed_5_3" name="__tabbed_5" type="radio"/><input id="__tabbed_5_4" name="__tabbed_5" type="radio"/><input id="__tabbed_5_5" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">为Django项目管理员创建账户和密码</label><label for="__tabbed_5_2">Django项目后台登录页面</label><label for="__tabbed_5_3">Django项目后台管理界面</label><label for="__tabbed_5_4">后台配置模型</label><label for="__tabbed_5_5">新增文章</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">cmd</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
 <span class="normal"><a href="#__codelineno-14-4">4</a></span>
@@ -2476,16 +1320,16 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="Django项目后台登录页面" src="assets/images/Django%E9%A1%B9%E7%9B%AE%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png" /></p>
+<p><img alt="Django项目后台登录页面" src="assets/images/Django%E9%A1%B9%E7%9B%AE%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="Django项目后台管理界面" src="assets/images/Django%E9%A1%B9%E7%9B%AE%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2.png" /></p>
+<p><img alt="Django项目后台管理界面" src="assets/images/Django%E9%A1%B9%E7%9B%AE%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="后台配置模型" src="assets/images/%E5%90%8E%E5%8F%B0%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9E%8B.png" /></p>
+<p><img alt="后台配置模型" src="assets/images/%E5%90%8E%E5%8F%B0%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9E%8B.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="新增文章" src="assets/images/%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0.png" /></p>
+<p><img alt="新增文章" src="assets/images/%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0.png"/></p>
 <blockquote>
 <p>说明：在新增文章页面，会显示User选项。因为一个用户可以发布多篇文章，而一篇文章只属于一个用户，所
 以User类和Article类是一对多的关系。在创建数据模型时，通过在Article类中设置“user = models.
@@ -2494,10 +1338,10 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 </div>
 </div>
 </div>
-<hr />
+<hr/>
 <h2 id="86">8.6  路由</h2>
 <p>URL是Web服务的入口，用户通过浏览器发送过来的任何请求，都会发送到指定的URL地址中，然后服务器会将响应返回给浏览器。路由（urls）就是用来处理URL和函数之间关系的调度器。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Django的路由流程</label><label for="__tabbed_6_2">路由表</label><label for="__tabbed_6_3">路由注册</label><label for="__tabbed_6_4">格式转换类型说明</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><input id="__tabbed_6_3" name="__tabbed_6" type="radio"/><input id="__tabbed_6_4" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Django的路由流程</label><label for="__tabbed_6_2">路由表</label><label for="__tabbed_6_3">路由注册</label><label for="__tabbed_6_4">格式转换类型说明</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -2516,7 +1360,7 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 </ol>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article/urls.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article/urls.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
@@ -2530,17 +1374,17 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">views</span>             <span class="c1"># 导入自定义的views模块</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a>
 <a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">article_list</span><span class="p">),</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&lt;int:year&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">year_archive</span><span class="p">),</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&lt;int:year&gt;/&lt;int:month&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">month_archive</span><span class="p">),</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&lt;int:year&gt;/&lt;int:month&gt;/&lt;slug:slug&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">article_detail</span><span class="p">),</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;current&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">get_current_datetime</span><span class="p">),</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">LoginFormView</span><span class="o">.</span><span class="n">as_view</span><span class="p">())</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">article_list</span><span class="p">),</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">'&lt;int:year&gt;/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">year_archive</span><span class="p">),</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">'&lt;int:year&gt;/&lt;int:month&gt;/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">month_archive</span><span class="p">),</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">'&lt;int:year&gt;/&lt;int:month&gt;/&lt;slug:slug&gt;/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">article_detail</span><span class="p">),</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">'current'</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">get_current_datetime</span><span class="p">),</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>  <span class="n">path</span><span class="p">(</span><span class="s1">'login'</span><span class="p">,</span><span class="n">views</span><span class="o">.</span><span class="n">LoginFormView</span><span class="o">.</span><span class="n">as_view</span><span class="p">())</span>
 <a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/blog/urls.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/blog/urls.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
@@ -2561,17 +1405,17 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 <a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">views</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a>
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;articles/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;article.urls&#39;</span><span class="p">)),</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a>    <span class="c1"># path(&#39;user/&#39;, include(&#39;user.urls&#39;)),</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a>    <span class="c1"># path(&#39;articles/&#39;, views.article_list),</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a>    <span class="c1"># path(&#39;articles/&lt;int:year&gt;/&#39;, views.year_archive),</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a>    <span class="c1"># path(&#39;articles/&lt;int:year&gt;/&lt;int:month&gt;/&#39;, views.month_archive),</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a>    <span class="c1"># path(&#39;articles/&lt;int:year&gt;/&lt;int:month&gt;/&lt;slug:slug&gt;/&#39;, views.article_detail),</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13"></a>    <span class="c1"># path(&#39;user/&lt;int:id&gt;/&#39;, views.userinfo),</span>
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a>    <span class="c1"># path(&#39;user/&lt;int:id&gt;/add/&#39;, views.user_add),</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15"></a>    <span class="c1"># path(&#39;user/&lt;int:id&gt;/update/&#39;, views.user_upade),</span>
-<a id="__codelineno-16-16" name="__codelineno-16-16"></a>    <span class="c1"># path(&#39;user/&lt;int:id&gt;/delete/&#39;, views.user_delete),</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'admin/'</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'articles/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">'article.urls'</span><span class="p">)),</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>    <span class="c1"># path('user/', include('user.urls')),</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>    <span class="c1"># path('articles/', views.article_list),</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>    <span class="c1"># path('articles/&lt;int:year&gt;/', views.year_archive),</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>    <span class="c1"># path('articles/&lt;int:year&gt;/&lt;int:month&gt;/', views.month_archive),</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>    <span class="c1"># path('articles/&lt;int:year&gt;/&lt;int:month&gt;/&lt;slug:slug&gt;/', views.article_detail),</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>    <span class="c1"># path('user/&lt;int:id&gt;/', views.userinfo),</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>    <span class="c1"># path('user/&lt;int:id&gt;/add/', views.user_add),</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a>    <span class="c1"># path('user/&lt;int:id&gt;/update/', views.user_upade),</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a>    <span class="c1"># path('user/&lt;int:id&gt;/delete/', views.user_delete),</span>
 <a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -2586,7 +1430,7 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 <tbody>
 <tr>
 <td>str</td>
-<td>匹配除分隔符（/）外的非空字符，默认类型<year>等价于<str:year></td>
+<td>匹配除分隔符（/）外的非空字符，默认类型<year>等价于<str:year></str:year></year></td>
 </tr>
 <tr>
 <td>int</td>
@@ -2609,13 +1453,13 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 </div>
 </div>
 </div>
-<hr />
+<hr/>
 <h2 id="87">8.7  视图</h2>
 <p>视图（views）函数（或类）简称视图，它是一个简单的Python函数（或类），接受request并且返回HttpResponse对象。根据视图函数的类型，Django视图可以分为FBV（基于函数的视图）和CBV（基于类的视图）。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">视图</label><label for="__tabbed_7_2">视图函数运行结果</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">视图</label><label for="__tabbed_7_2">视图函数运行结果</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article/views.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article/views.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
@@ -2683,73 +1527,73 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 <a id="__codelineno-17-7" name="__codelineno-17-7"></a>
 <a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">article_list</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
 <a id="__codelineno-17-9" name="__codelineno-17-9"></a>  <span class="n">articles</span> <span class="o">=</span> <span class="n">Article</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="c1"># 从Article表中获取数据</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a>  <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;article_list.html&#39;</span><span class="p">,{</span><span class="s2">&quot;articles&quot;</span><span class="p">:</span> <span class="n">articles</span><span class="p">})</span> <span class="c1"># 渲染模板</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>  <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">'article_list.html'</span><span class="p">,{</span><span class="s2">"articles"</span><span class="p">:</span> <span class="n">articles</span><span class="p">})</span> <span class="c1"># 渲染模板</span>
 <a id="__codelineno-17-11" name="__codelineno-17-11"></a>
 <a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">year_archive</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">year</span><span class="p">):</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;year_archive函数接受参数year:</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">'year_archive函数接受参数year:</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <a id="__codelineno-17-14" name="__codelineno-17-14"></a>
 <a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">month_archive</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">month</span><span class="p">):</span>
-<a id="__codelineno-17-16" name="__codelineno-17-16"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;month_archive函数接受参数year:</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">,month:</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">'month_archive函数接受参数year:</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">,month:</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <a id="__codelineno-17-17" name="__codelineno-17-17"></a>
 <a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="k">def</span><span class="w"> </span><span class="nf">article_detail</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">month</span><span class="p">,</span><span class="n">slug</span><span class="p">):</span>
-<a id="__codelineno-17-19" name="__codelineno-17-19"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;article_detail函数接受参数year:</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">,month:</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1">,slug:</span><span class="si">{</span><span class="n">slug</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">'article_detail函数接受参数year:</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">,month:</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s1">,slug:</span><span class="si">{</span><span class="n">slug</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <a id="__codelineno-17-20" name="__codelineno-17-20"></a>
 <a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="k">def</span><span class="w"> </span><span class="nf">article_re</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">year</span><span class="p">):</span>
-<a id="__codelineno-17-22" name="__codelineno-17-22"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;正则表单式year is</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s2">"正则表单式year is</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <a id="__codelineno-17-23" name="__codelineno-17-23"></a>
 <a id="__codelineno-17-24" name="__codelineno-17-24"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_current_datetime</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  <span class="c1"># 定义一个视图方法，必须带有请求对象作为参数</span>
 <a id="__codelineno-17-25" name="__codelineno-17-25"></a>  <span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>    <span class="c1"># 请求的时间</span>
-<a id="__codelineno-17-26" name="__codelineno-17-26"></a>  <span class="n">formatted_today</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-<a id="__codelineno-17-27" name="__codelineno-17-27"></a>  <span class="n">html</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&lt;html&gt;&lt;body&gt;今天是</span><span class="si">{</span><span class="n">formatted_today</span><span class="si">}</span><span class="s2">&lt;/body&gt;&lt;/html&gt;&quot;</span> <span class="c1"># 生成html代码</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a>  <span class="n">formatted_today</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a>  <span class="n">html</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"&lt;html&gt;&lt;body&gt;今天是</span><span class="si">{</span><span class="n">formatted_today</span><span class="si">}</span><span class="s2">&lt;/body&gt;&lt;/html&gt;"</span> <span class="c1"># 生成html代码</span>
 <a id="__codelineno-17-28" name="__codelineno-17-28"></a>  <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>   <span class="c1"># 将响应对象返回，数据为生成的html代码</span>
 <a id="__codelineno-17-29" name="__codelineno-17-29"></a>
 <a id="__codelineno-17-30" name="__codelineno-17-30"></a>
 <a id="__codelineno-17-31" name="__codelineno-17-31"></a><span class="k">class</span><span class="w"> </span><span class="nc">ArticleForm</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
 <a id="__codelineno-17-32" name="__codelineno-17-32"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># 定义GET请求的方法</span>
-<a id="__codelineno-17-33" name="__codelineno-17-33"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&quot;返回get请求响应&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">"返回get请求响应"</span><span class="p">)</span>
 <a id="__codelineno-17-34" name="__codelineno-17-34"></a>
 <a id="__codelineno-17-35" name="__codelineno-17-35"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># 定义POST请求的方法</span>
-<a id="__codelineno-17-36" name="__codelineno-17-36"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&quot;返回post请求响应&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-36" name="__codelineno-17-36"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">"返回post请求响应"</span><span class="p">)</span>
 <a id="__codelineno-17-37" name="__codelineno-17-37"></a>
 <a id="__codelineno-17-38" name="__codelineno-17-38"></a><span class="k">class</span><span class="w"> </span><span class="nc">LoginFormView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
 <a id="__codelineno-17-39" name="__codelineno-17-39"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">request</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a id="__codelineno-17-40" name="__codelineno-17-40"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-17-40" name="__codelineno-17-40"></a><span class="w">    </span><span class="sd">"""</span>
 <a id="__codelineno-17-41" name="__codelineno-17-41"></a><span class="sd">    定义GET请求的方法GET请求</span>
-<a id="__codelineno-17-42" name="__codelineno-17-42"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-17-43" name="__codelineno-17-43"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;login.html&#39;</span><span class="p">,{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span><span class="n">LoginForm</span><span class="p">()})</span>
+<a id="__codelineno-17-42" name="__codelineno-17-42"></a><span class="sd">    """</span>
+<a id="__codelineno-17-43" name="__codelineno-17-43"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">'login.html'</span><span class="p">,{</span><span class="s1">'form'</span><span class="p">:</span><span class="n">LoginForm</span><span class="p">()})</span>
 <a id="__codelineno-17-44" name="__codelineno-17-44"></a>
 <a id="__codelineno-17-45" name="__codelineno-17-45"></a>  <span class="k">def</span><span class="w"> </span><span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">request</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a id="__codelineno-17-46" name="__codelineno-17-46"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-17-46" name="__codelineno-17-46"></a><span class="w">    </span><span class="sd">"""</span>
 <a id="__codelineno-17-47" name="__codelineno-17-47"></a><span class="sd">    定义POST请求的方法GET请求</span>
-<a id="__codelineno-17-48" name="__codelineno-17-48"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-17-48" name="__codelineno-17-48"></a><span class="sd">    """</span>
 <a id="__codelineno-17-49" name="__codelineno-17-49"></a>    <span class="c1"># 将请求数据填充到LoginForm实例中</span>
 <a id="__codelineno-17-50" name="__codelineno-17-50"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">LoginForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
 <a id="__codelineno-17-51" name="__codelineno-17-51"></a>    <span class="c1"># 判断是否为有效表单</span>
 <a id="__codelineno-17-52" name="__codelineno-17-52"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
 <a id="__codelineno-17-53" name="__codelineno-17-53"></a>      <span class="c1"># 使用form.cleaned_data获取请求的数据</span>
-<a id="__codelineno-17-54" name="__codelineno-17-54"></a>      <span class="n">username</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
-<a id="__codelineno-17-55" name="__codelineno-17-55"></a>      <span class="n">email</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span>
+<a id="__codelineno-17-54" name="__codelineno-17-54"></a>      <span class="n">username</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">'username'</span><span class="p">]</span>
+<a id="__codelineno-17-55" name="__codelineno-17-55"></a>      <span class="n">email</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span>
 <a id="__codelineno-17-56" name="__codelineno-17-56"></a>      <span class="c1"># 页面跳转至欢迎页</span>
-<a id="__codelineno-17-57" name="__codelineno-17-57"></a>      <span class="c1"># return HttpResponseRedirect(&#39;/articles/welcome&#39;,username=username)</span>
-<a id="__codelineno-17-58" name="__codelineno-17-58"></a>      <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;用户名:</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s1"> ，邮箱:</span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-57" name="__codelineno-17-57"></a>      <span class="c1"># return HttpResponseRedirect('/articles/welcome',username=username)</span>
+<a id="__codelineno-17-58" name="__codelineno-17-58"></a>      <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="s1">'用户名:</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s1"> ，邮箱:</span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <a id="__codelineno-17-59" name="__codelineno-17-59"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-17-60" name="__codelineno-17-60"></a>      <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;login.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">})</span>
+<a id="__codelineno-17-60" name="__codelineno-17-60"></a>      <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'login.html'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'form'</span><span class="p">:</span> <span class="n">form</span><span class="p">})</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="视图函数运行结果" src="assets/images/%E8%A7%86%E5%9B%BE%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" /></p>
+<p><img alt="视图函数运行结果" src="assets/images/%E8%A7%86%E5%9B%BE%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png"/></p>
 </div>
 </div>
 </div>
-<hr />
+<hr/>
 <h2 id="88-django">8.8  Django模板</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:5"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><input id="__tabbed_8_4" name="__tabbed_8" type="radio" /><input id="__tabbed_8_5" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">后台添加文章内容数据</label><label for="__tabbed_8_2">目录结构</label><label for="__tabbed_8_3">Django模板引擎中的标签及说明</label><label for="__tabbed_8_4">图书列表页</label><label for="__tabbed_8_5">图书列表页效果</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:5"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><input id="__tabbed_8_3" name="__tabbed_8" type="radio"/><input id="__tabbed_8_4" name="__tabbed_8" type="radio"/><input id="__tabbed_8_5" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">后台添加文章内容数据</label><label for="__tabbed_8_2">目录结构</label><label for="__tabbed_8_3">Django模板引擎中的标签及说明</label><label for="__tabbed_8_4">图书列表页</label><label for="__tabbed_8_5">图书列表页效果</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="后台添加文章内容数据" src="assets/images/%E5%90%8E%E5%8F%B0%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9%E6%95%B0%E6%8D%AE.png" /></p>
+<p><img alt="后台添加文章内容数据" src="assets/images/%E5%90%8E%E5%8F%B0%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9%E6%95%B0%E6%8D%AE.png"/></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">目录结构</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">目录结构</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
@@ -2835,7 +1679,7 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article/templates/article_list.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article/templates/article_list.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
@@ -2861,12 +1705,12 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 <span class="normal"><a href="#__codelineno-19-24">24</a></span>
 <span class="normal"><a href="#__codelineno-19-25">25</a></span>
 <span class="normal"><a href="#__codelineno-19-26">26</a></span>
-<span class="normal"><a href="#__codelineno-19-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-19-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">"base.html"</span> <span class="o">%</span><span class="p">}</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">title</span> <span class="o">%</span><span class="p">}</span><span class="n">文章列表</span><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
 <a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">content</span> <span class="o">%</span><span class="p">}</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;margin-top:20px&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"margin-top:20px"</span><span class="o">&gt;</span>
 <a id="__codelineno-19-5" name="__codelineno-19-5"></a>  <span class="o">&lt;</span><span class="n">h3</span><span class="o">&gt;</span><span class="n">文章列表</span><span class="o">&lt;/</span><span class="n">h3</span><span class="o">&gt;</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6"></a>  <span class="o">&lt;</span><span class="n">table</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;table table-bordered &quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>  <span class="o">&lt;</span><span class="n">table</span> <span class="n">class</span><span class="o">=</span><span class="s2">"table table-bordered "</span><span class="o">&gt;</span>
 <a id="__codelineno-19-7" name="__codelineno-19-7"></a>    <span class="o">&lt;</span><span class="n">thead</span><span class="o">&gt;</span>
 <a id="__codelineno-19-8" name="__codelineno-19-8"></a>      <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
 <a id="__codelineno-19-9" name="__codelineno-19-9"></a>        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">文章ID</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
@@ -2881,7 +1725,7 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 <a id="__codelineno-19-18" name="__codelineno-19-18"></a>        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">article</span><span class="o">.</span><span class="n">id</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
 <a id="__codelineno-19-19" name="__codelineno-19-19"></a>        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">article</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
 <a id="__codelineno-19-20" name="__codelineno-19-20"></a>        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">article</span><span class="o">.</span><span class="n">title</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-<a id="__codelineno-19-21" name="__codelineno-19-21"></a>        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">article</span><span class="o">.</span><span class="n">publish_date</span> <span class="o">|</span> <span class="n">date</span><span class="p">:</span><span class="s1">&#39;Y-m-d&#39;</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
+<a id="__codelineno-19-21" name="__codelineno-19-21"></a>        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">article</span><span class="o">.</span><span class="n">publish_date</span> <span class="o">|</span> <span class="n">date</span><span class="p">:</span><span class="s1">'Y-m-d'</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
 <a id="__codelineno-19-22" name="__codelineno-19-22"></a>      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
 <a id="__codelineno-19-23" name="__codelineno-19-23"></a>      <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
 <a id="__codelineno-19-24" name="__codelineno-19-24"></a>    <span class="o">&lt;/</span><span class="n">tbody</span><span class="o">&gt;</span>
@@ -2891,17 +1735,17 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="图书列表页效果" src="assets/images/%E5%9B%BE%E4%B9%A6%E5%88%97%E8%A1%A8%E9%A1%B5%E6%95%88%E6%9E%9C.png" /></p>
+<p><img alt="图书列表页效果" src="assets/images/%E5%9B%BE%E4%B9%A6%E5%88%97%E8%A1%A8%E9%A1%B5%E6%95%88%E6%9E%9C.png"/></p>
 </div>
 </div>
 </div>
-<hr />
+<hr/>
 <h2 id="89">8.9  表单</h2>
 <p>Web开发过程中，经常使用HTML表单（forms）来实现服务器与用户之间的交互功能。通常的流程是在模板中编写HTML表单页面，然后提交表单到视图函数，接下来在视图函数中对表单数据进行验证。编写数据验证规则是一个很麻烦的过程。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">登录页面</label><label for="__tabbed_9_2">在Django项目中创建表单</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">登录页面</label><label for="__tabbed_9_2">在Django项目中创建表单</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">blog/article/templates/login.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">blog/article/templates/login.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
@@ -2925,101 +1769,73 @@ ForeignKey(User, on_delete=models.CASCADE)”，即可实现模型的一对多�
 <span class="normal"><a href="#__codelineno-20-22">22</a></span>
 <span class="normal"><a href="#__codelineno-20-23">23</a></span>
 <span class="normal"><a href="#__codelineno-20-24">24</a></span>
-<span class="normal"><a href="#__codelineno-20-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-20-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">"base.html"</span> <span class="o">%</span><span class="p">}</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">title</span> <span class="o">%</span><span class="p">}</span><span class="n">登录页面</span><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">content</span> <span class="o">%</span><span class="p">}</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="o">&lt;</span><span class="n">style</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/css&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="o">&lt;</span><span class="n">style</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text/css"</span><span class="o">&gt;</span>
 <a id="__codelineno-20-5" name="__codelineno-20-5"></a>  <span class="o">.</span><span class="n">errorlist</span> <span class="p">{</span>
 <a id="__codelineno-20-6" name="__codelineno-20-6"></a>    <span class="n">color</span><span class="p">:</span> <span class="n">red</span>
 <a id="__codelineno-20-7" name="__codelineno-20-7"></a>  <span class="p">}</span>
 <a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;container&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;margin-top:50px&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10"></a>  <span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"container"</span> <span class="n">style</span><span class="o">=</span><span class="s2">"margin-top:50px"</span><span class="o">&gt;</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a>  <span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">""</span> <span class="n">method</span><span class="o">=</span><span class="s2">"post"</span><span class="o">&gt;</span>
 <a id="__codelineno-20-11" name="__codelineno-20-11"></a>    <span class="p">{</span><span class="o">%</span> <span class="n">csrf_token</span> <span class="o">%</span><span class="p">}</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12"></a>    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;form-group&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a>    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"form-group"</span><span class="o">&gt;</span>
 <a id="__codelineno-20-13" name="__codelineno-20-13"></a>      <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">username</span><span class="o">.</span><span class="n">label</span> <span class="p">}}:</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
 <a id="__codelineno-20-14" name="__codelineno-20-14"></a>      <span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">username</span> <span class="p">}}</span>
 <a id="__codelineno-20-15" name="__codelineno-20-15"></a>      <span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">username</span><span class="o">.</span><span class="n">errors</span> <span class="p">}}</span>
 <a id="__codelineno-20-16" name="__codelineno-20-16"></a>    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-<a id="__codelineno-20-17" name="__codelineno-20-17"></a>    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;form-group&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17"></a>    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"form-group"</span><span class="o">&gt;</span>
 <a id="__codelineno-20-18" name="__codelineno-20-18"></a>      <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">label</span> <span class="p">}}:</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
 <a id="__codelineno-20-19" name="__codelineno-20-19"></a>      <span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">email</span> <span class="p">}}</span>
 <a id="__codelineno-20-20" name="__codelineno-20-20"></a>      <span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">errors</span> <span class="p">}}</span>
 <a id="__codelineno-20-21" name="__codelineno-20-21"></a>    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-<a id="__codelineno-20-22" name="__codelineno-20-22"></a>    <span class="o">&lt;</span><span class="n">button</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span><span class="o">&gt;</span><span class="n">提交</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+<a id="__codelineno-20-22" name="__codelineno-20-22"></a>    <span class="o">&lt;</span><span class="n">button</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"submit"</span> <span class="n">class</span><span class="o">=</span><span class="s2">"btn btn-primary"</span><span class="o">&gt;</span><span class="n">提交</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
 <a id="__codelineno-20-23" name="__codelineno-20-23"></a>  <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
 <a id="__codelineno-20-24" name="__codelineno-20-24"></a><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
 <a id="__codelineno-20-25" name="__codelineno-20-25"></a><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p><img alt="在Django项目中创建表单" src="assets/images/%E5%9C%A8Django%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95.png" /></p>
+<p><img alt="在Django项目中创建表单" src="assets/images/%E5%9C%A8Django%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95.png"/></p>
 </div>
 </div>
 </div>
-<hr />
+<hr/>
 <h2 id="810">8.10  小结</h2>
 <p>本章主要介绍了Django 3.0框架的基础知识，并从实际应用出发，完成了一个简单的应用。首先介绍了Django 3.0框架的新特性，然后安装Django 3.0框架；接下来创建项目、创建应用，并根据MVC模型展开介绍Django框架，包括创建模型、创建路由和创建视图；最后完成一个简单的Web表单应用。</p>
-<hr />
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
+<hr/>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../../../js/mermaid.min.js"></script>
+<script src="../../../js/init_mermaid.js"></script>
+</body>
 </html>

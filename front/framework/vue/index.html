@@ -1,2291 +1,1046 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-        <link rel="prev" href="../bootstrap/index.html">
-      
-      
-        <link rel="next" href="../element/index.html">
-      
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
-    
-    
-      
-        <title>Vue.js - 基于WEB的应用程序开发</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
-      
-        
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
-      
-      
+<!DOCTYPE html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
-    
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#vuejs" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../bootstrap/index.html" rel="prev"/>
+<link href="../element/index.html" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.10" name="generator"/>
+<title>Vue.js - 基于WEB的应用程序开发</title>
+<link href="../../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#vuejs">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../index.html" title="基于WEB的应用程序开发" class="md-header__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="基于WEB的应用程序开发" class="md-header__button md-logo" data-md-component="logo" href="../../../index.html" title="基于WEB的应用程序开发">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             基于WEB的应用程序开发
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Vue.js
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="日间模式"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="日间模式" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="夜间模式"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="夜间模式" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="浅色" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="浅色">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+<input aria-label="深色" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="深色">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
 </form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-    
-    
-  </nav>
-  
+</div>
+</div>
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../index.html">
         
   
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../index.html" class="md-tabs__link">
-        
   
     
   
   首页
 
       </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../introduction/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../introduction/index.html">
           
+  
   
   简介
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../html/syllabus/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../html/syllabus/index.html">
           
+  
   
   前端-基础
 
         </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../jquery/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../jquery/index.html">
           
+  
   
   前端-框架
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../back/java/jsp/basic/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../back/java/jsp/basic/index.html">
           
+  
   
   后端-JSP
 
         </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../back/java/framework/mvc/index.html" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../back/java/framework/mvc/index.html">
           
+  
   
   后端-框架
 
         </a>
-      </li>
-    
-  
-
-      
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../introduction/syllabus/index.html">
         
   
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../introduction/syllabus/index.html" class="md-tabs__link">
-        
   
     
   
   大纲
 
       </a>
-    </li>
-  
-
-      
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../introduction/kownledge_graph/index.html">
         
   
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../introduction/kownledge_graph/index.html" class="md-tabs__link">
-        
   
     
   
   知识图谱
 
       </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
+</li>
+</ul>
+</div>
 </nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../../index.html" title="基于WEB的应用程序开发" class="md-nav__button md-logo" aria-label="基于WEB的应用程序开发" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="基于WEB的应用程序开发" class="md-nav__button md-logo" data-md-component="logo" href="../../../index.html" title="基于WEB的应用程序开发">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
     基于WEB的应用程序开发
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../index.html">
+<span class="md-ellipsis">
     首页
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
     简介
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             简介
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/index.html">
+<span class="md-ellipsis">
     基本信息
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/hello/java/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/hello/java/index.html">
+<span class="md-ellipsis">
     Hello World-Java
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/http/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/http/index.html">
+<span class="md-ellipsis">
     HTTP协议
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
     前端-基础
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
             前端-基础
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
     Html
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
             Html
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../html/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../html/syllabus/index.html">
+<span class="md-ellipsis">
     目标
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../html/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../html/%E7%AE%80%E4%BB%8B/index.html">
+<span class="md-ellipsis">
     简介
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../html/%E6%A0%87%E7%AD%BE/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../html/%E6%A0%87%E7%AD%BE/index.html">
+<span class="md-ellipsis">
     常见标签
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../html/case/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../html/case/index.html">
+<span class="md-ellipsis">
     综合案例
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
     CSS
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
             CSS
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../css/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../css/syllabus/index.html">
+<span class="md-ellipsis">
     目标
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../css/%E7%AE%80%E4%BB%8B/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../css/%E7%AE%80%E4%BB%8B/index.html">
+<span class="md-ellipsis">
     简介
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html">
+<span class="md-ellipsis">
     常见样式属性
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html">
+<span class="md-ellipsis">
     应用方式
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../css/case/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../css/case/index.html">
+<span class="md-ellipsis">
     综合案例
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
     Javascript
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
             Javascript
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/syllabus/index.html">
+<span class="md-ellipsis">
     目标
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/gramma/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/gramma/index.html">
+<span class="md-ellipsis">
     基本语法
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+<span class="md-ellipsis">
     DOM编程
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_3">
+<span class="md-nav__icon md-icon"></span>
             DOM编程
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/dom/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/dom/index.html">
+<span class="md-ellipsis">
     DOM模型
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/dom/window/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/dom/window/index.html">
+<span class="md-ellipsis">
     Window
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/dom/document/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/dom/document/index.html">
+<span class="md-ellipsis">
     Document
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/dom/special/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/dom/special/index.html">
+<span class="md-ellipsis">
     特效
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/dom/validation/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/dom/validation/index.html">
+<span class="md-ellipsis">
     表单验证
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+<span class="md-ellipsis">
     进阶
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_4">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_4">
+<span class="md-nav__icon md-icon"></span>
             进阶
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/advanced/canvas/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/advanced/canvas/index.html">
+<span class="md-ellipsis">
     画图
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/advanced/regular/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/advanced/regular/index.html">
+<span class="md-ellipsis">
     正则表达式
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/advanced/json/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/advanced/json/index.html">
+<span class="md-ellipsis">
     JSON
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../js/advanced/ajax/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../js/advanced/ajax/index.html">
+<span class="md-ellipsis">
     Ajax
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
     前端-框架
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
             前端-框架
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jquery/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../jquery/index.html">
+<span class="md-ellipsis">
     jQuery
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bootstrap/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../bootstrap/index.html">
+<span class="md-ellipsis">
     Bootstrap
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     Vue.js
     
   </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="index.html">
+<span class="md-ellipsis">
     Vue.js
     
   </span>
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label=" ">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-       
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label=" " class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#javascript">
+<span class="md-ellipsis">
       Javascript开发常见需求
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mvvm" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mvvm">
+<span class="md-ellipsis">
       MVVM模式
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
       数据驱动和组件式编程
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="数据驱动和组件式编程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="数据驱动和组件式编程" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
       数据驱动
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       组件式编程
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="组件式编程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="组件式编程" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
       组件理解
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#hello-vue" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hello-vue">
+<span class="md-ellipsis">
       Hello Vue
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       生命周期
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api">
+<span class="md-ellipsis">
       API风格
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
       模板语法
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vuejs_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vuejs_1">
+<span class="md-ellipsis">
       Vue.js常用指令
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
       组件化应用构建
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
       风格指南
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vuejs_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vuejs_2">
+<span class="md-ellipsis">
       Vue.js快速起步
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vuejs_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vuejs_3">
+<span class="md-ellipsis">
       Vue.js目录结构
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
       不同技术选型对比
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../element/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../element/index.html">
+<span class="md-ellipsis">
     Element+
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
     后端-JSP
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
             后端-JSP
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/jsp/basic/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/jsp/basic/index.html">
+<span class="md-ellipsis">
     JSP简介
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/jsp/implicit%20object/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/jsp/implicit%20object/index.html">
+<span class="md-ellipsis">
     内置对象
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/jsp/jdbc/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/jsp/jdbc/index.html">
+<span class="md-ellipsis">
     JDBC
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/jsp/java%20bean/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/jsp/java%20bean/index.html">
+<span class="md-ellipsis">
     Java Bean
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/jsp/servlet/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/jsp/servlet/index.html">
+<span class="md-ellipsis">
     Servlet
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/jsp/filter/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/jsp/filter/index.html">
+<span class="md-ellipsis">
     过滤器
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
     后端-框架
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
             后端-框架
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/mvc/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/mvc/index.html">
+<span class="md-ellipsis">
     MVC设计模式
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/spring%20boot/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/spring%20boot/index.html">
+<span class="md-ellipsis">
     Spring Boot
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/maven/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/maven/index.html">
+<span class="md-ellipsis">
     Maven
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/spring%20mvc/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/spring%20mvc/index.html">
+<span class="md-ellipsis">
     Spring MVC
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/freemarker/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/freemarker/index.html">
+<span class="md-ellipsis">
     Freemarker
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/spring/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/spring/index.html">
+<span class="md-ellipsis">
     Spring
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/mybatis/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/mybatis/index.html">
+<span class="md-ellipsis">
     MyBatis
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+<span class="md-ellipsis">
     操作指南
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_8">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_8">
+<span class="md-nav__icon md-icon"></span>
             操作指南
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../back/java/framework/guide/remote%20repo/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../back/java/framework/guide/remote%20repo/index.html">
+<span class="md-ellipsis">
     修改远程仓库地址
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/syllabus/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/syllabus/index.html">
+<span class="md-ellipsis">
     大纲
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../introduction/kownledge_graph/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../introduction/kownledge_graph/index.html">
+<span class="md-ellipsis">
     知识图谱
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label=" ">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-       
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    <span class="md-ellipsis">
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label=" " class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#javascript">
+<span class="md-ellipsis">
       Javascript开发常见需求
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mvvm" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mvvm">
+<span class="md-ellipsis">
       MVVM模式
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
       数据驱动和组件式编程
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="数据驱动和组件式编程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="数据驱动和组件式编程" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
       数据驱动
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       组件式编程
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="组件式编程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="组件式编程" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
       组件理解
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#hello-vue" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hello-vue">
+<span class="md-ellipsis">
       Hello Vue
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       生命周期
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api">
+<span class="md-ellipsis">
       API风格
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
       模板语法
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vuejs_1" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vuejs_1">
+<span class="md-ellipsis">
       Vue.js常用指令
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
       组件化应用构建
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
       风格指南
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vuejs_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vuejs_2">
+<span class="md-ellipsis">
       Vue.js快速起步
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vuejs_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vuejs_3">
+<span class="md-ellipsis">
       Vue.js目录结构
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+<span class="md-ellipsis">
       不同技术选型对比
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="vuejs">Vue.js</h1>
 <blockquote>
 <p>https://cn.vuejs.org/</p>
 </blockquote>
-<p><img alt="evan" src="img/evan%20you.png" /></p>
+<p><img alt="evan" src="img/evan%20you.png"/></p>
 <h2 id="javascript">Javascript开发常见需求</h2>
 <p>MVVM</p>
 <p>组件</p>
-<hr />
+<hr/>
 <h2 id="mvvm">MVVM模式</h2>
 <p>Vue.js，Angular.js，React.js，Ember.js</p>
-<p><img alt="mvvm" src="img/mvvm.png" /></p>
-<p><img alt="mvvm-1" src="img/mvvm-1.png" /></p>
-<hr />
+<p><img alt="mvvm" src="img/mvvm.png"/></p>
+<p><img alt="mvvm-1" src="img/mvvm-1.png"/></p>
+<hr/>
 <h2 id="_1">数据驱动和组件式编程</h2>
 <h3 id="_2">数据驱动</h3>
-<p><img alt="data driven" src="img/data%20driven.png" /></p>
-<hr />
+<p><img alt="data driven" src="img/data%20driven.png"/></p>
+<hr/>
 <h3 id="_3">组件式编程</h3>
-<p><img alt="component" src="img/component.png" /></p>
+<p><img alt="component" src="img/component.png"/></p>
 <p>这个理念不是来源于vue, 把web组件式开发发扬光大的应该是react了,组件开发是一种朴素的开发思想,分而治之,大型系统拆分成一个个的小模块小组件,分配给不同的人。额外的好处是顺便能复用这个组件。</p>
-<hr />
+<hr/>
 <h4 id="_4">组件理解</h4>
 <p>理解组件的思想可以类比函数。一个函数包含哪些东西呢？</p>
 <ol>
@@ -2329,12 +1084,12 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr/>
 <h2 id="hello-vue">Hello Vue</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label><label for="__tabbed_1_2">程序结构</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label><label for="__tabbed_1_2">程序结构</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><iframe src="./src/hello_world.html" frameborder="0" width="100%" height="50"></iframe>
+<p><iframe frameborder="0" height="50" src="./src/hello_world.html" width="100%"></iframe>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -2351,10 +1106,10 @@
 <span class="normal"><a href="#__codelineno-0-14">14</a></span>
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
 <span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;vue.global.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"vue.global.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cm">&lt;!-- 定义View --&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"app"</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Vue</span>
@@ -2363,10 +1118,10 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="nx">createApp</span><span class="p">({</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="c1">//定义Model</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hello Vue!&#39;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">'Hello Vue!'</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span><span class="c1">//绑定</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="s1">'#app'</span><span class="p">)</span><span class="c1">//绑定</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
@@ -2388,19 +1143,19 @@
 Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使用一对大括号语法，在运行时{{ message }}会被数据对象的message属性替换，所以页面上会输出"Hello World!"。</p>
 </div>
 </div>
-</div>
-<hr />
+</input></input></div>
+<hr/>
 <h2 id="_5">生命周期</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">生命周期</label><label for="__tabbed_2_2">主要阶段</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">生命周期</label><label for="__tabbed_2_2">主要阶段</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><div style="display:flex;">
-  <div style="width:50%;">
-    <img src="./img/life1.png"/>
-  </div>
-  <div style="width:50%;">
-    <img src="./img/life2.png"/>
-  </div>
+<div style="width:50%;">
+<img src="./img/life1.png"/>
+</div>
+<div style="width:50%;">
+<img src="./img/life2.png"/>
+</div>
 </div></p>
 </div>
 <div class="tabbed-block">
@@ -2435,10 +1190,10 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 </ol>
 </div>
 </div>
-</div>
-<hr />
+</input></input></div>
+<hr/>
 <h2 id="api">API风格</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">选项式 API (Options API)</label><label for="__tabbed_3_2">组合式 API (Composition API)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">选项式 API (Options API)</label><label for="__tabbed_3_2">组合式 API (Composition API)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -2498,7 +1253,7 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="p">}</span>
 <a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;increment&quot;</span><span class="p">&gt;</span>Count is: {{ count }}<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">"increment"</span><span class="p">&gt;</span>Count is: {{ count }}<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
@@ -2527,7 +1282,7 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
 <span class="normal"><a href="#__codelineno-2-15">15</a></span>
 <span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">setup</span><span class="p">&gt;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ref</span><span class="p">,</span><span class="w"> </span><span class="nx">onMounted</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ref</span><span class="p">,</span><span class="w"> </span><span class="nx">onMounted</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'vue'</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// 响应式状态</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1">// 用来修改状态、触发更新的函数</span>
@@ -2540,16 +1295,16 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">})</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;increment&quot;</span><span class="p">&gt;</span>Count is: {{ count }}<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">"increment"</span><span class="p">&gt;</span>Count is: {{ count }}<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
-<hr />
+</input></input></div>
+<hr/>
 <h2 id="_6">模板语法</h2>
 <p>Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。所有 Vue.js 的模板都是合法的 HTML，所以能被遵循规范的浏览器和 HTML 解析器解析</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">插值</label><label for="__tabbed_4_2">指令</label><label for="__tabbed_4_3">缩写</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">插值</label><label for="__tabbed_4_2">指令</label><label for="__tabbed_4_3">缩写</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -2637,11 +1392,11 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 </ul>
 </div>
 </div>
-</div>
-<hr />
+</input></input></input></div>
+<hr/>
 <h2 id="vuejs_1">Vue.js常用指令</h2>
-<p><img alt="command" src="img/command.png" /></p>
-<hr />
+<p><img alt="command" src="img/command.png"/></p>
+<hr/>
 <h2 id="_7">组件化应用构建</h2>
 <p><strong>全局注册</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -2653,11 +1408,11 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'vue'</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createApp</span><span class="p">({})</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nx">app</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="c1">// 注册的名字</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="s1">&#39;MyComponent&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="s1">'MyComponent'</span><span class="p">,</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="c1">// 组件的实现</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">  </span><span class="p">{</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="cm">/* ... */</span>
@@ -2671,22 +1426,22 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
 <span class="normal"><a href="#__codelineno-4-5">5</a></span>
 <span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="o">&lt;</span><span class="nx">script</span><span class="w"> </span><span class="nx">setup</span><span class="o">&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ComponentA</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./ComponentA.vue&#39;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ComponentA</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./ComponentA.vue'</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="o">&lt;</span><span class="err">/script&gt;</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">ComponentA</span><span class="w"> </span><span class="o">/&gt;</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="o">&lt;</span><span class="err">/template&gt;</span>
 </code></pre></div></td></tr></table></div>
-<hr />
+<hr/>
 <h2 id="_8">风格指南</h2>
 <blockquote>
 <p><a href="https://cn.vuejs.org/v2/style-guide/">https://cn.vuejs.org/v2/style-guide/</a></p>
 </blockquote>
 <p><strong>组件名为多个单词</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;todo-item&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">            </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;todo&#39;</span><span class="p">],</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">            </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;li&gt;{{ todo.text }}&lt;/li&gt;&#39;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="s1">'todo-item'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">            </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'todo'</span><span class="p">],</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">            </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="s1">'&lt;li&gt;{{ todo.text }}&lt;/li&gt;'</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">})</span>
 </code></pre></div>
 <p><strong>单文件组件文件的大小写</strong></p>
 <ul>
@@ -2697,7 +1452,7 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <p>要么始终是横线连接 (kebab-case)</p>
 </li>
 </ul>
-<hr />
+<hr/>
 <h2 id="vuejs_2">Vue.js快速起步</h2>
 <blockquote>
 <p><a href="https://cn.vuejs.org/guide/quick-start.html">https://cn.vuejs.org/guide/quick-start.html</a></p>
@@ -2756,7 +1511,7 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a>cnpm<span class="w"> </span>install<span class="w">    </span>//安装依赖
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a>cnpm<span class="w"> </span>run<span class="w"> </span>dev<span class="w">    </span>//运行
 </code></pre></div></td></tr></table></div>
-<hr />
+<hr/>
 <h2 id="vuejs_3">Vue.js目录结构</h2>
 <table>
 <thead>
@@ -2820,13 +1575,13 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 </tr>
 </tbody>
 </table>
-<hr />
+<hr/>
 <h2 id="_9">不同技术选型对比</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">纯Javascript</label><label for="__tabbed_5_2">Vue.js</label><label for="__tabbed_5_3">Vuetify.js</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">纯Javascript</label><label for="__tabbed_5_2">Vue.js</label><label for="__tabbed_5_3">Vuetify.js</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><iframe src="./src/js-version.html" frameborder="0" width="100%" height="400"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">js-version.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">  1</a></span>
+<p><iframe frameborder="0" height="400" src="./src/js-version.html" width="100%"></iframe>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js-version.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-7-4">  4</a></span>
@@ -2937,32 +1692,32 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <span class="normal"><a href="#__codelineno-7-109">109</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;onInput()&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">"onInput()"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"app"</span><span class="p">&gt;</span>
 <a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>数据的双向绑定示例：加法器----js的实现<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span><span class="p">&gt;</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>数1：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;d1&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">onchange</span><span class="o">=</span><span class="s">&quot;onInput()&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"d1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">onchange</span><span class="o">=</span><span class="s">"onInput()"</span> <span class="p">/&gt;</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-7-11" name="__codelineno-7-11"></a>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span><span class="p">&gt;</span>
 <a id="__codelineno-7-13" name="__codelineno-7-13"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>数2：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;d2&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">onchange</span><span class="o">=</span><span class="s">&quot;onInput()&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"d2"</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">onchange</span><span class="o">=</span><span class="s">"onInput()"</span> <span class="p">/&gt;</span>
 <a id="__codelineno-7-15" name="__codelineno-7-15"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-7-16" name="__codelineno-7-16"></a>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span><span class="p">&gt;</span>
 <a id="__codelineno-7-18" name="__codelineno-7-18"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>结果：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a>      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;result&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">"result"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-7-20" name="__codelineno-7-20"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-7-21" name="__codelineno-7-21"></a>
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer1&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>用户操作：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>数1：<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer1_d1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>，数2：<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer1_d2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>，结果是：<span class="p">&lt;</span><span class="nt">span</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer1_result&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"observer1"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>用户操作：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>数1：<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">"observer1_d1"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>，数2：<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">"observer1_d2"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>，结果是：<span class="p">&lt;</span><span class="nt">span</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>        <span class="na">id</span><span class="o">=</span><span class="s">"observer1_result"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-7-25" name="__codelineno-7-25"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-7-26" name="__codelineno-7-26"></a>
-<a id="__codelineno-7-27" name="__codelineno-7-27"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer2&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>也就是说：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer2_d1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer2_d2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>=<span class="p">&lt;</span><span class="nt">span</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;observer2_result&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"observer2"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>也就是说：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">"observer2_d1"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">"observer2_d2"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>=<span class="p">&lt;</span><span class="nt">span</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a>        <span class="na">id</span><span class="o">=</span><span class="s">"observer2_result"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-7-30" name="__codelineno-7-30"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-7-31" name="__codelineno-7-31"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -2972,21 +1727,21 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">onInput</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">    </span><span class="c1">//提取数据</span>
-<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;d1&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;d2&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"d1"</span><span class="p">);</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"d2"</span><span class="p">);</span>
 <a id="__codelineno-7-41" name="__codelineno-7-41"></a>
 <a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">    </span><span class="c1">//观察者</span>
-<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">);</span>
 <a id="__codelineno-7-44" name="__codelineno-7-44"></a>
-<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer1&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1_d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer1_d1&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1_d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer1_d2&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer1_result&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer1"</span><span class="p">);</span>
+<a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1_d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer1_d1"</span><span class="p">);</span>
+<a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1_d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer1_d2"</span><span class="p">);</span>
+<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer1_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer1_result"</span><span class="p">);</span>
 <a id="__codelineno-7-49" name="__codelineno-7-49"></a>
-<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer2&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2_d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer2_d1&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2_d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer2_d2&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-53" name="__codelineno-7-53"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;observer2_result&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer2"</span><span class="p">);</span>
+<a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2_d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer2_d1"</span><span class="p">);</span>
+<a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2_d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer2_d2"</span><span class="p">);</span>
+<a id="__codelineno-7-53" name="__codelineno-7-53"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$observer2_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"observer2_result"</span><span class="p">);</span>
 <a id="__codelineno-7-54" name="__codelineno-7-54"></a>
 <a id="__codelineno-7-55" name="__codelineno-7-55"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$d1_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">$d1</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
 <a id="__codelineno-7-56" name="__codelineno-7-56"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">$d2_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">$d2</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
@@ -2996,19 +1751,19 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-7-60" name="__codelineno-7-60"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">$result_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$d1_value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">$d2_value</span><span class="p">;</span>
 <a id="__codelineno-7-61" name="__codelineno-7-61"></a><span class="w">      </span><span class="nx">$result</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$result_value</span><span class="p">;</span>
 <a id="__codelineno-7-62" name="__codelineno-7-62"></a>
-<a id="__codelineno-7-63" name="__codelineno-7-63"></a><span class="w">      </span><span class="nx">$observer1</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;show observer1&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-63" name="__codelineno-7-63"></a><span class="w">      </span><span class="nx">$observer1</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="s2">"show observer1"</span><span class="p">);</span>
 <a id="__codelineno-7-64" name="__codelineno-7-64"></a><span class="w">      </span><span class="nx">$observer1_d1</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$d1_value</span><span class="p">;</span>
 <a id="__codelineno-7-65" name="__codelineno-7-65"></a><span class="w">      </span><span class="nx">$observer1_d2</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$d2_value</span><span class="p">;</span>
 <a id="__codelineno-7-66" name="__codelineno-7-66"></a><span class="w">      </span><span class="nx">$observer1_result</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$result_value</span><span class="p">;</span>
 <a id="__codelineno-7-67" name="__codelineno-7-67"></a>
-<a id="__codelineno-7-68" name="__codelineno-7-68"></a><span class="w">      </span><span class="nx">$observer2</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;show observer2&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-68" name="__codelineno-7-68"></a><span class="w">      </span><span class="nx">$observer2</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="s2">"show observer2"</span><span class="p">);</span>
 <a id="__codelineno-7-69" name="__codelineno-7-69"></a><span class="w">      </span><span class="nx">$observer2_d1</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$d1_value</span><span class="p">;</span>
 <a id="__codelineno-7-70" name="__codelineno-7-70"></a><span class="w">      </span><span class="nx">$observer2_d2</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$d2_value</span><span class="p">;</span>
 <a id="__codelineno-7-71" name="__codelineno-7-71"></a><span class="w">      </span><span class="nx">$observer2_result</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$result_value</span><span class="p">;</span>
 <a id="__codelineno-7-72" name="__codelineno-7-72"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-73" name="__codelineno-7-73"></a><span class="w">      </span><span class="nx">$result</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
-<a id="__codelineno-7-74" name="__codelineno-7-74"></a><span class="w">      </span><span class="nx">$observer1</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hide&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-75" name="__codelineno-7-75"></a><span class="w">      </span><span class="nx">$observer2</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hide&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-73" name="__codelineno-7-73"></a><span class="w">      </span><span class="nx">$result</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">;</span>
+<a id="__codelineno-7-74" name="__codelineno-7-74"></a><span class="w">      </span><span class="nx">$observer1</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hide"</span><span class="p">);</span>
+<a id="__codelineno-7-75" name="__codelineno-7-75"></a><span class="w">      </span><span class="nx">$observer2</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hide"</span><span class="p">);</span>
 <a id="__codelineno-7-76" name="__codelineno-7-76"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-7-77" name="__codelineno-7-77"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-7-78" name="__codelineno-7-78"></a>
@@ -3046,8 +1801,8 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
-<p><iframe src="./src/vue-version.html" frameborder="0" width="100%" height="400"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">vue-version.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">  1</a></span>
+<p><iframe frameborder="0" height="400" src="./src/vue-version.html" width="100%"></iframe>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">vue-version.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-8-4">  4</a></span>
@@ -3150,31 +1905,31 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js\petite-vue.iife.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"js\petite-vue.iife.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-8-7" name="__codelineno-8-7"></a>
 <a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"app"</span><span class="p">&gt;</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>数据的双向绑定示例：加法器----Vue.js的实现<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span><span class="p">&gt;</span>
 <a id="__codelineno-8-12" name="__codelineno-8-12"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>数1：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;d1&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"d1"</span> <span class="p">/&gt;</span>
 <a id="__codelineno-8-14" name="__codelineno-8-14"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span><span class="p">&gt;</span>
 <a id="__codelineno-8-16" name="__codelineno-8-16"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>数2：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;d2&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"d2"</span> <span class="p">/&gt;</span>
 <a id="__codelineno-8-18" name="__codelineno-8-18"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-8-19" name="__codelineno-8-19"></a>
-<a id="__codelineno-8-20" name="__codelineno-8-20"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"item"</span><span class="p">&gt;</span>
 <a id="__codelineno-8-21" name="__codelineno-8-21"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>结果：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-8-22" name="__codelineno-8-22"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{result}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-8-23" name="__codelineno-8-23"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-8-24" name="__codelineno-8-24"></a>
-<a id="__codelineno-8-25" name="__codelineno-8-25"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;result&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;observer1&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">"result"</span> <span class="na">class</span><span class="o">=</span><span class="s">"observer1"</span><span class="p">&gt;</span>
 <a id="__codelineno-8-26" name="__codelineno-8-26"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>用户操作：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>数1：<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{d1}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>，数2：<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{d2}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>，结果是：<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{result}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-8-27" name="__codelineno-8-27"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-8-28" name="__codelineno-8-28"></a>
-<a id="__codelineno-8-29" name="__codelineno-8-29"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;result&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;observer2&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">"result"</span> <span class="na">class</span><span class="o">=</span><span class="s">"observer2"</span><span class="p">&gt;</span>
 <a id="__codelineno-8-30" name="__codelineno-8-30"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>也就是说：<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{d1}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>+<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{d2}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>=<span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{result}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-8-31" name="__codelineno-8-31"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-8-32" name="__codelineno-8-32"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -3183,9 +1938,9 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-8-36" name="__codelineno-8-36"></a>
 <a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">  </span><span class="nx">PetiteVue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">().</span><span class="nx">mount</span><span class="p">(</span><span class="s2">&quot;#app&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">  </span><span class="nx">PetiteVue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">().</span><span class="nx">mount</span><span class="p">(</span><span class="s2">"#app"</span><span class="p">)</span>
 <a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">Vue</span><span class="p">({</span>
-<a id="__codelineno-8-40" name="__codelineno-8-40"></a><span class="w">    </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#app&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a><span class="w">    </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="s1">'#app'</span><span class="p">,</span>
 <a id="__codelineno-8-41" name="__codelineno-8-41"></a><span class="w">    </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-42" name="__codelineno-8-42"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-43" name="__codelineno-8-43"></a><span class="w">        </span><span class="nx">d1</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
@@ -3249,8 +2004,8 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
-<p><iframe src="./src/vuetify-version.html" frameborder="0" width="100%" height="400"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">vuetify-version.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">  1</a></span>
+<p><iframe frameborder="0" height="400" src="./src/vuetify-version.html" width="100%"></iframe>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">vuetify-version.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">  4</a></span>
@@ -3358,25 +2113,25 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/fonts.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/materialdesignicons.min.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/vuetify.min.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"css/fonts.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"css/materialdesignicons.min.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"css/vuetify.min.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"</span><span class="p">&gt;</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a>
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"app"</span><span class="p">&gt;</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a>    <span class="p">&lt;</span><span class="nt">v-app</span><span class="p">&gt;</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a>      <span class="p">&lt;</span><span class="nt">v-main</span><span class="p">&gt;</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        <span class="p">&lt;</span><span class="nt">v-card</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mx-auto&quot;</span> <span class="na">max-width</span><span class="o">=</span><span class="s">&quot;500&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a>          <span class="p">&lt;</span><span class="nt">v-toolbar</span> <span class="na">color</span><span class="o">=</span><span class="s">&quot;deep-purple accent-4&quot;</span> <span class="na">dark</span><span class="p">&gt;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        <span class="p">&lt;</span><span class="nt">v-card</span> <span class="na">class</span><span class="o">=</span><span class="s">"mx-auto"</span> <span class="na">max-width</span><span class="o">=</span><span class="s">"500"</span><span class="p">&gt;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>          <span class="p">&lt;</span><span class="nt">v-toolbar</span> <span class="na">color</span><span class="o">=</span><span class="s">"deep-purple accent-4"</span> <span class="na">dark</span><span class="p">&gt;</span>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a>            <span class="p">&lt;</span><span class="nt">v-toolbar-title</span><span class="p">&gt;</span>数据的双向绑定示例：加法器----Vuetify的实现<span class="p">&lt;/</span><span class="nt">v-toolbar-title</span><span class="p">&gt;</span>
 <a id="__codelineno-9-18" name="__codelineno-9-18"></a>          <span class="p">&lt;/</span><span class="nt">v-toolbar</span><span class="p">&gt;</span>
 <a id="__codelineno-9-19" name="__codelineno-9-19"></a>
 <a id="__codelineno-9-20" name="__codelineno-9-20"></a>          <span class="p">&lt;</span><span class="nt">v-card-text</span><span class="p">&gt;</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a>            <span class="p">&lt;</span><span class="nt">v-text-field</span> <span class="na">label</span><span class="o">=</span><span class="s">&quot;数1：&quot;</span> <span class="na">:rules</span><span class="o">=</span><span class="s">&quot;rules&quot;</span> <span class="na">hide-details</span><span class="o">=</span><span class="s">&quot;auto&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;d1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">v-text-field</span><span class="p">&gt;</span>
-<a id="__codelineno-9-22" name="__codelineno-9-22"></a>            <span class="p">&lt;</span><span class="nt">v-text-field</span> <span class="na">label</span><span class="o">=</span><span class="s">&quot;数2：&quot;</span> <span class="na">:rules</span><span class="o">=</span><span class="s">&quot;rules&quot;</span> <span class="na">hide-details</span><span class="o">=</span><span class="s">&quot;auto&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;d2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">v-text-field</span><span class="p">&gt;</span>
-<a id="__codelineno-9-23" name="__codelineno-9-23"></a>            <span class="p">&lt;</span><span class="nt">v-text-field</span> <span class="na">label</span><span class="o">=</span><span class="s">&quot;结果：&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;result&quot;</span> <span class="na">readonly</span><span class="p">&gt;&lt;/</span><span class="nt">v-text-field</span><span class="p">&gt;</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a>            <span class="p">&lt;</span><span class="nt">v-text-field</span> <span class="na">label</span><span class="o">=</span><span class="s">"数1："</span> <span class="na">:rules</span><span class="o">=</span><span class="s">"rules"</span> <span class="na">hide-details</span><span class="o">=</span><span class="s">"auto"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"d1"</span><span class="p">&gt;&lt;/</span><span class="nt">v-text-field</span><span class="p">&gt;</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>            <span class="p">&lt;</span><span class="nt">v-text-field</span> <span class="na">label</span><span class="o">=</span><span class="s">"数2："</span> <span class="na">:rules</span><span class="o">=</span><span class="s">"rules"</span> <span class="na">hide-details</span><span class="o">=</span><span class="s">"auto"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"d2"</span><span class="p">&gt;&lt;/</span><span class="nt">v-text-field</span><span class="p">&gt;</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a>            <span class="p">&lt;</span><span class="nt">v-text-field</span> <span class="na">label</span><span class="o">=</span><span class="s">"结果："</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"result"</span> <span class="na">readonly</span><span class="p">&gt;&lt;/</span><span class="nt">v-text-field</span><span class="p">&gt;</span>
 <a id="__codelineno-9-24" name="__codelineno-9-24"></a>          <span class="p">&lt;/</span><span class="nt">v-card-text</span><span class="p">&gt;</span>
 <a id="__codelineno-9-25" name="__codelineno-9-25"></a>        <span class="p">&lt;/</span><span class="nt">v-card</span><span class="p">&gt;</span>
 <a id="__codelineno-9-26" name="__codelineno-9-26"></a>
@@ -3389,12 +2144,12 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-9-33" name="__codelineno-9-33"></a>
 <a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-9-35" name="__codelineno-9-35"></a>
-<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/vue.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/vuetify.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"js/vue.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"js/vuetify.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-9-38" name="__codelineno-9-38"></a>
 <a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="w">  </span><span class="ow">new</span><span class="w"> </span><span class="nx">Vue</span><span class="p">({</span>
-<a id="__codelineno-9-41" name="__codelineno-9-41"></a><span class="w">    </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#app&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a><span class="w">    </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="s1">'#app'</span><span class="p">,</span>
 <a id="__codelineno-9-42" name="__codelineno-9-42"></a><span class="w">    </span><span class="nx">vuetify</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Vuetify</span><span class="p">(),</span>
 <a id="__codelineno-9-43" name="__codelineno-9-43"></a><span class="w">    </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-44" name="__codelineno-9-44"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
@@ -3402,7 +2157,7 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 <a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="w">        </span><span class="nx">d2</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <a id="__codelineno-9-47" name="__codelineno-9-47"></a><span class="w">        </span><span class="nx">result</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="w">        </span><span class="nx">rules</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="w">          </span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!!</span><span class="nx">value</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;必填项.&#39;</span>
+<a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="w">          </span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!!</span><span class="nx">value</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">'必填项.'</span>
 <a id="__codelineno-9-50" name="__codelineno-9-50"></a><span class="w">        </span><span class="p">],</span>
 <a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="w">    </span><span class="p">},</span>
@@ -3462,66 +2217,38 @@ Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使�
 </code></pre></div></td></tr></table></div></p>
 </div>
 </div>
+</input></input></input></div>
+</article>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../../../js/mermaid.min.js"></script>
+<script src="../../../js/init_mermaid.js"></script>
+</body>
 </html>

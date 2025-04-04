@@ -39,5 +39,5 @@ id=1
 POST http://localhost:8080/{{app}}/demo/Student/Get HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-no=X1
+no=X2
 //--8<-- [end:get]
