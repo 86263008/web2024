@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../../../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.6.10" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.11" name="generator"/>
 <title>Getting Started - 基于WEB的应用程序开发</title>
 <link href="../../../../../../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
 <link href="../../../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
@@ -623,6 +623,14 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../integrated%20case/index.html">
+<span class="md-ellipsis">
+    综合案例
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -697,17 +705,25 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../integrated%20case/index.html">
+<span class="md-ellipsis">
+    综合案例
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6_8" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
 <span class="md-ellipsis">
     操作指南
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_6_8_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_6_8">
+<nav aria-expanded="false" aria-labelledby="__nav_6_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_9">
 <span class="md-nav__icon md-icon"></span>
             操作指南
           </label>
@@ -769,6 +785,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maven-parent-overrides">
+<span class="md-ellipsis">
+      Maven Parent overrides
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -781,9 +804,9 @@
 <p>For further reference, please consider the following sections:</p>
 <ul>
 <li><a href="https://maven.apache.org/guides/index.html">Official Apache Maven documentation</a></li>
-<li><a href="https://docs.spring.io/spring-boot/docs/3.0.7/maven-plugin/reference/html/">Spring Boot Maven Plugin Reference Guide</a></li>
-<li><a href="https://docs.spring.io/spring-boot/docs/3.0.7/maven-plugin/reference/html/#build-image">Create an OCI image</a></li>
-<li><a href="https://docs.spring.io/spring-boot/docs/3.0.7/reference/htmlsingle/#web">Spring Web</a></li>
+<li><a href="https://docs.spring.io/spring-boot/3.4.4/maven-plugin">Spring Boot Maven Plugin Reference Guide</a></li>
+<li><a href="https://docs.spring.io/spring-boot/3.4.4/maven-plugin/build-image.html">Create an OCI image</a></li>
+<li><a href="https://docs.spring.io/spring-boot/3.4.4/reference/web/servlet.html">Spring Web</a></li>
 </ul>
 <h3 id="guides">Guides</h3>
 <p>The following guides illustrate how to use some features concretely:</p>
@@ -792,6 +815,11 @@
 <li><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></li>
 <li><a href="https://spring.io/guides/tutorials/rest/">Building REST services with Spring</a></li>
 </ul>
+<h3 id="maven-parent-overrides">Maven Parent overrides</h3>
+<p>Due to Maven's design, elements are inherited from the parent POM to the project POM.
+While most of the inheritance is fine, it also inherits unwanted elements like <code>&lt;license&gt;</code> and <code>&lt;developers&gt;</code> from the parent.
+To prevent this, the project POM contains empty overrides for these elements.
+If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
