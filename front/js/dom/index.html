@@ -843,6 +843,7 @@
 <hr/>
 <h2 id="dom_1">什么是DOM</h2>
 <p>DOM－<strong>Document Object Model</strong> ,它是W3C国际组织的一套Web标准，它定义了访问HTML文档对象的一套属性、方法和事件 。</p>
+<p><strong>示例</strong>：</p>
 <iframe frameborder="0" height="80" src="./src/什么是DOM.html" width="100%"></iframe>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">动态改变HTML中的内容</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -890,7 +891,24 @@
 <p><img alt="DOM对象模型" src="img/DOM%E6%A8%A1%E5%9E%8B1.png"/></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="DOM分层结构" src="img/DOM%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84.png"/></p>
+<p><div class="mermaid">
+graph TD;
+Window --&gt; History;
+Window --&gt; Document;
+Window --&gt; location;
+Document --&gt; Link;
+Document --&gt; Form;
+Document --&gt; Anchor;
+Link --&gt; Text;
+Link --&gt; Textarea;
+Link --&gt; Radio;
+Link --&gt; Checkbox;
+Link --&gt; Button;
+Link --&gt; Option;
+Link --&gt; Reset;
+Link --&gt; Submit;
+Link --&gt; select;
+</div></p>
 </div>
 </div>
 </input></input></div>
@@ -927,5 +945,5 @@
 <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
 <script src="../../../js/mermaid.min.js"></script>
 <script src="../../../js/init_mermaid.js"></script>
-</body>
+<script>mermaid.initialize({});</script></body>
 </html>

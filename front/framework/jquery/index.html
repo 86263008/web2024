@@ -562,23 +562,23 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_2">
+<a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      jQuery选择器
+      选择器
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_3">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      jQuery事件
+      事件处理
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_4">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      jQuery效果
+      动画效果
     </span>
 </a>
 </li>
@@ -590,7 +590,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_5">
+<a class="md-nav__link" href="#jquery_2">
 <span class="md-ellipsis">
       jQuery遍历
     </span>
@@ -859,23 +859,23 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_2">
+<a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
-      jQuery选择器
+      选择器
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_3">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
-      jQuery事件
+      事件处理
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_4">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
-      jQuery效果
+      动画效果
     </span>
 </a>
 </li>
@@ -887,7 +887,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#jquery_5">
+<a class="md-nav__link" href="#jquery_2">
 <span class="md-ellipsis">
       jQuery遍历
     </span>
@@ -929,15 +929,15 @@
 <h2 id="jquery_1">jQuery语法</h2>
 <p>jQuery语法是通过选取HTML元素，并对选取的元素执行某些操作。</p>
 <p><strong>基础语法：</strong> </p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">action</span><span class="p">()</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">action</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>美元符号定义 jQuery</li>
 <li>选择符(selector)"查询"和"查找" HTML 元素</li>
 <li>jQuery 的 action() 执行对元素的操作</li>
 </ul>
 <p><strong>实例:</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">DOM操作</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span><span class="w"> </span><span class="c1">//隐藏当前元素</span>
@@ -945,8 +945,7 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nx">$</span><span class="p">(</span><span class="s2">"p .test"</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span><span class="w"> </span><span class="c1">//隐藏所有 class="test" 的段落</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nx">$</span><span class="p">(</span><span class="s2">"#test"</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span><span class="w"> </span><span class="err">、、</span><span class="nx">隐藏所有</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">"test"</span><span class="w"> </span><span class="nx">的元素</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>文档就绪事件</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">事件处理</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
@@ -957,7 +956,8 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h2 id="jquery_2">jQuery选择器</h2>
+<h2 id="_1">选择器</h2>
+<p>jQuery 选择器允许通过元素名称、ID、类、属性等方式来选取 HTML 元素。以下是一些常见的选择器及示例：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">jQuery选择器</label><label for="__tabbed_1_2">示例</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1065,7 +1065,8 @@
 </div>
 </input></input></div>
 <hr/>
-<h2 id="jquery_3">jQuery事件</h2>
+<h2 id="_2">事件处理</h2>
+<p>jQuery 简化了事件处理的过程，以下是一些常见的事件及处理示例：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">jQuery事件</label><label for="__tabbed_2_2">示例</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1276,7 +1277,8 @@
 </div>
 </input></input></div>
 <hr/>
-<h2 id="jquery_4">jQuery效果</h2>
+<h2 id="_3">动画效果</h2>
+<p>jQuery 提供了一些简单的动画方法，例如 show()、hide()、fadeIn()、fadeOut() 等。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">效果</label><label for="__tabbed_3_2">示例</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1618,7 +1620,7 @@
 </div>
 </input></input></div>
 <hr/>
-<h2 id="jquery_5">jQuery遍历</h2>
+<h2 id="jquery_2">jQuery遍历</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">jQuery遍历</label><label for="__tabbed_5_2">示例</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
