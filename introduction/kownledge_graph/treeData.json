@@ -1,0 +1,865 @@
+{
+  "name": "Web技术知识图谱",
+  "children": [
+    {
+      "name": "Web基础",
+      "children": [
+        {
+          "name": "Http协议",
+          "children": [
+            {
+              "name": "URL"
+            },
+            {
+              "name": "报文",
+              "children": [
+                {
+                  "name": "请求",
+                  "children": [
+                    {
+                      "name": "请求方法",
+                      "children": [
+                        {
+                          "name": "GET"
+                        },
+                        {
+                          "name": "POST",
+                          "children": [
+                            {
+                              "name": "参数"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "响应",
+                      "children": [
+                        {
+                          "name": "状态码"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "会话",
+                      "children": [
+                        {
+                          "name": "Session ID"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "前端",
+      "children": [
+        {
+          "name": "Html",
+          "children": [
+            {
+              "name": "语法",
+              "children": [
+                {
+                  "name": "标签",
+                  "children": [
+                    {
+                      "name": "元素"
+                    },
+                    {
+                      "name": "属性"
+                    },
+                    {
+                      "name": "颜色"
+                    }
+                  ]
+                },
+                {
+                  "name": "页面结构",
+                  "children": [
+                    {
+                      "name": "常见标签",
+                      "children": [
+                        {
+                          "name": "头部",
+                          "children": [
+                            {
+                              "name": "head"
+                            },
+                            {
+                              "name": "link"
+                            },
+                            {
+                              "name": "style"
+                            },
+                            {
+                              "name": "script"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "标题",
+                          "children": [
+                            {
+                              "name": "hx"
+                            },
+                            {
+                              "name": "hr"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "段落",
+                          "children": [
+                            {
+                              "name": "p"
+                            },
+                            {
+                              "name": "br"
+                            },
+                            {
+                              "name": "hr"
+                            },
+                            {
+                              "name": "b"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "div",
+                          "children": [
+                            {
+                              "name": "z-index"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "列表",
+                          "children": [
+                            {
+                              "name": "ol"
+                            },
+                            {
+                              "name": "ul"
+                            },
+                            {
+                              "name": "li"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "链接",
+                          "children": [
+                            {
+                              "name": "a"
+                            },
+                            {
+                              "name": "href"
+                            },
+                            {
+                              "name": "锚点"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "图像",
+                          "children": [
+                            {
+                              "name": "img"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "表格",
+                          "children": [
+                            {
+                              "name": "table",
+                              "children": [
+                                {
+                                  "name": "边框"
+                                },
+                                {
+                                  "name": "tr"
+                                },
+                                {
+                                  "name": "td"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "表单",
+                          "children": [
+                            {
+                              "name": "form",
+                              "children": [
+                                {
+                                  "name": "action"
+                                },
+                                {
+                                  "name": "method",
+                                  "children": [
+                                    {
+                                      "name": "GET"
+                                    },
+                                    {
+                                      "name": "POST"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "OnSubmit"
+                                },
+                                {
+                                  "name": "input",
+                                  "children": [
+                                    {
+                                      "name": "type"
+                                    },
+                                    {
+                                      "name": "name"
+                                    },
+                                    {
+                                      "name": "value"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "textarea"
+                                },
+                                {
+                                  "name": "select",
+                                  "children": [
+                                    {
+                                      "name": "option"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CSS",
+          "children": [
+            {
+              "name": "样式规则",
+              "children": [
+                {
+                  "name": "绑定"
+                },
+                {
+                  "name": "选择器",
+                  "children": [
+                    {
+                      "name": "标签选择器"
+                    },
+                    {
+                      "name": "ID选择器"
+                    },
+                    {
+                      "name": "类选择器"
+                    }
+                  ]
+                },
+                {
+                  "name": "属性"
+                }
+              ]
+            },
+            {
+              "name": "应用方式",
+              "children": [
+                {
+                  "name": "行内"
+                },
+                {
+                  "name": "内嵌"
+                },
+                {
+                  "name": "外部"
+                }
+              ]
+            },
+            {
+              "name": "常见样式",
+              "children": [
+                {
+                  "name": "文本",
+                  "children": [
+                    {
+                      "name": "font-size"
+                    },
+                    {
+                      "name": "font-family"
+                    },
+                    {
+                      "name": "font-style"
+                    },
+                    {
+                      "name": "color"
+                    },
+                    {
+                      "name": "text-align"
+                    }
+                  ]
+                },
+                {
+                  "name": "背景",
+                  "children": [
+                    {
+                      "name": "background-color"
+                    },
+                    {
+                      "name": "background-image"
+                    },
+                    {
+                      "name": "background-repeat"
+                    }
+                  ]
+                },
+                {
+                  "name": "框",
+                  "children": [
+                    {
+                      "name": "margin"
+                    },
+                    {
+                      "name": "padding"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "特殊样式",
+              "children": [
+                {
+                  "name": "伪类",
+                  "children": [
+                    {
+                      "name": "a:link"
+                    },
+                    {
+                      "name": "a:visited"
+                    },
+                    {
+                      "name": "a:hover"
+                    },
+                    {
+                      "name": "a:active"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Javascript",
+          "children": [
+            {
+              "name": "语法",
+              "children": [
+                {
+                  "name": "变量",
+                  "children": [
+                    {
+                      "name": "赋值时确定类型"
+                    }
+                  ]
+                },
+                {
+                  "name": "运算符"
+                },
+                {
+                  "name": "逻辑控制",
+                  "children": [
+                    {
+                      "name": "if"
+                    },
+                    {
+                      "name": "for"
+                    },
+                    {
+                      "name": "while"
+                    },
+                    {
+                      "name": "switch"
+                    }
+                  ]
+                },
+                {
+                  "name": "函数"
+                },
+                {
+                  "name": "类型转换",
+                  "children": [
+                    {
+                      "name": "parseInt"
+                    },
+                    {
+                      "name": "parseFloat"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "事件",
+              "children": [
+                {
+                  "name": "onload"
+                },
+                {
+                  "name": "onsubmit"
+                },
+                {
+                  "name": "onclick"
+                },
+                {
+                  "name": "onchange"
+                }
+              ]
+            },
+            {
+              "name": "DOM模型",
+              "children": [
+                {
+                  "name": "Window",
+                  "children": [
+                    {
+                      "name": "history"
+                    },
+                    {
+                      "name": "document",
+                      "children": [
+                        {
+                          "name": "getElementByID"
+                        },
+                        {
+                          "name": "getElementByName"
+                        },
+                        {
+                          "name": "write"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "location"
+                    },
+                    {
+                      "name": "status"
+                    },
+                    {
+                      "name": "screen"
+                    },
+                    {
+                      "name": "Date"
+                    }
+                  ]
+                },
+                {
+                  "name": "表单验证",
+                  "children": [
+                    {
+                      "name": "关联验证函数"
+                    },
+                    {
+                      "name": "获取表单元素值"
+                    },
+                    {
+                      "name": "返回验证结果"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "高级特性",
+              "children": [
+                {
+                  "name": "画图"
+                },
+                {
+                  "name": "正则表达式"
+                },
+                {
+                  "name": "JSON"
+                },
+                {
+                  "name": "Ajax"
+                },
+                {
+                  "name": "框架",
+                  "children": [
+                    {
+                      "name": "jQuery"
+                    },
+                    {
+                      "name": "Bootstrap"
+                    },
+                    {
+                      "name": "Vue.js"
+                    },
+                    {
+                      "name": "Element+"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "后端",
+      "children": [
+        {
+          "name": "Tomcat"
+        },
+        {
+          "name": "jdk"
+        },
+        {
+          "name": "域名"
+        },
+        {
+          "name": "端口"
+        },
+        {
+          "name": "JSP",
+          "children": [
+            {
+              "name": "运行环境"
+            },
+            {
+              "name": "请求响应过程",
+              "children": [
+                {
+                  "name": "翻译"
+                },
+                {
+                  "name": "编译"
+                },
+                {
+                  "name": "执行"
+                }
+              ]
+            },
+            {
+              "name": "页面组成",
+              "children": [
+                {
+                  "name": "模板元素"
+                },
+                {
+                  "name": "指令元素",
+                  "children": [
+                    {
+                      "name": "page"
+                    },
+                    {
+                      "name": "taglib"
+                    },
+                    {
+                      "name": "include"
+                    }
+                  ]
+                },
+                {
+                  "name": "脚本元素"
+                },
+                {
+                  "name": "动作元素",
+                  "children": [
+                    {
+                      "name": "jsp:useBean"
+                    },
+                    {
+                      "name": "jsp:getProperty"
+                    },
+                    {
+                      "name": "jsp:setProperty"
+                    },
+                    {
+                      "name": "jsp:param"
+                    },
+                    {
+                      "name": "jsp:include"
+                    },
+                    {
+                      "name": "jsp:forward"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "内置对象",
+              "children": [
+                {
+                  "name": "I/O对象",
+                  "children": [
+                    {
+                      "name": "request",
+                      "children": [
+                        {
+                          "name": "getParameter"
+                        },
+                        {
+                          "name": "setParameterValues"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "response",
+                      "children": [
+                        {
+                          "name": "setContentType"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "out",
+                      "children": [
+                        {
+                          "name": "println"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "作用域对象",
+                  "children": [
+                    {
+                      "name": "session",
+                      "children": [
+                        {
+                          "name": "setAttribute"
+                        },
+                        {
+                          "name": "getAttribute"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "application",
+                      "children": [
+                        {
+                          "name": "setAttribute"
+                        },
+                        {
+                          "name": "getAttribute"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "pageContext"
+                    }
+                  ]
+                },
+                {
+                  "name": "Servlet对象",
+                  "children": [
+                    {
+                      "name": "page"
+                    },
+                    {
+                      "name": "config"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "JDBC",
+          "children": [
+            {
+              "name": "内置对象",
+              "children": [
+                {
+                  "name": "Driver"
+                },
+                {
+                  "name": "Connection"
+                },
+                {
+                  "name": "Statement"
+                },
+                {
+                  "name": "PreparedStatement"
+                },
+                {
+                  "name": "ResultSet"
+                }
+              ]
+            },
+            {
+              "name": "执行流程",
+              "children": [
+                {
+                  "name": "加载驱动"
+                },
+                {
+                  "name": "创建连接"
+                },
+                {
+                  "name": "执行语句"
+                },
+                {
+                  "name": "处理结果集"
+                },
+                {
+                  "name": "关闭"
+                }
+              ]
+            },
+            {
+              "name": "伪代码"
+            }
+          ]
+        },
+        {
+          "name": "Java Bean",
+          "children": [
+            {
+              "name": "定义约定"
+            },
+            {
+              "name": "属性",
+              "children": [
+                {
+                  "name": "getter"
+                },
+                {
+                  "name": "setter"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Servlet",
+          "children": [
+            {
+              "name": "请求响应流程"
+            },
+            {
+              "name": "注册",
+              "children": [
+                {
+                  "name": "注解方式"
+                },
+                {
+                  "name": "web.xml方式",
+                  "children": [
+                    {
+                      "name": "Servlet"
+                    },
+                    {
+                      "name": "Servet-Name"
+                    },
+                    {
+                      "name": "Servlet-Class"
+                    },
+                    {
+                      "name": "Servlet-Mapping",
+                      "children": [
+                        {
+                          "name": "Serlvet-Name"
+                        },
+                        {
+                          "name": "Url-Pattern"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "独立线程执行"
+            }
+          ]
+        },
+        {
+          "name": "过滤器",
+          "children": [
+            {
+              "name": "工作原理"
+            },
+            {
+              "name": "注册",
+              "children": [
+                {
+                  "name": "注解方式"
+                },
+                {
+                  "name": "web.xml方式",
+                  "children": [
+                    {
+                      "name": "Filter"
+                    },
+                    {
+                      "name": "Filter-Name"
+                    },
+                    {
+                      "name": "Filter-Class"
+                    },
+                    {
+                      "name": "Filter-Mapping",
+                      "children": [
+                        {
+                          "name": "Filter-Name"
+                        },
+                        {
+                          "name": "Url-Pattern"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "框架",
+          "children": [
+            {
+              "name": "MVC模式"
+            },
+            {
+              "name": "Spring"
+            },
+            {
+              "name": "MyBatis"
+            },
+            {
+              "name": "Freemarker"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

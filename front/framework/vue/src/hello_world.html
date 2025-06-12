@@ -4,14 +4,15 @@
 <div id="app">{{ message }}</div>
 
 <script>
-  const { createApp } = Vue
+  const { createApp, ref } = Vue
 
-  //创建ViewModel
   createApp({
-    data() {//定义Model
+    setup() {
+      const message = ref('Hello vue!')
+      //定义Model
       return {
-        message: 'Hello Vue!'
+        message
       }
     }
-  }).mount('#app')//绑定
+  }).mount('#app')
 </script>

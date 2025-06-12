@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>知识图谱展示</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+</head>
+
+<body>
+  <div id="main" style="width: 800px;height:600px;"></div>
+  <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 发起请求获取 JSON 数据
+    fetch('treeData.json')
+      .then(response => response.json())
+      .then(data => {
+        // 配置项
+        var option = {
+          series: [
+            {
+              type: 'tree',
+              data: [data],
+              top: '1%',
+              left: '7%',
+              bottom: '1%',
+              right: '20%',
+              symbolSize: 7,
+              label: {
+                position: 'left',
+                verticalAlign: 'middle',
+                align: 'right',
+                fontSize: 24, // 增大字体大小
+              },
+              leaves: {
+                label: {
+                  position: 'right',
+                  verticalAlign: 'middle',
+                  align: 'left',
+                  fontSize: 24, // 增大叶子节点字体大小
+                }
+              },
+              expandAndCollapse: true,
+              animationDuration: 550,
+              animationDurationUpdate: 750
+            }
+          ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+      });
+  </script>
+</body>
+
+</html>
