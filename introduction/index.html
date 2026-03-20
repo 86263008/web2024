@@ -284,58 +284,18 @@
       
     </span>
 </a>
-<nav aria-label="目标" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       
-        体系结构
+        知识体系
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      
-        应用类型
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      
-        分层结构
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      
-        技术
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      
-        工具
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
 <span class="md-ellipsis">
       
         案例
@@ -354,7 +314,7 @@
 <span class="md-ellipsis">
     
   
-    Hello World-Java
+    Hello World
   
 
     
@@ -1204,58 +1164,18 @@
       
     </span>
 </a>
-<nav aria-label="目标" class="md-nav">
-<ul class="md-nav__list">
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       
-        体系结构
+        知识体系
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      
-        应用类型
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      
-        分层结构
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-<span class="md-ellipsis">
-      
-        技术
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-<span class="md-ellipsis">
-      
-        工具
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
 <span class="md-ellipsis">
       
         案例
@@ -1428,127 +1348,22 @@
 </tbody>
 </table>
 <hr/>
-<h4 id="_4">体系结构</h4>
-<p><img alt="软件开发内容" src="img/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E9%9D%A2.png"/></p>
-<hr/>
-<h4 id="_5">应用类型</h4>
+<h3 id="_4">知识体系</h3>
+<p>Web应用通过浏览器前端界面采集数据，通过HTTP/HTTPS协议将数据发送至后端服务器，后端接收并解析数据后执行业务逻辑处理，再与数据库进行交互完成数据的查询、新增、修改或删除操作，数据库将执行结果返回给后端，后端对结果进行封装后通过响应返回前端，最后前端解析并渲染数据，将最终内容展示给用户，完成一次完整的数据流转过程。</p>
+<p>Web应用开发主要包括：前端界面设计与实现（<strong>前端</strong>）、后端服务器设计与实现（<strong>后端</strong>）、数据库设计与实现（<strong>数据库</strong>）。</p>
+<ul>
+<li>
+<p>前端页面由Html语言定义<strong>结构</strong>，形成基本框架，使用Css<strong>美化</strong>页面外观样，用JavaScript定义<strong>交互</strong>。利用Bootstrap、jQuery、Vue.js、ElementUI等框架技术提高开发效率。使用Visual Studio Code等IDE工具进行代码编写与调试。</p>
+</li>
+<li>
+<p>后端采用Tomcat为<strong>服务容器</strong>，用基于Java语言的JSP技术实现<strong>业务逻辑</strong>处理，与数据库进行交互。或利用Spring Boot、Spring MVC等框架技术实现业务逻辑控制；使用Freemarker模板引擎渲染页面；采用Mybatis框架与数据库进行交互。使用STS 5等IDE工具进行代码编写与调试。</p>
+</li>
+</ul>
 <p><img alt="应用类型" src="img/%E5%BA%94%E7%94%A8%E7%B1%BB%E5%9E%8B.png"/></p>
+<p><strong>知识体系结构图</strong></p>
 <hr/>
-<h4 id="_6">分层结构</h4>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>graph LR;
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    A[MIS分层结构] --&gt; B[表示层]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    A --&gt; C[业务层]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    A --&gt; D[数据访问层]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    A --&gt; E[模型层]
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    B --&gt; B1[提供系统接口]
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    C --&gt; C1[控制层务层]
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    C --&gt; C2[服务层]
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    C1 --&gt; C11[控制业务流]
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    C2 --&gt; C21[实现系统服务]
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    D --&gt; D1[实现数据访问]
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>    E --&gt; E1[定义数据结构]
-</code></pre></div>
-<hr/>
-<h3 id="_7">技术</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">后端</label><label for="__tabbed_1_2">前端</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li><strong><em>Java</em></strong><ul>
-<li><strong><em>JSP</em></strong>, <strong><em>Servlet</em></strong>, <strong><em>JDBC</em></strong>, <strong><em>Spring Boot</em></strong>, <strong><em>Spring MVC</em></strong>, <strong><em>MyBatis</em></strong></li>
-</ul>
-</li>
-<li>Python<ul>
-<li>Django, Flask, FasktAPI</li>
-</ul>
-</li>
-<li>PHP，Node.js等</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Desktop</label><label for="__tabbed_2_2">Embedded</label><label for="__tabbed_2_3">Mobile</label><label for="__tabbed_2_4">Web</label><label for="__tabbed_2_5">Mini Program</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>Windows：C++，C，C#，Java，VB.NET，Electron等</li>
-<li>Linux： C++，C，Java，Electron等</li>
-<li>Mac OS：Object-C，Java，Electron等</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>ARM/DSP/FPGA： C++，C等</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>iOS：Object-C，Xamarin，Cordova ，React ，Uni-app等</li>
-<li>Android：Java，Xamarin，Cordova，React ，Uni-app 等</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li><strong><em>Html</em></strong>，<strong><em>Css</em></strong>，<strong><em>Javascript</em></strong>，<strong><em>jQuery</em></strong>, <strong><em>Bootstrap</em></strong>, <strong><em>Vue.js</em></strong>等</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>微信：类Html，类Css，类Javascript，类Vue.js，Uni-app 等</li>
-<li>支付宝等 ：类Html，类Css，类Javascript，类Vue.js ，Uni-app 等</li>
-</ul>
-</div>
-</div>
-</input></input></input></input></input></div>
-</div>
-</div>
-</input></input></div>
-<hr/>
-<h3 id="_8">工具</h3>
-<table>
-<thead>
-<tr>
-<th>角色</th>
-<th>工具</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>操作系统</td>
-<td>Windows, Linux</td>
-</tr>
-<tr>
-<td>数据库</td>
-<td>MySQL, SQL Sever, SQLite</td>
-</tr>
-<tr>
-<td>浏览器</td>
-<td>Chrome</td>
-</tr>
-<tr>
-<td>文本编辑</td>
-<td>Visual Studio Code(VS Code)</td>
-</tr>
-<tr>
-<td>集成开发环境</td>
-<td>STS(Java), PyCharm</td>
-</tr>
-<tr>
-<td>Web服务容器</td>
-<td>Nginx, Apache, Tomcat(Java)</td>
-</tr>
-<tr>
-<td>Http调试</td>
-<td>Rest Client</td>
-</tr>
-<tr>
-<td>版本控制</td>
-<td>Git、TortoiseGit</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="_9">案例</h3>
-<p><strong>学生选课管理系统</strong>包含三个表：学生表（学号，姓名，性别，年龄，所在系），课程表（编号，课程名，先修课，学分），学生-选课表（课程号，学号，成绩）,本课程综合案例以该系统为基础编排内容</p>
+<h3 id="_5">案例</h3>
+<p>课程主要技术示例围绕<strong>学生选课管理系统</strong>展开。该系统主要包含三个表：学生表（学号，姓名，性别，年龄，所在系），课程表（编号，课程名，先修课，学分），学生-选课表（课程号，学号，成绩）。</p>
 <blockquote>
 <p>Student（No，Name，Gender，Age，Dep），Course（No，Name，PreNo，Credit），Student-Course（CourseNo，StuNo，Grade）</p>
 </blockquote>

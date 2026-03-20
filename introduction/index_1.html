@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示 Mermaid 图表</title>
+    <!-- 引入 Mermaid 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        // 初始化 Mermaid
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <!-- 放置 Mermaid 图表代码 -->
+    <div class="mermaid">
+      graph LR
+      classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px
+      
+      A(web开发):::process --> B(目标):::process
+      B --> B1(掌握基于web技术的信息管理系统构建理论、技术、工具与方法):::process
+      A --> C(关键概念):::process
+      C --> C1(数据管理):::process
+      C1 --> C11(定义):::process
+      C11 --> C111(管理业务信息):::process
+      C111 --> C1111(语法层面体现为管理业务数据):::process
+      C1 --> C12(主要操作):::process
+      C12 --> C121(CRUD):::process
+      C --> C2(数据库管理):::process
+      C2 --> C21(定义):::process
+      C21 --> C211(使用数据库管理数据):::process
+      C2 --> C22(主要操作):::process
+      C22 --> C221(CRUD):::process
+      C --> C3(MIS系统):::process
+      C3 --> C31(定义):::process
+      C31 --> C311(使用web技术构建数据管理系统):::process
+      C3 --> C32(主要操作):::process
+      C32 --> C321(CRUD):::process
+      A --> D(MIS分层结构):::process
+      D --> D1(表示层):::process
+      D1 --> D11(提供系统接口):::process
+      D --> D2(业务层):::process
+      D2 --> D21(控制层务层):::process
+      D21 --> D211(控制业务流):::process
+      D2 --> D22(服务层):::process
+      D22 --> D221(实现系统服务):::process
+      D --> D3(数据访问层):::process
+      D3 --> D31(实现数据访问):::process
+      D --> D4(模型层):::process
+      D4 --> D41(定义数据结构):::process
+      A --> E(Web应用):::process
+      E --> E1(不同层次不同比重的web系统):::process
+      A --> F(主要内容):::process
+      F --> F1(理论):::process
+      F1 --> F11(数据库理论):::process
+      F11 --> F111(关系理论):::process
+      F111 --> F1111(管理技术):::process
+      F1111 --> F11111(sql):::process
+      F11111 --> F111111(工具):::process
+      F111111 --> F1111111(sqlite):::process
+      F111111 --> F1111112(mysql):::process
+      F111 --> F1112(访问技术):::process
+      F1112 --> F11121(jdbc):::process
+      F1 --> F12(web理论):::process
+      F12 --> F121(分布式网络理论):::process
+    </div>
+</body>
+</html>
