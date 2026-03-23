@@ -3,6 +3,7 @@
 <HEAD>
   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
   <TITLE>settimeout方法</TITLE>
+  <!-- --8<-- [start:js_window_settimeout_js] -->
   <SCRIPT language="JavaScript">
     function disptime() {
       var time = new Date(); //获得当前时间
@@ -16,6 +17,7 @@
       var myTime = setTimeout("disptime()", 1000);
     }
   </SCRIPT>
+  <!-- --8<-- [end:js_window_settimeout_js] -->
   <STYLE type="text/css">
     <!--
     /*设置样式：无边框的文本框*/
@@ -38,7 +40,9 @@
         <TD width="37%">&nbsp;</TD>
         <TD width="41%">
           <H2>当前时间：
+            <!-- --8<-- [start:js_window_settimeout_input] -->
             <INPUT name="myclock" type="text" value="" size="10">
+            <!-- --8<-- [end:js_window_settimeout_input] -->
           </H2>
         </TD>
         <TD width="22%">&nbsp;</TD>
