@@ -10,9 +10,7 @@
 <title>Index - 基于WEB的应用程序开发</title>
 <link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script src="https://unpkg.com/iframe-worker/shim"></script>
 <link href="../../../../assets/stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
@@ -1153,9 +1151,20 @@
 </table>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="150" src="./列表/src/ol_ul.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">ol_ul.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="150" src="./列表/src/ol_ul.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1197,11 +1206,11 @@
 </span><a id="__codelineno-0-19" name="__codelineno-0-19"></a>      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a>  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>  
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
 </div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_2">无序列表</h3>
 <p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。</p>
@@ -1209,16 +1218,30 @@
 <p>无序列表使用<code>&lt;ul&gt;</code>标签：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="80" src="./列表/src/ul.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">ul.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="80" src="./列表/src/ul.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Coffee<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Milk<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">ul.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -1254,25 +1277,36 @@
 <a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_3">有序列表</h3>
 <p>同样，有序列表也是一列项目，列表项目使用数字进行标记。有序列表始于<code>&lt;ol&gt;</code>标签。每个列表项始于<code>&lt;li&gt;</code>标签。</p>
 <p>有序列表适合各项目之间存在顺序关系的情况。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="80" src="./列表/src/ol.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">ol.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="80" src="./列表/src/ol.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Coffee<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Milk<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">ol.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
@@ -1308,9 +1342,6 @@
 <a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_4">自定义列表</h3>
 <p>自定义列表不仅仅是一列项目，而是项目及其注释的组合。  </p>
@@ -1318,9 +1349,20 @@
 <p>自定义列表中的一个术语名可以对应多重定义或者多个术语名对应同一个定义，如果只有术语名或者只有定义也是可行的，也就是说<code>&lt;dt&gt;</code>与<code>&lt;dd&gt;</code>在其中数量不限、对应关系不限。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="120" src="./列表/src/dl.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">dl.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="120" src="./列表/src/dl.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
@@ -1331,7 +1373,10 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>  <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Milk<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a>  <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>- white cold drink<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">dl.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
@@ -1371,9 +1416,6 @@
 <a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <div class="admonition tip">
 <p class="admonition-title">提示</p>
 <p>列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。</p>
@@ -1392,12 +1434,6 @@
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-      Material for MkDocs
-    </a>
 </div>
 </div>
 </div>
@@ -1406,7 +1442,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../js/mermaid.min.js"></script>
 <script src="../../../../js/init_mermaid.js"></script>

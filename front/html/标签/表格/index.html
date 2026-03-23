@@ -10,9 +10,7 @@
 <title>Index - 基于WEB的应用程序开发</title>
 <link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script src="https://unpkg.com/iframe-worker/shim"></script>
 <link href="../../../../assets/stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
@@ -1238,9 +1236,20 @@
 <p><code>&lt;td&gt;…&lt;/td&gt;</code>：定义表格的列</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="80" src="./表格/src/table.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">table.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="80" src="./表格/src/table.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1259,7 +1268,10 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">table.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -1292,33 +1304,41 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21"></a>
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_2">表格和边框属性</h3>
 <p>如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。</p>
 <p>使用边框属性border来显示一个带有边框的表格：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="50" src="./表格/src/border.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">border.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="50" src="./表格/src/border.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
@@ -1329,7 +1349,10 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">border.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -1358,20 +1381,17 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a>
 <a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_3">表格表头单元格</h3>
 <p>表格的表头单元格使用<th>标签进行定义。</th></p>
@@ -1379,9 +1399,20 @@
 <p>大多数浏览器会把表头显示为粗体居中的文本：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="100" src="./表格/src/header.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">header.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="100" src="./表格/src/header.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
@@ -1408,7 +1439,10 @@
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-4-13" name="__codelineno-4-13"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">header.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1445,28 +1479,25 @@
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Header 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Header 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Header 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Header 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-5-25" name="__codelineno-5-25"></a>
 <a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="caption">表格标题<code>&lt;caption&gt;</code></h3>
 <p>在<code>&lt;table&gt;</code>标签中我们可以使用<code>&lt;caption&gt; ... &lt;/ caption&gt;</code>标签作为标题，并在表的顶部显示出来。</p>
@@ -1476,22 +1507,44 @@
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="100" src="./表格/src/caption.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">caption.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span>
-<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="100" src="./表格/src/caption.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>  <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>这是标题<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, columnn 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, columnn 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">caption.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
@@ -1525,39 +1578,64 @@
 <a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>这是标题<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, columnn 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, columnn 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>  <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>这是标题<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 1, columnn 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>row 2, columnn 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-7-22" name="__codelineno-7-22"></a>
 <a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_4">表格高度和宽度</h3>
 <p>在<code>&lt;table&gt;</code>标签中您可以使用<code>width</code>（宽）和<code>height</code>（高）属性设置表格宽度和高度。您可以按像素或可用屏幕区域的百分比来指定表格宽度或高度。</p>
 <p><strong>示例</strong></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="180" src="./表格/src/width.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">width.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"400"</span> <span class="na">height</span><span class="o">=</span><span class="s">"150"</span><span class="p">&gt;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="180" src="./表格/src/width.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"400"</span> <span class="na">height</span><span class="o">=</span><span class="s">"150"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, Column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, Column 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2, Column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2, Column 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">width.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
@@ -1590,24 +1668,21 @@
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"400"</span> <span class="na">height</span><span class="o">=</span><span class="s">"150"</span><span class="p">&gt;</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, Column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, Column 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2, Column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2, Column 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"400"</span> <span class="na">height</span><span class="o">=</span><span class="s">"150"</span><span class="p">&gt;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, Column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1, Column 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2, Column 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2, Column 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-9-21" name="__codelineno-9-21"></a>
 <a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_5">表格背景</h3>
 <p>可以使用以下方法之一设置 HTML 表格的背景 </p>
@@ -1622,9 +1697,20 @@
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="60" src="./表格/src/background.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">background.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="60" src="./表格/src/background.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span>
 <span class="normal"><a href="#__codelineno-10-4">4</a></span>
@@ -1637,7 +1723,10 @@
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">background.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
@@ -1667,21 +1756,18 @@
 <a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-11-8" name="__codelineno-11-8"></a>
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">bordercolor</span><span class="o">=</span><span class="s">"green"</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">&gt;</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">bordercolor</span><span class="o">=</span><span class="s">"green"</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">&gt;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-11-18" name="__codelineno-11-18"></a>
 <a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_6">表格空间</h3>
 <p>有以下两个属性，用于调整 HTML 表格中单元格的空间：</p>
@@ -1691,14 +1777,50 @@
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="150" src="./表格/src/spacing.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">spacing.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">"5"</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">"5"</span><span class="p">&gt;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="150" src="./表格/src/spacing.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">"5"</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">"5"</span><span class="p">&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Salary<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>其琛<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><a id="__codelineno-12-11" name="__codelineno-12-11"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>曼迪<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">spacing.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
@@ -1735,36 +1857,44 @@
 <a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-13-8" name="__codelineno-13-8"></a>
 <a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">"5"</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">"5"</span><span class="p">&gt;</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Salary<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>其琛<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>曼迪<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-13-21" name="__codelineno-13-21"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-13-22" name="__codelineno-13-22"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-13-23" name="__codelineno-13-23"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">"5"</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">"5"</span><span class="p">&gt;</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Salary<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>其琛<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>曼迪<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-13-25" name="__codelineno-13-25"></a>
 <a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_7">合并单元格</h3>
 <p>如果要将两个或多个列合并为一个列，将使用colspan属性 </p>
 <p>如果要合并两行或更多行，则将使用rowspan属性。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="130" src="./表格/src/merge.html" width="100%"></iframe>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="130" src="./表格/src/merge.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">merge.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -1802,7 +1932,10 @@
 <a id="__codelineno-14-17" name="__codelineno-14-17"></a>    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span><span class="p">&gt;</span>Row 3 Cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-14-18" name="__codelineno-14-18"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">merge.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
@@ -1844,33 +1977,30 @@
 <a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-15-8" name="__codelineno-15-8"></a>
 <a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-15-13" name="__codelineno-15-13"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a>      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-17" name="__codelineno-15-17"></a>      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>Row 1 Cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-15-18" name="__codelineno-15-18"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1 Cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-15-19" name="__codelineno-15-19"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1 Cell 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-15-20" name="__codelineno-15-20"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-21" name="__codelineno-15-21"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-22" name="__codelineno-15-22"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2 Cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-15-23" name="__codelineno-15-23"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2 Cell 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-15-24" name="__codelineno-15-24"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-25" name="__codelineno-15-25"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-26" name="__codelineno-15-26"></a>      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span><span class="p">&gt;</span>Row 3 Cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-15-27" name="__codelineno-15-27"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-15-28" name="__codelineno-15-28"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 1<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 2<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Column 3<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a>    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>Row 1 Cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1 Cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 1 Cell 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2 Cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Row 2 Cell 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a>    <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span><span class="p">&gt;</span>Row 3 Cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-15-29" name="__codelineno-15-29"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-15-30" name="__codelineno-15-30"></a>
 <a id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_8">表格头部、主体、页脚</h3>
 <p>表格可以分为三个部分 - <strong>头部</strong>，<strong>主体</strong>和<strong>页脚</strong>，如同WORD文档中页面的页眉、正文、页脚。每个页面保持相同，而正文是表格的主要内容持有者。</p>
@@ -1885,8 +2015,19 @@
 <p>但值得注意的是<code>&lt;thead&gt;</code>和<code>&lt;tfoot&gt;</code>标签应出现在<code>&lt;tbody&gt;</code>之前：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="100" src="./表格/src/footer.html" width="100%"></iframe>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="100" src="./表格/src/footer.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">footer.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -1926,7 +2067,10 @@
 <a id="__codelineno-16-18" name="__codelineno-16-18"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-16-19" name="__codelineno-16-19"></a>  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
 <a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">footer.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
@@ -1969,41 +2113,49 @@
 <a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-17-8" name="__codelineno-17-8"></a>
 <a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span><span class="p">&gt;</span>
-<a id="__codelineno-17-11" name="__codelineno-17-11"></a>    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12"></a>      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"4"</span><span class="p">&gt;</span>This is the head of the table<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-17-14" name="__codelineno-17-14"></a>      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15"></a>    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
-<a id="__codelineno-17-16" name="__codelineno-17-16"></a>    <span class="p">&lt;</span><span class="nt">tfoot</span><span class="p">&gt;</span>
-<a id="__codelineno-17-17" name="__codelineno-17-17"></a>      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-17-18" name="__codelineno-17-18"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"4"</span><span class="p">&gt;</span>This is the foot of the table<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-17-19" name="__codelineno-17-19"></a>      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-17-20" name="__codelineno-17-20"></a>    <span class="p">&lt;/</span><span class="nt">tfoot</span><span class="p">&gt;</span>
-<a id="__codelineno-17-21" name="__codelineno-17-21"></a>    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-<a id="__codelineno-17-22" name="__codelineno-17-22"></a>      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-17-23" name="__codelineno-17-23"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-17-24" name="__codelineno-17-24"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-17-25" name="__codelineno-17-25"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-17-26" name="__codelineno-17-26"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-17-27" name="__codelineno-17-27"></a>      <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-17-28" name="__codelineno-17-28"></a>    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-<a id="__codelineno-17-29" name="__codelineno-17-29"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span><span class="p">&gt;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"4"</span><span class="p">&gt;</span>This is the head of the table<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>  <span class="p">&lt;</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a>      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"4"</span><span class="p">&gt;</span>This is the foot of the table<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a>  <span class="p">&lt;/</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a>  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Cell 4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a>  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-17-30" name="__codelineno-17-30"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-17-31" name="__codelineno-17-31"></a>
 <a id="__codelineno-17-32" name="__codelineno-17-32"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 <h3 id="_9">表格的嵌套</h3>
 <p>可以在另一个表中使用一个表。可以使用<code>&lt;table&gt;</code>内的几乎所有标签。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="120" src="./表格/src/embeded.html" width="100%"></iframe>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="120" src="./表格/src/embeded.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">embeded.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
@@ -2043,7 +2195,10 @@
 <a id="__codelineno-18-18" name="__codelineno-18-18"></a>    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 <a id="__codelineno-18-19" name="__codelineno-18-19"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">embeded.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
@@ -2086,34 +2241,31 @@
 <a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-19-8" name="__codelineno-19-8"></a>
 <a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span><span class="p">&gt;</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13"></a>        <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span><span class="p">&gt;</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14"></a>          <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-15" name="__codelineno-19-15"></a>            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16"></a>            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Salary<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
-<a id="__codelineno-19-17" name="__codelineno-19-17"></a>          <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-18" name="__codelineno-19-18"></a>          <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-19" name="__codelineno-19-19"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>其琛<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-19-20" name="__codelineno-19-20"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-19-21" name="__codelineno-19-21"></a>          <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-22" name="__codelineno-19-22"></a>          <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-23" name="__codelineno-19-23"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>曼迪<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-19-24" name="__codelineno-19-24"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-19-25" name="__codelineno-19-25"></a>          <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-26" name="__codelineno-19-26"></a>        <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
-<a id="__codelineno-19-27" name="__codelineno-19-27"></a>      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-<a id="__codelineno-19-28" name="__codelineno-19-28"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<a id="__codelineno-19-29" name="__codelineno-19-29"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span><span class="p">&gt;</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>      <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span><span class="p">&gt;</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Salary<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a>          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>其琛<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20"></a>          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-19-21" name="__codelineno-19-21"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-23" name="__codelineno-19-23"></a>          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>曼迪<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-19-24" name="__codelineno-19-24"></a>          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7000<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-19-25" name="__codelineno-19-25"></a>        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-26" name="__codelineno-19-26"></a>      <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-19-27" name="__codelineno-19-27"></a>    <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-19-28" name="__codelineno-19-28"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-19-29" name="__codelineno-19-29"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-19-30" name="__codelineno-19-30"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-19-31" name="__codelineno-19-31"></a>
 <a id="__codelineno-19-32" name="__codelineno-19-32"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></div>
 <hr/>
 </article>
 </div>
@@ -2129,12 +2281,6 @@
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-      Material for MkDocs
-    </a>
 </div>
 </div>
 </div>
@@ -2143,7 +2289,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../js/mermaid.min.js"></script>
 <script src="../../../../js/init_mermaid.js"></script>

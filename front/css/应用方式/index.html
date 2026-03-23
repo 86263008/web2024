@@ -12,9 +12,7 @@
 <title>应用方式 - 基于WEB的应用程序开发</title>
 <link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script src="https://unpkg.com/iframe-worker/shim"></script>
 <link href="../../../assets/stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
@@ -1148,35 +1146,10 @@
 </div>
 </div>
 <div class="md-content" data-md-component="content">
-<nav aria-label="Navigation" class="md-path">
-<ol class="md-path__list">
-<li class="md-path__item">
-<a class="md-path__link" href="../../../index.html">
-<span class="md-ellipsis">
-    首页
-  </span>
-</a>
-</li>
-<li class="md-path__item">
-<a class="md-path__link" href="../../html/syllabus/index.html">
-<span class="md-ellipsis">
-    前端-基础
-  </span>
-</a>
-</li>
-<li class="md-path__item">
-<a class="md-path__link" href="../syllabus/index.html">
-<span class="md-ellipsis">
-    CSS
-  </span>
-</a>
-</li>
-</ol>
-</nav>
 <article class="md-content__inner md-typeset">
 <h1 id="_1">应用方式</h1>
 <h2 id="_2">内嵌样式表</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">语法</label><label for="__tabbed_1_2">示例</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">语法</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>内嵌样式表使用格式如下：</p>
@@ -1191,28 +1164,43 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="260" src="./src/css_app_inner_css.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_inner_css.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">P</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">      </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"隶书"</span><span class="p">;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FF0000</span><span class="p">;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</div>
+</input></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="300" src="./src/css_app_inner_css.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_inner_css.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">P</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"隶书"</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FF0000</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_inner_css.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -1266,27 +1254,43 @@
 <a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></input></div>
 <hr/>
 <h2 id="_3">行内（嵌入）样式表</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">语法</label><label for="__tabbed_2_2">示例</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">语法</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">P</span> <span class="na">style </span><span class="o">=</span> <span class="s">"color:red;font-size:30px;font-family:隶书;"</span><span class="p">&gt;</span>这个段落应用了样式<span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="260" src="./src/css_app_lineinner_css.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_lineinner_css.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+</div>
+</input></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="320" src="./src/css_app_lineinner_css.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">P</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:#FF0000; font-size:18px; font-family:隶书; border-bottom-style:dashed "</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>  疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="hll"><span class="p">&lt;</span><span class="nt">P</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:#FF0000; font-size:18px; font-family:隶书; border-bottom-style:dashed "</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+</span><a id="__codelineno-4-2" name="__codelineno-4-2"></a>  疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>  我是郭德刚，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>  低头思故乡。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_lineinner_css.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1321,10 +1325,10 @@
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"libai.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>静夜思<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;</span>作者：李白<span class="p">&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">P</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:#FF0000; font-size:18px; font-family:隶书; border-bottom-style:dashed "</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-</span><a id="__codelineno-5-13" name="__codelineno-5-13"></a>    疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>    我是郭德刚，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a>    低头思故乡。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="hll"><span class="p">&lt;</span><span class="nt">P</span> <span class="na">style</span><span class="o">=</span><span class="s">"color:#FF0000; font-size:18px; font-family:隶书; border-bottom-style:dashed "</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+</span><a id="__codelineno-5-13" name="__codelineno-5-13"></a>  疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>  我是郭德刚，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>  低头思故乡。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
 <a id="__codelineno-5-16" name="__codelineno-5-16"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
 <a id="__codelineno-5-17" name="__codelineno-5-17"></a>    静夜思：宁静的夜晚所引起的乡思。
 <a id="__codelineno-5-18" name="__codelineno-5-18"></a>    疑：怀疑，以为。
@@ -1334,9 +1338,6 @@
 <a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></input></div>
 <hr/>
 <h2 id="_4">外部样式表文件</h2>
 <p>根据样式文件与网页的关联方式又分为：</p>
@@ -1348,7 +1349,7 @@
 <p>导入（@import）外部样式表</p>
 </li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">语法</label><label for="__tabbed_3_2">link示例</label><label for="__tabbed_3_3">@import示例</label><label for="__tabbed_3_4">link与@import的区别</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">语法</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -1374,19 +1375,28 @@
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<p><div style="display:flex;">
-<div style="width:50%;">
-<iframe frameborder="0" height="320" src="./src/css_app_Link_Outcss1.html" width="100%"></iframe>
 </div>
-<div style="width:50%;">
-<iframe frameborder="0" height="320" src="./src/css_app_Link_Outcss1.html" width="100%"></iframe>
+</input></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">link示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
 </div>
-</div></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">css_app_newstyle.css</label><label for="__tabbed_4_2">css_app_Link_Outcss1.html</label><label for="__tabbed_4_3">css_app_Link_Outcss2.html</label></div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="600" src="./src/css_app_link_case1.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><input id="__tabbed_7_3" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">css_app_newstyle.css</label><label for="__tabbed_7_2">css_app_Link_Outcss1.html</label><label for="__tabbed_7_3">css_app_Link_Outcss2.html</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_newstyle.css</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
@@ -1436,11 +1446,55 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_Link_Outcss1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">LINK</span> <span class="na">href</span><span class="o">=</span><span class="s">"newsyle.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span> <span class="p">/&gt;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>链接外部样式<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">LINK</span> <span class="na">href</span><span class="o">=</span><span class="s">"css_app_newstyle.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+</span><a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"libai.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>静夜思<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：李白<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>    疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>    我是郭德刚，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>    低头思故乡。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>    静夜思：宁静的夜晚所引起的乡思。
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>    疑：怀疑，以为。
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>    举：抬、仰。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_Link_Outcss1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
@@ -1460,9 +1514,7 @@
 <span class="normal"><a href="#__codelineno-10-18">18</a></span>
 <span class="normal"><a href="#__codelineno-10-19">19</a></span>
 <span class="normal"><a href="#__codelineno-10-20">20</a></span>
-<span class="normal"><a href="#__codelineno-10-21">21</a></span>
-<span class="normal"><a href="#__codelineno-10-22">22</a></span>
-<span class="normal"><a href="#__codelineno-10-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span> <span class="p">/&gt;</span>
@@ -1471,29 +1523,97 @@
 </span><a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8"></a>
 <a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"libai.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>静夜思<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：李白<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a>    疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a>    我是郭德刚，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16"></a>    低头思故乡。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"dufu.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>春望<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：杜甫<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>国破山河在，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>    城春草木深。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a>    感时花溅泪，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>    恨别鸟惊心。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
-<a id="__codelineno-10-18" name="__codelineno-10-18"></a>    静夜思：宁静的夜晚所引起的乡思。
-<a id="__codelineno-10-19" name="__codelineno-10-19"></a>    疑：怀疑，以为。
-<a id="__codelineno-10-20" name="__codelineno-10-20"></a>    举：抬、仰。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22"></a>
-<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>    诗的这四句，都统在“望”字中。诗人俯仰瞻视，视线由近而远，又由远而近，视野从城到山河，再由满城到花鸟。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
+</div>
+</input></input></input></div>
+</li>
+</ul>
+</div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">@import示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="600" src="./src/css_app_import_case1.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">css_app_import_Outcss1.html</label><label for="__tabbed_9_2">css_app_import_Outcss2.html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span> <span class="p">/&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>链接外部样式<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="hll"><span class="w">    </span><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">css_app_newstyle</span><span class="p">.</span><span class="nc">css</span><span class="p">;</span>
+</span><a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"libai.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>静夜思<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：李白<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>    疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a>    我是郭德刚，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a>    低头思故乡。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a>    静夜思：宁静的夜晚所引起的乡思。
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a>    疑：怀疑，以为。
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a>    举：抬、仰。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_Link_Outcss2.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">LINK</span> <span class="na">href</span><span class="o">=</span><span class="s">"newsyle.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_Link_Outcss2.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
@@ -1513,158 +1633,43 @@
 <span class="normal"><a href="#__codelineno-12-18">18</a></span>
 <span class="normal"><a href="#__codelineno-12-19">19</a></span>
 <span class="normal"><a href="#__codelineno-12-20">20</a></span>
-<span class="normal"><a href="#__codelineno-12-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a>
 <a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span> <span class="p">/&gt;</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>链接外部样式<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">LINK</span> <span class="na">href</span><span class="o">=</span><span class="s">"css_app_newstyle.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
-</span><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"dufu.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>春望<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：杜甫<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>国破山河在，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a>    城春草木深。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a>    感时花溅泪，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a>    恨别鸟惊心。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
-<a id="__codelineno-12-18" name="__codelineno-12-18"></a>    诗的这四句，都统在“望”字中。诗人俯仰瞻视，视线由近而远，又由远而近，视野从城到山河，再由满城到花鸟。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20"></a>
-<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-</details>
-</div>
-</div>
-</input></input></input></div>
-</div>
-<div class="tabbed-block">
-<p><div style="display:flex;">
-<div style="width:50%;">
-<iframe frameborder="0" height="320" src="./src/css_app_import_Outcss1.html" width="100%"></iframe>
-</div>
-<div style="width:50%;">
-<iframe frameborder="0" height="320" src="./src/css_app_import_Outcss2.html" width="100%"></iframe>
-</div>
-</div></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">css_app_import_Outcss1.html</label><label for="__tabbed_5_2">css_app_import_Outcss2.html</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_import_Outcss1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span>
-<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">css_app_newstyle</span><span class="p">.</span><span class="nc">css</span><span class="p">;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_import_Outcss1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-14-10">10</a></span>
-<span class="normal"><a href="#__codelineno-14-11">11</a></span>
-<span class="normal"><a href="#__codelineno-14-12">12</a></span>
-<span class="normal"><a href="#__codelineno-14-13">13</a></span>
-<span class="normal"><a href="#__codelineno-14-14">14</a></span>
-<span class="normal"><a href="#__codelineno-14-15">15</a></span>
-<span class="normal"><a href="#__codelineno-14-16">16</a></span>
-<span class="normal"><a href="#__codelineno-14-17">17</a></span>
-<span class="normal"><a href="#__codelineno-14-18">18</a></span>
-<span class="normal"><a href="#__codelineno-14-19">19</a></span>
-<span class="normal"><a href="#__codelineno-14-20">20</a></span>
-<span class="normal"><a href="#__codelineno-14-21">21</a></span>
-<span class="normal"><a href="#__codelineno-14-22">22</a></span>
-<span class="normal"><a href="#__codelineno-14-23">23</a></span>
-<span class="normal"><a href="#__codelineno-14-24">24</a></span>
-<span class="normal"><a href="#__codelineno-14-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span> <span class="p">/&gt;</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>链接外部样式<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="hll"><span class="w">    </span><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">css_app_newstyle</span><span class="p">.</span><span class="nc">css</span><span class="p">;</span>
-</span><a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10"></a>
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-14-12" name="__codelineno-14-12"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"libai.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>静夜思<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：李白<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>床前明月光，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16"></a>    疑是地上霜。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-14-17" name="__codelineno-14-17"></a>    我是郭德刚，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-14-18" name="__codelineno-14-18"></a>    低头思故乡。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-14-19" name="__codelineno-14-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
-<a id="__codelineno-14-20" name="__codelineno-14-20"></a>    静夜思：宁静的夜晚所引起的乡思。
-<a id="__codelineno-14-21" name="__codelineno-14-21"></a>    疑：怀疑，以为。
-<a id="__codelineno-14-22" name="__codelineno-14-22"></a>    举：抬、仰。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-14-24" name="__codelineno-14-24"></a>
-<a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-</details>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">css_app_import_Outcss2.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-15-10">10</a></span>
-<span class="normal"><a href="#__codelineno-15-11">11</a></span>
-<span class="normal"><a href="#__codelineno-15-12">12</a></span>
-<span class="normal"><a href="#__codelineno-15-13">13</a></span>
-<span class="normal"><a href="#__codelineno-15-14">14</a></span>
-<span class="normal"><a href="#__codelineno-15-15">15</a></span>
-<span class="normal"><a href="#__codelineno-15-16">16</a></span>
-<span class="normal"><a href="#__codelineno-15-17">17</a></span>
-<span class="normal"><a href="#__codelineno-15-18">18</a></span>
-<span class="normal"><a href="#__codelineno-15-19">19</a></span>
-<span class="normal"><a href="#__codelineno-15-20">20</a></span>
-<span class="normal"><a href="#__codelineno-15-21">21</a></span>
-<span class="normal"><a href="#__codelineno-15-22">22</a></span>
-<span class="normal"><a href="#__codelineno-15-23">23</a></span>
-<span class="normal"><a href="#__codelineno-15-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span> <span class="p">/&gt;</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>链接外部样式<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="hll"><span class="w">    </span><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">css_app_newstyle</span><span class="p">.</span><span class="nc">css</span><span class="p">;</span>
-</span><a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"dufu.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-15-13" name="__codelineno-15-13"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>春望<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：杜甫<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>国破山河在，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16"></a>    城春草木深。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-15-17" name="__codelineno-15-17"></a>    感时花溅泪，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
-<a id="__codelineno-15-18" name="__codelineno-15-18"></a>    恨别鸟惊心。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-15-19" name="__codelineno-15-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
-<a id="__codelineno-15-20" name="__codelineno-15-20"></a>    诗的这四句，都统在“望”字中。
-<a id="__codelineno-15-21" name="__codelineno-15-21"></a>    诗人俯仰瞻视，视线由近而远，又由远而近，视野从城到山河，再由满城到花鸟。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-15-23" name="__codelineno-15-23"></a>
-<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>  <span class="p">&lt;</span><span class="nt">STYLE</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="hll"><span class="w">    </span><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">css_app_newstyle</span><span class="p">.</span><span class="nc">css</span><span class="p">;</span>
+</span><a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">STYLE</span><span class="p">&gt;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"dufu.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"140"</span> <span class="na">height</span><span class="o">=</span><span class="s">"170"</span> <span class="na">align</span><span class="o">=</span><span class="s">"left"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>  <span class="p">&lt;</span><span class="nt">H2</span><span class="p">&gt;</span>春望<span class="p">&lt;/</span><span class="nt">H2</span><span class="p">&gt;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>  <span class="p">&lt;</span><span class="nt">H3</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>作者：杜甫<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">H3</span><span class="p">&gt;</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>国破山河在，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a>    城春草木深。<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a>    感时花溅泪，<span class="p">&lt;</span><span class="nt">BR</span><span class="p">&gt;</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a>    恨别鸟惊心。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span>注释：
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a>    诗的这四句，都统在“望”字中。
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a>    诗人俯仰瞻视，视线由近而远，又由远而近，视野从城到山河，再由满城到花鸟。<span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></div>
+</li>
+</ul>
 </div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">link与@import的区别</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
 <p>两种方法的区别：</p>
 <div class="admonition tip">
@@ -1686,7 +1691,7 @@
 </div>
 </div>
 </div>
-</input></input></input></input></div>
+</input></div>
 <hr/>
 </article>
 </div>
@@ -1702,12 +1707,6 @@
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-      Material for MkDocs
-    </a>
 </div>
 </div>
 </div>
@@ -1716,7 +1715,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
 <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../js/mermaid.min.js"></script>
 <script src="../../../js/init_mermaid.js"></script>

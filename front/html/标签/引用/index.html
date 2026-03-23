@@ -10,9 +10,7 @@
 <title>Index - 基于WEB的应用程序开发</title>
 <link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script src="https://unpkg.com/iframe-worker/shim"></script>
 <link href="../../../../assets/stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
@@ -1196,25 +1194,47 @@
 <p><code>&lt;q&gt;</code>元素定义短的引用。浏览器通常会为<code>&lt;q&gt;</code>元素包围引号。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><p>WWF 的目标是：<q>构建人与自然和谐共存的世界。</q></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>WWF 的目标是：<span class="p">&lt;</span><span class="nt">q</span><span class="p">&gt;</span>构建人与自然和谐共存的世界。<span class="p">&lt;/</span><span class="nt">q</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><p>WWF 的目标是：<q>构建人与自然和谐共存的世界。</q></p></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>WWF 的目标是：<span class="p">&lt;</span><span class="nt">q</span><span class="p">&gt;</span>构建人与自然和谐共存的世界。<span class="p">&lt;/</span><span class="nt">q</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <hr/>
 <h3 id="blockquote">用于长引用的<code>&lt;blockquote&gt;</code></h3>
 <p>HTML<code>&lt;blockquote&gt;</code>元素定义被引用的节。浏览器通常会对<code>&lt;blockquote&gt;</code>元素进行缩进处理。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
 <p><p>以下内容引用自 WWF 的网站：</p>
 <blockquote cite="http://www.worldwildlife.org/who/index.html">
 五十年来，WWF 一直致力于保护自然界的未来。
 世界领先的环保组织，WWF 工作于 100 个国家，
 并得到美国一百二十万会员及全球近五百万会员的支持。
-</blockquote>
+</blockquote></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1226,22 +1246,33 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>世界领先的环保组织，WWF 工作于 100 个国家，
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>并得到美国一百二十万会员及全球近五百万会员的支持。
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
 </div>
-</div>
-</input></div>
 <hr/>
 <h3 id="abbr">用于缩略词的<code>&lt;abbr&gt;</code></h3>
 <p>HTML<code>&lt;abbr&gt;</code>元素定义缩写或首字母缩略语。对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><p><abbr title="World Health Organization">WHO</abbr> 成立于 1948 年。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">"World Health Organization"</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;</span> 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><p><abbr title="World Health Organization">WHO</abbr> 成立于 1948 年。</p></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">"World Health Organization"</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;</span> 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <hr/>
 <h3 id="dfn">用于定义的<code>&lt;dfn&gt;</code></h3>
 <p><code>&lt;dfn&gt;</code>元素定义项目或缩写的定义。</p>
@@ -1251,37 +1282,70 @@
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><p><dfn title="World Health Organization">WHO</dfn> 成立于 1948 年。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">dfn</span> <span class="na">title</span><span class="o">=</span><span class="s">"World Health Organization"</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">dfn</span><span class="p">&gt;</span> 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><p><dfn title="World Health Organization">WHO</dfn> 成立于 1948 年。</p></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">dfn</span> <span class="na">title</span><span class="o">=</span><span class="s">"World Health Organization"</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">dfn</span><span class="p">&gt;</span> 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <ul>
 <li>如果<code>&lt;dfn&gt;</code>元素包含具有标题的 <code>&lt;abbr&gt;</code> 元素，则<code>title</code>定义项目：</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> 成立于 1948 年。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">dfn</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">"World Health Organization"</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;&lt;/</span><span class="nt">dfn</span><span class="p">&gt;</span> 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> 成立于 1948 年。</p></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">dfn</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">"World Health Organization"</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;&lt;/</span><span class="nt">dfn</span><span class="p">&gt;</span> 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <ul>
 <li>否则，<code>&lt;dfn&gt;</code>文本内容即是项目，并且父元素包含定义。</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><p><dfn>WHO</dfn> World Health Organization 成立于 1948 年。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">dfn</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">dfn</span><span class="p">&gt;</span> World Health Organization 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><p><dfn>WHO</dfn> World Health Organization 成立于 1948 年。</p></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">dfn</span><span class="p">&gt;</span>WHO<span class="p">&lt;/</span><span class="nt">dfn</span><span class="p">&gt;</span> World Health Organization 成立于 1948 年。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <div class="admonition info">
 <p class="admonition-title">注意</p>
 <p>如果希望简而化之，请使用第一条，或使用<code>&lt;abbr&gt;</code>代替。</p>
@@ -1292,7 +1356,14 @@
 <p>此元素通常以斜体显示。大多数浏览器会在此元素前后添加折行。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
 <p><address>
 Written by Donald Duck.<br/> 
 Visit us at:<br/>
@@ -1300,6 +1371,10 @@ Example.com<br/>
 Box 564, Disneyland<br/>
 USA
 </address></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
@@ -1314,35 +1389,57 @@ USA
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a>USA
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">&lt;/</span><span class="nt">address</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
+</li>
+</ul>
 </div>
-</div>
-</input></div>
 <hr/>
 <h3 id="cite">用于著作标题的<code>&lt;cite&gt;</code></h3>
 <p><code>&lt;cite&gt;</code>元素定义著作的标题。</p>
 <p>浏览器通常会以斜体显示<code>&lt;cite&gt;</code>元素。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>The Scream<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span> by Edward Munch. Painted in 1893.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>The Scream<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span> by Edward Munch. Painted in 1893.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <hr/>
 <h3 id="bdo">用于双向重写的<code>&lt;bdo&gt;</code></h3>
 <p><code>&lt;bdo&gt;</code>元素定义双流向覆盖（bi-directional override）。</p>
 <p><code>&lt;bdo&gt;</code>元素用于覆盖当前文本方向：</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><bdo dir="rtl">This text will be written from right to left</bdo> </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">bdo</span> <span class="na">dir</span><span class="o">=</span><span class="s">"rtl"</span><span class="p">&gt;</span>This text will be written from right to left<span class="p">&lt;/</span><span class="nt">bdo</span><span class="p">&gt;</span>    
-</code></pre></div></td></tr></table></div>
-</div>
+<div class="tabbed-block"></div>
 </div>
 </input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><bdo dir="rtl">This text will be written from right to left</bdo> </p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">bdo</span> <span class="na">dir</span><span class="o">=</span><span class="s">"rtl"</span><span class="p">&gt;</span>This text will be written from right to left<span class="p">&lt;/</span><span class="nt">bdo</span><span class="p">&gt;</span>    
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
@@ -1357,12 +1454,6 @@ USA
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-      Material for MkDocs
-    </a>
 </div>
 </div>
 </div>
@@ -1371,7 +1462,7 @@ USA
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.path", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../js/mermaid.min.js"></script>
 <script src="../../../../js/init_mermaid.js"></script>
