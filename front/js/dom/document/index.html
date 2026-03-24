@@ -1430,12 +1430,16 @@
 </ol>
 <hr/>
 <h3 id="1">实现1</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">效果</label><label for="__tabbed_2_2">源代码</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
 <p><iframe frameborder="0" height="600" src="./src/js_document_getElementByID2.html" width="100%"></iframe></p>
-</div>
-<div class="tabbed-block">
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1458,6 +1462,9 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a>  <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/close.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"26"</span> <span class="na">height</span><span class="o">=</span><span class="s">"18"</span><span class="p">&gt;</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -1513,36 +1520,42 @@
 <a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></input></div>
 <hr/>
 <h3 id="2">实现2</h3>
 <p>让关闭图标所在的层像浮动窗口一样，也跟随滚动条同步滚动。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">效果</label><label for="__tabbed_3_2">源代码</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
 <p><iframe frameborder="0" height="600" src="./src/js_document_getElementByID3.html" width="100%"></iframe></p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span>
-<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">closeInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"closeLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">closeInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1598,9 +1611,6 @@
 <a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></input></div>
 <hr/>
 <h2 id="_4">全选效果</h2>
 <p><strong>问题</strong></p>
@@ -1618,38 +1628,25 @@
 </ol>
 <hr/>
 <h3 id="_5">实现</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">效果</label><label for="__tabbed_4_2">源代码</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
 <p><iframe frameborder="0" height="600" src="./src/js_document_getElementsByName.html" width="100%"></iframe></p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementsByName.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span>
-<span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span>
-<span class="normal"><a href="#__codelineno-6-16">16</a></span>
-<span class="normal"><a href="#__codelineno-6-17">17</a></span>
-<span class="normal"><a href="#__codelineno-6-18">18</a></span>
-<span class="normal"><a href="#__codelineno-6-19">19</a></span>
-<span class="normal"><a href="#__codelineno-6-20">20</a></span>
-<span class="normal"><a href="#__codelineno-6-21">21</a></span>
-<span class="normal"><a href="#__codelineno-6-22">22</a></span>
-<span class="normal"><a href="#__codelineno-6-23">23</a></span>
-<span class="normal"><a href="#__codelineno-6-24">24</a></span>
-<span class="normal"><a href="#__codelineno-6-25">25</a></span>
-<span class="normal"><a href="#__codelineno-6-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span>
+<span class="normal"><a href="#__codelineno-6-8">8</a></span>
+<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">checkAll</span><span class="p">(</span><span class="nx">boolValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">"isBuy"</span><span class="p">);</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1657,25 +1654,11 @@
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">boolValue</span><span class="p">;</span><span class="w">  </span><span class="c1">//检查是否选中用checked，而不是value</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>  <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"6%"</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"javascript: checkAll(true)"</span><span class="p">&gt;</span>全选<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a>  <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"6%"</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"javascript: checkAll(false)"</span><span class="p">&gt;</span>全不选<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a>  <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"sanguo"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a>  <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"paozhu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a>  <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"paozhu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a>  <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"jingwu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>'
 </code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
 <details class="tip">
 <summary>源代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementsByName.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
@@ -1758,7 +1741,7 @@
 </span><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="hll"><span class="w">          </span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">boolValue</span><span class="p">;</span><span class="w">  </span><span class="c1">//检查是否选中用checked，而不是value</span>
 </span><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>'
 <a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
 <a id="__codelineno-7-16" name="__codelineno-7-16"></a>
 <a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
@@ -1815,9 +1798,6 @@
 <a id="__codelineno-7-68" name="__codelineno-7-68"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-</div>
-</div>
-</input></input></div>
 <hr/>
 </article>
 </div>

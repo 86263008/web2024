@@ -1732,7 +1732,11 @@ const - 块级作用域提升(在变量声明前使用变量，会报错。)</p>
 <p>var - 变量可以重新声明
 let - 变量不能重新声明
 const - 变量不能重新声明</p>
-<p>示例：
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1756,13 +1760,17 @@ const - 变量不能重新声明</p>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="c1">// const - 不允许在同一作用域内重复声明</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="kd">const</span><span class="w"> </span><span class="nx">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Beijing"</span><span class="p">;</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="c1">// const city = "Shanghai"; // SyntaxError: Identifier 'city' has already been declared</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>var - 变量可以重新赋值
 let - 变量不能重新赋值
 const - 变量不能重新赋值</p>
-<p>示例：<br/>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -1800,7 +1808,7 @@ const - 变量不能重新赋值</p>
 <a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"David"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这是可以的</span>
 <a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="nx">person</span><span class="p">.</span><span class="nx">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Developer"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这也是可以的</span>
 <a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span><span class="w"> </span><span class="c1">// { name: "David", age: 30, job: "Developer" }</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <p>var v = 5;
 let l = 10;</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
@@ -1871,11 +1879,15 @@ let l = 10;</p>
 </ul>
 <hr/>
 <h3 id="_5">逻辑控制语句</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">if条件语句</label><label for="__tabbed_3_2">switch多分支语句</label><label for="__tabbed_3_3">for、while循环语句</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">if条件语句</label><label for="__tabbed_5_2">switch多分支语句</label><label for="__tabbed_5_3">for、while循环语句</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>条件语句用于根据条件的真假来执行不同的代码块.</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
@@ -1885,8 +1897,13 @@ let l = 10;</p>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span><span class="k">else</span><span class="p">{</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="c1">//条件为false时执行的代码块;</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p>示例:
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span>
@@ -1900,11 +1917,15 @@ let l = 10;</p>
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"You are a minor."</span><span class="p">);</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="p">}</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="c1">//输出: You are an adult</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>多分支语句用于根据表达式的值来执行不同的代码块.</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
@@ -1926,8 +1947,13 @@ let l = 10;</p>
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">  </span><span class="k">default</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
 <a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="nx">JavaScript语句3</span><span class="p">;</span><span class="w">    </span>
 <a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p>示例:
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1957,11 +1983,15 @@ let l = 10;</p>
 <a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"It's a weekday!"</span><span class="p">);</span>
 <a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="p">}</span>
 <a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="c1">//输出: It's Monday!</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>循环语句用于重复执行代码块，直到满足某个条件为止.</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
@@ -1975,8 +2005,13 @@ let l = 10;</p>
 <a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="k">while</span><span class="p">(</span><span class="nx">条件</span><span class="p">){</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">  </span><span class="nx">语句集</span><span class="p">;</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p>示例:
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -2002,7 +2037,7 @@ let l = 10;</p>
 <a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">  </span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="p">}</span>
 <a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="c1">//输出: 0 1 2 3 4</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </input></input></input></div>
@@ -2011,12 +2046,20 @@ let l = 10;</p>
 <p>注释用于解释代码，提高代码的可读性,但注释本身不是JavaScript代码,不会被浏览器执行。JavaScript支持两种注释：单行注释和多行注释。</p>
 <p><strong>单行注释</strong></p>
 <p>以 <code>//</code> 开始，以行末结束</p>
-<p>示例：
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="o">&lt;</span><span class="nx">SCRIPT</span><span class="w"> </span><span class="nx">language</span><span class="o">=</span><span class="err">“</span><span class="nx">javascript</span><span class="err">”</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">//表示JavaScript代码的开始</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <p><strong>多行注释</strong></p>
 <p>以 <code>/*</code> 开始，以 <code>*/</code> 结束，符号 <code>/*…… */</code> 指示中间的语句是该程序中的注释。</p>
-<p>示例：
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span>
 <span class="normal"><a href="#__codelineno-16-3">3</a></span>
@@ -2026,15 +2069,19 @@ let l = 10;</p>
 <a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="cm">  2007-9-29</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="cm">  第一个JavaScript程序</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="cm"> */</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <hr/>
 <h3 id="_7">类型转换</h3>
 <p>JavaScript变量可以通过以下方式转换类型：</p>
 <ul>
-<li>显式类型转换:使用<code>parseInt</code>、<code>parseFloat</code>、<code>Number</code>等函数将字符串转换为数值型、浮点型或数值型等。</li>
-</ul>
-<p>示例:
-  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<li>
+<p>显式类型转换:使用<code>parseInt</code>、<code>parseFloat</code>、<code>Number</code>等函数将字符串转换为数值型、浮点型或数值型等。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio"/><div class="tabbed-labels"><label for="__tabbed_14_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
 <span class="normal"><a href="#__codelineno-17-2">2</a></span>
 <span class="normal"><a href="#__codelineno-17-3">3</a></span>
 <span class="normal"><a href="#__codelineno-17-4">4</a></span>
@@ -2043,35 +2090,48 @@ let l = 10;</p>
 <a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">a</span><span class="p">));</span><span class="w"> </span><span class="c1">// 10</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">a</span><span class="p">));</span><span class="w"> </span><span class="c1">// 10.0</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">a</span><span class="p">)));</span><span class="w"> </span><span class="c1">// "10.0"</span>
-</code></pre></div></td></tr></table></div></p>
-<ul>
+</code></pre></div></td></tr></table></div>
+</li>
 <li>
 <p>隐式类型转换:JavaScript会自动将不同类型的值进行比较或计算时，会将它们转换为数值型。</p>
-<p>示例:
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio"/><div class="tabbed-labels"><label for="__tabbed_15_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
 <span class="normal"><a href="#__codelineno-18-2">2</a></span>
 <span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"10"</span><span class="p">;</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1020</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </li>
 </ul>
 <hr/>
 <h3 id="_8">函数</h3>
 <p>函数是JavaScript中的一段可重用代码块，用于执行特定任务。函数接受输入（参数），执行操作，并可能返回结果。</p>
 <h4 id="_9">创建函数</h4>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">1. 函数声明（Function Declaration）</label><label for="__tabbed_4_2">2. 函数表达式（Function Expression）</label><label for="__tabbed_4_3">3. 箭头函数（Arrow Function）</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio"/><input id="__tabbed_16_2" name="__tabbed_16" type="radio"/><input id="__tabbed_16_3" name="__tabbed_16" type="radio"/><div class="tabbed-labels"><label for="__tabbed_16_1">1. 函数声明（Function Declaration）</label><label for="__tabbed_16_2">2. 函数表达式（Function Expression）</label><label for="__tabbed_16_3">3. 箭头函数（Arrow Function）</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>函数声明是一种命名函数，它有一个正式的名称。 </p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio"/><div class="tabbed-labels"><label for="__tabbed_17_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
 <span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">函数名</span><span class="p">(</span><span class="w"> </span><span class="nx">参数1</span><span class="p">,</span><span class="nx">参数2</span><span class="err">，…</span><span class="w"> </span><span class="p">){</span><span class="w"> </span>
 <a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">  </span><span class="nx">函数体</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio"/><div class="tabbed-labels"><label for="__tabbed_18_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
@@ -2081,18 +2141,27 @@ let l = 10;</p>
 <a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="p">}</span>
 <a id="__codelineno-20-4" name="__codelineno-20-4"></a>
 <a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">(</span><span class="s1">'World'</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: Hello, World!</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>函数表达式是一种匿名函数，它没有正式的名称。</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio"/><div class="tabbed-labels"><label for="__tabbed_19_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">函数名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">参数1</span><span class="p">,</span><span class="nx">参数2</span><span class="err">，…</span><span class="w"> </span><span class="p">){</span><span class="w"> </span>
 <a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">  </span><span class="nx">函数体</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio"/><div class="tabbed-labels"><label for="__tabbed_20_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
 <span class="normal"><a href="#__codelineno-22-2">2</a></span>
 <span class="normal"><a href="#__codelineno-22-3">3</a></span>
@@ -2104,18 +2173,27 @@ let l = 10;</p>
 <a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="p">};</span>
 <a id="__codelineno-22-5" name="__codelineno-22-5"></a>
 <a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: 5</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>箭头函数是一种简洁的函数定义方式，它没有自己的this，而是继承了父作用域的this。</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio"/><div class="tabbed-labels"><label for="__tabbed_21_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
 <span class="normal"><a href="#__codelineno-23-2">2</a></span>
 <span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">函数名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">参数1</span><span class="p">,</span><span class="nx">参数2</span><span class="err">，…</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">  </span><span class="nx">函数体</span><span class="p">;</span>
 <a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio"/><div class="tabbed-labels"><label for="__tabbed_22_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
 <span class="normal"><a href="#__codelineno-24-2">2</a></span>
 <span class="normal"><a href="#__codelineno-24-3">3</a></span>
@@ -2123,25 +2201,34 @@ let l = 10;</p>
 <a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3"></a>
 <a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: 5</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></input></input></div>
+</div>
 <hr/>
 <h4 id="_10">函数参数</h4>
 <p>函数参数是函数定义时使用的变量，用于接收调用函数时传递的值。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">1. 普通参数</label><label for="__tabbed_5_2">2. 默认参数</label><label for="__tabbed_5_3">3. 剩余参数</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:3"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio"/><input id="__tabbed_23_2" name="__tabbed_23" type="radio"/><input id="__tabbed_23_3" name="__tabbed_23" type="radio"/><div class="tabbed-labels"><label for="__tabbed_23_1">1. 普通参数</label><label for="__tabbed_23_2">2. 默认参数</label><label for="__tabbed_23_3">3. 剩余参数</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>普通参数是函数定义时使用的变量，用于接收调用函数时传递的值。</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio"/><div class="tabbed-labels"><label for="__tabbed_24_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
 <span class="normal"><a href="#__codelineno-25-2">2</a></span>
 <span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">函数名</span><span class="p">(</span><span class="nx">参数1</span><span class="p">,</span><span class="nx">参数2</span><span class="err">，…</span><span class="w"> </span><span class="p">){</span><span class="w"> </span>
 <a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">  </span><span class="nx">函数体</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio"/><div class="tabbed-labels"><label for="__tabbed_25_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
 <span class="normal"><a href="#__codelineno-26-3">3</a></span>
@@ -2151,18 +2238,27 @@ let l = 10;</p>
 <a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="p">}</span>
 <a id="__codelineno-26-4" name="__codelineno-26-4"></a>
 <a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: 5</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>默认参数是函数定义时使用的变量，用于接收调用函数时传递的值，如果没有传递值，则使用默认值。。</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio"/><div class="tabbed-labels"><label for="__tabbed_26_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>
 <span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">函数名</span><span class="p">(</span><span class="nx">参数1</span><span class="o">=</span><span class="nx">默认值1</span><span class="p">,</span><span class="w"> </span><span class="nx">参数2</span><span class="o">=</span><span class="nx">默认值2</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">){</span><span class="w"> </span>
 <a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="nx">函数体</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio"/><div class="tabbed-labels"><label for="__tabbed_27_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
 <span class="normal"><a href="#__codelineno-28-2">2</a></span>
 <span class="normal"><a href="#__codelineno-28-3">3</a></span>
@@ -2176,18 +2272,27 @@ let l = 10;</p>
 <a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: 2</span>
 <a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: 5</span>
 <a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: 2</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <p>剩余参数是函数定义时使用的变量，用于接收调用函数时传递的值，将所有传递的参数打包成一个数组。</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:1"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio"/><div class="tabbed-labels"><label for="__tabbed_28_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
 <span class="normal"><a href="#__codelineno-29-2">2</a></span>
 <span class="normal"><a href="#__codelineno-29-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">函数名</span><span class="p">(</span><span class="nx">参数1</span><span class="p">,</span><span class="w"> </span><span class="nx">参数2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">数组名</span><span class="p">){</span><span class="w"> </span>
 <a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="w">  </span><span class="nx">函数体</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio"/><div class="tabbed-labels"><label for="__tabbed_29_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
 <span class="normal"><a href="#__codelineno-30-3">3</a></span>
@@ -2197,14 +2302,18 @@ let l = 10;</p>
 <a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="p">}</span>
 <a id="__codelineno-30-4" name="__codelineno-30-4"></a>
 <a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
-</input></input></input></div>
+</div>
 <hr/>
 <h4 id="_11">返回值</h4>
 <p>函数可以返回一个值，用于调用函数时接收结果。</p>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio"/><div class="tabbed-labels"><label for="__tabbed_30_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
 <span class="normal"><a href="#__codelineno-31-2">2</a></span>
 <span class="normal"><a href="#__codelineno-31-3">3</a></span>
@@ -2212,8 +2321,13 @@ let l = 10;</p>
 <a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">  </span><span class="nx">函数体</span><span class="p">;</span><span class="w"> </span>
 <a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">返回值</span><span class="p">;</span>
 <a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="31:1"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio"/><div class="tabbed-labels"><label for="__tabbed_31_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
 <span class="normal"><a href="#__codelineno-32-2">2</a></span>
 <span class="normal"><a href="#__codelineno-32-3">3</a></span>
@@ -2223,7 +2337,7 @@ let l = 10;</p>
 <a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="p">}</span>
 <a id="__codelineno-32-4" name="__codelineno-32-4"></a>
 <a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出: 5</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <hr/>
 <h4 id="_12">函数的作用域</h4>
 <p>函数的作用域是指在函数体中可以访问的变量。包含全局作用域和函数作用域。其中：</p>
@@ -2231,7 +2345,11 @@ let l = 10;</p>
 <li>全局作用域：在函数外部定义的变量，可以在任何函数中访问。</li>
 <li>函数作用域：在函数内部定义的变量，只能在函数内部访问。</li>
 </ul>
-<p><strong>语法</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:1"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio"/><div class="tabbed-labels"><label for="__tabbed_32_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
 <span class="normal"><a href="#__codelineno-33-2">2</a></span>
 <span class="normal"><a href="#__codelineno-33-3">3</a></span>
@@ -2241,8 +2359,13 @@ let l = 10;</p>
 <a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">局部变量</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'局部变量'</span><span class="p">;</span>
 <a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="w">  </span><span class="p">...;</span><span class="w"> </span>
 <a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+</code></pre></div></td></tr></table></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="33:1"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio"/><div class="tabbed-labels"><label for="__tabbed_33_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
 <span class="normal"><a href="#__codelineno-34-2">2</a></span>
 <span class="normal"><a href="#__codelineno-34-3">3</a></span>
@@ -2258,11 +2381,15 @@ let l = 10;</p>
 <a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="p">}</span>
 <a id="__codelineno-34-7" name="__codelineno-34-7"></a>
 <a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">localVar</span><span class="p">);</span><span class="w"> </span><span class="c1">// 报错，局部变量只能在函数内部访问</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <hr/>
 <h4 id="this">this关键字</h4>
 <p>this关键字是指向调用函数的对象。不同的调用方式会导致this指向不同的对象。</p>
-<p><strong>示例</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:1"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio"/><div class="tabbed-labels"><label for="__tabbed_34_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
@@ -2284,27 +2411,34 @@ let l = 10;</p>
 <a id="__codelineno-35-9" name="__codelineno-35-9"></a>
 <a id="__codelineno-35-10" name="__codelineno-35-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Person</span><span class="p">(</span><span class="s1">'张三'</span><span class="p">,</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
 <a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="nx">p1</span><span class="p">.</span><span class="nx">sayName</span><span class="p">();</span><span class="w"> </span><span class="c1">// 输出: 张三</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <hr/>
 <h4 id="_13">调用函数</h4>
 <div class="highlight"><pre><span></span><code>函数调用是指在程序中调用函数，执行函数体中的代码。
-
-**语法**
-```javascript linenums="1"
-函数名(参数1,参数2，… );
-```
 </code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:1"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio"/><div class="tabbed-labels"><label for="__tabbed_35_1">语法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="nx">函数名</span><span class="p">(</span><span class="nx">参数1</span><span class="p">,</span><span class="nx">参数2</span><span class="err">，…</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <hr/>
 <h3 id="_14">事件</h3>
 <p>事件是指在程序中特定的时间点，用于触发特定的事件处理程序。</p>
 <p>JavaScript与Web页面之间的交互是通过用户操作浏览器页面时触发相关事件来实现的。例如，在页面载入完毕时将触发onload（载入）事件、当用户单击按钮时将触发按钮的onclick事件等。事件处理程序则是用于响应某个事件而执行的处理程序。事件处理程序可以是任意JavaScript语句，但通常使用特定的自定义函数（Function）来对事件进行处理。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">绑定语法</label><label for="__tabbed_6_2">常见事件</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio"/><input id="__tabbed_36_2" name="__tabbed_36" type="radio"/><div class="tabbed-labels"><label for="__tabbed_36_1">绑定语法</label><label for="__tabbed_36_2">常见事件</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>事件与处理程序绑定语法：
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="nx">事件名</span><span class="err">＝</span><span class="s2">"函数名"</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div></p>
-<p><strong>示例</strong>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:1"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio"/><div class="tabbed-labels"><label for="__tabbed_37_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-38-3"> 3</a></span>
@@ -2324,7 +2458,7 @@ let l = 10;</p>
 <a id="__codelineno-38-8" name="__codelineno-38-8"></a>...
 <a id="__codelineno-38-9" name="__codelineno-38-9"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"greetingButton1"</span><span class="err">"</span><span class="p">&gt;</span>  Greeting1!  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <a id="__codelineno-38-10" name="__codelineno-38-10"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"greetingButton2"</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"greeting()"</span><span class="p">&gt;</span>  Greeting2!  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
 <table>
@@ -2427,9 +2561,9 @@ let l = 10;</p>
 </table>
 </div>
 </div>
-</input></div>
+</div>
 <hr/>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Html界面</label><label for="__tabbed_7_2">Javascript实现</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="38:2"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio"/><input id="__tabbed_38_2" name="__tabbed_38" type="radio"/><div class="tabbed-labels"><label for="__tabbed_38_1">Html界面</label><label for="__tabbed_38_2">Javascript实现</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><iframe frameborder="0" height="250" src="./src/计算器/xiaojie1_pre.html" width="100%"></iframe>
