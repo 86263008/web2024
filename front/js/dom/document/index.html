@@ -572,6 +572,24 @@
 </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        简述
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        常见属性和方法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#div">
 <span class="md-ellipsis">
       
@@ -581,7 +599,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
         制作浮动的广告图片
@@ -591,7 +609,7 @@
 <nav aria-label="制作浮动的广告图片" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       
         实现
@@ -603,7 +621,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       
         带关闭按钮的浮动窗口
@@ -634,7 +652,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
       
         全选效果
@@ -644,7 +662,7 @@
 <nav aria-label="全选效果" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       
         实现
@@ -1171,6 +1189,24 @@
 </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        简述
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
+      
+        常见属性和方法
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#div">
 <span class="md-ellipsis">
       
@@ -1180,7 +1216,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
         制作浮动的广告图片
@@ -1190,7 +1226,7 @@
 <nav aria-label="制作浮动的广告图片" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       
         实现
@@ -1202,7 +1238,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       
         带关闭按钮的浮动窗口
@@ -1233,7 +1269,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
       
         全选效果
@@ -1243,7 +1279,7 @@
 <nav aria-label="全选效果" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       
         实现
@@ -1262,6 +1298,20 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="document">Document对象</h1>
+<h2 id="_1">简述</h2>
+<p><code>document</code> 是<strong>文档对象</strong>，隶属于 <code>window</code>（<code>window.document</code>），是 <strong>DOM（文档对象模型）</strong> 的核心入口，专门用来代表整个 HTML 网页文档。</p>
+<p><strong>核心作用</strong></p>
+<ol>
+<li>代表当前整个网页 HTML 结构，把所有标签转成 JS 可操作的对象；</li>
+<li>获取页面元素（标签）、修改内容、样式、属性；</li>
+<li>创建、新增、删除网页标签；</li>
+<li>监听页面元素事件，实现交互效果。</li>
+</ol>
+<hr/>
+<h2 id="_2">常见属性和方法</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">常见属性</label><label for="__tabbed_1_2">常见方法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -1271,25 +1321,167 @@
 </thead>
 <tbody>
 <tr>
+<td>title</td>
+<td>设置或获取文档的标题</td>
+</tr>
+<tr>
+<td>body</td>
+<td>获取文档的 body 元素</td>
+</tr>
+<tr>
+<td>head</td>
+<td>获取文档的 head 元素</td>
+</tr>
+<tr>
+<td>forms</td>
+<td>获取文档中所有表单元素的集合</td>
+</tr>
+<tr>
+<td>images</td>
+<td>获取文档中所有图片元素的集合</td>
+</tr>
+<tr>
+<td>links</td>
+<td>获取文档中所有链接元素的集合</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td>获取文档中所有脚本元素的集合</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>获取文档的加载状态</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>获取或设置文档的域名</td>
+</tr>
+<tr>
+<td>referrer</td>
+<td>获取引用当前页面的 URL</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>获取当前文档的完整 URL</td>
+</tr>
+<tr>
 <td>bgColor</td>
 <td>设置或检索 Document 对象的背景色</td>
 </tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
 <tr>
-<td>getElementByID( )</td>
-<td>根据HTML元素指定的ID，获得唯一的一个HTML元素。如：访问DIV层对象、图片Img对象</td>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getElementById()</td>
+<td>根据HTML元素指定的ID，获得唯一的一个HTML元素</td>
 </tr>
 <tr>
-<td>getElementsByName( )</td>
-<td>根据HTML元素指定的name，获得相同名称的一组元素。如：访问表单元素(全选功能)</td>
+<td>getElementsByName()</td>
+<td>根据HTML元素指定的name，获得相同名称的一组元素</td>
+</tr>
+<tr>
+<td>getElementsByClassName()</td>
+<td>根据元素的 class 名称获取元素集合</td>
+</tr>
+<tr>
+<td>getElementsByTagName()</td>
+<td>根据元素的标签名获取元素集合</td>
+</tr>
+<tr>
+<td>querySelector()</td>
+<td>根据 CSS 选择器获取第一个匹配的元素</td>
+</tr>
+<tr>
+<td>querySelectorAll()</td>
+<td>根据 CSS 选择器获取所有匹配的元素集合</td>
+</tr>
+<tr>
+<td>createElement()</td>
+<td>创建一个新的 HTML 元素</td>
+</tr>
+<tr>
+<td>createTextNode()</td>
+<td>创建一个新的文本节点</td>
+</tr>
+<tr>
+<td>appendChild()</td>
+<td>向元素末尾添加子元素</td>
+</tr>
+<tr>
+<td>removeChild()</td>
+<td>从元素中移除子元素</td>
+</tr>
+<tr>
+<td>replaceChild()</td>
+<td>替换元素中的子元素</td>
+</tr>
+<tr>
+<td>insertBefore()</td>
+<td>在指定子元素前插入新元素</td>
+</tr>
+<tr>
+<td>write()</td>
+<td>向文档写入 HTML 内容</td>
+</tr>
+<tr>
+<td>writeln()</td>
+<td>向文档写入 HTML 内容并添加换行符</td>
+</tr>
+<tr>
+<td>close()</td>
+<td>关闭文档的输出流</td>
+</tr>
+<tr>
+<td>open()</td>
+<td>打开文档的输出流</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</input></input></div>
 <hr/>
 <h2 id="div">DIV</h2>
-<p>DIV是层叠样式表中的定位技术，全称DIVision，即为划分。有时可以称其为图层。 </p>
-<p>DIV元素是用来为HTML（标准通用标记语言下的一个应用）文档内大块（block-level）的内容提供结构和背景的元素。</p>
+<p><code>&lt;div&gt;</code> 是 <strong>HTML 通用块级容器标签</strong>，全称 division（分区/分割），是网页布局最常用的骨架标签。</p>
+<p><strong>核心特点</strong></p>
+<ol>
+<li><strong>块级元素</strong>：默认独占一行，自动换行；</li>
+<li><strong>无默认样式</strong>：本身不加颜色、边框、缩进，纯空白容器；</li>
+<li><strong>无语义</strong>：只用来装内容、做分区，不代表文本、标题、图片等具体含义；</li>
+<li><strong>可嵌套</strong>：div 里面可以再放 div、文字、图片、表单、各种标签。</li>
+</ol>
+<p><strong>主要作用</strong></p>
+<ol>
+<li>网页<strong>整体布局分区</strong>（头部、侧边栏、主体、底部）；</li>
+<li>包裹一组元素，统一加 CSS 样式（宽高、颜色、边距、居中）；</li>
+<li>配合 class / id，供 JS（document）获取、操作、修改内容与样式；</li>
+<li>实现弹性布局、网格布局、卡片模块等页面结构。</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">&lt;!-- 单个容器 --&gt;</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"box"</span><span class="p">&gt;</span>我是div容器，用来装内容<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="cm">&lt;!-- 布局分区 --&gt;</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"header"</span><span class="p">&gt;</span>网页头部<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"main"</span><span class="p">&gt;</span>主体内容区<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"footer"</span><span class="p">&gt;</span>网页底部<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</input></div>
 <hr/>
-<h2 id="_1">制作浮动的广告图片</h2>
+<h2 id="_3">制作浮动的广告图片</h2>
 <p><strong>问题</strong></p>
 <p>如何在页面上方显示广告图片？如何控制图片的移动？</p>
 <p><strong>分析</strong></p>
@@ -1320,42 +1512,14 @@
 </li>
 </ul>
 <hr/>
-<h3 id="_2">实现</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">效果</label><label for="__tabbed_1_2">源代码</label></div>
+<h3 id="_4">实现</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">效果</label><label for="__tabbed_3_2">源代码</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><iframe frameborder="0" height="600" src="./src/js_document_getElementByID1.html" width="100%"></iframe></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">浮动广告</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;    left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">浮动广告</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -1367,52 +1531,80 @@
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
 <span class="normal"><a href="#__codelineno-1-11">11</a></span>
 <span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span>
-<span class="normal"><a href="#__codelineno-1-25">25</a></span>
-<span class="normal"><a href="#__codelineno-1-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementById方法<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="hll"><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
-</span><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="hll"><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
-</span><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">"inix( )"</span><span class="p">&gt;</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/contentpic.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"993"</span> <span class="na">height</span><span class="o">=</span><span class="s">"1799"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;  left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
-</span><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="hll">      <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
-</span><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;    left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>    <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementById方法<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">      </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="hll"><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+</span><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="hll"><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
+</span><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">"inix( )"</span><span class="p">&gt;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/contentpic.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"993"</span> <span class="na">height</span><span class="o">=</span><span class="s">"1799"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;  left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
+</span><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="hll">      <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
+</span><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
 </div>
 </input></input></div>
 <hr/>
-<h2 id="_3">带关闭按钮的浮动窗口</h2>
+<h2 id="_5">带关闭按钮的浮动窗口</h2>
 <p><strong>问题</strong></p>
 <p>如何实现带关闭功能的浮动窗口？</p>
 <p><strong>分析</strong></p>
@@ -1440,34 +1632,7 @@
 <li>
 <p><strong>源代码</strong></p>
 <hr/>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">closeMe</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"closeLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"closeLayer"</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"closeMe( )"</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>  <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;left:166px;  top:132px;  width:27px; height:19px;z-index:2;"</span><span class="p">&gt;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>  <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/close.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"26"</span> <span class="na">height</span><span class="o">=</span><span class="s">"18"</span><span class="p">&gt;</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-</li>
-</ul>
-</div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -1477,47 +1642,74 @@
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementById方法<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">      </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">"inix( )"</span><span class="p">&gt;</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/contentpic.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"993"</span> <span class="na">height</span><span class="o">=</span><span class="s">"1799"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a>  <span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;  left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>      <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">closeMe</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"closeLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"closeLayer"</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"closeMe( )"</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>  <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;left:166px;  top:132px;  width:27px; height:19px;z-index:2;"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>  <span class="p">&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/close.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"26"</span> <span class="na">height</span><span class="o">=</span><span class="s">"18"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="p">&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementById方法<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">      </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">"inix( )"</span><span class="p">&gt;</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/contentpic.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"993"</span> <span class="na">height</span><span class="o">=</span><span class="s">"1799"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>  <span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;  left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a>      <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <hr/>
@@ -1533,32 +1725,7 @@
 <li>
 <p><strong>源代码</strong></p>
 <hr/>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-</li>
-</ul>
-</div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
@@ -1567,52 +1734,77 @@
 <span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementById方法<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">      </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">"inix( )"</span><span class="p">&gt;</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/contentpic.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"993"</span> <span class="na">height</span><span class="o">=</span><span class="s">"1799"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a>  <span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;  left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a>      <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementByID1.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementById方法<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">inix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">      </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">move</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"advLayer"</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">pixelTop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">advInitTop</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">onscroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">move</span><span class="p">;</span><span class="w">  </span><span class="c1">//窗口的滚动事件，当页面滚动时调用move( )函数</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="p">&lt;</span><span class="nt">BODY</span> <span class="na">onload</span><span class="o">=</span><span class="s">"inix( )"</span><span class="p">&gt;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/contentpic.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"993"</span> <span class="na">height</span><span class="o">=</span><span class="s">"1799"</span><span class="p">&gt;&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a>  <span class="p">&lt;</span><span class="nt">P</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">P</span><span class="p">&gt;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a>  <span class="p">&lt;</span><span class="nt">DIV</span> <span class="na">id</span><span class="o">=</span><span class="s">"advLayer"</span> <span class="na">style</span><span class="o">=</span><span class="s">"position:absolute;  left:16px;  top:129px;  width:180px;    height:230px;   z-index:1;"</span><span class="p">&gt;&lt;</span><span class="nt">A</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>      <span class="na">href</span><span class="o">=</span><span class="s">"http://www.taobao.com"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/advpic.gif"</span> <span class="na">width</span><span class="o">=</span><span class="s">"180"</span> <span class="na">height</span><span class="o">=</span><span class="s">"230"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">DIV</span><span class="p">&gt;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <hr/>
-<h2 id="_4">全选效果</h2>
+<h2 id="_6">全选效果</h2>
 <p><strong>问题</strong></p>
 <p>如何实现列表的全选或全不选效果？</p>
 <p><strong>实现思路：</strong></p>
@@ -1627,7 +1819,7 @@
 </li>
 </ol>
 <hr/>
-<h3 id="_5">实现</h3>
+<h3 id="_7">实现</h3>
 <div class="grid cards">
 <ul>
 <li>
@@ -1638,164 +1830,164 @@
 <li>
 <p><strong>源代码</strong></p>
 <hr/>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span>
-<span class="normal"><a href="#__codelineno-6-7">7</a></span>
-<span class="normal"><a href="#__codelineno-6-8">8</a></span>
-<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">checkAll</span><span class="p">(</span><span class="nx">boolValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">"isBuy"</span><span class="p">);</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"checkbox"</span><span class="p">)</span><span class="w">  </span><span class="c1">//可能有重名的其他类型元素，如图片、控件等，所以要判断类型</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">boolValue</span><span class="p">;</span><span class="w">  </span><span class="c1">//检查是否选中用checked，而不是value</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>'
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">checkAll</span><span class="p">(</span><span class="nx">boolValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">"isBuy"</span><span class="p">);</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"checkbox"</span><span class="p">)</span><span class="w">  </span><span class="c1">//可能有重名的其他类型元素，如图片、控件等，所以要判断类型</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">boolValue</span><span class="p">;</span><span class="w">  </span><span class="c1">//检查是否选中用checked，而不是value</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>'
 </code></pre></div></td></tr></table></div>
 </li>
 </ul>
 </div>
 <details class="tip">
 <summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementsByName.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span>
-<span class="normal"><a href="#__codelineno-7-24">24</a></span>
-<span class="normal"><a href="#__codelineno-7-25">25</a></span>
-<span class="normal"><a href="#__codelineno-7-26">26</a></span>
-<span class="normal"><a href="#__codelineno-7-27">27</a></span>
-<span class="normal"><a href="#__codelineno-7-28">28</a></span>
-<span class="normal"><a href="#__codelineno-7-29">29</a></span>
-<span class="normal"><a href="#__codelineno-7-30">30</a></span>
-<span class="normal"><a href="#__codelineno-7-31">31</a></span>
-<span class="normal"><a href="#__codelineno-7-32">32</a></span>
-<span class="normal"><a href="#__codelineno-7-33">33</a></span>
-<span class="normal"><a href="#__codelineno-7-34">34</a></span>
-<span class="normal"><a href="#__codelineno-7-35">35</a></span>
-<span class="normal"><a href="#__codelineno-7-36">36</a></span>
-<span class="normal"><a href="#__codelineno-7-37">37</a></span>
-<span class="normal"><a href="#__codelineno-7-38">38</a></span>
-<span class="normal"><a href="#__codelineno-7-39">39</a></span>
-<span class="normal"><a href="#__codelineno-7-40">40</a></span>
-<span class="normal"><a href="#__codelineno-7-41">41</a></span>
-<span class="normal"><a href="#__codelineno-7-42">42</a></span>
-<span class="normal"><a href="#__codelineno-7-43">43</a></span>
-<span class="normal"><a href="#__codelineno-7-44">44</a></span>
-<span class="normal"><a href="#__codelineno-7-45">45</a></span>
-<span class="normal"><a href="#__codelineno-7-46">46</a></span>
-<span class="normal"><a href="#__codelineno-7-47">47</a></span>
-<span class="normal"><a href="#__codelineno-7-48">48</a></span>
-<span class="normal"><a href="#__codelineno-7-49">49</a></span>
-<span class="normal"><a href="#__codelineno-7-50">50</a></span>
-<span class="normal"><a href="#__codelineno-7-51">51</a></span>
-<span class="normal"><a href="#__codelineno-7-52">52</a></span>
-<span class="normal"><a href="#__codelineno-7-53">53</a></span>
-<span class="normal"><a href="#__codelineno-7-54">54</a></span>
-<span class="normal"><a href="#__codelineno-7-55">55</a></span>
-<span class="normal"><a href="#__codelineno-7-56">56</a></span>
-<span class="normal"><a href="#__codelineno-7-57">57</a></span>
-<span class="normal"><a href="#__codelineno-7-58">58</a></span>
-<span class="normal"><a href="#__codelineno-7-59">59</a></span>
-<span class="normal"><a href="#__codelineno-7-60">60</a></span>
-<span class="normal"><a href="#__codelineno-7-61">61</a></span>
-<span class="normal"><a href="#__codelineno-7-62">62</a></span>
-<span class="normal"><a href="#__codelineno-7-63">63</a></span>
-<span class="normal"><a href="#__codelineno-7-64">64</a></span>
-<span class="normal"><a href="#__codelineno-7-65">65</a></span>
-<span class="normal"><a href="#__codelineno-7-66">66</a></span>
-<span class="normal"><a href="#__codelineno-7-67">67</a></span>
-<span class="normal"><a href="#__codelineno-7-68">68</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementByName<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">checkAll</span><span class="p">(</span><span class="nx">boolValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">"isBuy"</span><span class="p">);</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="hll"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"checkbox"</span><span class="p">)</span><span class="w">  </span><span class="c1">//可能有重名的其他类型元素，如图片、控件等，所以要判断类型</span>
-</span><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="hll"><span class="w">          </span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">boolValue</span><span class="p">;</span><span class="w">  </span><span class="c1">//检查是否选中用checked，而不是value</span>
-</span><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>'
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a>  <span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">action</span><span class="o">=</span><span class="s">""</span> <span class="na">name</span><span class="o">=</span><span class="s">"buyForm"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a>    <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/head.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"958"</span> <span class="na">height</span><span class="o">=</span><span class="s">"175"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"6%"</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"javascript: checkAll(true)"</span><span class="p">&gt;</span>全选<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"6%"</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"javascript: checkAll(false)"</span><span class="p">&gt;</span>全不选<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-26" name="__codelineno-7-26"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"88%"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/top.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"845"</span> <span class="na">height</span><span class="o">=</span><span class="s">"18"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-27" name="__codelineno-7-27"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"sanguo"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-</span><a id="__codelineno-7-30" name="__codelineno-7-30"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/one.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"843"</span> <span class="na">height</span><span class="o">=</span><span class="s">"80"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-31" name="__codelineno-7-31"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
-<a id="__codelineno-7-35" name="__codelineno-7-35"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-36" name="__codelineno-7-36"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-37" name="__codelineno-7-37"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"paozhu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-</span><a id="__codelineno-7-39" name="__codelineno-7-39"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/two.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"842"</span> <span class="na">height</span><span class="o">=</span><span class="s">"79"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-40" name="__codelineno-7-40"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-41" name="__codelineno-7-41"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-42" name="__codelineno-7-42"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-43" name="__codelineno-7-43"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
-<a id="__codelineno-7-44" name="__codelineno-7-44"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-45" name="__codelineno-7-45"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-46" name="__codelineno-7-46"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"paozhu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-</span><a id="__codelineno-7-48" name="__codelineno-7-48"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/three.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"844"</span> <span class="na">height</span><span class="o">=</span><span class="s">"81"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-49" name="__codelineno-7-49"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-50" name="__codelineno-7-50"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-51" name="__codelineno-7-51"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-52" name="__codelineno-7-52"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
-<a id="__codelineno-7-53" name="__codelineno-7-53"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-54" name="__codelineno-7-54"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-55" name="__codelineno-7-55"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-56" name="__codelineno-7-56"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"jingwu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-</span><a id="__codelineno-7-57" name="__codelineno-7-57"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/four.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"847"</span> <span class="na">height</span><span class="o">=</span><span class="s">"85"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-58" name="__codelineno-7-58"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-59" name="__codelineno-7-59"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-60" name="__codelineno-7-60"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
-<a id="__codelineno-7-61" name="__codelineno-7-61"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
-<a id="__codelineno-7-62" name="__codelineno-7-62"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
-<a id="__codelineno-7-63" name="__codelineno-7-63"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
-<a id="__codelineno-7-64" name="__codelineno-7-64"></a>    <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
-<a id="__codelineno-7-65" name="__codelineno-7-65"></a>  <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
-<a id="__codelineno-7-66" name="__codelineno-7-66"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
-<a id="__codelineno-7-67" name="__codelineno-7-67"></a>
-<a id="__codelineno-7-68" name="__codelineno-7-68"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_document_getElementsByName.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span>
+<span class="normal"><a href="#__codelineno-8-38">38</a></span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span>
+<span class="normal"><a href="#__codelineno-8-40">40</a></span>
+<span class="normal"><a href="#__codelineno-8-41">41</a></span>
+<span class="normal"><a href="#__codelineno-8-42">42</a></span>
+<span class="normal"><a href="#__codelineno-8-43">43</a></span>
+<span class="normal"><a href="#__codelineno-8-44">44</a></span>
+<span class="normal"><a href="#__codelineno-8-45">45</a></span>
+<span class="normal"><a href="#__codelineno-8-46">46</a></span>
+<span class="normal"><a href="#__codelineno-8-47">47</a></span>
+<span class="normal"><a href="#__codelineno-8-48">48</a></span>
+<span class="normal"><a href="#__codelineno-8-49">49</a></span>
+<span class="normal"><a href="#__codelineno-8-50">50</a></span>
+<span class="normal"><a href="#__codelineno-8-51">51</a></span>
+<span class="normal"><a href="#__codelineno-8-52">52</a></span>
+<span class="normal"><a href="#__codelineno-8-53">53</a></span>
+<span class="normal"><a href="#__codelineno-8-54">54</a></span>
+<span class="normal"><a href="#__codelineno-8-55">55</a></span>
+<span class="normal"><a href="#__codelineno-8-56">56</a></span>
+<span class="normal"><a href="#__codelineno-8-57">57</a></span>
+<span class="normal"><a href="#__codelineno-8-58">58</a></span>
+<span class="normal"><a href="#__codelineno-8-59">59</a></span>
+<span class="normal"><a href="#__codelineno-8-60">60</a></span>
+<span class="normal"><a href="#__codelineno-8-61">61</a></span>
+<span class="normal"><a href="#__codelineno-8-62">62</a></span>
+<span class="normal"><a href="#__codelineno-8-63">63</a></span>
+<span class="normal"><a href="#__codelineno-8-64">64</a></span>
+<span class="normal"><a href="#__codelineno-8-65">65</a></span>
+<span class="normal"><a href="#__codelineno-8-66">66</a></span>
+<span class="normal"><a href="#__codelineno-8-67">67</a></span>
+<span class="normal"><a href="#__codelineno-8-68">68</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">&lt;</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>  <span class="p">&lt;</span><span class="nt">META</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Content-Type"</span> <span class="na">content</span><span class="o">=</span><span class="s">"text/html; charset=utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  <span class="p">&lt;</span><span class="nt">TITLE</span><span class="p">&gt;</span>getElementByName<span class="p">&lt;/</span><span class="nt">TITLE</span><span class="p">&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>  <span class="p">&lt;</span><span class="nt">SCRIPT</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">checkAll</span><span class="p">(</span><span class="nx">boolValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">"isBuy"</span><span class="p">);</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">allCheckBoxs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="hll"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"checkbox"</span><span class="p">)</span><span class="w">  </span><span class="c1">//可能有重名的其他类型元素，如图片、控件等，所以要判断类型</span>
+</span><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="hll"><span class="w">          </span><span class="nx">allCheckBoxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">boolValue</span><span class="p">;</span><span class="w">  </span><span class="c1">//检查是否选中用checked，而不是value</span>
+</span><a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">SCRIPT</span><span class="p">&gt;</span>'
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="p">&lt;/</span><span class="nt">HEAD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="p">&lt;</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>  <span class="p">&lt;</span><span class="nt">FORM</span> <span class="na">action</span><span class="o">=</span><span class="s">""</span> <span class="na">name</span><span class="o">=</span><span class="s">"buyForm"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>    <span class="p">&lt;</span><span class="nt">TABLE</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span> <span class="na">border</span><span class="o">=</span><span class="s">"0"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/head.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"958"</span> <span class="na">height</span><span class="o">=</span><span class="s">"175"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"6%"</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"javascript: checkAll(true)"</span><span class="p">&gt;</span>全选<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"6%"</span><span class="p">&gt;&lt;</span><span class="nt">A</span> <span class="na">href</span><span class="o">=</span><span class="s">"javascript: checkAll(false)"</span><span class="p">&gt;</span>全不选<span class="p">&lt;/</span><span class="nt">A</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">width</span><span class="o">=</span><span class="s">"88%"</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/top.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"845"</span> <span class="na">height</span><span class="o">=</span><span class="s">"18"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"sanguo"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><a id="__codelineno-8-30" name="__codelineno-8-30"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/one.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"843"</span> <span class="na">height</span><span class="o">=</span><span class="s">"80"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"paozhu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><a id="__codelineno-8-39" name="__codelineno-8-39"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/two.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"842"</span> <span class="na">height</span><span class="o">=</span><span class="s">"79"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-47" name="__codelineno-8-47"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"paozhu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><a id="__codelineno-8-48" name="__codelineno-8-48"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/three.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"844"</span> <span class="na">height</span><span class="o">=</span><span class="s">"81"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-49" name="__codelineno-8-49"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-50" name="__codelineno-8-50"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-51" name="__codelineno-8-51"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-52" name="__codelineno-8-52"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-53" name="__codelineno-8-53"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-54" name="__codelineno-8-54"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-55" name="__codelineno-8-55"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"2"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;&lt;</span><span class="nt">INPUT</span> <span class="na">name</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">id</span><span class="o">=</span><span class="s">"isBuy"</span> <span class="na">value</span><span class="o">=</span><span class="s">"jingwu"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+</span><a id="__codelineno-8-57" name="__codelineno-8-57"></a>        <span class="p">&lt;</span><span class="nt">TD</span><span class="p">&gt;&lt;</span><span class="nt">IMG</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/four.jpg"</span> <span class="na">width</span><span class="o">=</span><span class="s">"847"</span> <span class="na">height</span><span class="o">=</span><span class="s">"85"</span><span class="p">&gt;&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-58" name="__codelineno-8-58"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-59" name="__codelineno-8-59"></a>      <span class="p">&lt;</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-60" name="__codelineno-8-60"></a>        <span class="p">&lt;</span><span class="nt">TD</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span> <span class="na">align</span><span class="o">=</span><span class="s">"center"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-61" name="__codelineno-8-61"></a>          <span class="p">&lt;</span><span class="nt">HR</span> <span class="na">noshade</span><span class="o">=</span><span class="s">"noshade"</span> <span class="na">style</span><span class="o">=</span><span class="s">"border:1px  #CCCCCC dashed "</span> <span class="p">/&gt;</span>
+<a id="__codelineno-8-62" name="__codelineno-8-62"></a>        <span class="p">&lt;/</span><span class="nt">TD</span><span class="p">&gt;</span>
+<a id="__codelineno-8-63" name="__codelineno-8-63"></a>      <span class="p">&lt;/</span><span class="nt">TR</span><span class="p">&gt;</span>
+<a id="__codelineno-8-64" name="__codelineno-8-64"></a>    <span class="p">&lt;/</span><span class="nt">TABLE</span><span class="p">&gt;</span>
+<a id="__codelineno-8-65" name="__codelineno-8-65"></a>  <span class="p">&lt;/</span><span class="nt">FORM</span><span class="p">&gt;</span>
+<a id="__codelineno-8-66" name="__codelineno-8-66"></a><span class="p">&lt;/</span><span class="nt">BODY</span><span class="p">&gt;</span>
+<a id="__codelineno-8-67" name="__codelineno-8-67"></a>
+<a id="__codelineno-8-68" name="__codelineno-8-68"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <hr/>

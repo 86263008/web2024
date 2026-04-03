@@ -1149,7 +1149,42 @@
 <article class="md-content__inner md-typeset">
 <h1 id="dom">DOM编程</h1>
 <h2 id="html">HTML文档的树状结构</h2>
-<p><img alt="HTML文档的树状结构" src="img/html%E6%96%87%E6%A1%A3%E7%9A%84%E6%A0%91%E7%8A%B6%E7%BB%93%E6%9E%84.png"/></p>
+<div class="mermaid">
+graph TD
+    A[文档: Document]:::root --&gt; B[元素: html]:::html
+    B --&gt; C[元素: head]:::head
+    B --&gt; D[元素: body]:::body
+
+    C --&gt; E[元素: meta]:::element
+    C --&gt; F[元素: script]:::element
+    C --&gt; G[元素: title]:::element
+
+    E --&gt; H[属性: http-equiv]:::attr
+    E --&gt; I[属性: content]:::attr
+
+    G --&gt; J[文本: DOM结构]:::text
+
+    D --&gt; K[元素: a]:::element
+    D --&gt; L[元素: input]:::element
+
+    K --&gt; M[属性: href]:::attr
+    K --&gt; N[文本: 淘宝]:::text
+
+    L --&gt; O[属性: onclick]:::attr
+    L --&gt; P[属性: value]:::attr
+
+    %% 苹果极简清淡配色
+    classDef root fill:#f5f5f7,stroke:#d2d2d7,color:#1d1d1f,stroke-width:1px
+    classDef html fill:#e8edf2,stroke:#b7c4d1,color:#1d1d1f,stroke-width:1px
+    classDef head fill:#fef2f2,stroke:#fccaca,color:#1d1d1f,stroke-width:1px
+    classDef body fill:#f2f7f5,stroke:#c6e0d5,color:#1d1d1f,stroke-width:1px
+    classDef element fill:#fef6fb,stroke:#f7d6e6,color:#1d1d1f,stroke-width:1px
+    classDef attr fill:#f1f9ff,stroke:#b3d7f9,color:#1d1d1f,stroke-width:1px
+    classDef text fill:#fdf8ee,stroke:#f9e0b7,color:#1d1d1f,stroke-width:1px
+</div>
+<!--
+![HTML文档的树状结构](./img/html%E6%96%87%E6%A1%A3%E7%9A%84%E6%A0%91%E7%8A%B6%E7%BB%93%E6%9E%84.png)
+-->
 <hr/>
 <h2 id="dom_1">什么是DOM</h2>
 <p>DOM－<strong>Document Object Model</strong> ,它是W3C国际组织的一套Web标准，它定义了访问HTML文档对象的一套属性、方法和事件 。</p>
@@ -1212,33 +1247,62 @@
 </div>
 <hr/>
 <h2 id="dom_2">DOM对象模型</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">窗口的构成</label><label for="__tabbed_2_2">对象结构</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">窗口的构成</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="DOM对象模型" src="img/DOM%E6%A8%A1%E5%9E%8B1.png"/></p>
 </div>
-<div class="tabbed-block">
-<p><div class="mermaid">
-graph TD;
-Window --&gt; History;
-Window --&gt; Document;
-Window --&gt; location;
-Document --&gt; Link;
-Document --&gt; Form;
-Document --&gt; Anchor;
-Link --&gt; Text;
-Link --&gt; Textarea;
-Link --&gt; Radio;
-Link --&gt; Checkbox;
-Link --&gt; Button;
-Link --&gt; Option;
-Link --&gt; Reset;
-Link --&gt; Submit;
-Link --&gt; select;
-</div></p>
 </div>
+</input></div>
+<!-- -->
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">对象结构</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
 </div>
-</input></input></div>
+</input></div>
+<div class="mermaid">
+graph TD
+    %% 层级节点
+    A[Window]:::layer1
+    B[History]:::layer2
+    C[Document]:::layer2
+    D[Location]:::layer2
+    E[Link]:::layer3
+    F[Form]:::layer3
+    G[Anchor]:::layer3
+    H[Text]:::layer4
+    I[Textarea]:::layer4
+    J[Radio]:::layer4
+    K[Checkbox]:::layer4
+    L[Button]:::layer4
+    M[Option]:::layer4
+    N[Reset]:::layer4
+    O[Submit]:::layer4
+    P[Select]:::layer4
+
+    %% 关联连线
+    A --&gt; B
+    A --&gt; C
+    A --&gt; D
+    C --&gt; E
+    C --&gt; F
+    C --&gt; G
+    E --&gt; H
+    E --&gt; I
+    E --&gt; J
+    E --&gt; K
+    E --&gt; L
+    E --&gt; M
+    E --&gt; N
+    E --&gt; O
+    E --&gt; P
+
+    %% 苹果Apple原生极简磨砂浅色系
+    classDef layer1 fill:#f5f5f7,stroke:#d2d2d7,color:#1d1d1f
+    classDef layer2 fill:#e8edf2,stroke:#b7c4d1,color:#1d1d1f
+    classDef layer3 fill:#fef2f2,stroke:#fccaca,color:#1d1d1f
+    classDef layer4 fill:#f2f7f5,stroke:#c6e0d5,color:#1d1d1f
+</div>
 <hr/>
 </article>
 </div>

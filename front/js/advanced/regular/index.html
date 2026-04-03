@@ -673,7 +673,7 @@
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       
-        什么是正则表达式？
+        概述
       
     </span>
 </a>
@@ -682,7 +682,7 @@
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
-        正则表达式可以做什么？
+        为什么需要正则表达式
       
     </span>
 </a>
@@ -1153,7 +1153,7 @@
 <a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       
-        什么是正则表达式？
+        概述
       
     </span>
 </a>
@@ -1162,7 +1162,7 @@
 <a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
-        正则表达式可以做什么？
+        为什么需要正则表达式
       
     </span>
 </a>
@@ -1220,49 +1220,47 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="_1">正则表达式<a href="plan.html" title="教案"><sub>⯐</sub></a></h1>
-<h2 id="_2">什么是正则表达式？</h2>
-<p>正则表达式(regular expression)描述了一种字符串匹配的模式，可以用来检查一个串是否含有某种子串</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label><label for="__tabbed_1_2">分析</label></div>
+<h2 id="_2">概述</h2>
+<p>正则表达式（RegExp）是<strong>匹配、检索、替换字符串规则</strong>的语法模板，用来快速校验格式、提取内容、批量替换文本。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><strong>验证邮政编码，6位数字</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">js_regular_post_code.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="c1">//使用传统方法</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">check1</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">6</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0123456789"</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">ch</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="c1">//使用正则表达式</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">check2</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sr">/^\d{6}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// 手机号</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">phone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/^1\d{10}$/</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nx">phone</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">"13800138000"</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">// 邮箱简易规则</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/^\w+@\w+\.\w+$/</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1">// 替换空格</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="s2">"a b c"</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\s/g</span><span class="p">,</span><span class="s2">""</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">front/js/advanced/regular/src/js_regular_post_code.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+</div>
+</div>
+</input></div>
+<hr/>
+<h2 id="_3">为什么需要正则表达式</h2>
+<p>以邮政编码校验为例，对比传统方法和正则表达式检验的区别。</p>
+<p><strong>邮政编码规则</strong></p>
+<ol>
+<li>总长度固定：<strong>必须严格 6 位字符</strong>，不能多、不能少；</li>
+<li>字符类型：<strong>只能是纯阿拉伯数字 0–9</strong>，不允许字母、汉字、空格、符号；</li>
+<li>首尾规范：第一位不能为 <code>0</code>（常规通用校验规则），后5位可为任意数字；</li>
+<li>无空值：不允许空白、不全、补零占位；</li>
+<li>无拼接：不能有加号、横杠、括号等分隔符，纯6位连续数字。</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">验证邮政编码，6位数字</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -1278,105 +1276,106 @@
 <span class="normal"><a href="#__codelineno-1-14">14</a></span>
 <span class="normal"><a href="#__codelineno-1-15">15</a></span>
 <span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span>
-<span class="normal"><a href="#__codelineno-1-25">25</a></span>
-<span class="normal"><a href="#__codelineno-1-26">26</a></span>
-<span class="normal"><a href="#__codelineno-1-27">27</a></span>
-<span class="normal"><a href="#__codelineno-1-28">28</a></span>
-<span class="normal"><a href="#__codelineno-1-29">29</a></span>
-<span class="normal"><a href="#__codelineno-1-30">30</a></span>
-<span class="normal"><a href="#__codelineno-1-31">31</a></span>
-<span class="normal"><a href="#__codelineno-1-32">32</a></span>
-<span class="normal"><a href="#__codelineno-1-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>rect<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"123456"</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">check1</span><span class="p">(</span><span class="nx">code</span><span class="p">));</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">check2</span><span class="p">(</span><span class="nx">code</span><span class="p">));</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="c1">//使用传统方法</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">check1</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="hll"><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">6</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-</span><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="hll"><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0123456789"</span><span class="p">;</span>
-</span><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="hll"><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="hll"><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
-</span><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="hll"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">ch</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-</span><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="hll"><span class="w">      </span><span class="p">}</span>
-</span><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="hll"><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-</span><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">    </span><span class="c1">//使用正则表达式</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">check2</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="hll"><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="sr">/^\d{6}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-</span><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="c1">//使用传统方法</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">check1</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">6</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0123456789"</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">ch</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">  </span><span class="c1">//使用正则表达式</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">check2</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sr">/^\d{6}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">front/js/advanced/regular/src/js_regular_post_code.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>rect<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"123456"</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">check1</span><span class="p">(</span><span class="nx">code</span><span class="p">));</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">check2</span><span class="p">(</span><span class="nx">code</span><span class="p">));</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="c1">//使用传统方法</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">check1</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="hll"><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">6</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</span><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="hll"><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0123456789"</span><span class="p">;</span>
+</span><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="hll"><span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="hll"><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+</span><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="hll"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">ch</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</span><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="hll"><span class="w">      </span><span class="p">}</span>
+</span><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="hll"><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="c1">//使用正则表达式</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">check2</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="hll"><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="sr">/^\d{6}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</span><a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="sr">/^\d{6}$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
-</code></pre></div>
-<ul>
-<li>
-<p><code>/^\d{6}$/</code> 是一个正则表达式对象</p>
-</li>
-<li>
-<p><code>test()</code> 是正则表达式对象的方法，用来检查字符串是否匹配正则表达式对象所描述的模式</p>
-</li>
-<li>
-<p>也可以写为：<code>var regex = /^\d{6}$/; regex.test(s);</code> </p>
-</li>
-<li>
-<p>正则表达式由“/”开始和结束</p>
-</li>
-<li>
-<p><code>^\d{6}$</code> 是正则表达式内容，用来描述字符串模式</p>
-</li>
-<li>
-<p><code>^</code> 匹配字符串开头位置</p>
-</li>
-<li>
-<p><code>$</code> 匹配字符串结束位置</p>
-</li>
-<li>
-<p><code>\d</code> 匹配0~9的任意数字</p>
-</li>
-<li>
-<p><code>{n}</code> 匹配前面的表达式n次</p>
-</li>
-<li>
-<p><code>^\d{6}$</code> 描述的模式为：字符串从开始到结束包含6个数字</p>
-</li>
-</ul>
 </div>
-</div>
-</input></input></div>
-<hr/>
-<h2 id="_3">正则表达式可以做什么？</h2>
-<p>检查字符串是否与指定模式匹配（对用户在表单中输入的数据进行校验）</p>
-<p>根据指定的模式在字符串中提取子串</p>
-<p>替换字符串中符合指定模式的部分</p>
-<p>除了JavaScript，其他几乎所有编程语言都支持正则表达式，它还可以在许多其他软件环境中使用，例如文本编辑器、Unix Shell脚本……</p>
+</input></div>
 <hr/>
 <h2 id="_4">正则表达式语法</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">匹配范围</label><label for="__tabbed_2_2">元字符</label><label for="__tabbed_2_3">定位</label><label for="__tabbed_2_4">量词</label><label for="__tabbed_2_5">其它</label></div>
+<p>正则由普通字符 + 元字符 + 限定符 + 修饰符组成，用来匹配字符串规则。</p>
+<ul>
+<li>普通字符：仅作字面匹配、无特殊语义的基础字符。</li>
+<li>元字符：拥有特殊含义的字符，用来描述字符串模式。</li>
+<li>限定符：用来限制元字符的匹配次数。</li>
+<li>修饰符：用来改变正则表达式的匹配行为。</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">匹配范围</label><label for="__tabbed_3_2">元字符</label><label for="__tabbed_3_3">定位</label><label for="__tabbed_3_4">量词</label><label for="__tabbed_3_5">其它</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -1508,27 +1507,60 @@
 </input></input></input></input></input></div>
 <hr/>
 <h2 id="_5">示例</h2>
-<p><strong>匹配手机号码：1xxxxxxxxxx</strong></p>
-<p>要求：一共11位数字，第一位必须是1，第二位可以是3、5、8。</p>
-<p>例如："13712345678"、"15987654321"、"1868668888"</p>
-<p><strong>匹配QQ号码：xxxxxxxx</strong></p>
-<p>要求：大于或等于10000的数字</p>
-<p>例如："10001"、"95001209"、"622009331"</p>
-<p><strong>匹配浮点数：-xxx.xxxx</strong></p>
-<p>要求：前面可以带负号，整数至少1位，小数任意位，可以没有小数位</p>
-<p>例如："3.14159"、"-123.45"、"6789"、"-256"、"0"</p>
-<p><strong>匹配带区号和分机号的电话号码格式：(xxxx)xxxxxxxx-xxx</strong></p>
-<p>要求：城市区号必须以0开头，共3位或4位，电话号8位，分机号3位，分机号部分可有可无。</p>
-<p>例如："(0431)88951212-152"、"(010)82619957"</p>
-<p><strong>匹配国际电话号码格式：+xx xxx xxxx xxxx</strong></p>
-<p>要求：由空格分成4个部分，第一部分+号后面接1~4位国际区号，第二部分3-4位地区号不能以0开始，第三部分3-4位，第四部分4位</p>
-<p>例如："+86 431 8895 1212"、"+1 201 123 4567“</p>
-<p><strong>匹配IP地址：xxx.xxx.xxx.xxx</strong></p>
-<p>要求：由小数点分开的4段，每段都是0~255之间的数字</p>
-<p>例如："10.0.2.15"、"192.168.0.100"、"127.0.0.1"</p>
-<p><strong>匹配电子邮件地址：xxxx@xxx.xxx.xx</strong></p>
-<p>要求：@前面至少1个字符（可以是数字、字母、下划线、加减号、小数点，加减号和小数点不能在两端），@后面由.分隔成至少2段，每段至少1个字符（可以是数字、字母、下划线、减号、小数点，减号和小数点不能在两端）</p>
-<p>例如："jack@java-fans.com"、"yao_ming@nba.com"、"hacker+123@sina.com.cn"、"admin.user@apple.com"</p>
+<table>
+<thead>
+<tr>
+<th>编码</th>
+<th>规则</th>
+<th>示例</th>
+<th>正则表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>手机号码</td>
+<td>1. 一共11位数字；<br/>2. 第一位必须是1；<br/>3. 第第二位可以是3、5、8</td>
+<td>"13712345678"</td>
+<td><code>^1[358]\d{9}$</code></td>
+</tr>
+<tr>
+<td>QQ号码</td>
+<td>大于或等于10000的数字</td>
+<td>"10001"</td>
+<td><code>^[1-9]\d{4,}$</code></td>
+</tr>
+<tr>
+<td>浮点数</td>
+<td>1. 前面可以带负号；<br/>2. 整数至少1位；<br/>3. 小数任意位可以没有小数位</td>
+<td>"3.14159"</td>
+<td><code>^-?\d+(\.\d+)?$</code></td>
+</tr>
+<tr>
+<td>带区号和分机号的电话号码</td>
+<td>1. 城市区号必须以0开头，共3位或4位；<br/>2. 电话号8位；<br/>3. 分机号3位，分机号部分可有可无</td>
+<td>"(0431)88951212-152"</td>
+<td><code>^\(0\d{2,3}\)\d{8}(-\d{3})?$</code></td>
+</tr>
+<tr>
+<td>国际电话号码</td>
+<td>1. 由空格分成4个部分，<br/>2. 第一部分+号后面接1~4位国际区号；<br/>3. 第二部分后面接1~4位国际区号，第二部分3-4位地区号不能以0开始，第三部分3-4位，第四部分4位</td>
+<td>"+86 431 8895 1212"</td>
+<td><code>^\+\d{1,4} \d{3,4} \d{3,4} \d{4}$</code></td>
+</tr>
+<tr>
+<td>IP地址</td>
+<td>1. 由小数点分开的4段；<br/>2. 每段都是0~255之间的数字</td>
+<td>"10.0.2.15"</td>
+<td><code>^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$</code></td>
+</tr>
+<tr>
+<td>电子邮件地址</td>
+<td>1. @前面至少1个字符（可以是数字、字母、下划线、加减号、小数点，加减号和小数点不能在两端）；<br/>2. @后面由.分隔成至少2段；<br/>3. 每段至少1个字符（可以是数字、字母、下划线、减号、小数点，减号和小数点不能在两端）</td>
+<td>"jack@java-fans.com"</td>
+<td><code>^[a-zA-Z0-9_]([a-zA-Z0-9._+-]*[a-zA-Z0-9_])?@[a-zA-Z0-9_]([a-zA-Z0-9.-]*[a-zA-Z0-9_])?\.[a-zA-Z]{2,}$</code></td>
+</tr>
+</tbody>
+</table>
 <hr/>
 <h2 id="_6">使用正则表达式进行替换</h2>
 <p>字符串替换：</p>
