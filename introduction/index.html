@@ -1347,15 +1347,55 @@
 <p>Web应用通过浏览器前端界面采集数据，通过HTTP/HTTPS协议将数据发送至后端服务器，后端接收并解析数据后执行业务逻辑处理，再与数据库进行交互完成数据的查询、新增、修改或删除操作，数据库将执行结果返回给后端，后端对结果进行封装后通过响应返回前端，最后前端解析并渲染数据，将最终内容展示给用户，完成一次完整的数据流转过程。</p>
 <p>Web应用开发主要包括：前端界面设计与实现（<strong>前端</strong>）、后端服务器设计与实现（<strong>后端</strong>）、数据库设计与实现（<strong>数据库</strong>）。</p>
 <ul>
-<li>
-<p>前端页面由Html语言定义<strong>结构</strong>，形成基本框架，使用Css<strong>美化</strong>页面外观样，用JavaScript定义<strong>交互</strong>。利用Bootstrap、jQuery、Vue.js、ElementUI等框架技术提高开发效率。使用Visual Studio Code等IDE工具进行代码编写与调试。</p>
-</li>
-<li>
-<p>后端采用Tomcat为<strong>服务容器</strong>，用基于Java语言的JSP技术实现<strong>业务逻辑</strong>处理，与数据库进行交互。或利用Spring Boot、Spring MVC等框架技术实现业务逻辑控制；使用Freemarker模板引擎渲染页面；采用Mybatis框架与数据库进行交互。使用STS 5等IDE工具进行代码编写与调试。</p>
-</li>
+<li>前端页面由Html语言定义<strong>结构</strong>，形成基本框架，使用Css<strong>美化</strong>页面外观样，用JavaScript定义<strong>交互</strong>。利用Bootstrap、jQuery、Vue.js、ElementUI等框架技术提高开发效率。使用Visual Studio Code等IDE工具进行代码编写与调试。</li>
 </ul>
-<p><img alt="应用类型" src="img/%E5%BA%94%E7%94%A8%E7%B1%BB%E5%9E%8B.png"/></p>
+<div class="mermaid">
+graph LR
+    subgraph 前端三大核心
+        A[HTML<br/>超文本标记语言] --&gt;|结构层：页面骨架| B[CSS<br/>层叠样式表]
+        B --&gt;|样式层：外观美化| C[JavaScript<br/>脚本语言]
+        C --&gt;|行为层：交互动态| D[浏览器<br/>渲染引擎]
+    end
+
+    %% 功能描述
+    A1[定义标题/段落/图片/表单等页面元素] --&gt; A
+    B1[设置颜色/字体/布局/动画/响应式] --&gt; B
+    C1[处理点击/输入/请求数据/动态修改页面] --&gt; C
+
+    %% 样式标注
+    style A fill:#fef7fb,stroke:#e8c4e8,stroke-width:2px
+    style B fill:#f0f8fb,stroke:#b8d6e8,stroke-width:2px
+    style C fill:#fef2e0,stroke:#f6d8c0,stroke-width:2px
+    style D fill:#f5fafe,stroke:#90caf9,stroke-width:2px
+</div>
+<ul>
+<li>后端采用Tomcat为<strong>服务容器</strong>，用基于Java语言的JSP技术实现<strong>业务逻辑</strong>处理，与数据库进行交互。或利用Spring Boot、Spring MVC等框架技术实现业务逻辑控制；使用Freemarker模板引擎渲染页面；采用Mybatis框架与数据库进行交互。使用STS 5等IDE工具进行代码编写与调试。</li>
+</ul>
+<div class="mermaid">
+graph LR
+    subgraph MVC架构
+        View[视图层 View]
+        Controller[控制层 Controller]
+        Model[模型层 Model]
+    end
+
+    subgraph 对应技术
+        T1[HTML/CSS/JS/Vue/Freemarker]
+        T2[JSP/Spring MVC/Spring Boot]
+        T3[JDBC/MyBatis+MySQL]
+    end
+
+    View -.-&gt;|用户请求| Controller
+    Controller -.-&gt;|调用业务| Model
+    Model -.-&gt;|返回数据| Controller
+    Controller -.-&gt;|渲染页面| View
+
+    View --- T1
+    Controller --- T2
+    Model --- T3
+</div>
 <p><strong>知识体系结构图</strong></p>
+<p><img alt="应用类型" src="img/%E5%BA%94%E7%94%A8%E7%B1%BB%E5%9E%8B.png"/></p>
 <hr/>
 <h3 id="_5">案例</h3>
 <p>课程主要技术示例围绕<strong>学生选课管理系统</strong>展开。该系统主要包含三个表：学生表（学号，姓名，性别，年龄，所在系），课程表（编号，课程名，先修课，学分），学生-选课表（课程号，学号，成绩）。</p>
