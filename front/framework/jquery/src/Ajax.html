@@ -7,6 +7,7 @@
   <meta http-equiv="Access-Control-Allow-Origin" content="*">
   <script src="jquery-3.6.1.min.js">
   </script>
+  <!-- --8<-- [start:ajax_js] -->
   <script>
     $(document).ready(function () {
       $("button").click(function () {
@@ -21,15 +22,20 @@
       $("#a_b").val(data);
     }
   </script>
+  <!-- --8<-- [end:ajax_js] -->
 </head>
 
 <body>
+  <!-- --8<-- [start:ajax_html] -->
   <span>a: </span>
   <input id="a" type="text" />
+  <br>
   <span>b: </span>
   <input id="b" type="text" />
+  <br>
   <button>a-b</button>
   <input id="a_b" type="text" />
+  <!-- --8<-- [end:ajax_html] -->
 </body>
 
 </html>

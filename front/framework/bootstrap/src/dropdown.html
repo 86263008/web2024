@@ -9,18 +9,22 @@
 </head>
 
 <body>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-      aria-expanded="false">
-      Dropdown button
+  <!-- --8<-- [start:dropdown] -->
+  <div class="dropdown m-5">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      点击展开菜单
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">选项一</a></li>
+      <li><a class="dropdown-item" href="#">选项二</a></li>
+      <li><a class="dropdown-item" href="#">选项三</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">其他选项</a></li>
     </ul>
   </div>
-  <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <!-- --8<-- [end:dropdown] -->
+
+  <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

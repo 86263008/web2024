@@ -15,15 +15,17 @@
   </style>
   <script src="jquery-3.6.1.min.js">
   </script>
+  <!-- --8<-- [start:traverse_js] -->
   <script>
     $(document).ready(function () {
       $("span").parent().css({ "color": "red", "border": "2px solid red" });
     });
   </script>
+  <!-- --8<-- [end:traverse_js] -->
 </head>
 
 <body>
-
+  <!-- --8<-- [start:traverse_html] -->
   <div class="ancestors">
     <div style="width:500px;">div (曾祖父元素)
       <ul>ul (祖父元素)
@@ -39,6 +41,7 @@
       </p>
     </div>
   </div>
+  <!-- --8<-- [end:traverse_html] -->
 
 </body>
 
