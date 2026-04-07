@@ -848,6 +848,18 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vite/index.html">
+<span class="md-ellipsis">
+    
+  
+    Vite
+  
+
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1291,7 +1303,7 @@
 </code></pre></div></td></tr></table></div>
 <hr/>
 <h2 id="_1">选择器</h2>
-<p>jQuery 选择器允许通过元素名称、ID、类、属性等方式来选取 HTML 元素。</p>
+<p>jQuery 选择器允许通过<strong>元素名称</strong>、<strong>ID</strong>、<strong>类</strong>、<strong>属性</strong>等方式来选取 HTML 元素。</p>
 <p><strong>常见选择器</strong></p>
 <table>
 <thead>
@@ -1616,70 +1628,36 @@
 <h2 id="_3">动画效果</h2>
 <p>jQuery 提供了一些简单的动画方法，例如 show()、hide()、fadeIn()、fadeOut() 等。</p>
 <p><strong>常见动画效果</strong></p>
-<ul>
-<li>
-<p>隐藏和显示</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">hide</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w">   </span><span class="c1">//隐藏</span>
-<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">show</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w">   </span><span class="c1">//显示</span>
-<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">toggle</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w"> </span><span class="c1">//显示/隐藏切换</span>
-</code></pre></div>
-</li>
-<li>
-<p>淡入淡出</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w"> </span><span class="c1">//淡入</span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w">    </span><span class="c1">//淡出</span>
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">fadeToggle</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w"> </span><span class="c1">//淡入/淡出切换</span>
-<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">fadeTo</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">opacity</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w"> </span><span class="c1">//渐变为指定透明度</span>
-</code></pre></div>
-</li>
-<li>
-<p>滑动</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">slideDown</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w">  </span><span class="c1">//向下滑动</span>
-<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w">    </span><span class="c1">//向上滑动</span>
-<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="w">    </span><span class="c1">//向下滑动/向上滑动切换</span>
-</code></pre></div>
-</li>
-<li>
-<p>动画</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span><span class="nx">params</span><span class="p">},</span><span class="nx">speed</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span><span class="c1">//自定义动画</span>
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="nx">$</span><span class="p">(</span><span class="nx">selector</span><span class="p">).</span><span class="nx">stop</span><span class="p">(</span><span class="nx">stopAll</span><span class="p">,</span><span class="nx">goToEnd</span><span class="p">);</span><span class="w">  </span><span class="c1">//停止</span>
-</code></pre></div>
-</li>
-<li>
-<p>方法链接</p>
-<p>在相同的元素上运行多条jQuery命令，一条接着另一条</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-11-10">10</a></span>
-<span class="normal"><a href="#__codelineno-11-11">11</a></span>
-<span class="normal"><a href="#__codelineno-11-12">12</a></span>
-<span class="normal"><a href="#__codelineno-11-13">13</a></span>
-<span class="normal"><a href="#__codelineno-11-14">14</a></span>
-<span class="normal"><a href="#__codelineno-11-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>显示/隐藏<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').show()"</span><span class="p">&gt;</span>显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').hide()"</span><span class="p">&gt;</span>隐藏<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').toggle()"</span><span class="p">&gt;</span>隐藏/显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeIn()"</span><span class="p">&gt;</span>淡入<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeOut()"</span><span class="p">&gt;</span>淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeToggle()"</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>滑动方法<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideDown()"</span><span class="p">&gt;</span>向下滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideUp()"</span><span class="p">&gt;</span>向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideToggle()"</span><span class="p">&gt;</span>向下滑动/向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').animate({height:'300px',opacity:'0.4'}, 'slow')"</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>效果</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>隐藏和显示</td>
+<td>hide()、show()、toggle()</td>
+</tr>
+<tr>
+<td>淡入淡出</td>
+<td>fadeIn()、fadeOut() 、fadeToggle()、fadeTo()</td>
+</tr>
+<tr>
+<td>滑动</td>
+<td>slideDown()、slideUp()、slideToggle()</td>
+</tr>
+<tr>
+<td>动画</td>
+<td>animate()、stop()、queue()</td>
+</tr>
+<tr>
+<td>方法链接</td>
+<td>在相同的元素上运行多条jQuery命令，一条接着另一条</td>
+</tr>
+</tbody>
+</table>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">示例</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
@@ -1695,106 +1673,106 @@
 <li>
 <p><strong>源代码</strong></p>
 <hr/>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-12-10">10</a></span>
-<span class="normal"><a href="#__codelineno-12-11">11</a></span>
-<span class="normal"><a href="#__codelineno-12-12">12</a></span>
-<span class="normal"><a href="#__codelineno-12-13">13</a></span>
-<span class="normal"><a href="#__codelineno-12-14">14</a></span>
-<span class="normal"><a href="#__codelineno-12-15">15</a></span>
-<span class="normal"><a href="#__codelineno-12-16">16</a></span>
-<span class="normal"><a href="#__codelineno-12-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>显示/隐藏<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').show()"</span><span class="p">&gt;</span>显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').hide()"</span><span class="p">&gt;</span>隐藏<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').toggle()"</span><span class="p">&gt;</span>隐藏/显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeIn()"</span><span class="p">&gt;</span>淡入<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeOut()"</span><span class="p">&gt;</span>淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeToggle()"</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>滑动方法<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideDown()"</span><span class="p">&gt;</span>向下滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideUp()"</span><span class="p">&gt;</span>向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideToggle()"</span><span class="p">&gt;</span>向下滑动/向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a>
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').animate({height:'300px',opacity:'0.4'}, 'slow')"</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>显示/隐藏<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').show()"</span><span class="p">&gt;</span>显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').hide()"</span><span class="p">&gt;</span>隐藏<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').toggle()"</span><span class="p">&gt;</span>隐藏/显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeIn()"</span><span class="p">&gt;</span>淡入<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeOut()"</span><span class="p">&gt;</span>淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeToggle()"</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>滑动方法<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideDown()"</span><span class="p">&gt;</span>向下滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideUp()"</span><span class="p">&gt;</span>向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideToggle()"</span><span class="p">&gt;</span>向下滑动/向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').animate({height:'300px',opacity:'0.4'}, 'slow')"</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </li>
 </ul>
 </div>
 <details class="tip">
 <summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">效果.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span>
-<span class="normal"><a href="#__codelineno-13-11">11</a></span>
-<span class="normal"><a href="#__codelineno-13-12">12</a></span>
-<span class="normal"><a href="#__codelineno-13-13">13</a></span>
-<span class="normal"><a href="#__codelineno-13-14">14</a></span>
-<span class="normal"><a href="#__codelineno-13-15">15</a></span>
-<span class="normal"><a href="#__codelineno-13-16">16</a></span>
-<span class="normal"><a href="#__codelineno-13-17">17</a></span>
-<span class="normal"><a href="#__codelineno-13-18">18</a></span>
-<span class="normal"><a href="#__codelineno-13-19">19</a></span>
-<span class="normal"><a href="#__codelineno-13-20">20</a></span>
-<span class="normal"><a href="#__codelineno-13-21">21</a></span>
-<span class="normal"><a href="#__codelineno-13-22">22</a></span>
-<span class="normal"><a href="#__codelineno-13-23">23</a></span>
-<span class="normal"><a href="#__codelineno-13-24">24</a></span>
-<span class="normal"><a href="#__codelineno-13-25">25</a></span>
-<span class="normal"><a href="#__codelineno-13-26">26</a></span>
-<span class="normal"><a href="#__codelineno-13-27">27</a></span>
-<span class="normal"><a href="#__codelineno-13-28">28</a></span>
-<span class="normal"><a href="#__codelineno-13-29">29</a></span>
-<span class="normal"><a href="#__codelineno-13-30">30</a></span>
-<span class="normal"><a href="#__codelineno-13-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>效果示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>显示/隐藏<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').show()"</span><span class="p">&gt;</span>显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').hide()"</span><span class="p">&gt;</span>隐藏<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').toggle()"</span><span class="p">&gt;</span>隐藏/显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="hll">
-</span><a id="__codelineno-13-17" name="__codelineno-13-17"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeIn()"</span><span class="p">&gt;</span>淡入<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeOut()"</span><span class="p">&gt;</span>淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeToggle()"</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-21" name="__codelineno-13-21"></a>
-<a id="__codelineno-13-22" name="__codelineno-13-22"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>滑动方法<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-13-23" name="__codelineno-13-23"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideDown()"</span><span class="p">&gt;</span>向下滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-24" name="__codelineno-13-24"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideUp()"</span><span class="p">&gt;</span>向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-25" name="__codelineno-13-25"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideToggle()"</span><span class="p">&gt;</span>向下滑动/向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-26" name="__codelineno-13-26"></a>
-<a id="__codelineno-13-27" name="__codelineno-13-27"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-13-28" name="__codelineno-13-28"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').animate({height:'300px',opacity:'0.4'}, 'slow')"</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-13-30" name="__codelineno-13-30"></a>
-<a id="__codelineno-13-31" name="__codelineno-13-31"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">效果.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>效果示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>显示/隐藏<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').show()"</span><span class="p">&gt;</span>显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').hide()"</span><span class="p">&gt;</span>隐藏<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').toggle()"</span><span class="p">&gt;</span>隐藏/显示<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="hll">
+</span><a id="__codelineno-8-17" name="__codelineno-8-17"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeIn()"</span><span class="p">&gt;</span>淡入<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeOut()"</span><span class="p">&gt;</span>淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').fadeToggle()"</span><span class="p">&gt;</span>淡入/淡出<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>滑动方法<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideDown()"</span><span class="p">&gt;</span>向下滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideUp()"</span><span class="p">&gt;</span>向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').slideToggle()"</span><span class="p">&gt;</span>向下滑动/向上滑动<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('p').animate({height:'300px',opacity:'0.4'}, 'slow')"</span><span class="p">&gt;</span>动画<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <hr/>
@@ -1832,11 +1810,11 @@
 </tbody>
 </table>
 <p><strong>示例：</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
-<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w"> </span><span class="p">});</span>
-<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w"> </span><span class="p">});</span>
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">示例</label></div>
 <div class="tabbed-content">
@@ -1853,164 +1831,164 @@
 <li>
 <p><strong>源代码</strong></p>
 <hr/>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Html.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-15-10">10</a></span>
-<span class="normal"><a href="#__codelineno-15-11">11</a></span>
-<span class="normal"><a href="#__codelineno-15-12">12</a></span>
-<span class="normal"><a href="#__codelineno-15-13">13</a></span>
-<span class="normal"><a href="#__codelineno-15-14">14</a></span>
-<span class="normal"><a href="#__codelineno-15-15">15</a></span>
-<span class="normal"><a href="#__codelineno-15-16">16</a></span>
-<span class="normal"><a href="#__codelineno-15-17">17</a></span>
-<span class="normal"><a href="#__codelineno-15-18">18</a></span>
-<span class="normal"><a href="#__codelineno-15-19">19</a></span>
-<span class="normal"><a href="#__codelineno-15-20">20</a></span>
-<span class="normal"><a href="#__codelineno-15-21">21</a></span>
-<span class="normal"><a href="#__codelineno-15-22">22</a></span>
-<span class="normal"><a href="#__codelineno-15-23">23</a></span>
-<span class="normal"><a href="#__codelineno-15-24">24</a></span>
-<span class="normal"><a href="#__codelineno-15-25">25</a></span>
-<span class="normal"><a href="#__codelineno-15-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>获取内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').text())"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').html())"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').val())"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').attr('class'))"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>设置内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('hello paragraph!')"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('&lt;button&gt;hello paragraph!&lt;/button&gt;')"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').val('hello val!')"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').attr('class', 'fail_class')"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12"></a>
-<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>添加元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').append('Some appended text.')"</span><span class="p">&gt;</span>append<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').prepend('Some prepended text.')"</span><span class="p">&gt;</span>prepended<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').after('&lt;p&gt;Some after text.&lt;/p&gt;')"</span><span class="p">&gt;</span>after<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').before('&lt;p&gt;Some before text.&lt;/p&gt;')"</span><span class="p">&gt;</span>before<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-18" name="__codelineno-15-18"></a>
-<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>删除元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').remove()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').empty()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-22" name="__codelineno-15-22"></a>
-<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>CSS类<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').addClass('blue')"</span><span class="p">&gt;</span>addClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').removeClass('blue')"</span><span class="p">&gt;</span>removeClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').toggleClass('blue')"</span><span class="p">&gt;</span>toggleClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Html.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>获取内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').text())"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').html())"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').val())"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').attr('class'))"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>设置内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('hello paragraph!')"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('&lt;button&gt;hello paragraph!&lt;/button&gt;')"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').val('hello val!')"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').attr('class', 'fail_class')"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>添加元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').append('Some appended text.')"</span><span class="p">&gt;</span>append<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').prepend('Some prepended text.')"</span><span class="p">&gt;</span>prepended<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').after('&lt;p&gt;Some after text.&lt;/p&gt;')"</span><span class="p">&gt;</span>after<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').before('&lt;p&gt;Some before text.&lt;/p&gt;')"</span><span class="p">&gt;</span>before<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>删除元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').remove()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').empty()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>CSS类<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').addClass('blue')"</span><span class="p">&gt;</span>addClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').removeClass('blue')"</span><span class="p">&gt;</span>removeClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').toggleClass('blue')"</span><span class="p">&gt;</span>toggleClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </li>
 </ul>
 </div>
 <details class="tip">
 <summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Html.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-16-10">10</a></span>
-<span class="normal"><a href="#__codelineno-16-11">11</a></span>
-<span class="normal"><a href="#__codelineno-16-12">12</a></span>
-<span class="normal"><a href="#__codelineno-16-13">13</a></span>
-<span class="normal"><a href="#__codelineno-16-14">14</a></span>
-<span class="normal"><a href="#__codelineno-16-15">15</a></span>
-<span class="normal"><a href="#__codelineno-16-16">16</a></span>
-<span class="normal"><a href="#__codelineno-16-17">17</a></span>
-<span class="normal"><a href="#__codelineno-16-18">18</a></span>
-<span class="normal"><a href="#__codelineno-16-19">19</a></span>
-<span class="normal"><a href="#__codelineno-16-20">20</a></span>
-<span class="normal"><a href="#__codelineno-16-21">21</a></span>
-<span class="normal"><a href="#__codelineno-16-22">22</a></span>
-<span class="normal"><a href="#__codelineno-16-23">23</a></span>
-<span class="normal"><a href="#__codelineno-16-24">24</a></span>
-<span class="normal"><a href="#__codelineno-16-25">25</a></span>
-<span class="normal"><a href="#__codelineno-16-26">26</a></span>
-<span class="normal"><a href="#__codelineno-16-27">27</a></span>
-<span class="normal"><a href="#__codelineno-16-28">28</a></span>
-<span class="normal"><a href="#__codelineno-16-29">29</a></span>
-<span class="normal"><a href="#__codelineno-16-30">30</a></span>
-<span class="normal"><a href="#__codelineno-16-31">31</a></span>
-<span class="normal"><a href="#__codelineno-16-32">32</a></span>
-<span class="normal"><a href="#__codelineno-16-33">33</a></span>
-<span class="normal"><a href="#__codelineno-16-34">34</a></span>
-<span class="normal"><a href="#__codelineno-16-35">35</a></span>
-<span class="normal"><a href="#__codelineno-16-36">36</a></span>
-<span class="normal"><a href="#__codelineno-16-37">37</a></span>
-<span class="normal"><a href="#__codelineno-16-38">38</a></span>
-<span class="normal"><a href="#__codelineno-16-39">39</a></span>
-<span class="normal"><a href="#__codelineno-16-40">40</a></span>
-<span class="normal"><a href="#__codelineno-16-41">41</a></span>
-<span class="normal"><a href="#__codelineno-16-42">42</a></span>
-<span class="normal"><a href="#__codelineno-16-43">43</a></span>
-<span class="normal"><a href="#__codelineno-16-44">44</a></span>
-<span class="normal"><a href="#__codelineno-16-45">45</a></span>
-<span class="normal"><a href="#__codelineno-16-46">46</a></span>
-<span class="normal"><a href="#__codelineno-16-47">47</a></span>
-<span class="normal"><a href="#__codelineno-16-48">48</a></span>
-<span class="normal"><a href="#__codelineno-16-49">49</a></span>
-<span class="normal"><a href="#__codelineno-16-50">50</a></span>
-<span class="normal"><a href="#__codelineno-16-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Html示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a>  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="p">.</span><span class="nc">ok_class</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">    </span><span class="p">.</span><span class="nc">fail_class</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">    </span><span class="p">.</span><span class="nc">blue</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
-<a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-16-20" name="__codelineno-16-20"></a>
-<a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-16-22" name="__codelineno-16-22"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"p1"</span> <span class="na">class</span><span class="o">=</span><span class="s">"ok_class"</span><span class="p">&gt;</span>这是一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-16-23" name="__codelineno-16-23"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>获取内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-16-24" name="__codelineno-16-24"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').text())"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').html())"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').val())"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').attr('class'))"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span><a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="hll">
-</span><a id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>设置内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-</span><a id="__codelineno-16-30" name="__codelineno-16-30"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('hello paragraph!')"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-31" name="__codelineno-16-31"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('&lt;button&gt;hello paragraph!&lt;/button&gt;')"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-32" name="__codelineno-16-32"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').val('hello val!')"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-33" name="__codelineno-16-33"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').attr('class', 'fail_class')"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-34" name="__codelineno-16-34"></a>
-<a id="__codelineno-16-35" name="__codelineno-16-35"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>添加元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-16-36" name="__codelineno-16-36"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').append('Some appended text.')"</span><span class="p">&gt;</span>append<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-37" name="__codelineno-16-37"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').prepend('Some prepended text.')"</span><span class="p">&gt;</span>prepended<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-38" name="__codelineno-16-38"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').after('&lt;p&gt;Some after text.&lt;/p&gt;')"</span><span class="p">&gt;</span>after<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-39" name="__codelineno-16-39"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').before('&lt;p&gt;Some before text.&lt;/p&gt;')"</span><span class="p">&gt;</span>before<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-40" name="__codelineno-16-40"></a>
-<a id="__codelineno-16-41" name="__codelineno-16-41"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>删除元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-16-42" name="__codelineno-16-42"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').remove()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-43" name="__codelineno-16-43"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').empty()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-44" name="__codelineno-16-44"></a>
-<a id="__codelineno-16-45" name="__codelineno-16-45"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>CSS类<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-16-46" name="__codelineno-16-46"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').addClass('blue')"</span><span class="p">&gt;</span>addClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-47" name="__codelineno-16-47"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').removeClass('blue')"</span><span class="p">&gt;</span>removeClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-48" name="__codelineno-16-48"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').toggleClass('blue')"</span><span class="p">&gt;</span>toggleClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-16-49" name="__codelineno-16-49"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-16-50" name="__codelineno-16-50"></a>
-<a id="__codelineno-16-51" name="__codelineno-16-51"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Html.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span>
+<span class="normal"><a href="#__codelineno-11-24">24</a></span>
+<span class="normal"><a href="#__codelineno-11-25">25</a></span>
+<span class="normal"><a href="#__codelineno-11-26">26</a></span>
+<span class="normal"><a href="#__codelineno-11-27">27</a></span>
+<span class="normal"><a href="#__codelineno-11-28">28</a></span>
+<span class="normal"><a href="#__codelineno-11-29">29</a></span>
+<span class="normal"><a href="#__codelineno-11-30">30</a></span>
+<span class="normal"><a href="#__codelineno-11-31">31</a></span>
+<span class="normal"><a href="#__codelineno-11-32">32</a></span>
+<span class="normal"><a href="#__codelineno-11-33">33</a></span>
+<span class="normal"><a href="#__codelineno-11-34">34</a></span>
+<span class="normal"><a href="#__codelineno-11-35">35</a></span>
+<span class="normal"><a href="#__codelineno-11-36">36</a></span>
+<span class="normal"><a href="#__codelineno-11-37">37</a></span>
+<span class="normal"><a href="#__codelineno-11-38">38</a></span>
+<span class="normal"><a href="#__codelineno-11-39">39</a></span>
+<span class="normal"><a href="#__codelineno-11-40">40</a></span>
+<span class="normal"><a href="#__codelineno-11-41">41</a></span>
+<span class="normal"><a href="#__codelineno-11-42">42</a></span>
+<span class="normal"><a href="#__codelineno-11-43">43</a></span>
+<span class="normal"><a href="#__codelineno-11-44">44</a></span>
+<span class="normal"><a href="#__codelineno-11-45">45</a></span>
+<span class="normal"><a href="#__codelineno-11-46">46</a></span>
+<span class="normal"><a href="#__codelineno-11-47">47</a></span>
+<span class="normal"><a href="#__codelineno-11-48">48</a></span>
+<span class="normal"><a href="#__codelineno-11-49">49</a></span>
+<span class="normal"><a href="#__codelineno-11-50">50</a></span>
+<span class="normal"><a href="#__codelineno-11-51">51</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Html示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">    </span><span class="p">.</span><span class="nc">ok_class</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="p">.</span><span class="nc">fail_class</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="p">.</span><span class="nc">blue</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"p1"</span> <span class="na">class</span><span class="o">=</span><span class="s">"ok_class"</span><span class="p">&gt;</span>这是一个段落。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>获取内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').text())"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').html())"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').val())"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert($('#p1').attr('class'))"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="hll">
+</span><a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>设置内容和属性<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span><a id="__codelineno-11-30" name="__codelineno-11-30"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('hello paragraph!')"</span><span class="p">&gt;</span>text<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').text('&lt;button&gt;hello paragraph!&lt;/button&gt;')"</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').val('hello val!')"</span><span class="p">&gt;</span>val<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').attr('class', 'fail_class')"</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34"></a>
+<a id="__codelineno-11-35" name="__codelineno-11-35"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>添加元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').append('Some appended text.')"</span><span class="p">&gt;</span>append<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').prepend('Some prepended text.')"</span><span class="p">&gt;</span>prepended<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').after('&lt;p&gt;Some after text.&lt;/p&gt;')"</span><span class="p">&gt;</span>after<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').before('&lt;p&gt;Some before text.&lt;/p&gt;')"</span><span class="p">&gt;</span>before<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-40" name="__codelineno-11-40"></a>
+<a id="__codelineno-11-41" name="__codelineno-11-41"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>删除元素<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').remove()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').empty()"</span><span class="p">&gt;</span>remove<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44"></a>
+<a id="__codelineno-11-45" name="__codelineno-11-45"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>CSS类<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').addClass('blue')"</span><span class="p">&gt;</span>addClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').removeClass('blue')"</span><span class="p">&gt;</span>removeClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-48" name="__codelineno-11-48"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"$('#p1').toggleClass('blue')"</span><span class="p">&gt;</span>toggleClass<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-11-50" name="__codelineno-11-50"></a>
+<a id="__codelineno-11-51" name="__codelineno-11-51"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <hr/>
@@ -2044,15 +2022,15 @@
 </tbody>
 </table>
 <p><strong>示例：</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span>
-<span class="normal"><a href="#__codelineno-17-3">3</a></span>
-<span class="normal"><a href="#__codelineno-17-4">4</a></span>
-<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">示例</label></div>
 <div class="tabbed-content">
@@ -2069,140 +2047,140 @@
 <li>
 <p><strong>源代码</strong></p>
 <hr/>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">遍历.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-18-10">10</a></span>
-<span class="normal"><a href="#__codelineno-18-11">11</a></span>
-<span class="normal"><a href="#__codelineno-18-12">12</a></span>
-<span class="normal"><a href="#__codelineno-18-13">13</a></span>
-<span class="normal"><a href="#__codelineno-18-14">14</a></span>
-<span class="normal"><a href="#__codelineno-18-15">15</a></span>
-<span class="normal"><a href="#__codelineno-18-16">16</a></span>
-<span class="normal"><a href="#__codelineno-18-17">17</a></span>
-<span class="normal"><a href="#__codelineno-18-18">18</a></span>
-<span class="normal"><a href="#__codelineno-18-19">19</a></span>
-<span class="normal"><a href="#__codelineno-18-20">20</a></span>
-<span class="normal"><a href="#__codelineno-18-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">  </span><span class="p">});</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a>
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"ancestors"</span><span class="p">&gt;</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (曾祖父元素)
-<a id="__codelineno-18-9" name="__codelineno-18-9"></a>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>ul (祖父元素)
-<a id="__codelineno-18-10" name="__codelineno-18-10"></a>      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>li (父元素)
-<a id="__codelineno-18-11" name="__codelineno-18-11"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-18-12" name="__codelineno-18-12"></a>      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<a id="__codelineno-18-13" name="__codelineno-18-13"></a>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<a id="__codelineno-18-14" name="__codelineno-18-14"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-18-15" name="__codelineno-18-15"></a>
-<a id="__codelineno-18-16" name="__codelineno-18-16"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (祖父元素)
-<a id="__codelineno-18-17" name="__codelineno-18-17"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>p (父元素)
-<a id="__codelineno-18-18" name="__codelineno-18-18"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-18-19" name="__codelineno-18-19"></a>    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-18-20" name="__codelineno-18-20"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">遍历.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"ancestors"</span><span class="p">&gt;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (曾祖父元素)
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>ul (祖父元素)
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>li (父元素)
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (祖父元素)
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>p (父元素)
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </li>
 </ul>
 </div>
 <details class="tip">
 <summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">遍历.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-19-10">10</a></span>
-<span class="normal"><a href="#__codelineno-19-11">11</a></span>
-<span class="normal"><a href="#__codelineno-19-12">12</a></span>
-<span class="normal"><a href="#__codelineno-19-13">13</a></span>
-<span class="normal"><a href="#__codelineno-19-14">14</a></span>
-<span class="normal"><a href="#__codelineno-19-15">15</a></span>
-<span class="normal"><a href="#__codelineno-19-16">16</a></span>
-<span class="normal"><a href="#__codelineno-19-17">17</a></span>
-<span class="normal"><a href="#__codelineno-19-18">18</a></span>
-<span class="normal"><a href="#__codelineno-19-19">19</a></span>
-<span class="normal"><a href="#__codelineno-19-20">20</a></span>
-<span class="normal"><a href="#__codelineno-19-21">21</a></span>
-<span class="normal"><a href="#__codelineno-19-22">22</a></span>
-<span class="normal"><a href="#__codelineno-19-23">23</a></span>
-<span class="normal"><a href="#__codelineno-19-24">24</a></span>
-<span class="normal"><a href="#__codelineno-19-25">25</a></span>
-<span class="normal"><a href="#__codelineno-19-26">26</a></span>
-<span class="normal"><a href="#__codelineno-19-27">27</a></span>
-<span class="normal"><a href="#__codelineno-19-28">28</a></span>
-<span class="normal"><a href="#__codelineno-19-29">29</a></span>
-<span class="normal"><a href="#__codelineno-19-30">30</a></span>
-<span class="normal"><a href="#__codelineno-19-31">31</a></span>
-<span class="normal"><a href="#__codelineno-19-32">32</a></span>
-<span class="normal"><a href="#__codelineno-19-33">33</a></span>
-<span class="normal"><a href="#__codelineno-19-34">34</a></span>
-<span class="normal"><a href="#__codelineno-19-35">35</a></span>
-<span class="normal"><a href="#__codelineno-19-36">36</a></span>
-<span class="normal"><a href="#__codelineno-19-37">37</a></span>
-<span class="normal"><a href="#__codelineno-19-38">38</a></span>
-<span class="normal"><a href="#__codelineno-19-39">39</a></span>
-<span class="normal"><a href="#__codelineno-19-40">40</a></span>
-<span class="normal"><a href="#__codelineno-19-41">41</a></span>
-<span class="normal"><a href="#__codelineno-19-42">42</a></span>
-<span class="normal"><a href="#__codelineno-19-43">43</a></span>
-<span class="normal"><a href="#__codelineno-19-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a>
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>遍历示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7"></a>  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">    </span><span class="p">.</span><span class="nc">ancestors</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">lightgrey</span><span class="p">;</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightgrey</span><span class="p">;</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;</span>
-<a id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-19-18" name="__codelineno-19-18"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="hll"><span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
-</span><a id="__codelineno-19-21" name="__codelineno-19-21"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-19-22" name="__codelineno-19-22"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-19-23" name="__codelineno-19-23"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-19-24" name="__codelineno-19-24"></a>
-<a id="__codelineno-19-25" name="__codelineno-19-25"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-19-26" name="__codelineno-19-26"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"ancestors"</span><span class="p">&gt;</span>
-<a id="__codelineno-19-27" name="__codelineno-19-27"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (曾祖父元素)
-<a id="__codelineno-19-28" name="__codelineno-19-28"></a>      <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>ul (祖父元素)
-<a id="__codelineno-19-29" name="__codelineno-19-29"></a>        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>li (父元素)
-<a id="__codelineno-19-30" name="__codelineno-19-30"></a>          <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-19-31" name="__codelineno-19-31"></a>        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<a id="__codelineno-19-32" name="__codelineno-19-32"></a>      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<a id="__codelineno-19-33" name="__codelineno-19-33"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-19-34" name="__codelineno-19-34"></a>
-<a id="__codelineno-19-35" name="__codelineno-19-35"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (祖父元素)
-<a id="__codelineno-19-36" name="__codelineno-19-36"></a>      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>p (父元素)
-<a id="__codelineno-19-37" name="__codelineno-19-37"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-19-38" name="__codelineno-19-38"></a>      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-19-39" name="__codelineno-19-39"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-19-40" name="__codelineno-19-40"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-19-41" name="__codelineno-19-41"></a>
-<a id="__codelineno-19-42" name="__codelineno-19-42"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-19-43" name="__codelineno-19-43"></a>
-<a id="__codelineno-19-44" name="__codelineno-19-44"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">遍历.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span>
+<span class="normal"><a href="#__codelineno-14-27">27</a></span>
+<span class="normal"><a href="#__codelineno-14-28">28</a></span>
+<span class="normal"><a href="#__codelineno-14-29">29</a></span>
+<span class="normal"><a href="#__codelineno-14-30">30</a></span>
+<span class="normal"><a href="#__codelineno-14-31">31</a></span>
+<span class="normal"><a href="#__codelineno-14-32">32</a></span>
+<span class="normal"><a href="#__codelineno-14-33">33</a></span>
+<span class="normal"><a href="#__codelineno-14-34">34</a></span>
+<span class="normal"><a href="#__codelineno-14-35">35</a></span>
+<span class="normal"><a href="#__codelineno-14-36">36</a></span>
+<span class="normal"><a href="#__codelineno-14-37">37</a></span>
+<span class="normal"><a href="#__codelineno-14-38">38</a></span>
+<span class="normal"><a href="#__codelineno-14-39">39</a></span>
+<span class="normal"><a href="#__codelineno-14-40">40</a></span>
+<span class="normal"><a href="#__codelineno-14-41">41</a></span>
+<span class="normal"><a href="#__codelineno-14-42">42</a></span>
+<span class="normal"><a href="#__codelineno-14-43">43</a></span>
+<span class="normal"><a href="#__codelineno-14-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>遍历示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="p">.</span><span class="nc">ancestors</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">lightgrey</span><span class="p">;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightgrey</span><span class="p">;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="hll"><span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">"span"</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">css</span><span class="p">({</span><span class="w"> </span><span class="s2">"color"</span><span class="o">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="s2">"border"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2px solid red"</span><span class="w"> </span><span class="p">});</span>
+</span><a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"ancestors"</span><span class="p">&gt;</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (曾祖父元素)
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a>      <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>ul (祖父元素)
+<a id="__codelineno-14-29" name="__codelineno-14-29"></a>        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>li (父元素)
+<a id="__codelineno-14-30" name="__codelineno-14-30"></a>          <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31"></a>        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32"></a>      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34"></a>
+<a id="__codelineno-14-35" name="__codelineno-14-35"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">"width:500px;"</span><span class="p">&gt;</span>div (祖父元素)
+<a id="__codelineno-14-36" name="__codelineno-14-36"></a>      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>p (父元素)
+<a id="__codelineno-14-37" name="__codelineno-14-37"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38"></a>      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41"></a>
+<a id="__codelineno-14-42" name="__codelineno-14-42"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-14-43" name="__codelineno-14-43"></a>
+<a id="__codelineno-14-44" name="__codelineno-14-44"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <hr/>
@@ -2257,130 +2235,130 @@
 <li>
 <p><strong>源代码</strong></p>
 <hr/>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-20-10">10</a></span>
-<span class="normal"><a href="#__codelineno-20-11">11</a></span>
-<span class="normal"><a href="#__codelineno-20-12">12</a></span>
-<span class="normal"><a href="#__codelineno-20-13">13</a></span>
-<span class="normal"><a href="#__codelineno-20-14">14</a></span>
-<span class="normal"><a href="#__codelineno-20-15">15</a></span>
-<span class="normal"><a href="#__codelineno-20-16">16</a></span>
-<span class="normal"><a href="#__codelineno-20-17">17</a></span>
-<span class="normal"><a href="#__codelineno-20-18">18</a></span>
-<span class="normal"><a href="#__codelineno-20-19">19</a></span>
-<span class="normal"><a href="#__codelineno-20-20">20</a></span>
-<span class="normal"><a href="#__codelineno-20-21">21</a></span>
-<span class="normal"><a href="#__codelineno-20-22">22</a></span>
-<span class="normal"><a href="#__codelineno-20-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"button"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">      </span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"http://127.0.0.1:8888/minus"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">      </span><span class="p">})</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8"></a>
-<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">  </span><span class="p">});</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">minus_done</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-20-14" name="__codelineno-20-14"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-20-15" name="__codelineno-20-15"></a>
-<a id="__codelineno-20-16" name="__codelineno-20-16"></a><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>a: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-20-17" name="__codelineno-20-17"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
-<a id="__codelineno-20-18" name="__codelineno-20-18"></a><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<a id="__codelineno-20-19" name="__codelineno-20-19"></a><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>b: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-20-20" name="__codelineno-20-20"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
-<a id="__codelineno-20-21" name="__codelineno-20-21"></a><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<a id="__codelineno-20-22" name="__codelineno-20-22"></a><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>a-b<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-20-23" name="__codelineno-20-23"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a_b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"button"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">      </span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"http://127.0.0.1:8888/minus"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">      </span><span class="p">})</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">minus_done</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>a: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>b: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>a-b<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a_b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
 </code></pre></div></td></tr></table></div>
 </li>
 </ul>
 </div>
 <details class="tip">
 <summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Ajax.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-21-10">10</a></span>
-<span class="normal"><a href="#__codelineno-21-11">11</a></span>
-<span class="normal"><a href="#__codelineno-21-12">12</a></span>
-<span class="normal"><a href="#__codelineno-21-13">13</a></span>
-<span class="normal"><a href="#__codelineno-21-14">14</a></span>
-<span class="normal"><a href="#__codelineno-21-15">15</a></span>
-<span class="normal"><a href="#__codelineno-21-16">16</a></span>
-<span class="normal"><a href="#__codelineno-21-17">17</a></span>
-<span class="normal"><a href="#__codelineno-21-18">18</a></span>
-<span class="normal"><a href="#__codelineno-21-19">19</a></span>
-<span class="normal"><a href="#__codelineno-21-20">20</a></span>
-<span class="normal"><a href="#__codelineno-21-21">21</a></span>
-<span class="normal"><a href="#__codelineno-21-22">22</a></span>
-<span class="normal"><a href="#__codelineno-21-23">23</a></span>
-<span class="normal"><a href="#__codelineno-21-24">24</a></span>
-<span class="normal"><a href="#__codelineno-21-25">25</a></span>
-<span class="normal"><a href="#__codelineno-21-26">26</a></span>
-<span class="normal"><a href="#__codelineno-21-27">27</a></span>
-<span class="normal"><a href="#__codelineno-21-28">28</a></span>
-<span class="normal"><a href="#__codelineno-21-29">29</a></span>
-<span class="normal"><a href="#__codelineno-21-30">30</a></span>
-<span class="normal"><a href="#__codelineno-21-31">31</a></span>
-<span class="normal"><a href="#__codelineno-21-32">32</a></span>
-<span class="normal"><a href="#__codelineno-21-33">33</a></span>
-<span class="normal"><a href="#__codelineno-21-34">34</a></span>
-<span class="normal"><a href="#__codelineno-21-35">35</a></span>
-<span class="normal"><a href="#__codelineno-21-36">36</a></span>
-<span class="normal"><a href="#__codelineno-21-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a>
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ajax示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Access-Control-Allow-Origin"</span> <span class="na">content</span><span class="o">=</span><span class="s">"*"</span><span class="p">&gt;</span>
-<a id="__codelineno-21-8" name="__codelineno-21-8"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-21-10" name="__codelineno-21-10"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">"button"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13"></a><span class="hll"><span class="w">        </span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"http://127.0.0.1:8888/minus"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="hll"><span class="w">          </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-</span><a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="hll"><span class="w">        </span><span class="p">})</span>
-</span><a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="w">      </span><span class="p">});</span>
-<a id="__codelineno-21-17" name="__codelineno-21-17"></a>
-<a id="__codelineno-21-18" name="__codelineno-21-18"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-21-19" name="__codelineno-21-19"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">minus_done</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-20" name="__codelineno-21-20"></a><span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-<a id="__codelineno-21-21" name="__codelineno-21-21"></a><span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-21-22" name="__codelineno-21-22"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-21-23" name="__codelineno-21-23"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<a id="__codelineno-21-24" name="__codelineno-21-24"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-21-25" name="__codelineno-21-25"></a>
-<a id="__codelineno-21-26" name="__codelineno-21-26"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-21-27" name="__codelineno-21-27"></a>  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>a: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-21-28" name="__codelineno-21-28"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
-<a id="__codelineno-21-29" name="__codelineno-21-29"></a>  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<a id="__codelineno-21-30" name="__codelineno-21-30"></a>  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>b: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-21-31" name="__codelineno-21-31"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
-<a id="__codelineno-21-32" name="__codelineno-21-32"></a>  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<a id="__codelineno-21-33" name="__codelineno-21-33"></a>  <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>a-b<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-21-34" name="__codelineno-21-34"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a_b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
-<a id="__codelineno-21-35" name="__codelineno-21-35"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-21-36" name="__codelineno-21-36"></a>
-<a id="__codelineno-21-37" name="__codelineno-21-37"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Ajax.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span>
+<span class="normal"><a href="#__codelineno-16-28">28</a></span>
+<span class="normal"><a href="#__codelineno-16-29">29</a></span>
+<span class="normal"><a href="#__codelineno-16-30">30</a></span>
+<span class="normal"><a href="#__codelineno-16-31">31</a></span>
+<span class="normal"><a href="#__codelineno-16-32">32</a></span>
+<span class="normal"><a href="#__codelineno-16-33">33</a></span>
+<span class="normal"><a href="#__codelineno-16-34">34</a></span>
+<span class="normal"><a href="#__codelineno-16-35">35</a></span>
+<span class="normal"><a href="#__codelineno-16-36">36</a></span>
+<span class="normal"><a href="#__codelineno-16-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ajax示例<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"Access-Control-Allow-Origin"</span> <span class="na">content</span><span class="o">=</span><span class="s">"*"</span><span class="p">&gt;</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"jquery-3.6.1.min.js"</span><span class="p">&gt;</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">"button"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="hll"><span class="w">        </span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"http://127.0.0.1:8888/minus"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="hll"><span class="w">          </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span><a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="hll"><span class="w">        </span><span class="p">})</span>
+</span><a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">      </span><span class="p">});</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">minus_done</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#a_b"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a>  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>a: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a>  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a>  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>b: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32"></a>  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33"></a>  <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>a-b<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">"a_b"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="p">/&gt;</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36"></a>
+<a id="__codelineno-16-37" name="__codelineno-16-37"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <hr/>

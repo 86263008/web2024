@@ -1,15 +1,16 @@
 <script src="vue.global.js"></script>
 
-<!-- 定义View -->
+<!-- 1. 定义View -->
 <div id="app">{{ message }}</div>
 
 <script>
   const { createApp, ref } = Vue
 
+  // 3. 定义ViewModel
   createApp({
     setup() {
       const message = ref('Hello vue!')
-      //定义Model
+      // 2. 定义Model
       return {
         message
       }

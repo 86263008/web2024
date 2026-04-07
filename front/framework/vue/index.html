@@ -928,6 +928,18 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vite/index.html">
+<span class="md-ellipsis">
+    
+  
+    Vite
+  
+
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1402,20 +1414,83 @@
 <p>https://cn.vuejs.org/</p>
 </blockquote>
 <p><img alt="evan" src="img/evan%20you.png"/></p>
+<p><strong>Vue.js</strong>（发音 /vjuː/，类似 view）是由尤雨溪（Evan You）于2014年发布的一款<strong>轻量级、渐进式</strong> JavaScript 前端框架，专注于高效构建用户界面与单页应用（SPA）。</p>
+<p>它基于标准 HTML、CSS、JavaScript，核心是<strong>响应式数据绑定</strong>与<strong>组件化开发</strong>：
+- <strong>响应式</strong>：数据变化时，视图自动同步更新，无需手动操作 DOM。
+- <strong>组件化</strong>：将界面拆分为独立、可复用的单文件组件（.vue），封装逻辑、模板与样式。
+- <strong>渐进式</strong>：可按需引入，小到用 <code>&lt;script&gt;</code> 标签增强网页交互，大到配合 Vue Router、Pinia 构建全栈应用。</p>
+<p>Vue 语法直观、文档完善、性能优异（虚拟 DOM 优化），兼具<strong>易用性、灵活性与高效性</strong>，是全球主流前端框架之一。</p>
 <h2 id="javascript">Javascript开发常见需求</h2>
 <p>MVVM</p>
 <p>组件</p>
 <hr/>
 <h2 id="mvvm">MVVM模式</h2>
-<p>Vue.js，Angular.js，React.js，Ember.js</p>
+<p>MVVM 全称 <strong>Model–View–ViewModel</strong>，是一种前端架构设计模式，<strong>Vue 就是典型的 MVVM 框架</strong>。</p>
+<p>数据驱动视图，视图同步数据，中间由 ViewModel 自动衔接，开发者不用手动操作 DOM。</p>
 <p><img alt="mvvm" src="img/mvvm.png"/></p>
 <p><img alt="mvvm-1" src="img/mvvm-1.png"/></p>
+<p><strong>MVVM 的核心特点</strong></p>
+<ul>
+<li><strong>双向绑定</strong>：数据 ↔ 视图自动同步</li>
+<li><strong>低耦合</strong>：视图和数据分开，互不污染</li>
+<li><strong>开发者不用操作 DOM</strong>，只关心数据逻辑</li>
+</ul>
 <hr/>
 <h2 id="_1">数据驱动和组件式编程</h2>
 <h3 id="_2">数据驱动</h3>
+<p>不用手动改 DOM，只改数据，页面自动跟着变。</p>
+<p><strong>与jQuery对比</strong></p>
+<ul>
+<li>传统 jQuery：改文字 → 找到 DOM → 赋值</li>
+<li>Vue 数据驱动：改数据 → Vue 自动帮你更新页面</li>
+</ul>
+<p>开发者只需关心<strong>数据是什么</strong>，不关心页面怎么刷新。</p>
+<p><strong>核心特点</strong>
+- 以数据为中心
+  页面展示、样式、列表渲染，都由数据决定。</p>
+<ul>
+<li>
+<p>数据变 → 视图自动更新
+  修改 <code>data</code> 里的变量，视图自动刷新，不用操作 DOM。</p>
+</li>
+<li>
+<p>视图操作同步回数据（双向绑定）
+  输入框输入内容，数据自动跟着变，不用 <code>value</code>、不用监听事件。</p>
+</li>
+<li>
+<p>减少 DOM 操作
+  几乎不用 <code>getElementById</code>、<code>innerHTML</code>、jQuery 之类。</p>
+</li>
+</ul>
 <p><img alt="data driven" src="img/data%20driven.png"/></p>
 <hr/>
 <h3 id="_3">组件式编程</h3>
+<p>把页面拆成一个个独立、可复用的小模块，像搭积木一样拼成完整页面。</p>
+<p><strong>核心思想</strong></p>
+<ul>
+<li>一个页面 = 多个组件组合而成</li>
+<li>每个组件<strong>独立封装</strong>：自己的 HTML、CSS、JS</li>
+<li>组件可以<strong>复用、嵌套、互相通信</strong></li>
+<li>便于维护、分工协作、单元测试</li>
+</ul>
+<p><strong>组件的特点</strong>
+- 可复用
+  写一次导航栏、按钮、卡片，到处都能用。</p>
+<ul>
+<li>
+<p>独立作用域
+  数据和样式默认不互相污染（Vue 单文件组件 + scoped）。</p>
+</li>
+<li>
+<p>可嵌套
+  组件里可以再放组件，形成组件树。</p>
+</li>
+<li>
+<p>可通信
+  父子组件通过 props、emit 传递数据；
+  复杂项目用 Pinia/Vuex 统一管理。</p>
+</li>
+</ul>
 <p><img alt="component" src="img/component.png"/></p>
 <p>这个理念不是来源于vue, 把web组件式开发发扬光大的应该是react了,组件开发是一种朴素的开发思想,分而治之,大型系统拆分成一个个的小模块小组件,分配给不同的人。额外的好处是顺便能复用这个组件。</p>
 <hr/>
@@ -1435,7 +1510,7 @@
 <p>返回值</p>
 </li>
 </ol>
-<p>那对应到vue中又是什么呢?</p>
+<p><strong>与Vue组件类比</strong></p>
 <table>
 <thead>
 <tr>
@@ -1464,11 +1539,22 @@
 </table>
 <hr/>
 <h2 id="hello-vue">Hello Vue</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label><label for="__tabbed_1_2">程序结构</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">示例</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p><iframe frameborder="0" height="50" src="./src/hello_world.html" width="100%"></iframe>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Hello Html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>效果</strong></p>
+<hr/>
+<p><iframe frameborder="0" height="50" src="./src/hello_world.html" width="100%"></iframe></p>
+</li>
+<li>
+<p><strong>源代码</strong></p>
+<hr/>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1485,45 +1571,30 @@
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
 <span class="normal"><a href="#__codelineno-0-16">16</a></span>
 <span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"vue.global.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"vue.global.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cm">&lt;!-- 定义View --&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cm">&lt;!-- 1. 定义View --&gt;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"app"</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="p">,</span><span class="w"> </span><span class="nx">ref</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Vue</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="nx">createApp</span><span class="p">({</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="s1">'Hello vue!'</span><span class="p">)</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span><span class="c1">//定义Model</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="nx">message</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="s1">'#app'</span><span class="p">)</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-</div>
-<div class="tabbed-block">
-<p>使用Vue的过程就是定义MVVM各个组成部分的过程的过程。</p>
-<ol>
-<li>
-<p>定义View</p>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="c1">// 3. 定义ViewModel</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="nx">createApp</span><span class="p">({</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ref</span><span class="p">(</span><span class="s1">'Hello vue!'</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">      </span><span class="c1">// 2. 定义Model</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="nx">message</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="s1">'#app'</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
 </li>
-<li>
-<p>定义Model</p>
-</li>
-<li>
-<p>创建一个Vue实例或"ViewModel"，它用于连接View和Model</p>
-</li>
-</ol>
-<p>在创建Vue实例时，需要传入一个选项对象，选项对象可以包含数据、挂载元素、方法、模生命周期钩子等等。
-在这个示例中，选项对象的el属性指向View，el: '#app'表示该Vue实例将挂载到<code>&lt;div id="app"&gt;...&lt;/div&gt;</code>这个元素；data属性指向Model，data: exampleData表示我们的Model是exampleData对象。
-Vue.js有多种数据绑定的语法，最基础的形式是文本插值，使用一对大括号语法，在运行时{{ message }}会被数据对象的message属性替换，所以页面上会输出"Hello World!"。</p>
+</ul>
 </div>
-</div>
-</input></input></div>
 <hr/>
 <h2 id="_5">生命周期</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">生命周期</label><label for="__tabbed_2_2">主要阶段</label></div>
