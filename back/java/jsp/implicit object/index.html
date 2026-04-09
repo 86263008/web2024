@@ -1385,7 +1385,46 @@
 <p>JSP为简化页面的开发提供了一些内部对象。</p>
 <p>这些内部对象不需要由JSP的编写者实例化，它们由JSP容器实现和管理，在所有JSP页面中都能使用内部对象。</p>
 <p>内部对象只对表达式和Scriptlet有用，在声明中不能使用。</p>
-<p><img alt="隐含对象" src="img/%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1.png"/></p>
+<!--
+![隐含对象](./img/%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1.png)
+-->
+<div class="mermaid">
+graph TB
+    A[隐含对象]:::primary
+
+    B[输入 / 输出对象]:::success
+    C[作用域通信对象]:::success
+    D[Servlet 对象]:::success
+    E[错误对象]:::success
+
+    F[request]:::danger
+    G[response]:::danger
+    H[out]:::danger
+    I[session]:::danger
+    J[application]:::danger
+    K[pageContext]:::danger
+    L[Page]:::danger
+    M[config]:::danger
+    N[exception]:::danger
+
+    A --&gt; B
+    A --&gt; C
+    A --&gt; D
+    A --&gt; E
+
+    B --&gt; F
+    B --&gt; G
+    B --&gt; H
+
+    C --&gt; I
+    C --&gt; J
+    C --&gt; K
+
+    D --&gt; L
+    D --&gt; M
+
+    E --&gt; N
+</div>
 <hr/>
 <h2 id="jsp_1">JSP隐含对象功能概述</h2>
 <table>
@@ -1477,7 +1516,7 @@
 <li>
 <p><strong>效果</strong></p>
 <hr/>
-<p><iframe frameborder="0" height="300" src="./src/BuiltInTestResult/OutTest.jsp.html" width="100%"></iframe></p>
+<p><iframe frameborder="0" height="300" src="/back/java/jsp/implicit object/src/BuiltInTestResult/OutTest.jsp.html" width="100%"></iframe></p>
 </li>
 <li>
 <p><strong>源代码</strong></p>
@@ -2812,5 +2851,5 @@
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../js/mermaid.min.js"></script>
 <script src="../../../../js/init_mermaid.js"></script>
-</body>
+<script>mermaid.initialize({});</script></body>
 </html>

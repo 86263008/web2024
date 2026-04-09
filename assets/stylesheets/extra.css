@@ -9,3 +9,112 @@
 .md-grid {
   max-width: 1920px; /* (1)! */
 }
+
+:root {
+  --radius: 6px;
+
+  /* Default */
+  --default-bg: #fff;
+  --default-border: #dcdfe6;
+  --default-text: #606266;
+
+  /* Primary */
+  --primary-bg: #409eff;
+  --primary-border: #409eff;
+  --primary-text: #ffffff;
+
+  /* Success */
+  --success-bg: #67c23a;
+  --success-border: #67c23a;
+  --success-text: #ffffff;
+
+  /* Info */
+  --info-bg: #909399;
+  --info-border: #909399;
+  --info-text: #ffffff;
+
+  /* Warning */
+  --warning-bg: #e6a23c;
+  --warning-border: #e6a23c;
+  --warning-text: #ffffff;
+
+  /* Danger */
+  --danger-bg: #f56c6c;
+  --danger-border: #f56c6c;
+  --danger-text: #ffffff;
+
+  --line-color: #c0c4cc;
+}
+
+/* 深色模式 */
+[data-md-color-scheme="slate"] {
+  --default-bg: #1f2937;
+  --default-border: #4b5563;
+  --default-text: #e5e7eb;
+  --line-color: #6b7280;
+}
+
+.mermaid {
+  font-family: var(--md-text-font-family) !important;
+  font-size: 16px !important;
+}
+
+/* 默认节点 */
+.mermaid rect,
+.mermaid ellipse,
+.mermaid polygon,
+.mermaid circle {
+  fill: var(--default-bg) !important;
+  stroke: var(--default-border) !important;
+  stroke-width: 1px !important;
+  rx: var(--radius) !important;
+  ry: var(--radius) !important;
+}
+
+.mermaid .nodeLabel {
+  color: var(--default-text) !important;
+  font-weight: 400 !important;
+}
+
+.mermaid .edgeLabel p {
+  background-color: var(--default-bg) !important;
+}
+
+
+/* 连线 */
+.mermaid path {
+  stroke: var(--line-color) !important;
+  stroke-width: 1px !important;
+}
+.mermaid .arrowMarkerPath {
+  fill: var(--line-color) !important;
+}
+
+.mermaid .primary .nodeLabel { color: var(--primary-text) !important; font-weight: 500 !important; }
+.mermaid .primary rect,
+.mermaid .primary ellipse,
+.mermaid .primary polygon,
+.mermaid .primary circle { fill: var(--primary-bg) !important; stroke: var(--primary-border) !important; }
+
+.mermaid .success .nodeLabel { color: var(--success-text) !important; font-weight: 500 !important; }
+.mermaid .success rect,
+.mermaid .success ellipse,
+.mermaid .success polygon,
+.mermaid .success circle { fill: var(--success-bg) !important; stroke: var(--success-border) !important; }
+
+.mermaid .info .nodeLabel { color: var(--info-text) !important; font-weight: 500 !important; }
+.mermaid .info rect,
+.mermaid .info ellipse,
+.mermaid .info polygon,
+.mermaid .info circle { fill: var(--info-bg) !important; stroke: var(--info-border) !important; }
+
+.mermaid .warning .nodeLabel { color: var(--warning-text) !important; font-weight: 500 !important; }
+.mermaid .warning rect,
+.mermaid .warning ellipse,
+.mermaid .warning polygon,
+.mermaid .warning circle { fill: var(--warning-bg) !important; stroke: var(--warning-border) !important; }
+
+.mermaid .danger .nodeLabel { color: var(--danger-text) !important; font-weight: 500 !important; }.mermaid .danger rect,
+.mermaid .danger ellipse,
+.mermaid .danger polygon,
+.mermaid .danger circle { fill: var(--danger-bg) !important; stroke: var(--danger-border) !important; }

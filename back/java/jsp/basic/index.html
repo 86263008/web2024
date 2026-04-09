@@ -1778,11 +1778,11 @@
 <p><strong>B/S 架构 = Browser / Server（浏览器 / 服务器）</strong>，是一种<strong>基于 Web</strong> 的软件架构模式。</p>
 <div class="mermaid">
 sequenceDiagram
-    actor 用户 as 👤 用户
-    participant 浏览器 as 🌐 浏览器
-    participant Web服务器 as 🖥️ Web 服务器
-    participant JSP容器 as ⚙️ JSP 容器(Tomcat)
-    participant 数据库 as 📊 数据库
+    actor 用户 as 用户
+    participant 浏览器 as 浏览器
+    participant Web服务器 as Web服务器
+    participant JSP容器 as JSP容器(Tomcat)
+    participant 数据库 as 数据库
 
     %% 1. 用户访问
     用户-&gt;&gt;浏览器: 输入URL/点击页面
@@ -1843,8 +1843,6 @@ sequenceDiagram
 ### 为什么学习B/S技术
 
 ![为什么需要BS技术](./img/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81BS%E6%8A%80%E6%9C%AF.png)
-
-***
 
 ### 什么是B/S技术
 
@@ -2072,7 +2070,7 @@ B/S中浏览器端与服务器端采用请求/响应模式进行交互
 <thead>
 <tr>
 <th>模块</th>
-<th>核心内容</th>
+<th>主要内容</th>
 </tr>
 </thead>
 <tbody>
@@ -2110,13 +2108,13 @@ B/S中浏览器端与服务器端采用请求/响应模式进行交互
 </ul>
 <div class="mermaid">
 graph TD
-    A[用户访问 JSP 页面<br/>Tomcat] --&gt; C{是否已编译?}
+    A[用户访问 JSP 页面<br/>Tomcat] --&gt; C{是否已编译?}:::danger
 
-    C --&gt;|否| D[JSP 引擎翻译 JSP]
-    D --&gt; E[生成 .java 源码文件]
-    E --&gt; F[编译为 .class 字节码]
+    C --&gt;|否| D[JSP 引擎翻译 JSP]:::primary
+    D --&gt; E[生成 .java 源码文件]:::primary
+    E --&gt; F[编译为 .class 字节码]:::primary
 
-    C --&gt;|是| G[加载已编译的 Servlet]
+    C --&gt;|是| G["加载已编译的 Servlet"]:::success
     F --&gt; G
 
     G --&gt; H[执行 Servlet 处理请求]

@@ -1263,14 +1263,14 @@
 <p>Vite 是一款面向现代前端工程的<strong>下一代构建与开发工具</strong>，由 Vue 作者尤雨溪主导开发，为 Vue、React 等框架提供高效的构建方案。</p>
 <div class="mermaid">
 graph TD
-    subgraph 开发源代码
+    subgraph g1[开发源代码]
         A[JS/TS/Vue]
         B[CSS/SCSS]
         C[图片/字体]
     end
 
-    D[前端构建工具]
-    subgraph 构建输出结果
+    D[前端构建工具]:::primary
+    subgraph g2[构建输出结果]
         E[打包JS]
         F[压缩CSS]
         G[优化静态资源]
