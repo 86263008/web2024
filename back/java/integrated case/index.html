@@ -1757,28 +1757,26 @@
 <h2 id="_3">二、主要功能</h2>
 <p>主要功能模块如下图所示：</p>
 <div class="mermaid">
-graph TD
-    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px
+graph TD    
+    A(学生选课管理系统):::primary
+    A --&gt; B(学生信息管理):::warning
+    A --&gt; C(课程信息管理):::danger
+    A --&gt; D(学生选课管理):::success
 
-    A(学生选课管理系统):::process
-    A --&gt; B(学生信息管理):::process
-    A --&gt; C(课程信息管理):::process
-    A --&gt; D(学生选课管理):::process
+    B --&gt; B1(查看):::info
+    B --&gt; B2(添加):::info
+    B --&gt; B3(修改):::info
+    B --&gt; B4(删除):::info
 
-    B --&gt; B1(查看):::process
-    B --&gt; B2(添加):::process
-    B --&gt; B3(修改):::process
-    B --&gt; B4(删除):::process
+    C --&gt; C1(查看):::info
+    C --&gt; C2(添加):::info
+    C --&gt; C3(修改):::info
+    C --&gt; C4(删除):::info
 
-    C --&gt; C1(查看):::process
-    C --&gt; C2(添加):::process
-    C --&gt; C3(修改):::process
-    C --&gt; C4(删除):::process
-
-    D --&gt; D1(查看):::process
-    D --&gt; D2(添加):::process
-    D --&gt; D3(修改):::process
-    D --&gt; D4(删除):::process
+    D --&gt; D1(查看):::info
+    D --&gt; D2(添加):::info
+    D --&gt; D3(修改):::info
+    D --&gt; D4(删除):::info
 </div>
 <h3 id="_4">（一）学生信息管理</h3>
 <ol>

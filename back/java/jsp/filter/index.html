@@ -1222,9 +1222,41 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="_1">过滤器</h1>
-<p>过滤器(Filter)是向 Web 应用程序的请求和响应处理添加功能的Web服务组件</p>
-<p>过滤器的工作原理：</p>
-<p><img alt="过滤器工作原理" src="img/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png"/></p>
+<p><strong>Filter（过滤器）</strong>是Java Web中的一种<strong>拦截组件</strong>，运行在Servlet/JSP之前，用于对请求和响应进行<strong>统一预处理、后处理</strong>，而不修改业务逻辑本身。</p>
+<p><strong>主要用途</strong></p>
+<ul>
+<li>统一设置 <strong>编码格式</strong></li>
+<li><strong>登录验证、权限控制</strong></li>
+<li>请求日志、敏感词过滤</li>
+<li>对响应内容进行压缩、替换等</li>
+</ul>
+<p><strong>工作特点</strong></p>
+<ol>
+<li>请求先到Filter，再到Servlet/JSP</li>
+<li>响应先从Servlet/JSP返回，再经过Filter</li>
+<li>可配置多个，形成<strong>过滤链</strong></li>
+<li>基于 <strong>拦截—放行</strong> 机制，不侵入业务代码</li>
+</ol>
+<!--
+![过滤器工作原理](./img/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png)
+-->
+<div class="mermaid">
+flowchart LR
+    Client[客户端浏览器]:::info --&gt; Request[HTTP请求]:::success
+
+    Request --&gt; Filter1[过滤器1<br/>Filter]:::warning
+    Filter1 --&gt; Filter2[过滤器2<br/>Filter]:::warning
+    Filter2 --&gt; FilterN[过滤器N<br/>Filter]:::warning
+
+    FilterN --&gt; Servlet[Servlet/JSP<br/>处理请求]:::primary
+
+    Servlet --&gt; Response[响应数据]:::danger
+
+    Response --&gt; FilterN
+    FilterN --&gt; Filter2
+    Filter2 --&gt; Filter1
+    Filter1 --&gt; Client
+</div>
 <hr/>
 <h2 id="_2">过滤器生命周期</h2>
 <p>过滤器生命周期的各个阶段:</p>
@@ -1632,8 +1664,22 @@
 </input></input></div>
 <hr/>
 <h2 id="_4">过滤器链</h2>
-<p>FilterChain 接口用于调用过滤器链中的一系列过滤器</p>
-<p><img alt="过滤器链" src="img/%E8%BF%87%E6%BB%A4%E5%99%A8%E9%93%BE.png"/></p>
+<p><strong>过滤器链</strong>就是多个过滤器按配置顺序串联在一起，形成一条处理Web请求的<strong>链式调用流程</strong>。</p>
+<ol>
+<li>客户端请求到来时，按顺序依次经过每个过滤器</li>
+<li>每个过滤器做完处理后，决定是否<strong>放行（doFilter）</strong></li>
+<li>全部放行后，请求才到达 Servlet/JSP</li>
+<li>响应返回时，按<strong>相反顺序</strong>再次经过过滤器链</li>
+<li>整个过程像流水线一样，统一处理编码、登录、日志、权限等</li>
+</ol>
+<div class="mermaid">
+flowchart LR
+    客户端:::success --&gt; 过滤器1:::danger --&gt; 过滤器2:::danger --&gt; etc[...]:::danger --&gt; 过滤器n:::danger --&gt; Servlet/JSP:::primary
+    Servlet/JSP --&gt; 过滤器n --&gt; etc --&gt; 过滤器2 --&gt; 过滤器1 --&gt; 客户端
+</div>
+<!--
+![过滤器链](./img/%E8%BF%87%E6%BB%A4%E5%99%A8%E9%93%BE.png)
+-->
 <hr/>
 <h2 id="_5">示例</h2>
 <p>创建一个Servlet(<code>DoSomethingServlet</code>)接收客户端语法，创建一个客户端页面(<code>hi_filter.html</code>)发送Servlet请求，创建两个过滤器(<code>SimpleFilter1</code>，<code>SimpleFilter2</code>)监听全部URL请求</p>
@@ -1998,5 +2044,5 @@
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../js/mermaid.min.js"></script>
 <script src="../../../../js/init_mermaid.js"></script>
-</body>
+<script>mermaid.initialize({});</script></body>
 </html>

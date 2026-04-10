@@ -1315,9 +1315,13 @@
 <p><img alt="JSP工作原理" src="img/JSP%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png"/></p>
 <hr/>
 <h2 id="servlet_2">什么是Servlet</h2>
-<p><strong>定义</strong></p>
+<p>Servlet是运行在<strong>服务器端</strong>的Java程序，是Java Web开发的核心组件，专门用来<strong>接收客户端请求、处理业务逻辑并返回响应</strong>，是连接前端与后端、后端与数据库的桥梁。</p>
 <ul>
-<li>Servlet 是一个 Java程序，是在服务器上运行以处理客户端请求并做出响应的程序</li>
+<li>本质是一个 <strong>Java 接口/类</strong>，必须实现 <code>Servlet</code> 接口或继承 <code>HttpServlet</code>。</li>
+<li>由 Web 服务器（如 Tomcat）加载、创建和管理生命周期。</li>
+<li>负责处理 HTTP 请求（GET/POST），获取参数、调用业务代码、控制页面跳转。</li>
+<li>通常配合 <strong>JavaBean</strong> 封装数据，配合 <strong>JDBC</strong> 操作数据库，配合 <strong>JSP</strong> 展示页面。</li>
+<li>是早期 MVC 架构中的 <strong>Controller（控制器）</strong> 角色，也是 Spring MVC 等框架的底层基础。</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Servlet生命周期</label><label for="__tabbed_1_2">示例</label></div>
 <div class="tabbed-content">
@@ -1731,10 +1735,14 @@
 </input></input></div>
 <hr/>
 <h2 id="servletjsp">Servlet与JSP关系</h2>
-<p>Servlet与JSP之间的关系</p>
+<p>JSP本质上就是<strong>Servlet</strong>，Web容器会把JSP翻译成对应的Servlet类执行。</p>
+<p><strong>分工不同</strong></p>
 <ul>
-<li>JSP在服务器上转译的文件</li>
+<li><strong>Servlet</strong>：侧重<strong>业务处理</strong>，接收请求、调用逻辑、访问数据库。</li>
+<li><strong>JSP</strong>：侧重<strong>页面展示</strong>，写HTML+少量代码，负责数据渲染。</li>
 </ul>
+<p><strong>协作模式</strong></p>
+<p>前端请求→<strong>Servlet</strong>处理数据并封装到JavaBean→转发到<strong>JSP</strong>→JSP页面展示结果，即经典的<strong>MVC模式</strong>。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">MyJsp.jsp</label><label for="__tabbed_3_2">MyJsp.java</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1984,22 +1992,18 @@
 <div class="mermaid">
 graph TD;
     subgraph 上层应用
-        A[Web App] --&gt;|请求和响应| B[控制层];
-        C[Web Api] --&gt;|请求和响应| B[控制层];
-        D[App] --&gt;|请求和响应| B[控制层];
+        A[Web App]:::info --&gt;|请求和响应| B[控制层]:::primary;
+        C[Web Api]:::info --&gt;|请求和响应| B[控制层];
+        D[App]:::info --&gt;|请求和响应| B[控制层];
     end
     subgraph 系统层次
-        B[控制层] --&gt;|业务服务功能| E[服务层];
-        E[服务层] --&gt;|数据存储交互| F[数据访问层];
-        F[数据访问层] --&gt;|业务实体| G[域模型层];
-        style B fill:#f9f,stroke:#333,stroke - width:2px
-        style E fill:#a9f,stroke:#333,stroke - width:2px
-        style F fill:#9ff,stroke:#333,stroke - width:2px
-        style G fill:#99f,stroke:#333,stroke - width:2px
-        note[Spring MVC, Servlet/JSP] --&gt; B
-        note2[Spring] --&gt; E
-        note3[MyBatis, Hibernate, JDBC] --&gt; F
-        note4[POJO] --&gt; G
+        B[控制层] --&gt;|业务服务功能| E[服务层]:::warning;
+        E[服务层] --&gt;|数据存储交互| F[数据访问层]:::danger;
+        F[数据访问层] --&gt;|业务实体| G[域模型层]:::success;
+        note[Spring MVC, Servlet/JSP]:::info --&gt; B
+        note2[Spring]:::info --&gt; E
+        note3[MyBatis, Hibernate, JDBC]:::info --&gt; F
+        note4[POJO]:::info --&gt; G
     end
 </div>
 <p>下面是基于Servlet 的实现这些层级的详细介绍：</p>
