@@ -9,13 +9,15 @@ HelloSpringBoot:.
     │  │  └─com
     │  │      └─example
     │  │          └─demo
-    │  │                  GreetingController.java //GreetingController
+    │  │                  HelloController.java //HelloController
+    │  │                  ViewController.java //ViewController    
     │  │                  HelloSpringBootApplication.java //主程序入口
     │  │
     │  └─resources
     │      │  application.properties  //配置文件
     │      ├─static
-    │      └─templates
+    │      └─templates  //模板文件
+    │         hello.html    
     └─test
         └─java
             └─com
