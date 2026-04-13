@@ -989,10 +989,19 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ssm">
+<a class="md-nav__link" href="#sst">
 <span class="md-ellipsis">
       
-        SSM
+        SST架构
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        不同构架对比
       
     </span>
 </a>
@@ -1221,10 +1230,19 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ssm">
+<a class="md-nav__link" href="#sst">
 <span class="md-ellipsis">
       
-        SSM
+        SST架构
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        不同构架对比
       
     </span>
 </a>
@@ -1276,143 +1294,369 @@
 </ul>
 <hr/>
 <h2 id="oo_1">OO设计模式</h2>
-<p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 <strong>Design Patterns - Elements of Reusable Object-Oriented Software</strong>的书，该书首次提到了软件开发中设计模式的概念。</p>
-<p>四位作者合称 四人小组（Gang of Four， GOF ）。他们所提出的设计模式主要是基于以下的面向对象设计原则。</p>
-<ul>
-<li>
-<p>对接口编程而不是对实现编程。</p>
-</li>
-<li>
-<p>优先使用对象组合而不是继承。</p>
-</li>
-</ul>
-<p><strong>设计模式</strong>（Design Pattern）代表了最佳的实践</p>
-<ul>
-<li>就是设计过程中可以反复使用的、可以解决特定问题的设计方法</li>
-</ul>
-<p>＊ 设计模式是前人留下的经验，相当于武侠小说中的武林秘籍，所谓的编程语言，就是内功招式。其实设计模式的核心就是<strong>高内聚，低耦合</strong>。</p>
+<p>设计模式是对软件设计过程中<strong>反复出现的典型问题</strong>，总结出的<strong>可复用、经过验证的解决方案与设计思路</strong>，是软件开发的最佳实践。</p>
+<p>它用于<strong>优化代码结构、降低耦合、提高可扩展性与可维护性</strong>，同时统一开发者之间的设计沟通语言。</p>
+<p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 <strong>《Design Patterns - Elements of Reusable Object-Oriented Software》</strong>的书，该书首次提到了软件开发中设计模式的概念。</p>
+<p>设计模式通常分为三大类：</p>
+<ol>
+<li><strong>创建型模式</strong>：关注对象的创建与实例化过程</li>
+<li><strong>结构型模式</strong>：关注类或对象的组合与结构关系</li>
+<li><strong>行为型模式</strong>：关注对象间的交互、通信与职责分配</li>
+</ol>
+<p>合理使用设计模式，能让系统更灵活、易扩展、易维护，是实现高质量软件设计的重要手段。</p>
 <hr/>
 <h2 id="mvc_1">MVC设计模式</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">MVC设计模式</label><label for="__tabbed_1_2">架构图</label><label for="__tabbed_1_3">优点</label><label for="__tabbed_1_4">缺点</label></div>
+<p>MVC 是一种<strong>软件架构设计模式</strong>，核心思想是<strong>职责分离</strong>，将一个应用划分为三个核心部分，以降低耦合、提高代码可维护性和扩展性。协作原理图如下：</p>
+<center>
+<div class="mermaid">
+flowchart LR
+    User[用户]:::info
+    V[View 视图]:::success
+    C[Controller 控制器]:::warning
+    M[Model 模型]:::danger
+
+    User --&gt;|1 交互/请求| V
+    V --&gt;|2 转发请求| C
+    C --&gt;|3 调用业务| M
+    M --&gt;|4 返回数据| C
+    C --&gt;|5 更新视图| V
+    V --&gt;|6 展示结果| User
+</div>
+MVC设计模式原理图
+</center>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">核心组件及职责</label><label for="__tabbed_1_2">协作流程</label><label for="__tabbed_1_3">核心优点</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><strong>MVC模式（Model-View-Controller）</strong>是软件工程中的一种架构模式，把软件系统分为三个基本部分（<a href="/introduction/index.html#_4">软件架构</a>）</p>
-<p><strong>模型（Model）</strong></p>
 <ul>
-<li>模型持有所有的数据、状态和程序逻辑，是应用程序的核心。</li>
+<li>
+<p><strong>Model（模型）</strong>
+负责数据封装、业务逻辑处理和数据持久化，与视图和控制器无关，独立维护数据状态。</p>
+</li>
+<li>
+<p><strong>View（视图）</strong>
+负责数据展示与用户界面渲染，只做显示，不处理业务逻辑。</p>
+</li>
+<li>
+<p><strong>Controller（控制器）</strong>
+作为中间调度层，接收用户请求，调用模型处理数据，再选择视图进行响应。</p>
+</li>
 </ul>
-<p><strong>视图（View）</strong></p>
-<ul>
-<li>代表用户交互界面，用来显示数据。</li>
-</ul>
-<p><strong>控制器（Controller）</strong></p>
-<ul>
-<li>控制器( Controller)- 负责转发请求，对请求进行处理</li>
-</ul>
-<p>MVC模式的目的是实现一种动态的程式设计，使后续对程序的修改和扩展简化，并且使程序某一部分的重复利用成为可能。</p>
-<p>除此之外，此模式通过对复杂度的简化，使程序结构更加直观。</p>
 </div>
 <div class="tabbed-block">
-<p><img alt="mvc" src="img/mvc.png"/></p>
-</div>
-<div class="tabbed-block">
-<p><strong>分工明确</strong></p>
-<ul>
-<li>使用MVC可以把数据库开发，程序业务逻辑开发，页面开发分开，每一层都具有相同的特征，方便以后的代码维护。方便多开发人员间的分工。</li>
-</ul>
-<p><strong>松耦合</strong></p>
-<ul>
-<li>视图层和业务层分离，这样就允许更改视图层代码而不用重新编译模型和控制器代码，同样，一个应用的业务流程或者业务规则的改变只需要改动MVC的模型层即可。</li>
-</ul>
-<p><strong>重用性高</strong></p>
-<p>视图控制模型分离， 提高代码重用性。</p>
-<p><strong>可移植性</strong></p>
-<p>因为模型是独立于视图的，所以可以把一个模型独立地移植到新的平台工作。需要做的只是在新平台上对视图和控制器进行新的修改。</p>
+<ol>
+<li>用户通过<strong>视图</strong>发出请求</li>
+<li><strong>控制器</strong>接收并处理请求</li>
+<li><strong>控制器</strong>调用<strong>模型</strong>完成业务与数据操作</li>
+<li>模型返回数据给控制器</li>
+<li>控制器将数据交给<strong>视图</strong>渲染并展示给用户</li>
+</ol>
 </div>
 <div class="tabbed-block">
 <ul>
-<li>
-<p>清晰的构架以代码的复杂性为代价， 对小项目优可能反而降低开发效率。</p>
-</li>
-<li>
-<p>运行效率相对较低。</p>
-</li>
-<li>
-<p>控制层和表现层有时会过于紧密，导致没有真正分离和重用 </p>
-</li>
+<li>职责清晰，<strong>视图与业务逻辑分离</strong></li>
+<li>代码耦合度低，便于维护、扩展和测试</li>
+<li>支持前后端分工开发</li>
+<li>便于界面灵活替换（同一套业务可适配多端展示）</li>
+</ul>
+</div>
+</div>
+</input></input></input></div>
+<!--
+![mvc](./img/mvc.png)
+-->
+<hr/>
+<h2 id="javaweb">JavaWeb与设计模式</h2>
+<h3 id="model1">Model1</h3>
+<p><strong>Model1</strong> 是 Java Web 早期最基础的开发模式 = “JSP + JavaBean“。它<strong>没有 Servlet、没有 Controller</strong>，是最原始的两层结构，模式原理如下：</p>
+<center>
+<div class="mermaid">
+flowchart LR
+    User[用户]:::info
+    JSP[JSP]:::success
+    Bean[JavaBean]:::danger
+    DB[(DB)]:::danger
+
+    User --&gt;|1 请求| JSP
+    JSP --&gt;|2 调用| Bean
+    Bean --&gt;|3 操作| DB
+    DB --&gt; Bean
+    Bean --&gt; JSP
+    JSP --&gt;|4 响应| User
+</div>
+Model1模式
+</center>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">核心组件及职责</label><label for="__tabbed_2_2">协作流程</label><label for="__tabbed_2_3">核心特点</label><label for="__tabbed_2_4">优点</label><label for="__tabbed_2_5">缺点</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>JSP页面</strong>：显示 + 业务逻辑处理</li>
+<li><strong>JavaBean</strong>：封装数据、简单业务</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>用户访问 JSP</li>
+<li>JSP 直接接收参数、调用 JavaBean</li>
+<li>JavaBean 处理数据/业务</li>
+<li>JSP 直接把结果渲染成页面返回</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>只有两层</strong>：JSP（视图+控制）+ JavaBean（模型）</li>
+<li><strong>JSP 大包大揽</strong>：接收请求、处理逻辑、连接数据库、输出页面</li>
+<li><strong>没有控制器（Controller）</strong></li>
+<li><strong>开发速度快、结构简单</strong></li>
+<li><strong>适合小型项目</strong></li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>结构简单，上手快</li>
+<li>小型项目开发效率极高</li>
+<li>不需要复杂框架</li>
+<li>适合学习 Java Web 入门</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>高耦合</strong>：JSP 里混写 HTML 和 Java 代码</li>
+<li><strong>难以维护</strong>：逻辑和页面搅在一起</li>
+<li><strong>难以分工</strong>：前端后端无法分开开发</li>
+<li><strong>无法复用业务逻辑</strong></li>
+<li><strong>不适合大型项目</strong></li>
+</ul>
+</div>
+</div>
+</input></input></input></input></input></div>
+<!--
+    ![model1](./img/mvc-Model1.png)
+-->
+<hr/>
+<h3 id="model2">Model2</h3>
+<p><strong>Model2 = Servlet + JSP + JavaBean</strong>，也就是标准 MVC 模式。其模式原理如下：</p>
+<center>
+<div class="mermaid">
+flowchart LR
+    User[用户]:::info
+    C[Servlet]:::warning
+    V[JSP]:::success
+    M[JavaBean]:::danger
+    DB[(DB)]:::danger
+
+    User --&gt;|1 请求| C
+    C --&gt;|2 调用| M
+    M --&gt;|3 操作| DB
+    DB --&gt; M
+    M --&gt; C
+    C --&gt;|4 转发| V
+    V --&gt;|5 响应| User
+</div>
+Model2 模式
+</center>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">核心组件及职责</label><label for="__tabbed_3_2">协作流程</label><label for="__tabbed_3_3">优点</label><label for="__tabbed_3_4">缺点</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Servlet</strong>：Controller 控制器</li>
+<li><strong>JSP</strong>：View 视图</li>
+<li><strong>JavaBean</strong>：Model 模型（数据 + 业务）</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>用户请求 → <strong>Servlet</strong> 接收</li>
+<li>Servlet 调用 <strong>JavaBean</strong> 处理业务、查数据库</li>
+<li>数据封装好，Servlet 转发给 <strong>JSP</strong></li>
+<li>JSP 只负责展示页面，返回给用户</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>职责清晰，<strong>低耦合</strong></li>
+<li>便于维护、便于扩展</li>
+<li>前后端可以分工开发</li>
+<li>适合<strong>中大型项目</strong></li>
+<li>便于复用业务逻辑</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>结构比 Model1 复杂</li>
+<li>入门稍微麻烦一点</li>
 </ul>
 </div>
 </div>
 </input></input></input></input></div>
+<!--
+    ![model2](./img/mvc-Model2.png)
+-->
 <hr/>
-<h2 id="javaweb">JavaWeb与设计模式</h2>
-<h3 id="model1">Model1</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Model1</label><label for="__tabbed_2_2">架构图</label></div>
+<h3 id="sst">SST架构</h3>
+<p>Spring MVC + MyBatis + Thymeleaf 是Java Web主流轻量级企业架构，基于Model2（MVC）模式，分工明确、低耦合，适用于中大型Web项目，核心分为视图层、控制层、业务层、持久层四层。架构组合原理如下：</p>
+<center>
+<div class="mermaid">
+flowchart LR
+    User[用户]:::info
+    C[Spring MVC]:::warning
+    V[Thymeleaf]:::success
+    S[Service]:::info
+    M[MyBatis]:::danger
+    DB[(DB)]:::danger
+
+    User --&gt;|1 请求| C
+    C --&gt;|2 调用| S
+    S --&gt;|3 操作| M
+    M --&gt;|4 操作| DB
+    DB --&gt; M
+    M --&gt; S
+    S --&gt; C
+    C --&gt;|5 渲染| V
+    V --&gt;|6 响应| User
+</div>
+SMT架构原理图
+</center>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">核心组件及职责</label><label for="__tabbed_4_2">协作流程</label><label for="__tabbed_4_3">核心优势</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><strong>控制器：</strong>JSP</p>
-<p><strong>视图：</strong>JSP</p>
-<p><strong>模型：</strong>JavaBean</p>
-<p><strong>优点</strong></p>
 <ul>
-<li>架构简单，比较适合小型项目开发。</li>
-</ul>
-<p><strong>缺点</strong></p>
-<ul>
-<li>从工程化角度看，它的局限性非常明显；JSP的职责不单一，身兼View和Controller两种角色，将控制逻辑职和表现逻辑混杂在一起，职责过重，代码的可复用性低，不便于维护。</li>
+<li>
+<p><strong>Thymeleaf（视图层）</strong>：替代JSP，负责页面渲染与数据展示，支持HTML原生语法和动态数据绑定，可实现前后端分离预览。</p>
+</li>
+<li>
+<p><strong>Spring MVC（控制层）</strong>：接收用户请求、解析参数、调度业务逻辑，传递数据至视图层，控制请求流转。</p>
+</li>
+<li>
+<p><strong>Service（业务层）</strong>：封装核心业务逻辑与事务管理，调用持久层完成数据操作，将结果返回控制器，实现逻辑复用解耦。</p>
+</li>
+<li>
+<p><strong>MyBatis（持久层）</strong>：通过XML或注解配置SQL，实现数据库交互，将结果封装为Java实体类，供业务层调用。</p>
+</li>
+<li>
+<p><strong>数据库（DB）</strong>：存储核心数据，接收MyBatis的SQL请求并返回数据。</p>
+</li>
 </ul>
 </div>
 <div class="tabbed-block">
-<p><img alt="model1" src="img/mvc-Model1.png"/></p>
+<ol>
+<li>
+<p>用户发送HTTP请求，由Spring MVC前端控制器拦截并转发至对应Controller。</p>
+</li>
+<li>
+<p>Controller解析请求参数，调用Service层对应业务方法。</p>
+</li>
+<li>
+<p>Service层执行业务逻辑，调用MyBatis持久层接口发起数据操作。</p>
+</li>
+<li>
+<p>MyBatis执行SQL并与数据库交互，将结果封装为实体类返回Service层。</p>
+</li>
+<li>
+<p>Service层将处理后的数据返回Controller。</p>
+</li>
+<li>
+<p>Controller将数据传递给Thymeleaf视图层进行渲染。</p>
+</li>
+<li>
+<p>Thymeleaf生成HTML页面，响应给用户，完成请求-响应流程。</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>职责分离：各层独立，降低耦合，便于维护扩展。</p>
+</li>
+<li>
+<p>开发高效：MyBatis简化数据库操作，Thymeleaf支持静态预览，Spring MVC简化请求处理。</p>
+</li>
+<li>
+<p>兼容性强：适配主流Web服务器与数据库，可无缝集成Spring生态。</p>
+</li>
+<li>
+<p>分工便捷：支持前后端分离协作，提升开发效率。</p>
+</li>
+</ul>
 </div>
 </div>
-</input></input></div>
+</input></input></input></div>
+<!--
+    ![ssm](./img/mvc-SSM.png)
+-->
 <hr/>
-<h3 id="model2">Model2</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Model2</label><label for="__tabbed_3_2">架构图</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><strong>控制器：</strong>Servlet</p>
-<p><strong>视图：</strong>JSP</p>
-<p><strong>模型：</strong>JavaBean</p>
-<p><strong>优点</strong></p>
+<h3 id="_1">不同构架对比</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Model1</th>
+<th>Model2</th>
+<th>SMT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>结构</td>
+<td>JSP + JavaBean</td>
+<td>Servlet + JSP + JavaBean</td>
+<td>SpringMVC + Service + MyBatis + Thymeleaf</td>
+</tr>
+<tr>
+<td>控制层</td>
+<td>无，JSP 兼任控制器</td>
+<td>Servlet 作为控制器</td>
+<td>SpringMVC 控制器</td>
+</tr>
+<tr>
+<td>视图层</td>
+<td>JSP</td>
+<td>JSP</td>
+<td>Thymeleaf</td>
+</tr>
+<tr>
+<td>持久层</td>
+<td>JDBC/简单封装</td>
+<td>JavaBean 封装</td>
+<td>MyBatis 专业持久层</td>
+</tr>
+<tr>
+<td>业务层</td>
+<td>无</td>
+<td>简单业务逻辑</td>
+<td>独立 Service 层 + 事务</td>
+</tr>
+<tr>
+<td>耦合度</td>
+<td>高，代码混乱</td>
+<td>中等，职责分离</td>
+<td>低，分层清晰</td>
+</tr>
+<tr>
+<td>可维护性</td>
+<td>差</td>
+<td>较好</td>
+<td>优秀</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td>入门、小Demo</td>
+<td>学习MVC、小型项目</td>
+<td>企业级、中大型项目</td>
+</tr>
+<tr>
+<td>核心思想</td>
+<td>简易开发</td>
+<td>MVC 职责分离</td>
+<td>分层架构 + 生态整合</td>
+</tr>
+</tbody>
+</table>
+<p><strong>总结</strong></p>
 <ul>
-<li>职责清晰，各司其职，互不干扰，有利于组件的重用，适合大型的Web项目。</li>
+<li><strong>Model1</strong>：JSP 一把抓，简单但混乱，适合入门。</li>
+<li><strong>Model2</strong>：MVC 基础实现，Servlet 控制、JSP 展示、JavaBean 处理数据。</li>
+<li><strong>SMT</strong>：现代化企业级架构，分层更细、功能更强、易于维护和扩展。</li>
 </ul>
-<p><strong>缺点</strong></p>
-<ul>
-<li>不适合小型项目、对开发人员要求更高。</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><img alt="model2" src="img/mvc-Model2.png"/></p>
-</div>
-</div>
-</input></input></div>
-<hr/>
-<h3 id="ssm">SSM</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">SSM</label><label for="__tabbed_4_2">架构图</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><strong>控制器：</strong>Srping MVC</p>
-<p><strong>视图：</strong>Freemarker</p>
-<p><strong>模型：</strong>MyBatis/JavaBean</p>
-<p>Spring提供：依赖注入、有效性校验、国际化等</p>
-<p>Spring Boot：简化Spring项目配置</p>
-<p><strong>优点</strong></p>
-<ul>
-<li>职责清晰，各司其职，互不干扰，有利于组件的重用，适合大型的Web项目。</li>
-</ul>
-<p><strong>缺点</strong></p>
-<ul>
-<li>不适合小型项目、对开发人员要求更高。</li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><img alt="ssm" src="img/mvc-SSM.png"/></p>
-</div>
-</div>
-</input></input></div>
 <hr/>
 </article>
 </div>
@@ -1441,5 +1685,5 @@
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../js/mermaid.min.js"></script>
 <script src="../../../../js/init_mermaid.js"></script>
-</body>
+<script>mermaid.initialize({});</script></body>
 </html>
