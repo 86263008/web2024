@@ -965,10 +965,19 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#spring-boot_1">
 <span class="md-ellipsis">
       
-        核心特性
+        Spring Boot程序组织思路
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-boot_2">
+<span class="md-ellipsis">
+      
+        Spring Boot程序体系结构
       
     </span>
 </a>
@@ -987,7 +996,7 @@
 <nav aria-label="Hello World!" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
         开发环境
@@ -1013,6 +1022,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      
+        标准项目结构
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1020,7 +1038,7 @@
 <a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       
-        标准项目结构
+        核心特性
       
     </span>
 </a>
@@ -1033,7 +1051,8 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="注解" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
@@ -1118,6 +1137,18 @@
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-boot_3">
+<span class="md-ellipsis">
+      
+        Spring Boot集成第三方库
+      
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -1292,10 +1323,19 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+<a class="md-nav__link" href="#spring-boot_1">
 <span class="md-ellipsis">
       
-        核心特性
+        Spring Boot程序组织思路
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-boot_2">
+<span class="md-ellipsis">
+      
+        Spring Boot程序体系结构
       
     </span>
 </a>
@@ -1314,7 +1354,7 @@
 <nav aria-label="Hello World!" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
         开发环境
@@ -1340,6 +1380,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      
+        标准项目结构
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1347,7 +1396,7 @@
 <a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       
-        标准项目结构
+        核心特性
       
     </span>
 </a>
@@ -1360,7 +1409,8 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="注解" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
@@ -1448,6 +1498,18 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-boot_3">
+<span class="md-ellipsis">
+      
+        Spring Boot集成第三方库
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
@@ -1455,41 +1517,65 @@
 <article class="md-content__inner md-typeset">
 <h1 id="spring-boot">Spring Boot<a href="plan.html" title="教案"><sub>⯐</sub></a></h1>
 <h2 id="_1">概述</h2>
-<p>Spring Boot 是基于 <strong>Spring Framework</strong> 构建的<strong>快速开发脚手架</strong>，核心设计理念为<strong>约定优于配置</strong>，用于简化 Spring 应用的搭建、配置、部署与运维。
-它不替代 Spring，而是通过<strong>自动配置、起步依赖、内嵌容器</strong>等特性，实现独立运行、开箱即用，是 Java 后端、微服务、云原生开发的主流基础框架。</p>
+<p>Spring Boot是由Pivotal团队开发的基于<strong>Spring Framework</strong>构建的<strong>快速开发脚手架</strong>，核心设计理念为<strong>约定优于配置</strong>，用于<strong>简化Spring应用</strong>的搭建、配置、部署与运维。它不替代Spring，而是通过<strong>自动配置、起步依赖、内嵌容器</strong>等特性，实现独立运行、开箱即用，是Java后端、微服务、云原生开发的主流基础框架。</p>
 <h3 id="_2">发展历程</h3>
 <p>Spring Boot的发展历程可以分为以下几个阶段：</p>
 <ol>
 <li>
-<p>2013年：Spring Boot项目正式启动，旨在简化Spring应用程序的开发和部署。</p>
+<p><strong>诞生背景（2012年前）</strong> 传统Spring配置繁琐、依赖复杂、部署麻烦，急需轻量化解决方案。</p>
 </li>
 <li>
-<p>2014年：Spring Boot 1.0版本发布，引入了自动配置、起步依赖等特性，大大简化了Spring应用程序的开发和部署。</p>
+<p><strong>1.x 奠基（2014）</strong> 2014年发布1.0，推出<strong>自动配置、Starter依赖、内嵌服务器、Actuator监控</strong>，实现开箱即用，快速普及。</p>
 </li>
 <li>
-<p>2015年：Spring Boot 1.2版本发布，引入了Actuator、Devtools等特性，增强了应用程序的监控和管理能力。</p>
+<p><strong>2.x 升级（2018）</strong> 基于Spring 5，支持<strong>JDK8+、WebFlux响应式编程</strong>，优化性能，适配云原生与微服务。</p>
 </li>
 <li>
-<p>2016年：Spring Boot 1.4版本发布，引入了多种新特性，例如Spring Cloud、Spring Security等，进一步扩展了Spring Boot的功能和应用范围。</p>
+<p><strong>3.x 革新（2022）</strong> 全面切换<strong>Jakarta EE</strong>，基线升至<strong>JDK17</strong>，支持GraalVM原生镜像，启动更快、占用更低。</p>
 </li>
 <li>
-<p>2017年：Spring Boot 2.0版本发布，引入了对Java 9和Java EE 8的支持，同时升级了多个依赖库，提高了应用程序的性能和稳定性。</p>
-</li>
-<li>
-<p>2018年：Spring Boot 2.1版本发布，引入了多种新特性，例如WebFlux、Kotlin支持等，进一步提高了应用程序的性能和开发效率。</p>
-</li>
-<li>
-<p>2019年：Spring Boot 2.2版本发布，引入了多种新特性，例如Micrometer、RSocket支持等，进一步扩展了Spring Boot的功能和应用范围。</p>
+<p><strong>4.x 演进（2025）</strong> 基于Spring7、Jakarta EE10，深化云原生与AI集成，持续优化安全与性能。</p>
 </li>
 </ol>
 <hr/>
-<h3 id="_3">核心特性</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">起步依赖Starter</label><label for="__tabbed_1_2">自动配置</label><label for="__tabbed_1_3">内嵌Web容器</label><label for="__tabbed_1_4">外部化配置</label><label for="__tabbed_1_5">生产级特性（Actuator）</label></div>
+<h3 id="spring-boot_1">Spring Boot程序组织思路</h3>
+<p>Spring Boot通过<strong>自动装配好了Spring MVC</strong>天然实现了MVC模式，只需分层编写代码即可。具体业务流程如下：</p>
+<ol>
+<li>浏览器/前端请求 → <strong>Controller（C）</strong> 接收</li>
+<li>Controller 调用 <strong>Service（M 的业务层）</strong></li>
+<li>Service 调用 <strong>Mapper 操作数据库</strong></li>
+<li>返回 <strong>User 对象（M 的数据层）</strong></li>
+<li>Controller 转为 JSON 返回</li>
+<li>前端展示 → <strong>View（V）</strong></li>
+</ol>
+<center>
+<div class="mermaid">
+graph TB
+    A[浏览器/前端]:::info --&gt;|1 请求| B[Controller<br/>控制器]:::danger
+    B --&gt;|2 调用| C[Service<br/>业务逻辑层]:::success
+    C --&gt;|3 操作数据库| D[Mapper<br/>数据访问层]:::success
+    D --&gt;|4 返回数据| E[User对象<br/>数据模型]:::success
+    E --&gt;|传递| C
+    C --&gt;|处理后返回| B
+    B --&gt;|5 转为JSON| F[JSON响应]:::info
+    F --&gt;|6 展示| G[前端View<br/>视图]:::primary
+</div>
+Spring Boot程序业务流程原理图
+</center>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C → Controller（控制器）</label><label for="__tabbed_1_2">M → Model（模型）</label><label for="__tabbed_1_3">V → View（视图）</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>对常用场景依赖进行<strong>聚合与版本管理</strong>，引入一个 Starter 即可获得整套技术栈，避免依赖冲突。</p>
-<p><strong>示例（Maven）</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<p>负责接收请求、分发、返回结果</p>
+<ul>
+<li>注解：<code>@RestController</code> / <code>@Controller</code></li>
+<li>接收：URL 请求、参数</li>
+<li>调用：Service</li>
+<li>返回：JSON / 视图</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">示例</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentController</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1499,90 +1585,192 @@
 <span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">&lt;!-- 统一版本管理 --&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nt">&lt;parent&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>3.2.0<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nt">&lt;/parent&gt;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="cm">&lt;!-- Web 开发：包含 Spring MVC + Tomcat + Jackson --&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nt">&lt;dependencies&gt;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="hll"><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
-</span><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nt">&lt;/dependencies&gt;</span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nd">@RestController</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/student"</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StudentController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">StudentService</span><span class="w"> </span><span class="n">studentService</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/{id}"</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">studentService</span><span class="p">.</span><span class="na">getById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<p>根据类路径下的依赖，<strong>自动装配 Bean</strong>，无需 XML 配置。
-例如引入 <code>web</code> 自动配置 <code>DispatcherServlet</code>，引入 <code>jdbc</code> 自动配置数据源。</p>
+</div>
+</input></div>
 </div>
 <div class="tabbed-block">
-<p>内置 Tomcat（默认）、Jetty、Undertow，项目可打包为 Jar 直接运行，无需外部服务器。</p>
-<p><strong>运行命令</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>java<span class="w"> </span>-jar<span class="w"> </span>demo.jar
-</code></pre></div></td></tr></table></div></p>
-</div>
+<p>Spring Boot 里把 Model 拆成两层，职责更清晰：</p>
+<ol>
+<li>
+<p>业务模型：Service</p>
+<ul>
+<li>注解：<code>@Service</code></li>
+<li>职责：业务逻辑、事务、组合数据</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">示例</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>支持 <code>.properties</code> / <code>.yml</code>，可配置端口、数据源、日志、多环境等。</p>
-<p><strong>application.yml 示例</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">server</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8088</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nt">servlet</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">context-path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/demo</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nt">spring</span><span class="p">:</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nt">datasource</span><span class="p">:</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jdbc:mysql://localhost:3306/test_db</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">123456</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nt">driver-class-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com.mysql.cj.jdbc.Driver</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentService</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nd">@Service</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StudentService</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">StudentMapper</span><span class="w"> </span><span class="n">studentMapper</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="nf">getById</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">studentMapper</span><span class="p">.</span><span class="na">selectById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
+</div>
+</input></div>
+</li>
+<li>
+<p>数据模型：Entity + Mapper</p>
+<ul>
+<li>Entity：数据载体</li>
+<li>Mapper：数据访问</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">示例</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>提供<strong>应用监控、健康检查、配置查看等能力</strong>。</p>
-<p><strong>依赖</strong>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>配置开启端点</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nt">management</span><span class="p">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nt">endpoints</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nt">web</span><span class="p">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nt">exposure</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="s">"*"</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentEntity</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>访问：<code>http://localhost:8088/demo/actuator/health</code></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nd">@Mapper</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">StudentMapper</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">Student</span><span class="w"> </span><span class="nf">selectById</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
+</code></pre></div>
 </div>
 </div>
-</input></input></input></input></input></div>
+</input></div>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>在前后端分离项目中：</p>
+<ul>
+<li><strong>后端不写 View</strong></li>
+<li>前端（Vue/React/小程序）充当 View</li>
+<li>Spring Boot 只返回 JSON 数据</li>
+</ul>
+</div>
+</div>
+</input></input></input></div>
+<hr/>
+<h3 id="spring-boot_2">Spring Boot程序体系结构</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><input id="__tabbed_5_4" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">1 业务代码</label><label for="__tabbed_5_2">2 配置与资源</label><label for="__tabbed_5_3">3 依赖与构建</label><label for="__tabbed_5_4">4 测试与资源</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>启动入口</strong><ul>
+<li>启动类（含 <code>@SpringBootApplication</code>）</li>
+</ul>
+</li>
+<li><strong>分层业务代码</strong><ul>
+<li>Controller：接口层</li>
+<li>Service：业务逻辑层</li>
+<li>Mapper/DAO：数据访问层</li>
+</ul>
+</li>
+<li><strong>数据模型</strong><ul>
+<li>Entity/PO：数据库实体</li>
+<li>DTO/VO：参数与返回对象</li>
+</ul>
+</li>
+<li><strong>框架扩展类</strong><ul>
+<li>Configuration：配置类</li>
+<li>Interceptor / AOP：拦截、切面</li>
+<li>GlobalExceptionHandler：全局异常</li>
+<li>Util：工具类</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>配置文件</strong><ul>
+<li>application.yml / properties</li>
+<li>多环境配置（dev/test/prod）</li>
+</ul>
+</li>
+<li><strong>注解配置</strong><ul>
+<li>@Value、@ConfigurationProperties</li>
+<li>@MapperScan、@EnableXXX</li>
+</ul>
+</li>
+<li><strong>扩展配置</strong><ul>
+<li>@PropertySource 自定义配置文件</li>
+<li>外置配置文件、环境变量</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>依赖管理</strong><ul>
+<li>pom.xml（Maven）</li>
+<li>build.gradle（Gradle）</li>
+</ul>
+</li>
+<li><strong>基础依赖</strong><ul>
+<li>spring-boot-starter-web 等官方 Starter</li>
+</ul>
+</li>
+<li><strong>第三方整合依赖</strong><ul>
+<li>MyBatis、Redis、MQ、OSS 等</li>
+</ul>
+</li>
+<li><strong>驱动与工具</strong><ul>
+<li>数据库驱动、工具包、测试依赖</li>
+</ul>
+</li>
+<li><strong>构建文件</strong><ul>
+<li>pom.xml（Maven）</li>
+<li>build.gradle（Gradle）</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>测试代码</strong><ul>
+<li>单元测试、集成测试</li>
+</ul>
+</li>
+<li><strong>测试注解与环境</strong><ul>
+<li>@SpringBootTest</li>
+<li>测试专用配置</li>
+</ul>
+</li>
+<li><strong>测试资源</strong><ul>
+<li>测试配置文件</li>
+<li>测试数据脚本</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</input></input></input></input></div>
 <hr/>
 <h2 id="hello-world">Hello World!</h2>
-<h3 id="_4">开发环境</h3>
+<h3 id="_3">开发环境</h3>
 <ol>
 <li>
 <p>使用<strong>Eclipse</strong>开发；默认支持Java Web应用</p>
@@ -1605,7 +1793,7 @@
 </div>
 <hr/>
 <h3 id="spring-boot-web">创建Spring Boot Web工程</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:9"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><input id="__tabbed_2_6" name="__tabbed_2" type="radio"><input id="__tabbed_2_7" name="__tabbed_2" type="radio"><input id="__tabbed_2_8" name="__tabbed_2" type="radio"><input id="__tabbed_2_9" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">选择向导</label><label for="__tabbed_2_2">输入工程信息</label><label for="__tabbed_2_3">选择依赖</label><label for="__tabbed_2_4">目录结构</label><label for="__tabbed_2_5">pom.xml</label><label for="__tabbed_2_6">创建HelloController</label><label for="__tabbed_2_7">创建ViewController</label><label for="__tabbed_2_8">启动</label><label for="__tabbed_2_9">运行</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:9"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><input id="__tabbed_6_4" name="__tabbed_6" type="radio"><input id="__tabbed_6_5" name="__tabbed_6" type="radio"><input id="__tabbed_6_6" name="__tabbed_6" type="radio"><input id="__tabbed_6_7" name="__tabbed_6" type="radio"><input id="__tabbed_6_8" name="__tabbed_6" type="radio"/><input id="__tabbed_6_9" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">选择向导</label><label for="__tabbed_6_2">输入工程信息</label><label for="__tabbed_6_3">选择依赖</label><label for="__tabbed_6_4">目录结构</label><label for="__tabbed_6_5">pom.xml</label><label for="__tabbed_6_6">创建HelloController</label><label for="__tabbed_6_7">创建ViewController</label><label for="__tabbed_6_8">启动</label><label for="__tabbed_6_9">运行</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>在STS中创建新工程，选择<code>Spring Starter Project</code>向导</p>
@@ -1625,6 +1813,61 @@
 </div>
 <div class="tabbed-block">
 <p>向导完成后生成的目录结构如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>HelloSpringBoot:.
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>│<span class="w">  </span>HELP.md
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>│<span class="w">  </span>mvnw
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>│<span class="w">  </span>mvnw.cmd
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>│<span class="w">  </span>pom.xml<span class="w">  </span>//<span class="w"> </span>Maven配置文件
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>└─src
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span>├─main
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span>│<span class="w">  </span>├─java
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">  </span>└─com
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">      </span>└─example
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">          </span>└─demo
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>HelloController.java<span class="w"> </span>//HelloController
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>ViewController.java<span class="w"> </span>//ViewController<span class="w">    </span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>HelloSpringBootApplication.java<span class="w"> </span>//主程序入口
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span>│<span class="w">  </span>│
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span>│<span class="w">  </span>└─resources
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span>│<span class="w">      </span>│<span class="w">  </span>application.properties<span class="w">  </span>//配置文件
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">    </span>│<span class="w">      </span>├─static
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span>│<span class="w">      </span>└─templates<span class="w">  </span>//模板文件
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">    </span>│<span class="w">         </span>hello.html<span class="w">    </span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">    </span>└─test
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">        </span>└─java
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">            </span>└─com
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">                </span>└─example
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">                    </span>└─demo
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">                            </span>HelloSpringBootApplicationTests.java<span class="w">  </span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>工程创建向导完成后，Mavan配置文件<code>pom.xml</code>的关键依赖如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -1643,44 +1886,29 @@
 <span class="normal"><a href="#__codelineno-5-16">16</a></span>
 <span class="normal"><a href="#__codelineno-5-17">17</a></span>
 <span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>HelloSpringBoot:.
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>│<span class="w">  </span>HELP.md
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>│<span class="w">  </span>mvnw
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>│<span class="w">  </span>mvnw.cmd
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>│<span class="w">  </span>pom.xml<span class="w">  </span>//<span class="w"> </span>Maven配置文件
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>└─src
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span>├─main
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span>│<span class="w">  </span>├─java
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">  </span>└─com
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">      </span>└─example
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">          </span>└─demo
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>HelloController.java<span class="w"> </span>//HelloController
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>ViewController.java<span class="w"> </span>//ViewController<span class="w">    </span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span>│<span class="w">  </span>│<span class="w">                  </span>HelloSpringBootApplication.java<span class="w"> </span>//主程序入口
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span>│<span class="w">  </span>│
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span>│<span class="w">  </span>└─resources
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span>│<span class="w">      </span>│<span class="w">  </span>application.properties<span class="w">  </span>//配置文件
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span>│<span class="w">      </span>├─static
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span>│<span class="w">      </span>└─templates<span class="w">  </span>//模板文件
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span>│<span class="w">         </span>hello.html<span class="w">    </span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span>└─test
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span>└─java
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">            </span>└─com
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">                </span>└─example
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">                    </span>└─demo
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">                            </span>HelloSpringBootApplicationTests.java<span class="w">  </span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>工程创建向导完成后，Mavan配置文件<code>pom.xml</code>的关键依赖如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/pom.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
@@ -1698,177 +1926,165 @@
 <span class="normal"><a href="#__codelineno-6-16">16</a></span>
 <span class="normal"><a href="#__codelineno-6-17">17</a></span>
 <span class="normal"><a href="#__codelineno-6-18">18</a></span>
-<span class="normal"><a href="#__codelineno-6-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf-test<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc-test<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">    </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/pom.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span>
-<span class="normal"><a href="#__codelineno-7-24">24</a></span>
-<span class="normal"><a href="#__codelineno-7-25">25</a></span>
-<span class="normal"><a href="#__codelineno-7-26">26</a></span>
-<span class="normal"><a href="#__codelineno-7-27">27</a></span>
-<span class="normal"><a href="#__codelineno-7-28">28</a></span>
-<span class="normal"><a href="#__codelineno-7-29">29</a></span>
-<span class="normal"><a href="#__codelineno-7-30">30</a></span>
-<span class="normal"><a href="#__codelineno-7-31">31</a></span>
-<span class="normal"><a href="#__codelineno-7-32">32</a></span>
-<span class="normal"><a href="#__codelineno-7-33">33</a></span>
-<span class="normal"><a href="#__codelineno-7-34">34</a></span>
-<span class="normal"><a href="#__codelineno-7-35">35</a></span>
-<span class="normal"><a href="#__codelineno-7-36">36</a></span>
-<span class="normal"><a href="#__codelineno-7-37">37</a></span>
-<span class="normal"><a href="#__codelineno-7-38">38</a></span>
-<span class="normal"><a href="#__codelineno-7-39">39</a></span>
-<span class="normal"><a href="#__codelineno-7-40">40</a></span>
-<span class="normal"><a href="#__codelineno-7-41">41</a></span>
-<span class="normal"><a href="#__codelineno-7-42">42</a></span>
-<span class="normal"><a href="#__codelineno-7-43">43</a></span>
-<span class="normal"><a href="#__codelineno-7-44">44</a></span>
-<span class="normal"><a href="#__codelineno-7-45">45</a></span>
-<span class="normal"><a href="#__codelineno-7-46">46</a></span>
-<span class="normal"><a href="#__codelineno-7-47">47</a></span>
-<span class="normal"><a href="#__codelineno-7-48">48</a></span>
-<span class="normal"><a href="#__codelineno-7-49">49</a></span>
-<span class="normal"><a href="#__codelineno-7-50">50</a></span>
-<span class="normal"><a href="#__codelineno-7-51">51</a></span>
-<span class="normal"><a href="#__codelineno-7-52">52</a></span>
-<span class="normal"><a href="#__codelineno-7-53">53</a></span>
-<span class="normal"><a href="#__codelineno-7-54">54</a></span>
-<span class="normal"><a href="#__codelineno-7-55">55</a></span>
-<span class="normal"><a href="#__codelineno-7-56">56</a></span>
-<span class="normal"><a href="#__codelineno-7-57">57</a></span>
-<span class="normal"><a href="#__codelineno-7-58">58</a></span>
-<span class="normal"><a href="#__codelineno-7-59">59</a></span>
-<span class="normal"><a href="#__codelineno-7-60">60</a></span>
-<span class="normal"><a href="#__codelineno-7-61">61</a></span>
-<span class="normal"><a href="#__codelineno-7-62">62</a></span>
-<span class="normal"><a href="#__codelineno-7-63">63</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="nt">&gt;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>4.0.5<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">        </span><span class="nt">&lt;relativePath/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- lookup parent from repository --&gt;</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>HelloSpringBoot<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>HelloSpringBoot<span class="nt">&lt;/name&gt;</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="nt">&lt;description/&gt;</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="nt">&lt;url/&gt;</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">    </span><span class="nt">&lt;licenses&gt;</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">        </span><span class="nt">&lt;license/&gt;</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="nt">&lt;/licenses&gt;</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="nt">&lt;developers&gt;</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">        </span><span class="nt">&lt;developer/&gt;</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">    </span><span class="nt">&lt;/developers&gt;</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">    </span><span class="nt">&lt;scm&gt;</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">        </span><span class="nt">&lt;connection/&gt;</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">        </span><span class="nt">&lt;developerConnection/&gt;</span>
-<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">        </span><span class="nt">&lt;tag/&gt;</span>
-<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">        </span><span class="nt">&lt;url/&gt;</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="w">    </span><span class="nt">&lt;/scm&gt;</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
-<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>21<span class="nt">&lt;/java.version&gt;</span>
-<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-7-41" name="__codelineno-7-41"></a>
-<a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf-test<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-7-46" name="__codelineno-7-46"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc-test<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
-<a id="__codelineno-7-53" name="__codelineno-7-53"></a>
-<a id="__codelineno-7-54" name="__codelineno-7-54"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
-<a id="__codelineno-7-55" name="__codelineno-7-55"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
-<a id="__codelineno-7-56" name="__codelineno-7-56"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-7-57" name="__codelineno-7-57"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-7-58" name="__codelineno-7-58"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-7-59" name="__codelineno-7-59"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-7-60" name="__codelineno-7-60"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
-<a id="__codelineno-7-61" name="__codelineno-7-61"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
-<a id="__codelineno-7-62" name="__codelineno-7-62"></a>
-<a id="__codelineno-7-63" name="__codelineno-7-63"></a><span class="nt">&lt;/project&gt;</span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span>
+<span class="normal"><a href="#__codelineno-6-32">32</a></span>
+<span class="normal"><a href="#__codelineno-6-33">33</a></span>
+<span class="normal"><a href="#__codelineno-6-34">34</a></span>
+<span class="normal"><a href="#__codelineno-6-35">35</a></span>
+<span class="normal"><a href="#__codelineno-6-36">36</a></span>
+<span class="normal"><a href="#__codelineno-6-37">37</a></span>
+<span class="normal"><a href="#__codelineno-6-38">38</a></span>
+<span class="normal"><a href="#__codelineno-6-39">39</a></span>
+<span class="normal"><a href="#__codelineno-6-40">40</a></span>
+<span class="normal"><a href="#__codelineno-6-41">41</a></span>
+<span class="normal"><a href="#__codelineno-6-42">42</a></span>
+<span class="normal"><a href="#__codelineno-6-43">43</a></span>
+<span class="normal"><a href="#__codelineno-6-44">44</a></span>
+<span class="normal"><a href="#__codelineno-6-45">45</a></span>
+<span class="normal"><a href="#__codelineno-6-46">46</a></span>
+<span class="normal"><a href="#__codelineno-6-47">47</a></span>
+<span class="normal"><a href="#__codelineno-6-48">48</a></span>
+<span class="normal"><a href="#__codelineno-6-49">49</a></span>
+<span class="normal"><a href="#__codelineno-6-50">50</a></span>
+<span class="normal"><a href="#__codelineno-6-51">51</a></span>
+<span class="normal"><a href="#__codelineno-6-52">52</a></span>
+<span class="normal"><a href="#__codelineno-6-53">53</a></span>
+<span class="normal"><a href="#__codelineno-6-54">54</a></span>
+<span class="normal"><a href="#__codelineno-6-55">55</a></span>
+<span class="normal"><a href="#__codelineno-6-56">56</a></span>
+<span class="normal"><a href="#__codelineno-6-57">57</a></span>
+<span class="normal"><a href="#__codelineno-6-58">58</a></span>
+<span class="normal"><a href="#__codelineno-6-59">59</a></span>
+<span class="normal"><a href="#__codelineno-6-60">60</a></span>
+<span class="normal"><a href="#__codelineno-6-61">61</a></span>
+<span class="normal"><a href="#__codelineno-6-62">62</a></span>
+<span class="normal"><a href="#__codelineno-6-63">63</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>4.0.5<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="nt">&lt;relativePath/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- lookup parent from repository --&gt;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>HelloSpringBoot<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>HelloSpringBoot<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="nt">&lt;description/&gt;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="nt">&lt;url/&gt;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="nt">&lt;licenses&gt;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">        </span><span class="nt">&lt;license/&gt;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">    </span><span class="nt">&lt;/licenses&gt;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="nt">&lt;developers&gt;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">        </span><span class="nt">&lt;developer/&gt;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">    </span><span class="nt">&lt;/developers&gt;</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">    </span><span class="nt">&lt;scm&gt;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">        </span><span class="nt">&lt;connection/&gt;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">        </span><span class="nt">&lt;developerConnection/&gt;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">        </span><span class="nt">&lt;tag/&gt;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">        </span><span class="nt">&lt;url/&gt;</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="w">    </span><span class="nt">&lt;/scm&gt;</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>21<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41"></a>
+<a id="__codelineno-6-42" name="__codelineno-6-42"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-6-43" name="__codelineno-6-43"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-6-44" name="__codelineno-6-44"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-6-45" name="__codelineno-6-45"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-6-46" name="__codelineno-6-46"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-6-47" name="__codelineno-6-47"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-6-48" name="__codelineno-6-48"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-6-49" name="__codelineno-6-49"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-6-50" name="__codelineno-6-50"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-6-51" name="__codelineno-6-51"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-6-52" name="__codelineno-6-52"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<a id="__codelineno-6-53" name="__codelineno-6-53"></a>
+<a id="__codelineno-6-54" name="__codelineno-6-54"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-6-55" name="__codelineno-6-55"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-6-56" name="__codelineno-6-56"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-6-57" name="__codelineno-6-57"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-6-58" name="__codelineno-6-58"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-6-59" name="__codelineno-6-59"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-6-60" name="__codelineno-6-60"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-6-61" name="__codelineno-6-61"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<a id="__codelineno-6-62" name="__codelineno-6-62"></a>
+<a id="__codelineno-6-63" name="__codelineno-6-63"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
 <div class="tabbed-block">
 <p>在<code>com.example.demo</code>下创建类<code>HelloController</code>：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span>
-<span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span>
-<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// http://localhost:8080/hello</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nd">@RestController</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/hello"</span><span class="p">)</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(){</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">"Hello Spring Boot！"</span><span class="p">;</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">// http://localhost:8080/hello</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nd">@RestController</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/hello"</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(){</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">"Hello Spring Boot！"</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <details class="tip">
 <summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/src/main/java/com/example/demo/HelloController.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/src/main/java/com/example/demo/HelloController.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.demo</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="nd">@RestController</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/hello"</span><span class="p">)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(){</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">"Hello Spring Boot！"</span><span class="p">;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="tabbed-block">
+<p>在<code>com.example.demo</code>下创建类<code>ViewController</code>：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
@@ -1877,26 +2093,20 @@
 <span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-9-10">10</a></span>
-<span class="normal"><a href="#__codelineno-9-11">11</a></span>
-<span class="normal"><a href="#__codelineno-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.demo</span><span class="p">;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="nd">@RestController</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="p">{</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/hello"</span><span class="p">)</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">(){</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">"Hello Spring Boot！"</span><span class="p">;</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">// http://localhost:8080/hello</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nd">@Controller</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ViewController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/view"</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">view</span><span class="p">(</span><span class="n">Model</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="n">model</span><span class="p">.</span><span class="na">addAttribute</span><span class="p">(</span><span class="s">"msg"</span><span class="p">,</span><span class="w"> </span><span class="s">"这是来自后端的数据"</span><span class="p">);</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视图名，自动找 templates/hello.html</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
-</div>
-<div class="tabbed-block">
-<p>在<code>com.example.demo</code>下创建类<code>ViewController</code>：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<details class="tip">
+<summary>源代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/src/main/java/com/example/demo/ViewController.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
@@ -1905,76 +2115,54 @@
 <span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1">// http://localhost:8080/hello</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="nd">@Controller</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ViewController</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/view"</span><span class="p">)</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">view</span><span class="p">(</span><span class="n">Model</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">        </span><span class="n">model</span><span class="p">.</span><span class="na">addAttribute</span><span class="p">(</span><span class="s">"msg"</span><span class="p">,</span><span class="w"> </span><span class="s">"这是来自后端的数据"</span><span class="p">);</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视图名，自动找 templates/hello.html</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/src/main/java/com/example/demo/ViewController.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-11-10">10</a></span>
-<span class="normal"><a href="#__codelineno-11-11">11</a></span>
-<span class="normal"><a href="#__codelineno-11-12">12</a></span>
-<span class="normal"><a href="#__codelineno-11-13">13</a></span>
-<span class="normal"><a href="#__codelineno-11-14">14</a></span>
-<span class="normal"><a href="#__codelineno-11-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.demo</span><span class="p">;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Controller</span><span class="p">;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.ui.Model</span><span class="p">;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="nd">@Controller</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ViewController</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/view"</span><span class="p">)</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">view</span><span class="p">(</span><span class="n">Model</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="n">model</span><span class="p">.</span><span class="na">addAttribute</span><span class="p">(</span><span class="s">"msg"</span><span class="p">,</span><span class="w"> </span><span class="s">"这是来自后端的数据"</span><span class="p">);</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视图名，自动找 templates/hello.html</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.demo</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Controller</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.ui.Model</span><span class="p">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="nd">@Controller</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ViewController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/view"</span><span class="p">)</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">view</span><span class="p">(</span><span class="n">Model</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="n">model</span><span class="p">.</span><span class="na">addAttribute</span><span class="p">(</span><span class="s">"msg"</span><span class="p">,</span><span class="w"> </span><span class="s">"这是来自后端的数据"</span><span class="p">);</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视图名，自动找 templates/hello.html</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <p>在<code>resources/templates</code>下创建文件<code>hello.html</code>：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Spring Boot 视图渲染<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">th:text</span><span class="o">=</span><span class="s">"${msg}"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Spring Boot 视图渲染<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">th:text</span><span class="o">=</span><span class="s">"${msg}"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <details class="tip">
 <summary>源代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/src/main/resources/templates/hello.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns:th</span><span class="o">=</span><span class="s">"http://www.thymeleaf.org"</span><span class="p">&gt;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello View<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Spring Boot 视图渲染<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">th:text</span><span class="o">=</span><span class="s">"${msg}"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloSpringBoot/src/main/resources/templates/hello.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns:th</span><span class="o">=</span><span class="s">"http://www.thymeleaf.org"</span><span class="p">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello View<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Spring Boot 视图渲染<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">th:text</span><span class="o">=</span><span class="s">"${msg}"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
@@ -1982,22 +2170,22 @@
 <p><strong>开发模式</strong></p>
 <p>在<code>Boot Dashboard</code>中启动<code>HelloSpringBoot</code></p>
 <p><strong>生产模式</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>java<span class="w"> </span>-jar<span class="w"> </span>HelloSpringBoot.jar
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>java<span class="w"> </span>-jar<span class="w"> </span>HelloSpringBoot.jar
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>在浏览器访问<code>http://localhost:8080/hi</code>，结果如下：</p>
+<p>在浏览器访问<code>http://localhost:8080/hello</code>，结果如下：</p>
 <p><iframe frameborder="0" height="200" src="./src/HelloSpringBootResult/hi.html" width="100%"></iframe></p>
 </div>
 </div>
-</input></input></input></input></input></input></input></input></input></div>
+</input></input></input></input></input></input></input></div>
 <hr/>
 <h3 id="hello-world_1">Hello World执行原理图</h3>
 <center>
 <div class="mermaid">
 graph TB
     %% 启动流程
-    A["启动类<br/>@SpringBootApplication"]:::primary --&gt; B["SpringApplication.run()"]
+    A["启动类<br/>@SpringBootApplication"]:::success --&gt; B["SpringApplication.run()"]
     B --&gt; C["自动配置核心"]
 
     C --&gt; C1["自动包扫描<br/>创建Bean到IOC容器"]
@@ -2005,16 +2193,16 @@ graph TB
     C --&gt; C3["启动内嵌Tomcat :8080"]
 
     %% 视图相关自动配置
-    C2 --&gt; D["视图解析器 ViewResolver"]:::danger
-    D --&gt; D1["Thymeleaf 模板渲染"]:::success
+    C2 --&gt; D["视图解析器 ViewResolver"]:::warning
+    D --&gt; D1["Thymeleaf 模板渲染"]:::warning
     D --&gt; D2["静态资源映射 /static/**"]
 
     %% 请求入口
-    E[浏览器] --&gt;|请求| F[内嵌Tomcat]
-    F --&gt; G[DispatcherServlet<br/>中央分发器]:::warning
+    E[浏览器]:::primary --&gt;|请求| F[内嵌Tomcat]
+    F --&gt; G[DispatcherServlet<br/>中央分发器]:::danger
 
     G --&gt; H[HandlerMapping<br/>URL匹配Controller方法]
-    H --&gt; I[执行对应Controller]:::info
+    H --&gt; I[执行对应Controller]:::danger
 
     %% 两种返回分支
     I --&gt;|RestController<br/>返回字符串/JSON| J["直接响应数据给浏览器"]
@@ -2038,32 +2226,149 @@ graph TB
 Hello World执行原理图
 </center>
 <hr/>
-<h2 id="_5">标准项目结构</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>src
-<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>├── main
-<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>│   ├── java/com/example
-<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>│   │   ├── DemoApplication.java       // 启动类（必须在根包）
-<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>│   │   ├── controller                 // 控制层：接收请求、参数校验、返回结果
-<a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a>│   │   ├── service                    // 业务逻辑层
-<a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a>│   │   │   └── impl                   // 业务实现类
-<a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a>│   │   ├── mapper                     // 数据访问层（MyBatis）
-<a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a>│   │   ├── entity                     // 数据库映射实体
-<a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a>│   │   ├── dto                        // 接口入参/出参对象
-<a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a>│   │   ├── config                     // 配置类（Mvc、线程池等）
-<a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a>│   │   ├── common                     // 工具类、统一返回、常量
-<a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a>│   │   ├── exception                  // 全局异常、自定义异常
-<a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a>│   │   └── interceptor                // 请求拦截器
-<a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a>│   └── resources
-<a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a>│       ├── application.yml            // 主配置
-<a href="#__codelineno-15-17" id="__codelineno-15-17" name="__codelineno-15-17"></a>│       ├── application-dev.yml        // 开发环境
-<a href="#__codelineno-15-18" id="__codelineno-15-18" name="__codelineno-15-18"></a>│       ├── application-prod.yml       // 生产环境
-<a href="#__codelineno-15-19" id="__codelineno-15-19" name="__codelineno-15-19"></a>│       ├── mapper                     // MyBatis XML 文件
-<a href="#__codelineno-15-20" id="__codelineno-15-20" name="__codelineno-15-20"></a>│       ├── static                     // 静态资源（js/css/img）
-<a href="#__codelineno-15-21" id="__codelineno-15-21" name="__codelineno-15-21"></a>│       └── templates                  // 模板页面（Thymeleaf）
-<a href="#__codelineno-15-22" id="__codelineno-15-22" name="__codelineno-15-22"></a>└── test
-<a href="#__codelineno-15-23" id="__codelineno-15-23" name="__codelineno-15-23"></a>    └── java/com/example
-<a href="#__codelineno-15-24" id="__codelineno-15-24" name="__codelineno-15-24"></a>        └── DemoApplicationTests.java   // 单元测试
+<h3 id="_4">标准项目结构</h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>src
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>├── main
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>│   ├── java/com/example
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>│   │   ├── DemoApplication.java       // 启动类（必须在根包）
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>│   │   ├── controller                 // 控制层：接收请求、参数校验、返回结果
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>│   │   ├── service                    // 业务逻辑层
+<a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a>│   │   │   └── impl                   // 业务实现类
+<a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a>│   │   ├── mapper                     // 数据访问层（MyBatis）
+<a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a>│   │   ├── entity                     // 数据库映射实体
+<a href="#__codelineno-14-10" id="__codelineno-14-10" name="__codelineno-14-10"></a>│   │   ├── dto                        // 接口入参/出参对象
+<a href="#__codelineno-14-11" id="__codelineno-14-11" name="__codelineno-14-11"></a>│   │   ├── config                     // 配置类（Mvc、线程池等）
+<a href="#__codelineno-14-12" id="__codelineno-14-12" name="__codelineno-14-12"></a>│   │   ├── common                     // 工具类、统一返回、常量
+<a href="#__codelineno-14-13" id="__codelineno-14-13" name="__codelineno-14-13"></a>│   │   ├── exception                  // 全局异常、自定义异常
+<a href="#__codelineno-14-14" id="__codelineno-14-14" name="__codelineno-14-14"></a>│   │   └── interceptor                // 请求拦截器
+<a href="#__codelineno-14-15" id="__codelineno-14-15" name="__codelineno-14-15"></a>│   └── resources
+<a href="#__codelineno-14-16" id="__codelineno-14-16" name="__codelineno-14-16"></a>│       ├── application.yml            // 主配置
+<a href="#__codelineno-14-17" id="__codelineno-14-17" name="__codelineno-14-17"></a>│       ├── application-dev.yml        // 开发环境
+<a href="#__codelineno-14-18" id="__codelineno-14-18" name="__codelineno-14-18"></a>│       ├── application-prod.yml       // 生产环境
+<a href="#__codelineno-14-19" id="__codelineno-14-19" name="__codelineno-14-19"></a>│       ├── mapper                     // MyBatis XML 文件
+<a href="#__codelineno-14-20" id="__codelineno-14-20" name="__codelineno-14-20"></a>│       ├── static                     // 静态资源（js/css/img）
+<a href="#__codelineno-14-21" id="__codelineno-14-21" name="__codelineno-14-21"></a>│       └── templates                  // 模板页面（Thymeleaf）
+<a href="#__codelineno-14-22" id="__codelineno-14-22" name="__codelineno-14-22"></a>└── test
+<a href="#__codelineno-14-23" id="__codelineno-14-23" name="__codelineno-14-23"></a>    └── java/com/example
+<a href="#__codelineno-14-24" id="__codelineno-14-24" name="__codelineno-14-24"></a>        └── DemoApplicationTests.java   // 单元测试
 </code></pre></div>
+<hr/>
+<h2 id="_5">核心特性</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:5"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><input id="__tabbed_7_4" name="__tabbed_7" type="radio"/><input id="__tabbed_7_5" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">起步依赖Starter</label><label for="__tabbed_7_2">自动配置</label><label for="__tabbed_7_3">内嵌Web容器</label><label for="__tabbed_7_4">外部化配置</label><label for="__tabbed_7_5">生产级特性（Actuator）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>对常用场景依赖进行<strong>聚合与版本管理</strong>，引入一个 Starter 即可获得整套技术栈，避免依赖冲突。</p>
+<p><strong>示例（Maven）</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">pom.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="cm">&lt;!-- 统一版本管理 --&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="hll"><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span><a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>3.2.0<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="nt">&lt;/parent&gt;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="cm">&lt;!-- Web 开发：包含 Spring MVC + Tomcat + Jackson --&gt;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="hll"><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+</span><a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>根据类路径下的依赖，<strong>自动装配 Bean</strong>，无需 XML 配置。
+例如引入 <code>web</code> 自动配置 <code>DispatcherServlet</code>，引入 <code>jdbc</code> 自动配置数据源。</p>
+</div>
+<div class="tabbed-block">
+<p>内置 Tomcat（默认）、Jetty、Undertow，项目可打包为 Jar 直接运行，无需外部服务器。</p>
+<p><strong>运行命令</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>java<span class="w"> </span>-jar<span class="w"> </span>demo.jar
+</code></pre></div></td></tr></table></div></p>
+</div>
+<div class="tabbed-block">
+<p>支持 <code>.properties</code> / <code>.yml</code>，可配置端口、数据源、日志、多环境等。<a href="features/config.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
+<p><strong>yaml示例</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">application.yml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nt">server</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8088</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="nt">servlet</span><span class="p">:</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="nt">context-path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/demo</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="nt">spring</span><span class="p">:</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="nt">datasource</span><span class="p">:</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jdbc:mysql://localhost:3306/test_db</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">123456</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">    </span><span class="nt">driver-class-name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">com.mysql.cj.jdbc.Driver</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>properties示例</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">application.properties</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span>
+<span class="normal"><a href="#__codelineno-18-6">6</a></span>
+<span class="normal"><a href="#__codelineno-18-7">7</a></span>
+<span class="normal"><a href="#__codelineno-18-8">8</a></span>
+<span class="normal"><a href="#__codelineno-18-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="c1"># 服务器配置</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="na">server.port</span><span class="o">=</span><span class="s">8088</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="na">server.servlet.context-path</span><span class="o">=</span><span class="s">/demo</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="c1"># 数据源配置</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://localhost:3306/test_db</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">root</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">123456</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="na">spring.datasource.driver-class-name</span><span class="o">=</span><span class="s">com.mysql.cj.jdbc.Driver</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>提供<strong>应用监控、健康检查、配置查看等能力</strong>。</p>
+<p><strong>依赖</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>配置开启端点</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="nt">management</span><span class="p">:</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="nt">endpoints</span><span class="p">:</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">    </span><span class="nt">web</span><span class="p">:</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">    </span><span class="nt">exposure</span><span class="p">:</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">        </span><span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="s">"*"</span>
+</code></pre></div></td></tr></table></div>
+<p>访问：<code>http://localhost:8088/demo/actuator/health</code></p>
+</div>
+</div>
+</div>
 <hr/>
 <h2 id="_6">注解</h2>
 <p>使用注解，以更简洁、更直观、更紧凑的方式替代XML配置，实现Spring容器的自动管理与依赖注入，降低耦合、提升开发效率，并支持声明式事务、定时、异步等能力，最终让代码更易维护、更易扩展。</p>
@@ -2100,8 +2405,8 @@ Hello World执行原理图
 </li>
 </ol>
 <hr/>
-<h2 id="_7">核心注解</h2>
-<h3 id="_8">启动与容器类</h3>
+<h3 id="_7">核心注解</h3>
+<h4 id="_8">启动与容器类</h4>
 <p>Spring Boot 项目的“入口”和“容器管理核心”，负责启动项目、声明配置类、将对象（Bean）交给 Spring 容器管理，是所有功能的基础。<a href="annotation_case/start.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2134,7 +2439,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h3 id="web">Web 控制层</h3>
+<h4 id="web">Web 控制层</h4>
 <p>专门处理前端 HTTP 请求，负责路径映射、参数接收、响应结果（JSON 为主），是前后端交互的核心层。<a href="annotation_case/web.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2171,7 +2476,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h3 id="_9">业务与持久层</h3>
+<h4 id="_9">业务与持久层</h4>
 <p>分层开发的核心，负责封装业务逻辑、处理数据库操作，保证数据一致性（事务），是项目的“业务核心”。<a href="annotation_case/service.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2200,7 +2505,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h3 id="_10">依赖注入类</h3>
+<h4 id="_10">依赖注入类</h4>
 <p>Spring 核心特性，无需手动 <code>new</code> 对象，从 Spring 容器中自动获取已注册的 Bean，降低组件间耦合度。<a href="annotation_case/inject.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2225,7 +2530,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h3 id="_11">配置读取类</h3>
+<h4 id="_11">配置读取类</h4>
 <p>读取项目配置文件（<code>application.yml</code> 或 <code>application.properties</code>）中的参数，避免硬编码，提高配置灵活性。<a href="annotation_case/config.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2246,7 +2551,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h3 id="_12">全局增强类</h3>
+<h4 id="_12">全局增强类</h4>
 <p>全局统一处理 Controller 层的异常、统一响应格式，避免重复编码，提升项目规范性。<a href="annotation_case/exception.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2267,7 +2572,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h3 id="_13">定时任务 &amp; 异步</h3>
+<h4 id="_13">定时任务 &amp; 异步</h4>
 <p>用于实现定时执行任务（如定时备份数据）、异步调用（如异步发送短信），提升项目性能和灵活性。<a href="annotation_case/schedule.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2296,7 +2601,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h3 id="lombok">Lombok 简化代码</h3>
+<h4 id="lombok">Lombok 简化代码</h4>
 <p>第三方工具注解，无需手动编写 getter/setter、构造方法、日志对象，大幅简化代码，提升开发效率（需导入 Lombok 依赖）。<a href="annotation_case/lombok.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <table>
 <thead>
@@ -2321,6 +2626,100 @@ Hello World执行原理图
 <tr>
 <td><code>@AllArgsConstructor</code></td>
 <td>生成全参构造方法（所有属性都作为参数）</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="spring-boot_3">Spring Boot集成第三方库</h2>
+<p>Spring Boot集成第三方库时，不同第三方库的配置方式不同，不同阶段的配置也不同（<a href="integration/mybatis.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span>MyBatis</a> 等库）。可能的配置方式包括：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>主要操作</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>依赖引入</td>
+<td>1. 在 <code>pom.xml</code>（Maven）或 <code>build.gradle</code>（Gradle）中添加依赖；<br/>2. 优先使用 <strong>Spring Boot Starter</strong> 自动整合包；<br/>3. 处理版本冲突、依赖排除；<br/>4. 多环境区分依赖（可选）</td>
+<td><a href="integration/dependency.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></td>
+</tr>
+<tr>
+<td>配置文件配置（application.yml / properties）</td>
+<td>1. 连接地址、端口、账号密码；<br/>2. 连接池、超时、重试、线程数；<br/>3. 日志、开关、模式配置；<br/>4. 第三方专属配置项</td>
+<td><a href="integration/config.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></td>
+</tr>
+<tr>
+<td>启用类/注解配置</td>
+<td>1. 很多第三方需要 <strong>@EnableXXX</strong> 开启功能</td>
+<td><a href="integration/enable.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></td>
+</tr>
+<tr>
+<td>Java 配置类（手动配置 Bean）</td>
+<td>1. 手动创建第三方客户端实例;<br/>2. 自定义连接池、拦截器、序列化方式;<br/>3. 覆盖自动配置</td>
+<td><a href="integration/manual.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></td>
+</tr>
+<tr>
+<td>编写业务代码（核心使用）</td>
+<td>1. DAO / Mapper 层（如 MyBatis 的 Mapper 接口）;<br/>2. Service 层调用;<br/>3. Controller 暴露接口;<br/>4. 工具类封装（RedisUtil、OssUtil 等）</td>
+<td></td>
+</tr>
+<tr>
+<td>映射/模型类编写</td>
+<td>1. 实体类 Entity;<br/>2. DTO / VO;<br/>3. 第三方要求的配置类（如 MyBatis 的 TypeHandler）</td>
+<td></td>
+</tr>
+<tr>
+<td>XML / 映射文件（部分框架需要）</td>
+<td>1.MyBatis、MyBatis-Plus 等需要：mapper.xml;配置文件扫描路径</td>
+<td></td>
+</tr>
+<tr>
+<td>AOP / 拦截器 / 插件</td>
+<td>1. 分页插件;<br/>2. 监控拦截;<br/>3. 日志、性能统计;<br/>4. 第三方提供的插件</td>
+<td></td>
+</tr>
+<tr>
+<td>事务/异常处理</td>
+<td>1. 事务管理器配置;<br/>2. 自定义异常;<br/>3. 全局异常捕获;<br/>4. 失败重试、熔断降级</td>
+<td></td>
+</tr>
+<tr>
+<td>日志与监控</td>
+<td>1. 打印执行日志（SQL、请求日志）;<br/>2. 对接 Actuator;<br/>3. 性能监控、慢查询监控</td>
+<td></td>
+</tr>
+<tr>
+<td>测试相关</td>
+<td>1. 测试依赖;<br/>2. 测试配置;<br/>3. 单元测试、集成测试</td>
+<td></td>
+</tr>
+<tr>
+<td>多环境适配</td>
+<td>1. dev / test / prod 不同配置；<br/>2. 不同环境的连接信息隔离</td>
+<td></td>
+</tr>
+<tr>
+<td>安全与权限</td>
+<td>1. 密钥、证书配置；<br/>2. 权限认证；<br/>3. 加密传输</td>
+<td></td>
+</tr>
+<tr>
+<td>打包与部署</td>
+<td>1. 驱动、依赖是否打包；<br/>2. 外部配置文件；<br/>3. 环境变量注入</td>
+<td></td>
+</tr>
+<tr>
+<td>外部配置文件</td>
+<td>1. 外部配置文件（如 application.yml、application.properties）；<br/>2. 环境变量注入；<br/>3. 环境变量注入</td>
+<td></td>
+</tr>
+<tr>
+<td>版本与兼容性</td>
+<td>1. JDK 版本；<br/>2. Spring Boot 版本；<br/>3. 第三方库版本匹配</td>
+<td></td>
 </tr>
 </tbody>
 </table>
