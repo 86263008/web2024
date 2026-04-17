@@ -8,7 +8,7 @@
 <link href="../maven/index.html" rel="prev"/>
 <link href="../freemarker/index.html" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.4" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
 <title>Spring MVC - 基于WEB的应用程序开发</title>
 <link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
@@ -30,7 +30,7 @@
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="基于WEB的应用程序开发" class="md-header__button md-logo" data-md-component="logo" href="../../../../index.html" title="基于WEB的应用程序开发">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<img alt="logo" src="../../../../assets/images/logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -62,36 +62,6 @@
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-</button>
-</nav>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
-            Initializing search
-          </div>
-<ol class="md-search-result__list" role="presentation"></ol>
-</div>
-</div>
-</div>
-</div>
-</div>
 </nav>
 </header>
 <div class="md-container" data-md-component="container">
@@ -187,7 +157,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="基于WEB的应用程序开发" class="md-nav__button md-logo" data-md-component="logo" href="../../../../index.html" title="基于WEB的应用程序开发">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<img alt="logo" src="../../../../assets/images/logo.png"/>
 </a>
     基于WEB的应用程序开发
   </label>
@@ -977,37 +947,6 @@
       
     </span>
 </a>
-<nav aria-label="简介" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        原理
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        体系结构
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      
-        代码框架
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#spring-boot">
@@ -1017,31 +956,9 @@
       
     </span>
 </a>
-<nav aria-label="Spring Boot集成" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      
-        安装
-      
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      
-        开发流程
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       
         输入
@@ -1051,7 +968,7 @@
 <nav aria-label="输入" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
         主要的注解
@@ -1060,10 +977,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spring-mvc_1">
+<a class="md-nav__link" href="#http">
 <span class="md-ellipsis">
       
-        Spring MVC进行映射的依据
+        控制器与HTTP请求
       
     </span>
 </a>
@@ -1097,7 +1014,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       
         请求方法
@@ -1106,7 +1023,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
+<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       
         报文头及报文体示例
@@ -1115,7 +1032,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
+<a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
       
         表单对象绑定
@@ -1155,7 +1072,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       
         其他类型的参数
@@ -1170,7 +1087,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
+<a class="md-nav__link" href="#_8">
 <span class="md-ellipsis">
       
         输出
@@ -1180,7 +1097,7 @@
 <nav aria-label="输出" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
+<a class="md-nav__link" href="#_9">
 <span class="md-ellipsis">
       
         控制器返回值
@@ -1232,7 +1149,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
+<a class="md-nav__link" href="#_10">
 <span class="md-ellipsis">
       
         数据转换、校验
@@ -1242,7 +1159,7 @@
 <nav aria-label="数据转换、校验" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
+<a class="md-nav__link" href="#_11">
 <span class="md-ellipsis">
       
         数据绑定机理
@@ -1261,7 +1178,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
+<a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
       
         定义自定义的类型转换器
@@ -1273,7 +1190,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
+<a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
       
         数据校验框架
@@ -1292,7 +1209,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_19">
+<a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
       
         数据校验框架
@@ -1301,7 +1218,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_20">
+<a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
       
         如何使用注解驱动的校验
@@ -1310,7 +1227,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_21">
+<a class="md-nav__link" href="#_16">
 <span class="md-ellipsis">
       
         使用校验功能时，处理方法要如何签名？？
@@ -1319,7 +1236,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_22">
+<a class="md-nav__link" href="#_17">
 <span class="md-ellipsis">
       
         校验错误信息存放在什么地方？
@@ -1328,7 +1245,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_23">
+<a class="md-nav__link" href="#_18">
 <span class="md-ellipsis">
       
         页面如何显示错误信息
@@ -1361,7 +1278,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_24">
+<a class="md-nav__link" href="#_19">
 <span class="md-ellipsis">
       
         数据模型控制
@@ -1371,7 +1288,7 @@
 <nav aria-label="数据模型控制" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_25">
+<a class="md-nav__link" href="#_20">
 <span class="md-ellipsis">
       
         数据模型访问结构
@@ -1419,7 +1336,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_26">
+<a class="md-nav__link" href="#_21">
 <span class="md-ellipsis">
       
         视图及解析器
@@ -1429,7 +1346,7 @@
 <nav aria-label="视图及解析器" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_27">
+<a class="md-nav__link" href="#_22">
 <span class="md-ellipsis">
       
         视图解析器类型
@@ -1577,37 +1494,6 @@
       
     </span>
 </a>
-<nav aria-label="简介" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-<span class="md-ellipsis">
-      
-        原理
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        体系结构
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-<span class="md-ellipsis">
-      
-        代码框架
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#spring-boot">
@@ -1617,31 +1503,9 @@
       
     </span>
 </a>
-<nav aria-label="Spring Boot集成" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-<span class="md-ellipsis">
-      
-        安装
-      
-    </span>
-</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-<span class="md-ellipsis">
-      
-        开发流程
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       
         输入
@@ -1651,7 +1515,7 @@
 <nav aria-label="输入" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
         主要的注解
@@ -1660,10 +1524,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spring-mvc_1">
+<a class="md-nav__link" href="#http">
 <span class="md-ellipsis">
       
-        Spring MVC进行映射的依据
+        控制器与HTTP请求
       
     </span>
 </a>
@@ -1697,7 +1561,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
+<a class="md-nav__link" href="#_4">
 <span class="md-ellipsis">
       
         请求方法
@@ -1706,7 +1570,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
+<a class="md-nav__link" href="#_5">
 <span class="md-ellipsis">
       
         报文头及报文体示例
@@ -1715,7 +1579,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
+<a class="md-nav__link" href="#_6">
 <span class="md-ellipsis">
       
         表单对象绑定
@@ -1755,7 +1619,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
+<a class="md-nav__link" href="#_7">
 <span class="md-ellipsis">
       
         其他类型的参数
@@ -1770,7 +1634,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
+<a class="md-nav__link" href="#_8">
 <span class="md-ellipsis">
       
         输出
@@ -1780,7 +1644,7 @@
 <nav aria-label="输出" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
+<a class="md-nav__link" href="#_9">
 <span class="md-ellipsis">
       
         控制器返回值
@@ -1832,7 +1696,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
+<a class="md-nav__link" href="#_10">
 <span class="md-ellipsis">
       
         数据转换、校验
@@ -1842,7 +1706,7 @@
 <nav aria-label="数据转换、校验" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
+<a class="md-nav__link" href="#_11">
 <span class="md-ellipsis">
       
         数据绑定机理
@@ -1861,7 +1725,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
+<a class="md-nav__link" href="#_12">
 <span class="md-ellipsis">
       
         定义自定义的类型转换器
@@ -1873,7 +1737,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
+<a class="md-nav__link" href="#_13">
 <span class="md-ellipsis">
       
         数据校验框架
@@ -1892,7 +1756,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_19">
+<a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
       
         数据校验框架
@@ -1901,7 +1765,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_20">
+<a class="md-nav__link" href="#_15">
 <span class="md-ellipsis">
       
         如何使用注解驱动的校验
@@ -1910,7 +1774,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_21">
+<a class="md-nav__link" href="#_16">
 <span class="md-ellipsis">
       
         使用校验功能时，处理方法要如何签名？？
@@ -1919,7 +1783,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_22">
+<a class="md-nav__link" href="#_17">
 <span class="md-ellipsis">
       
         校验错误信息存放在什么地方？
@@ -1928,7 +1792,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_23">
+<a class="md-nav__link" href="#_18">
 <span class="md-ellipsis">
       
         页面如何显示错误信息
@@ -1961,7 +1825,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_24">
+<a class="md-nav__link" href="#_19">
 <span class="md-ellipsis">
       
         数据模型控制
@@ -1971,7 +1835,7 @@
 <nav aria-label="数据模型控制" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_25">
+<a class="md-nav__link" href="#_20">
 <span class="md-ellipsis">
       
         数据模型访问结构
@@ -2019,7 +1883,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_26">
+<a class="md-nav__link" href="#_21">
 <span class="md-ellipsis">
       
         视图及解析器
@@ -2029,7 +1893,7 @@
 <nav aria-label="视图及解析器" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_27">
+<a class="md-nav__link" href="#_22">
 <span class="md-ellipsis">
       
         视图解析器类型
@@ -2049,121 +1913,130 @@
 <article class="md-content__inner md-typeset">
 <h1 id="spring-mvc">Spring MVC<a href="plan.html" title="教案"><sub>⯐</sub></a></h1>
 <h2 id="_1">简介</h2>
-<p>Spring  为展现层提供的基于 MVC 设计理念的优秀的Web 框架，是目前最主流的 MVC 框架之一</p>
-<p>Spring3.0 后全面超越 Struts2，成为最优秀的 MVC 框架</p>
-<p>Spring MVC 通过一套 MVC 注解，让 POJO 成为处理请求的控制器，而无须实现任何接口</p>
-<p>支持REST风格的URL请求</p>
-<p>采用松散耦合可插拔组件结构，比其他MVC框架更具有扩展性和灵活性</p>
-<hr/>
-<h3 id="_2">原理</h3>
-<p><img alt="pricinple" src="img/mvc.png"/></p>
-<hr/>
-<h3 id="_3">体系结构</h3>
-<p><img alt="architect" src="img/architect.png"/></p>
-<hr/>
-<h3 id="_4">代码框架</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.demo</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nd">@Controller</span><span class="w"> </span><span class="c1">// 将UserController变成一个Handler</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/user"</span><span class="p">)</span><span class="w"> </span><span class="c1">// 指定控制器映射的URL</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserController</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/register"</span><span class="p">)</span><span class="w"> </span><span class="c1">// 处理方法对应的URL，相对于类的URL</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">register</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"user/register"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回逻辑视图名</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<p>Spring MVC 是<strong>Spring 生态基于MVC模式</strong>的轻量级Web请求框架，以<strong>DispatcherServlet前端控制器</strong>为统一入口，接收浏览器请求，通过处理器映射器、适配器匹配并执行Controller控制器，封装Model数据，再由视图解析器解析视图、渲染页面，实现<strong>请求分发、业务处理、视图解耦</strong>，职责清晰、开箱即用，是Java Web及SSM、SpringBoot后端接口开发的核心基础。Spring MVC工作原理图如下：</p>
+<center>
+<div class="mermaid">
+flowchart LR
+    %% 外层：请求/响应
+    Front[前端]:::info --&gt;|1 HTTP请求| FrontController
+
+    subgraph Servlet engine
+        %% 核心组件
+        M1[模型<br/>POJO]:::primary
+        FrontController[前端控制器<br/>DispatcherServlet]:::success        
+        Controller[控制器<br/>Controller]:::danger
+
+        %% 控制器流程
+        FrontController --&gt;|2 分发请求| Controller
+        Controller --&gt;|2 处理请求<br/>创建模型| M1
+        M1 --&gt;|POJO<br/>3 委托结果渲染| FrontController
+
+        %% 视图渲染流程
+        FrontController --&gt;|POJO<br/>4 分派视图渲染| VT
+        VT[视图解析器]:::warning --&gt;|5 渲染 | TE[模板引擎<br/>Thymeleaf]:::danger
+        TE --&gt;|6 视图 | VT
+        VT --&gt;|7 返回控制| FrontController
+    end
+
+    FrontController --&gt;|8 响应| Front
+</div>
+Spring MVC工作原理图
+</center>
 <hr/>
 <h2 id="spring-boot">Spring Boot集成</h2>
-<h3 id="_5">安装</h3>
-<p>在<code>pom.xml</code>添加以下依赖：</p>
+<p>Spring Boot 通过<code>spring-boot-starter-web</code>实现Spring MVC自动集成，自动完成<code>DispatcherServlet</code>、处理器映射器、视图解析器等核心组件的配置；开发者仅需引入依赖、编写控制器即可完成<strong>请求处理</strong>、<strong>数据封装</strong>与<strong>视图渲染</strong>。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">1. 引入依赖</label><label for="__tabbed_1_2">2. 启动类</label><label for="__tabbed_1_3">3. 控制器</label><label for="__tabbed_1_4">4. 视图页面</label><label for="__tabbed_1_5">5. 执行流程</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>添加web依赖自动集成Spring MVC；添加模板引擎依赖用于视图渲染。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>SpringMVC启动类用于<strong>初始化Spring容器、扫描控制器、加载Web与MVC核心配置</strong>，整合web环境，开启请求处理与接口访问功能。是Spring Boot应用的入口，通过<code>@SpringBootApplication</code>注解开启自动配置，扫描项目中的组件，加载<code>DispatcherServlet</code>等核心组件。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nt">&lt;/dependency&gt;</span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nd">@SpringBootApplication</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MvcApplication</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="c1">// 主方法，用于启动Spring Boot应用</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">MvcApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<hr/>
-<h3 id="_6">开发流程</h3>
-<p>spring-boot-starter-web是一个用于在Spring Boot应用中集成Spring MVC的starter，使用它可以方便地进行Srping MVC的配置和使用。下面是spring-boot-starter-web的开发流程：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">添加依赖</label><label for="__tabbed_1_2">配置</label><label for="__tabbed_1_3">创建Controller类</label><label for="__tabbed_1_4">模板文件</label></div>
-<div class="tabbed-content">
+</div>
 <div class="tabbed-block">
-<p>在<code>pom.xml</code>文件中添加spring-boot-starter-web依赖：</p>
+<p>控制器是MVC模式中的C（Controller），是业务逻辑的调度中心，主要涉及以下任务：</p>
+<ul>
+<li>
+<p>映射URL路径（路由）；通过<code>@RequestMapping</code>注解将请求映射到控制器方法。</p>
+</li>
+<li>
+<p>接收参数（输入）；通过<code>@RequestParam</code>、<code>@RequestHeader</code>、<code>@CookieValue</code>等注解绑定请求参数。</p>
+</li>
+<li>
+<p>封装数据；将业务逻辑处理结果封装到Model，返回视图名用于渲染。</p>
+</li>
+<li>
+<p>视图渲染（输出）；根据返回的视图名，由视图解析器解析视图，渲染页面。</p>
+</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nt">&lt;/dependency&gt;</span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nd">@Controller</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IndexController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/index"</span><span class="p">)</span><span class="w"> </span><span class="c1">//请求处理</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="n">Model</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="na">输入参数</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="c1">// 业务逻辑处理...</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">model</span><span class="p">.</span><span class="na">addAttribute</span><span class="p">(</span><span class="s">"msg"</span><span class="p">,</span><span class="w"> </span><span class="s">"Spring MVC渲染成功"</span><span class="p">);</span><span class="w"> </span><span class="c1">// 数据封装</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"index"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视图渲染，返回视图名，用于渲染index.html</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>在<code>application.properties</code>或<code>application.yml</code>文件中配置MyBatis相关属性，例如：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="l l-Scalar l-Scalar-Plain">mybatis.mapper-locations=classpath:mapper/*.xml</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="l l-Scalar l-Scalar-Plain">mybatis.type-aliases-package=com.example.demo.entity</span>
+<p>模板页面接收Model数据，完成HTML渲染。</p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">resources/templates/index.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns:th</span><span class="o">=</span><span class="s">"http://www.thymeleaf.org"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">th:text</span><span class="o">=</span><span class="s">"${msg}"</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>创建Controller类，使用@Controller、@RestController注解标注该类，使用@RequestMapping、@GetMapping、@PostMapping注解标注该类中的方法，指定请求路径和请求方法。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nd">@Controller</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyController</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/hello"</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RequestMethod</span><span class="p">.</span><span class="na">GET</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">hello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>创建一个模板文件，用于渲染页面：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span>
-<span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span>
-<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Spring Boot with Freemarker<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>${message}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
+<p>请求→DispatcherServlet→Controller→视图解析→渲染页面→响应客户端。</p>
 </div>
 </div>
-</input></input></input></input></div>
+</input></input></input></input></input></div>
 <hr/>
-<h2 id="_7">输入</h2>
-<h3 id="_8">主要的注解</h3>
+<h2 id="_2">输入</h2>
+<h3 id="_3">主要的注解</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">控制器</label><label for="__tabbed_2_2">输入</label><label for="__tabbed_2_3">输出</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2177,11 +2050,11 @@
 <tbody>
 <tr>
 <td>@Controller</td>
-<td>指示Spring类的实例是一个控制器</td>
+<td>指示Spring类的实例是一个控制器；返回<strong>视图名</strong></td>
 </tr>
 <tr>
 <td>@RestController</td>
-<td>指示Spring类的实例是一个Restful控制器</td>
+<td>指示Spring类的实例是一个Restful控制器；@RestController = @Controller + @ResponseBody；返回<strong>JSON数据</strong></td>
 </tr>
 </tbody>
 </table>
@@ -2245,12 +2118,12 @@
 </div>
 </input></input></input></div>
 <hr/>
-<h3 id="spring-mvc_1">Spring MVC进行映射的依据</h3>
+<h3 id="http">控制器与HTTP请求</h3>
 <p><img alt="parse" src="img/input_parse.png"/></p>
 <hr/>
 <h3 id="url">请求URL</h3>
 <h4 id="url_1">URL表达式</h4>
-<p><code>@RequestMapping</code>不但支持标准的URL，还支持<a href="/terms/index.html#Ant风格的URL">Ant风格</a>的和带<code>{xxx}</code>占位符的URL。以下URL都是合法的：</p>
+<p><code>@RequestMapping</code>不但支持标准的URL，还支持<a href="/terms/index.html#Ant风格的URL" target="_blank">Ant风格<span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a>的和带<code>{xxx}</code>占位符的URL。以下URL都是合法的：</p>
 <table>
 <thead>
 <tr>
@@ -2288,43 +2161,43 @@
 <hr/>
 <h4 id="xxx">绑定{xxx}中的值</h4>
 <p>URL中的<code>{xxx}</code>占位符可以通过<code>@PathVariable("xxx")</code>绑定到操作方法的入参中，如：</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span>
-<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/{userId}"</span><span class="p">)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">ModelAndView</span><span class="w"> </span><span class="nf">showDetail</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userId</span><span class="p">){</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">ModelAndView</span><span class="w"> </span><span class="n">mav</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ModelAndView</span><span class="p">();</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">mav</span><span class="p">.</span><span class="na">setViewName</span><span class="p">(</span><span class="s">"user/showDetail"</span><span class="p">);</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">mav</span><span class="p">.</span><span class="na">addObject</span><span class="p">(</span><span class="s">"user"</span><span class="p">,</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">getUserById</span><span class="p">(</span><span class="n">userId</span><span class="p">));</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">mav</span><span class="p">;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/{userId}"</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">ModelAndView</span><span class="w"> </span><span class="nf">showDetail</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userId</span><span class="p">){</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">ModelAndView</span><span class="w"> </span><span class="n">mav</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ModelAndView</span><span class="p">();</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="n">mav</span><span class="p">.</span><span class="na">setViewName</span><span class="p">(</span><span class="s">"user/showDetail"</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="n">mav</span><span class="p">.</span><span class="na">addObject</span><span class="p">(</span><span class="s">"user"</span><span class="p">,</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">getUserById</span><span class="p">(</span><span class="n">userId</span><span class="p">));</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">mav</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>如果<code>@PathVariable</code>不指定参数名，只有在编译时打开debug开关（javac -debug=no）时才可行！！（不建议）</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nd">@Controller</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/owners/{ownerId}"</span><span class="p">)</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RelativePathUriTemplateController</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">   </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/pets/{petId}"</span><span class="p">)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">findPet</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ownerId</span><span class="p">,</span><span class="w"> </span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">                                 </span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">petId</span><span class="p">,</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">     </span><span class="err">…</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">   </span><span class="p">}</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nd">@Controller</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/owners/{ownerId}"</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RelativePathUriTemplateController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">   </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/pets/{petId}"</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">findPet</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ownerId</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">                                 </span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">petId</span><span class="p">,</span><span class="w"> </span><span class="n">Model</span><span class="w"> </span><span class="n">model</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">     </span><span class="err">…</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h4 id="_9">请求方法</h4>
+<h4 id="_4">请求方法</h4>
 <p>请求方法，在HTTP中这被叫做动词（verb），除了两个大家熟知的（GET和POST）之外，标准方法集合中还包含PUT、DELETE、HEAD和OPTIONS。这些方法的含义连同行为许诺都一起定义在HTTP规范之中。一般浏览器只支持GET和POST方法。</p>
 <p>常见的HTTP请求方法有以下几种：</p>
 <table>
@@ -2374,143 +2247,146 @@
 </tbody>
 </table>
 <hr/>
-<h4 id="_10">报文头及报文体示例</h4>
+<h4 id="_5">报文头及报文体示例</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/delete"</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="o">=</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">test1</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userId</span><span class="p">){</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/show"</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="s">"content-type=text/*"</span><span class="p">)</span><span class="n">②</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">test2</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userId</span><span class="p">){}</span>
+</code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/delete"</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="o">=</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">test1</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userId</span><span class="p">){</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/handle1"</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle1</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userName"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">              </span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"password"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">              </span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"realName"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">realName</span><span class="p">){</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/show"</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="s">"content-type=text/*"</span><span class="p">)</span><span class="n">②</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">test2</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userId"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userId</span><span class="p">){}</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span>
-<span class="normal"><a href="#__codelineno-10-5">5</a></span>
-<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/handle1"</span><span class="p">)</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle1</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userName"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="p">,</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">              </span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"password"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="p">,</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">              </span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"realName"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">realName</span><span class="p">){</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="p">...</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/handle2"</span><span class="p">)</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle2</span><span class="p">(</span><span class="nd">@CookieValue</span><span class="p">(</span><span class="s">"JSESSIONID"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sessionId</span><span class="p">,</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">       </span><span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">"Accept-Language"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">accpetLanguage</span><span class="p">){</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="p">...</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/handle2"</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle2</span><span class="p">(</span><span class="nd">@CookieValue</span><span class="p">(</span><span class="s">"JSESSIONID"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sessionId</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">       </span><span class="nd">@RequestHeader</span><span class="p">(</span><span class="s">"Accept-Language"</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">accpetLanguage</span><span class="p">){</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="p">...</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h4 id="_11">表单对象绑定</h4>
+<h4 id="_6">表单对象绑定</h4>
 <p>所谓命令/表单对象并不需要实现任何接口，仅是一个拥有若干属性的POJO。Spring MVC按：</p>
 <ul>
 <li>"HTTP请求参数名 =  命令/表单对象的属性名"</li>
 </ul>
 <p>的规则，自动绑定请求数据，支持"级联属性名"，自动进行基本类型数据转换。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle14"</span><span class="p">)</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle14</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="c1">//…</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle14"</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle14</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="c1">//…</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><img alt="form_bind" src="img/form_bind.png"/></p>
+<center>
+<div class="mermaid">
+graph LR
+    A["userName=xxxx password=yyyy"]:::success
+    B["class User{<br/>private String userName;<br/>private String password;<br/>}"]:::warning
+
+    A --&gt; B
+</div>
+表单-对象绑定
+</center>
 <hr/>
 <h4 id="servlet-api">使用Servlet  API对象作为入参</h4>
 <p>在Spring MVC中，控制器类可以不依赖任何Servlet API对象，但是Spring MVC并不阻止我们使用Servlet API的类作为处理方法的入参。值得注意的是，如果处理方法自行使用HttpServletResponse返回响应，则处理方法的返回值设置成void即可。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle21"</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle21</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WebUtils</span><span class="p">.</span><span class="na">findParameterValue</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="s">"userName"</span><span class="p">);</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="n">response</span><span class="p">.</span><span class="na">addCookie</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Cookie</span><span class="p">(</span><span class="s">"userName"</span><span class="p">,</span><span class="w"> </span><span class="n">userName</span><span class="p">));</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle23</span><span class="p">(</span><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">"sessionId"</span><span class="p">,</span><span class="w"> </span><span class="mi">1234</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">"success"</span><span class="p">;</span><span class="w">     </span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
 <span class="normal"><a href="#__codelineno-13-4">4</a></span>
-<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle21"</span><span class="p">)</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle21</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WebUtils</span><span class="p">.</span><span class="na">findParameterValue</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="s">"userName"</span><span class="p">);</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="n">response</span><span class="p">.</span><span class="na">addCookie</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Cookie</span><span class="p">(</span><span class="s">"userName"</span><span class="p">,</span><span class="w"> </span><span class="n">userName</span><span class="p">));</span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle24</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">                                    </span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userName"</span><span class="p">)</span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="c1">//…</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">"success"</span><span class="p">;</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span>
-<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle23</span><span class="p">(</span><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">"sessionId"</span><span class="p">,</span><span class="w"> </span><span class="mi">1234</span><span class="p">);</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">"success"</span><span class="p">;</span><span class="w">     </span>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span>
-<span class="normal"><a href="#__codelineno-15-3">3</a></span>
-<span class="normal"><a href="#__codelineno-15-4">4</a></span>
-<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle24</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">                                    </span><span class="nd">@RequestParam</span><span class="p">(</span><span class="s">"userName"</span><span class="p">)</span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">  </span><span class="c1">//…</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">"success"</span><span class="p">;</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
 <h3 id="springservlet-api">使用Spring的Servlet API代理类</h3>
 <p>Spring MVC在org.springframework.web.context.request包中定义了若干个可代理Servlet原生API类的接口，如WebRequest和NativeWebRequest，它们也允许作为处理类的入参，通过这些代理类可访问请求对象的任何信息。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
-<span class="normal"><a href="#__codelineno-16-2">2</a></span>
-<span class="normal"><a href="#__codelineno-16-3">3</a></span>
-<span class="normal"><a href="#__codelineno-16-4">4</a></span>
-<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle25"</span><span class="p">)</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle25</span><span class="p">(</span><span class="n">WebRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">"userName"</span><span class="p">);</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"success"</span><span class="p">;</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle25"</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handle25</span><span class="p">(</span><span class="n">WebRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">userName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">"userName"</span><span class="p">);</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"success"</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
 <h4 id="io">使用IO对象作为入参</h4>
 <p>Spring MVC允许控制器的处理方法使用java.io.InputStream/java.io.Reader及java.io.OutputStream/java.io.Writer作为方法的入参</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span>
-<span class="normal"><a href="#__codelineno-17-3">3</a></span>
-<span class="normal"><a href="#__codelineno-17-4">4</a></span>
-<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle31"</span><span class="p">)</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle31</span><span class="p">(</span><span class="n">OutputStream</span><span class="w"> </span><span class="n">os</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">       </span><span class="n">Resource</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClassPathResource</span><span class="p">(</span><span class="s">"/image.jpg"</span><span class="p">);</span><span class="c1">//读取类路径下的图片文件</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">       </span><span class="n">FileCopyUtils</span><span class="p">.</span><span class="na">copy</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">(),</span><span class="w"> </span><span class="n">os</span><span class="p">);</span><span class="c1">//将图片写到输出流中</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle31"</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle31</span><span class="p">(</span><span class="n">OutputStream</span><span class="w"> </span><span class="n">os</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">       </span><span class="n">Resource</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClassPathResource</span><span class="p">(</span><span class="s">"/image.jpg"</span><span class="p">);</span><span class="c1">//读取类路径下的图片文件</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">       </span><span class="n">FileCopyUtils</span><span class="p">.</span><span class="na">copy</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">(),</span><span class="w"> </span><span class="n">os</span><span class="p">);</span><span class="c1">//将图片写到输出流中</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Spring MVC将获取ServletRequest的InputStream/Reader或ServletResponse的OutputStream/Writer，然后按类型匹配的方式，传递给控制器的处理方法入参。</p>
 <hr/>
-<h4 id="_12">其他类型的参数</h4>
+<h4 id="_7">其他类型的参数</h4>
 <p>控制器处理方法的入参除支持以上类型的参数以外，还支持java.util.Locale、java.security.Principal，可以通过Servlet的HttpServletRequest 的getLocale()及getUserPrincipal()得到相应的值。如果处理方法的入参类型为Locale或Principal，Spring MVC自动从请求对象中获取相应的对象并传递给处理方法的入参。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
-<span class="normal"><a href="#__codelineno-18-2">2</a></span>
-<span class="normal"><a href="#__codelineno-18-3">3</a></span>
-<span class="normal"><a href="#__codelineno-18-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle32"</span><span class="p">)</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle31</span><span class="p">(</span><span class="n">Locale</span><span class="w"> </span><span class="n">locale</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="w">  </span><span class="c1">//...</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/handle32"</span><span class="p">)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">handle31</span><span class="p">(</span><span class="n">Locale</span><span class="w"> </span><span class="n">locale</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">{</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">  </span><span class="c1">//...</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h2 id="_13">输出</h2>
-<h3 id="_14">控制器返回值</h3>
+<h2 id="_8">输出</h2>
+<h3 id="_9">控制器返回值</h3>
 <p><strong>@Controller</strong></p>
 <ul>
 <li>
-<p>String</p>
-<ul>
-<li>可以跳转视图，但不能携带数据</li>
-</ul>
+<p><strong>String</strong>; 可以跳转视图，但不能携带数据</p>
 </li>
 <li>
-<p>ModelAndView</p>
-<ul>
-<li>可以添加Model数据，并指定视图</li>
-</ul>
+<p><strong>ModelAndView</strong>; 可以添加Model数据，并指定视图</p>
 </li>
 <li>
-<p>View</p>
+<p><strong>View</strong></p>
 </li>
 </ul>
 <p><strong>@RestController</strong></p>
@@ -2522,10 +2398,7 @@
 <p>Map</p>
 </li>
 <li>
-<p>void</p>
-<ul>
-<li>在异步请求时使用，它只返回数据，而不会跳转视图</li>
-</ul>
+<p><strong>void</strong>； 在异步请求时使用，它只返回数据，而不会跳转视图</p>
 </li>
 <li>
 <p>HttpEntity&lt;?&gt;或ResponseEntity&lt;?&gt;</p>
@@ -2539,7 +2412,43 @@
 </ul>
 <hr/>
 <h3 id="httpmessageconverter">HttpMessageConverter<t></t></h3>
-<p><img alt="converter" src="img/converter.png"/></p>
+<p><strong>HttpMessageConverter 是 SpringMVC 中专门负责【HTTP 请求/响应报文】与【Java 对象】之间自动转换的核心组件</strong>，帮我们省去手动解析 JSON、拼接数据的繁琐工作。</p>
+<ol>
+<li>
+<p>接收请求时（入参）：JSON → Java 对象</p>
+<p>把前端传来的 <strong>JSON/XML/表单</strong> 原始报文</p>
+<p><strong>自动转换成 Java 对象</strong></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>JSON字符串 → @RequestBody 对象
+</code></pre></div>
+</li>
+<li>
+<p>响应数据时（出参）：Java 对象 → JSON</p>
+<p>把 Java 对象
+<strong>自动转换成 JSON/XML 响应报文</strong> 返回给前端
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>@ResponseBody 对象 → JSON字符串
+</code></pre></div></p>
+</li>
+</ol>
+<center>
+<div class="mermaid">
+graph TD
+    %% 左侧：请求流程
+    reqIn["HttpServletRequest"]:::success
+    converter["HttpMessageConverter&lt;T&gt;"]:::danger
+    reqOut["@RequestBody/HttpEntity&lt;T&gt;"]:::success
+
+    reqIn -- HTTP请求报文 --&gt; converter
+    converter --&gt; reqOut
+
+    %% 右侧：响应流程
+    respOut["HttpServletResponse"]
+    respIn["@ResponseBody/ResponseEntity&lt;T&gt;"]:::primary
+
+    respIn --&gt; converter
+    converter -- HTTP响应报文 --&gt; respOut:::primary
+</div>
+前后端数据转换
+</center>
 <hr/>
 <h4 id="httpmessageconverter_1">HttpMessageConverter<t>实现类</t></h4>
 <p><img alt="converter_impl" src="img/converter_impl.png"/></p>
@@ -2611,8 +2520,8 @@
 <p><strong>优点：</strong>处理方法签名受限</p>
 <p><strong>缺点：</strong>不但可以访问报文体，还能访问报文头</p>
 <hr/>
-<h2 id="_15">数据转换、校验</h2>
-<h3 id="_16">数据绑定机理</h3>
+<h2 id="_10">数据转换、校验</h2>
+<h3 id="_11">数据绑定机理</h3>
 <p><img alt="data_bind" src="img/data_bind.png"/></p>
 <hr/>
 <h4 id="conversionservice">ConversionService</h4>
@@ -2627,7 +2536,7 @@
 </code></pre></div></td></tr></table></div>
 <p>以上User类，通过一个@DateTimeFormat注解，为类型转换提供了一些“额外”的信息，即代表日期的“源字符器”格式是“yyyy-MM-dd”</p>
 <hr/>
-<h4 id="_17">定义自定义的类型转换器</h4>
+<h4 id="_12">定义自定义的类型转换器</h4>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">过程</label><label for="__tabbed_3_2">示例</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2705,7 +2614,7 @@
 </div>
 </input></input></div>
 <hr/>
-<h3 id="_18">数据校验框架</h3>
+<h3 id="_13">数据校验框架</h3>
 <p>Spring 3.0拥有自己独立的数据校验框架，同时支持JSR 303标准的校验框架。Spring 的DataBinder在进行数据绑定时，可同时调用校验框架完成数据校验工作。</p>
 <p>在Spring MVC中，则可直接通过注解驱动的方式进行数据校验。</p>
 <p>Spring的org.springframework.validation是校验框架所在的包</p>
@@ -2772,7 +2681,7 @@
 </tbody>
 </table>
 <hr/>
-<h4 id="_19">数据校验框架</h4>
+<h4 id="_14">数据校验框架</h4>
 <p><code>&lt;mvc:annotation-driven/&gt;</code>会默认装配好一个LocalValidatorFactoryBean，通过在处理方法的入参上标注@Valid注解即可让Spring MVC在完成数据绑定后执行数据校验的工作。</p>
 <blockquote>
 <p>注意：Spring本身没有提供JSR 303的实现，所以必须将JSR 303的实现者（如Hibernate Validator）的jar文件放到类路径下，Spring将自动加载并装配好JSR 303的实现者。</p>
@@ -2810,7 +2719,7 @@
 <a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h4 id="_20">如何使用注解驱动的校验</h4>
+<h4 id="_15">如何使用注解驱动的校验</h4>
 <p>在已经标注了JSR 303注解的表单/命令对象前标注一个@Valid，Spring MVC框架在将请求数据绑定到该入参对象后，就会调用校验框架根据注解声明的校验规则实施校验。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
@@ -2837,17 +2746,17 @@
 <a id="__codelineno-27-12" name="__codelineno-27-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h4 id="_21">使用校验功能时，处理方法要如何签名？？</h4>
+<h4 id="_16">使用校验功能时，处理方法要如何签名？？</h4>
 <p>Spring MVC是通过对处理方法签名的规约来保存校验结果的：前一个表单/命令对象的校验结果保存在其后的入参中，这个保存校验结果的入参必须是BindingResult或Errors类型，这两个类都位于org.springframework.validation包中。</p>
 <p><img alt="sign" src="img/sign.png"/></p>
 <hr/>
-<h4 id="_22">校验错误信息存放在什么地方？</h4>
+<h4 id="_17">校验错误信息存放在什么地方？</h4>
 <p><img alt="error_message" src="img/error_message.png"/></p>
 <p>4.Spring MVC将HttpServletRequest对象数据绑定到处理方法的入参对象中（表单/命令对象）；</p>
 <p>5.将绑定错误信息、检验错误信息都保存到隐含模型中；</p>
 <p>6.本次请求的对应隐含模型数据存放到HttpServletRequest的属性列表中，暴露给视图对象。</p>
 <hr/>
-<h4 id="_23">页面如何显示错误信息</h4>
+<h4 id="_18">页面如何显示错误信息</h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
@@ -2928,8 +2837,8 @@
 <p><img alt="i18n" src="img/i18n.png"/></p>
 <p><img alt="form" src="./error_form.png"/></p>
 <hr/>
-<h2 id="_24">数据模型控制</h2>
-<h3 id="_25">数据模型访问结构</h3>
+<h2 id="_19">数据模型控制</h2>
+<h3 id="_20">数据模型访问结构</h3>
 <p><img alt="data_model_access" src="img/data_model_access.png"/></p>
 <hr/>
 <h3 id="modelandview">访问数据模型:ModelAndView</h3>
@@ -3063,10 +2972,10 @@ Spring MVC一旦发现处理方法有Map或Model类型的入参，就会将请�
 <a id="__codelineno-34-22" name="__codelineno-34-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr/>
-<h2 id="_26">视图及解析器</h2>
+<h2 id="_21">视图及解析器</h2>
 <p><img alt="view_resolver" src="img/view_resolver.png"/></p>
 <hr/>
-<h3 id="_27">视图解析器类型</h3>
+<h3 id="_22">视图解析器类型</h3>
 <p>完成单一解析逻辑的视图解析器：</p>
 <ul>
 <li>
@@ -3111,5 +3020,5 @@ Spring MVC一旦发现处理方法有Map或Model类型的入参，就会将请�
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../js/mermaid.min.js"></script>
 <script src="../../../../js/init_mermaid.js"></script>
-</body>
+<script>mermaid.initialize({});</script></body>
 </html>

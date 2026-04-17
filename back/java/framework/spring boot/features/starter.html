@@ -5,21 +5,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../../../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.4" name="generator"/>
-<title>Getting Started - 基于WEB的应用程序开发</title>
-<link href="../../../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
-<link href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link href="../../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<title>Spring Starter - 基于WEB的应用程序开发</title>
+<link href="../../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/iframe-worker/shim"></script>
-<link href="../../../../../../assets/stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#getting-started">
+<a class="md-skip" href="#spring-starter">
           Skip to content
         </a>
 </div>
@@ -27,8 +27,8 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="基于WEB的应用程序开发" class="md-header__button md-logo" data-md-component="logo" href="../../../../../../index.html" title="基于WEB的应用程序开发">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<a aria-label="基于WEB的应用程序开发" class="md-header__button md-logo" data-md-component="logo" href="../../../../../index.html" title="基于WEB的应用程序开发">
+<img alt="logo" src="../../../../../assets/images/logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -43,7 +43,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Getting Started
+              Spring Starter
             
           </span>
 </div>
@@ -60,36 +60,6 @@
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-</button>
-</nav>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
-            Initializing search
-          </div>
-<ol class="md-search-result__list" role="presentation"></ol>
-</div>
-</div>
-</div>
-</div>
-</div>
 </nav>
 </header>
 <div class="md-container" data-md-component="container">
@@ -97,7 +67,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../../index.html">
+<a class="md-tabs__link" href="../../../../../index.html">
         
   
   
@@ -108,7 +78,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../../introduction/index.html">
+<a class="md-tabs__link" href="../../../../../introduction/index.html">
           
   
   
@@ -117,7 +87,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../../front/html/syllabus/index.html">
+<a class="md-tabs__link" href="../../../../../front/html/syllabus/index.html">
           
   
   
@@ -126,7 +96,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../../front/framework/jquery/index.html">
+<a class="md-tabs__link" href="../../../../../front/framework/jquery/index.html">
           
   
   
@@ -135,7 +105,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../jsp/basic/index.html">
+<a class="md-tabs__link" href="../../../jsp/basic/index.html">
           
   
   
@@ -144,7 +114,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../mvc/index.html">
+<a class="md-tabs__link" href="../../mvc/index.html">
           
   
   
@@ -153,7 +123,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../../introduction/syllabus/index.html">
+<a class="md-tabs__link" href="../../../../../introduction/syllabus/index.html">
         
   
   
@@ -164,7 +134,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../../../introduction/kownledge_graph/index.html">
+<a class="md-tabs__link" href="../../../../../introduction/kownledge_graph/index.html">
         
   
   
@@ -184,14 +154,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="基于WEB的应用程序开发" class="md-nav__button md-logo" data-md-component="logo" href="../../../../../../index.html" title="基于WEB的应用程序开发">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<a aria-label="基于WEB的应用程序开发" class="md-nav__button md-logo" data-md-component="logo" href="../../../../../index.html" title="基于WEB的应用程序开发">
+<img alt="logo" src="../../../../../assets/images/logo.png"/>
 </a>
     基于WEB的应用程序开发
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../index.html">
+<a class="md-nav__link" href="../../../../../index.html">
 <span class="md-ellipsis">
     
   
@@ -226,7 +196,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../introduction/index.html">
+<a class="md-nav__link" href="../../../../../introduction/index.html">
 <span class="md-ellipsis">
     
   
@@ -238,7 +208,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../introduction/hello/java/index.html">
+<a class="md-nav__link" href="../../../../../introduction/hello/java/index.html">
 <span class="md-ellipsis">
     
   
@@ -250,7 +220,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../introduction/http/index.html">
+<a class="md-nav__link" href="../../../../../introduction/http/index.html">
 <span class="md-ellipsis">
     
   
@@ -311,7 +281,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/html/syllabus/index.html">
+<a class="md-nav__link" href="../../../../../front/html/syllabus/index.html">
 <span class="md-ellipsis">
     
   
@@ -323,7 +293,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/html/%E7%AE%80%E4%BB%8B/index.html">
+<a class="md-nav__link" href="../../../../../front/html/%E7%AE%80%E4%BB%8B/index.html">
 <span class="md-ellipsis">
     
   
@@ -335,7 +305,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/html/%E6%A0%87%E7%AD%BE/index.html">
+<a class="md-nav__link" href="../../../../../front/html/%E6%A0%87%E7%AD%BE/index.html">
 <span class="md-ellipsis">
     
   
@@ -347,7 +317,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/html/case/index.html">
+<a class="md-nav__link" href="../../../../../front/html/case/index.html">
 <span class="md-ellipsis">
     
   
@@ -385,7 +355,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/css/syllabus/index.html">
+<a class="md-nav__link" href="../../../../../front/css/syllabus/index.html">
 <span class="md-ellipsis">
     
   
@@ -397,7 +367,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/css/%E7%AE%80%E4%BB%8B/index.html">
+<a class="md-nav__link" href="../../../../../front/css/%E7%AE%80%E4%BB%8B/index.html">
 <span class="md-ellipsis">
     
   
@@ -409,7 +379,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html">
+<a class="md-nav__link" href="../../../../../front/css/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7/index.html">
 <span class="md-ellipsis">
     
   
@@ -421,7 +391,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html">
+<a class="md-nav__link" href="../../../../../front/css/%E5%BA%94%E7%94%A8%E6%96%B9%E5%BC%8F/index.html">
 <span class="md-ellipsis">
     
   
@@ -433,7 +403,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/css/case/index.html">
+<a class="md-nav__link" href="../../../../../front/css/case/index.html">
 <span class="md-ellipsis">
     
   
@@ -471,7 +441,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/syllabus/index.html">
+<a class="md-nav__link" href="../../../../../front/js/syllabus/index.html">
 <span class="md-ellipsis">
     
   
@@ -483,7 +453,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/gramma/index.html">
+<a class="md-nav__link" href="../../../../../front/js/gramma/index.html">
 <span class="md-ellipsis">
     
   
@@ -518,7 +488,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/dom/index.html">
+<a class="md-nav__link" href="../../../../../front/js/dom/index.html">
 <span class="md-ellipsis">
     
   
@@ -530,7 +500,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/dom/window/index.html">
+<a class="md-nav__link" href="../../../../../front/js/dom/window/index.html">
 <span class="md-ellipsis">
     
   
@@ -542,7 +512,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/dom/document/index.html">
+<a class="md-nav__link" href="../../../../../front/js/dom/document/index.html">
 <span class="md-ellipsis">
     
   
@@ -554,7 +524,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/dom/special/index.html">
+<a class="md-nav__link" href="../../../../../front/js/dom/special/index.html">
 <span class="md-ellipsis">
     
   
@@ -566,7 +536,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/dom/validation/index.html">
+<a class="md-nav__link" href="../../../../../front/js/dom/validation/index.html">
 <span class="md-ellipsis">
     
   
@@ -604,7 +574,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/advanced/obj/index.html">
+<a class="md-nav__link" href="../../../../../front/js/advanced/obj/index.html">
 <span class="md-ellipsis">
     
   
@@ -616,7 +586,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/advanced/json/index.html">
+<a class="md-nav__link" href="../../../../../front/js/advanced/json/index.html">
 <span class="md-ellipsis">
     
   
@@ -628,7 +598,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/advanced/canvas/index.html">
+<a class="md-nav__link" href="../../../../../front/js/advanced/canvas/index.html">
 <span class="md-ellipsis">
     
   
@@ -640,7 +610,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/advanced/regular/index.html">
+<a class="md-nav__link" href="../../../../../front/js/advanced/regular/index.html">
 <span class="md-ellipsis">
     
   
@@ -652,7 +622,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/advanced/async/index.html">
+<a class="md-nav__link" href="../../../../../front/js/advanced/async/index.html">
 <span class="md-ellipsis">
     
   
@@ -664,7 +634,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/js/advanced/ajax/index.html">
+<a class="md-nav__link" href="../../../../../front/js/advanced/ajax/index.html">
 <span class="md-ellipsis">
     
   
@@ -708,7 +678,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/framework/jquery/index.html">
+<a class="md-nav__link" href="../../../../../front/framework/jquery/index.html">
 <span class="md-ellipsis">
     
   
@@ -720,7 +690,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/framework/bootstrap/index.html">
+<a class="md-nav__link" href="../../../../../front/framework/bootstrap/index.html">
 <span class="md-ellipsis">
     
   
@@ -732,7 +702,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/framework/vue/index.html">
+<a class="md-nav__link" href="../../../../../front/framework/vue/index.html">
 <span class="md-ellipsis">
     
   
@@ -744,7 +714,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/framework/element/index.html">
+<a class="md-nav__link" href="../../../../../front/framework/element/index.html">
 <span class="md-ellipsis">
     
   
@@ -756,7 +726,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../front/framework/vite/index.html">
+<a class="md-nav__link" href="../../../../../front/framework/vite/index.html">
 <span class="md-ellipsis">
     
   
@@ -794,7 +764,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../jsp/basic/index.html">
+<a class="md-nav__link" href="../../../jsp/basic/index.html">
 <span class="md-ellipsis">
     
   
@@ -806,7 +776,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../jsp/implicit%20object/index.html">
+<a class="md-nav__link" href="../../../jsp/implicit%20object/index.html">
 <span class="md-ellipsis">
     
   
@@ -818,7 +788,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../jsp/jdbc/index.html">
+<a class="md-nav__link" href="../../../jsp/jdbc/index.html">
 <span class="md-ellipsis">
     
   
@@ -830,7 +800,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../jsp/java%20bean/index.html">
+<a class="md-nav__link" href="../../../jsp/java%20bean/index.html">
 <span class="md-ellipsis">
     
   
@@ -842,7 +812,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../jsp/servlet/index.html">
+<a class="md-nav__link" href="../../../jsp/servlet/index.html">
 <span class="md-ellipsis">
     
   
@@ -854,7 +824,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../jsp/filter/index.html">
+<a class="md-nav__link" href="../../../jsp/filter/index.html">
 <span class="md-ellipsis">
     
   
@@ -866,7 +836,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../integrated%20case/index.html">
+<a class="md-nav__link" href="../../../integrated%20case/index.html">
 <span class="md-ellipsis">
     
   
@@ -904,7 +874,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mvc/index.html">
+<a class="md-nav__link" href="../../mvc/index.html">
 <span class="md-ellipsis">
     
   
@@ -916,7 +886,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../index.html">
+<a class="md-nav__link" href="../index.html">
 <span class="md-ellipsis">
     
   
@@ -928,7 +898,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../maven/index.html">
+<a class="md-nav__link" href="../../maven/index.html">
 <span class="md-ellipsis">
     
   
@@ -940,7 +910,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../spring%20mvc/index.html">
+<a class="md-nav__link" href="../../spring%20mvc/index.html">
 <span class="md-ellipsis">
     
   
@@ -952,7 +922,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../freemarker/index.html">
+<a class="md-nav__link" href="../../freemarker/index.html">
 <span class="md-ellipsis">
     
   
@@ -964,7 +934,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../spring/index.html">
+<a class="md-nav__link" href="../../spring/index.html">
 <span class="md-ellipsis">
     
   
@@ -976,7 +946,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../mybatis/index.html">
+<a class="md-nav__link" href="../../mybatis/index.html">
 <span class="md-ellipsis">
     
   
@@ -988,7 +958,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../integrated%20case/index.html">
+<a class="md-nav__link" href="../../../integrated%20case/index.html">
 <span class="md-ellipsis">
     
   
@@ -1023,7 +993,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../guide/remote%20repo/index.html">
+<a class="md-nav__link" href="../../guide/remote%20repo/index.html">
 <span class="md-ellipsis">
     
   
@@ -1041,7 +1011,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../introduction/syllabus/index.html">
+<a class="md-nav__link" href="../../../../../introduction/syllabus/index.html">
 <span class="md-ellipsis">
     
   
@@ -1053,7 +1023,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../../../../introduction/kownledge_graph/index.html">
+<a class="md-nav__link" href="../../../../../introduction/kownledge_graph/index.html">
 <span class="md-ellipsis">
     
   
@@ -1078,28 +1048,46 @@
 </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#reference-documentation">
+<a class="md-nav__link" href="#_1">
 <span class="md-ellipsis">
       
-        Reference Documentation
+        核心作用
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#guides">
+<a class="md-nav__link" href="#_2">
 <span class="md-ellipsis">
       
-        Guides
+        分类
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#maven-parent-overrides">
+<a class="md-nav__link" href="#_3">
 <span class="md-ellipsis">
       
-        Maven Parent overrides
+        典型常用示例
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
+      
+        底层原理
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
+      
+        价值意义
       
     </span>
 </a>
@@ -1111,29 +1099,42 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="getting-started">Getting Started</h1>
-<h3 id="reference-documentation">Reference Documentation</h3>
-<p>For further reference, please consider the following sections:</p>
+<h1 id="spring-starter">Spring Starter</h1>
+<p><strong>Spring Starter</strong> 是 Spring Boot 提供的<strong>依赖组合与自动化配置集成组件</strong>，是 Spring Boot 生态标准化的依赖封装方案。</p>
+<h2 id="_1">核心作用</h2>
+<ol>
+<li>
+<p><strong>依赖聚合</strong></p>
+<p>将某一场景下所需的所有核心依赖、基础依赖进行统一封装，替代手动逐个引入 Jar 包的方式，简化依赖管理。
+2. <strong>版本统一管控</strong></p>
+<p>依托 Spring Boot 父工程的版本仲裁机制，统一约束所有关联依赖的版本，规避版本冲突、兼容异常问题。</p>
+</li>
+<li>
+<p><strong>自动化配置触发</strong>
+    结合 Spring Boot 自动配置机制，在引入 Starter 后，框架自动加载对应场景的默认配置类，完成组件初始化、环境绑定，减少手动 XML 或注解配置。</p>
+</li>
+</ol>
+<h2 id="_2">分类</h2>
+<ol>
+<li><strong>官方 Starter</strong>
+    遵循固定命名规范：<code>spring-boot-starter-xxx</code>，由 Spring 官方维护，覆盖 Web、缓存、数据库、消息队列等基础通用场景。</li>
+<li><strong>第三方 Starter</strong>
+    由第三方框架厂商或社区封装，命名规范多为 <code>xxx-spring-boot-starter</code>，用于适配中间件、工具类、开源框架与 Spring Boot 整合。</li>
+</ol>
+<h2 id="_3">典型常用示例</h2>
 <ul>
-<li><a href="https://maven.apache.org/guides/index.html">Official Apache Maven documentation</a></li>
-<li><a href="https://docs.spring.io/spring-boot/4.0.5/maven-plugin">Spring Boot Maven Plugin Reference Guide</a></li>
-<li><a href="https://docs.spring.io/spring-boot/4.0.5/maven-plugin/build-image.html">Create an OCI image</a></li>
-<li><a href="https://docs.spring.io/spring-boot/4.0.5/reference/web/servlet.html#web.servlet.spring-mvc.template-engines">Thymeleaf</a></li>
-<li><a href="https://docs.spring.io/spring-boot/4.0.5/reference/web/servlet.html">Spring Web</a></li>
+<li><code>spring-boot-starter-web</code>：整合 SpringMVC、内嵌 Tomcat、序列化组件，用于 Web 服务开发</li>
+<li><code>spring-boot-starter-data-redis</code>：整合 Redis 客户端与缓存基础配置，实现 Redis 快速集成</li>
+<li><code>mybatis-plus-boot-starter</code>：第三方 Starter，完成 MyBatis-Plus 框架自动整合</li>
 </ul>
-<h3 id="guides">Guides</h3>
-<p>The following guides illustrate how to use some features concretely:</p>
-<ul>
-<li><a href="https://spring.io/guides/gs/handling-form-submission/">Handling Form Submission</a></li>
-<li><a href="https://spring.io/guides/gs/rest-service/">Building a RESTful Web Service</a></li>
-<li><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></li>
-<li><a href="https://spring.io/guides/tutorials/rest/">Building REST services with Spring</a></li>
-</ul>
-<h3 id="maven-parent-overrides">Maven Parent overrides</h3>
-<p>Due to Maven's design, elements are inherited from the parent POM to the project POM.
-While most of the inheritance is fine, it also inherits unwanted elements like <code>&lt;license&gt;</code> and <code>&lt;developers&gt;</code> from the parent.
-To prevent this, the project POM contains empty overrides for these elements.
-If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.</p>
+<h2 id="_4">底层原理</h2>
+<ol>
+<li>Starter 本质为<strong>空壳依赖工程</strong>，仅通过 <code>pom.xml</code> 声明所需依赖集合；</li>
+<li>真正的自动配置逻辑由 <code>spring-boot-autoconfigure</code> 模块提供；</li>
+<li>基于条件注解（<code>@Conditional</code> 系列），根据项目依赖、环境参数、Bean 存在与否，动态按需加载配置。</li>
+</ol>
+<h2 id="_5">价值意义</h2>
+<p>标准化技术集成方式，降低 Spring 生态的整合成本，统一项目架构规范，提升项目初始化与开发效率，是 Spring Boot 实现<strong>约定大于配置</strong>设计思想的核心载体。</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
@@ -1157,9 +1158,9 @@ If you manually switch to a different parent and actually want the inheritance, 
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <div class="md-progress" data-md-component="progress" role="progressbar"></div>
-<script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.tabs"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-<script src="../../../../../../js/mermaid.min.js"></script>
-<script src="../../../../../../js/init_mermaid.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.top", "navigation.tabs"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="../../../../../js/mermaid.min.js"></script>
+<script src="../../../../../js/init_mermaid.js"></script>
 </body>
 </html>

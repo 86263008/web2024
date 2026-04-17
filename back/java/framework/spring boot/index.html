@@ -8,7 +8,7 @@
 <link href="../mvc/index.html" rel="prev"/>
 <link href="../maven/index.html" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.6.1, mkdocs-material-9.7.4" name="generator"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
 <title>Spring Boot - 基于WEB的应用程序开发</title>
 <link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
@@ -30,7 +30,7 @@
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="基于WEB的应用程序开发" class="md-header__button md-logo" data-md-component="logo" href="../../../../index.html" title="基于WEB的应用程序开发">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<img alt="logo" src="../../../../assets/images/logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -62,36 +62,6 @@
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-<label class="md-header__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-</label>
-<div class="md-search" data-md-component="search" role="dialog">
-<label class="md-search__overlay" for="__search"></label>
-<div class="md-search__inner" role="search">
-<form class="md-search__form" name="search">
-<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
-<label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-</label>
-<nav aria-label="Search" class="md-search__options">
-<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-</button>
-</nav>
-</form>
-<div class="md-search__output">
-<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
-<div class="md-search-result" data-md-component="search-result">
-<div class="md-search-result__meta">
-            Initializing search
-          </div>
-<ol class="md-search-result__list" role="presentation"></ol>
-</div>
-</div>
-</div>
-</div>
-</div>
 </nav>
 </header>
 <div class="md-container" data-md-component="container">
@@ -187,7 +157,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="基于WEB的应用程序开发" class="md-nav__button md-logo" data-md-component="logo" href="../../../../index.html" title="基于WEB的应用程序开发">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<img alt="logo" src="../../../../assets/images/logo.png"/>
 </a>
     基于WEB的应用程序开发
   </label>
@@ -1142,13 +1112,62 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spring-boot_3">
+<a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
       
-        Spring Boot集成第三方库
+        集成第三方库
       
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+<span class="md-ellipsis">
+      
+        打包
+      
+    </span>
+</a>
+<nav aria-label="打包" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jarfat-jar-uber-jar">
+<span class="md-ellipsis">
+      
+        可执行JAR包（Fat Jar /Uber Jar）——默认推荐方式
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#war">
+<span class="md-ellipsis">
+      
+        传统 WAR 包
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+<span class="md-ellipsis">
+      
+        补充：两种特殊打包形态
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+<span class="md-ellipsis">
+      
+        总结
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1500,13 +1519,62 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#spring-boot_3">
+<a class="md-nav__link" href="#_14">
 <span class="md-ellipsis">
       
-        Spring Boot集成第三方库
+        集成第三方库
       
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+<span class="md-ellipsis">
+      
+        打包
+      
+    </span>
+</a>
+<nav aria-label="打包" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jarfat-jar-uber-jar">
+<span class="md-ellipsis">
+      
+        可执行JAR包（Fat Jar /Uber Jar）——默认推荐方式
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#war">
+<span class="md-ellipsis">
+      
+        传统 WAR 包
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+<span class="md-ellipsis">
+      
+        补充：两种特殊打包形态
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+<span class="md-ellipsis">
+      
+        总结
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1786,14 +1854,14 @@ Spring Boot程序业务流程原理图
 </li>
 </ol>
 <div style="background-color: teal;padding:5px;">
-<img src="./img/java_logo.png" style="height:120px;"/>
-<img src="./img/tomcat_logo.png" style="height:120px;"/>
+<img src="./img/java_logo.png" style="height:120px;">
+<img src="./img/tomcat_logo.png" style="height:120px;">
 <img src="./img/eclipse_logo.svg" style="height:120px;"/>
 <img src="./img/spring-tool_logo.svg" style="height:120px;"/>
-</div>
+</img></img></div>
 <hr/>
 <h3 id="spring-boot-web">创建Spring Boot Web工程</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:9"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><input id="__tabbed_6_4" name="__tabbed_6" type="radio"><input id="__tabbed_6_5" name="__tabbed_6" type="radio"><input id="__tabbed_6_6" name="__tabbed_6" type="radio"><input id="__tabbed_6_7" name="__tabbed_6" type="radio"><input id="__tabbed_6_8" name="__tabbed_6" type="radio"/><input id="__tabbed_6_9" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">选择向导</label><label for="__tabbed_6_2">输入工程信息</label><label for="__tabbed_6_3">选择依赖</label><label for="__tabbed_6_4">目录结构</label><label for="__tabbed_6_5">pom.xml</label><label for="__tabbed_6_6">创建HelloController</label><label for="__tabbed_6_7">创建ViewController</label><label for="__tabbed_6_8">启动</label><label for="__tabbed_6_9">运行</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:9"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><input id="__tabbed_6_4" name="__tabbed_6" type="radio"><input id="__tabbed_6_5" name="__tabbed_6" type="radio"><input id="__tabbed_6_6" name="__tabbed_6" type="radio"><input id="__tabbed_6_7" name="__tabbed_6" type="radio"/><input id="__tabbed_6_8" name="__tabbed_6" type="radio"/><input id="__tabbed_6_9" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">选择向导</label><label for="__tabbed_6_2">输入工程信息</label><label for="__tabbed_6_3">选择依赖</label><label for="__tabbed_6_4">目录结构</label><label for="__tabbed_6_5">pom.xml</label><label for="__tabbed_6_6">创建HelloController</label><label for="__tabbed_6_7">创建ViewController</label><label for="__tabbed_6_8">启动</label><label for="__tabbed_6_9">运行</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>在STS中创建新工程，选择<code>Spring Starter Project</code>向导</p>
@@ -1886,25 +1954,113 @@ Spring Boot程序业务流程原理图
 <span class="normal"><a href="#__codelineno-5-16">16</a></span>
 <span class="normal"><a href="#__codelineno-5-17">17</a></span>
 <span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf-test<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc-test<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="nt">&lt;/dependency&gt;</span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span>
+<span class="normal"><a href="#__codelineno-5-38">38</a></span>
+<span class="normal"><a href="#__codelineno-5-39">39</a></span>
+<span class="normal"><a href="#__codelineno-5-40">40</a></span>
+<span class="normal"><a href="#__codelineno-5-41">41</a></span>
+<span class="normal"><a href="#__codelineno-5-42">42</a></span>
+<span class="normal"><a href="#__codelineno-5-43">43</a></span>
+<span class="normal"><a href="#__codelineno-5-44">44</a></span>
+<span class="normal"><a href="#__codelineno-5-45">45</a></span>
+<span class="normal"><a href="#__codelineno-5-46">46</a></span>
+<span class="normal"><a href="#__codelineno-5-47">47</a></span>
+<span class="normal"><a href="#__codelineno-5-48">48</a></span>
+<span class="normal"><a href="#__codelineno-5-49">49</a></span>
+<span class="normal"><a href="#__codelineno-5-50">50</a></span>
+<span class="normal"><a href="#__codelineno-5-51">51</a></span>
+<span class="normal"><a href="#__codelineno-5-52">52</a></span>
+<span class="normal"><a href="#__codelineno-5-53">53</a></span>
+<span class="normal"><a href="#__codelineno-5-54">54</a></span>
+<span class="normal"><a href="#__codelineno-5-55">55</a></span>
+<span class="normal"><a href="#__codelineno-5-56">56</a></span>
+<span class="normal"><a href="#__codelineno-5-57">57</a></span>
+<span class="normal"><a href="#__codelineno-5-58">58</a></span>
+<span class="normal"><a href="#__codelineno-5-59">59</a></span>
+<span class="normal"><a href="#__codelineno-5-60">60</a></span>
+<span class="normal"><a href="#__codelineno-5-61">61</a></span>
+<span class="normal"><a href="#__codelineno-5-62">62</a></span>
+<span class="normal"><a href="#__codelineno-5-63">63</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="nt">&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>4.0.5<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="nt">&lt;relativePath/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- lookup parent from repository --&gt;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>HelloSpringBoot<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>HelloSpringBoot<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="nt">&lt;description/&gt;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="nt">&lt;url/&gt;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="nt">&lt;licenses&gt;</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="nt">&lt;license/&gt;</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="nt">&lt;/licenses&gt;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="nt">&lt;developers&gt;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">        </span><span class="nt">&lt;developer/&gt;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">    </span><span class="nt">&lt;/developers&gt;</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">    </span><span class="nt">&lt;scm&gt;</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">        </span><span class="nt">&lt;connection/&gt;</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="nt">&lt;developerConnection/&gt;</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">        </span><span class="nt">&lt;tag/&gt;</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">        </span><span class="nt">&lt;url/&gt;</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">    </span><span class="nt">&lt;/scm&gt;</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>21<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-49" name="__codelineno-5-49"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webmvc-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-5-51" name="__codelineno-5-51"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-5-52" name="__codelineno-5-52"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<a id="__codelineno-5-53" name="__codelineno-5-53"></a>
+<a id="__codelineno-5-54" name="__codelineno-5-54"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-5-55" name="__codelineno-5-55"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-5-57" name="__codelineno-5-57"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-5-59" name="__codelineno-5-59"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-5-61" name="__codelineno-5-61"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<a id="__codelineno-5-62" name="__codelineno-5-62"></a>
+<a id="__codelineno-5-63" name="__codelineno-5-63"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <details class="tip">
 <summary>源代码</summary>
@@ -2178,7 +2334,7 @@ Spring Boot程序业务流程原理图
 <p><iframe frameborder="0" height="200" src="./src/HelloSpringBootResult/hi.html" width="100%"></iframe></p>
 </div>
 </div>
-</input></input></input></input></input></input></input></div>
+</input></input></input></input></input></input></div>
 <hr/>
 <h3 id="hello-world_1">Hello World执行原理图</h3>
 <center>
@@ -2257,7 +2413,7 @@ Hello World执行原理图
 <div class="tabbed-set tabbed-alternate" data-tabs="7:5"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><input id="__tabbed_7_3" name="__tabbed_7" type="radio"/><input id="__tabbed_7_4" name="__tabbed_7" type="radio"/><input id="__tabbed_7_5" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">起步依赖Starter</label><label for="__tabbed_7_2">自动配置</label><label for="__tabbed_7_3">内嵌Web容器</label><label for="__tabbed_7_4">外部化配置</label><label for="__tabbed_7_5">生产级特性（Actuator）</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>对常用场景依赖进行<strong>聚合与版本管理</strong>，引入一个 Starter 即可获得整套技术栈，避免依赖冲突。</p>
+<p>对常用场景依赖进行<strong>聚合与版本管理</strong>，引入一个 Starter 即可获得整套技术栈，避免依赖冲突。<a href="features/starter.html" target="_blank" title="Spring Starter"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></p>
 <p><strong>示例（Maven）</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">pom.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
@@ -2630,7 +2786,7 @@ Hello World执行原理图
 </tbody>
 </table>
 <hr/>
-<h2 id="spring-boot_3">Spring Boot集成第三方库</h2>
+<h2 id="_14">集成第三方库</h2>
 <p>Spring Boot集成第三方库时，不同第三方库的配置方式不同，不同阶段的配置也不同（<a href="integration/mybatis.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span>MyBatis</a> 等库）。可能的配置方式包括：</p>
 <table>
 <thead>
@@ -2642,12 +2798,12 @@ Hello World执行原理图
 </thead>
 <tbody>
 <tr>
-<td>依赖引入</td>
+<td>**依赖引入 **</td>
 <td>1. 在 <code>pom.xml</code>（Maven）或 <code>build.gradle</code>（Gradle）中添加依赖；<br/>2. 优先使用 <strong>Spring Boot Starter</strong> 自动整合包；<br/>3. 处理版本冲突、依赖排除；<br/>4. 多环境区分依赖（可选）</td>
 <td><a href="integration/dependency.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></td>
 </tr>
 <tr>
-<td>配置文件配置（application.yml / properties）</td>
+<td><strong>配置文件配置</strong>（application.yml / properties）</td>
 <td>1. 连接地址、端口、账号密码；<br/>2. 连接池、超时、重试、线程数；<br/>3. 日志、开关、模式配置；<br/>4. 第三方专属配置项</td>
 <td><a href="integration/config.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></td>
 </tr>
@@ -2718,12 +2874,188 @@ Hello World执行原理图
 </tr>
 <tr>
 <td>版本与兼容性</td>
-<td>1. JDK 版本；<br/>2. Spring Boot 版本；<br/>3. 第三方库版本匹配</td>
+<td>1. JDK 版本；<br/>2. Spring Boot版本；<br/>3. 第三方库版本匹配</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <hr/>
+<h2 id="_15">打包</h2>
+<p>在STS（Spring Tool Suite）中，Spring Boot项目的打包方式本质上由构建工具（Maven/Gradle）决定，主要分为以下两种标准类型，并可通过IDE界面或命令行执行：</p>
+<h3 id="jarfat-jar-uber-jar">可执行JAR包（Fat Jar /Uber Jar）——默认推荐方式</h3>
+<p><strong>核心特性</strong></p>
+<ul>
+<li>包含应用程序代码、所有依赖库及<strong>内嵌Servlet容器</strong>（Tomcat/Jetty）。</li>
+<li>独立可运行，直接使用<code>java -jar xxx.jar</code>命令启动。</li>
+<li>适用于微服务、云原生、容器化（Docker）等独立部署场景。</li>
+</ul>
+<p><strong>STS操作方式</strong></p>
+<ol>
+<li>
+<p><strong>Maven项目</strong></p>
+<ul>
+<li><strong>配置</strong>：<code>pom.xml</code>中默认<code>packaging</code>为<code>jar</code>，并自动集成<code>spring-boot-maven-plugin</code>插件。</li>
+</ul>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span>
+<span class="normal"><a href="#__codelineno-21-7">7</a></span>
+<span class="normal"><a href="#__codelineno-21-8">8</a></span>
+<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">        </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">        </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">    </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="nt">&lt;/build&gt;</span>
+</code></pre></div></td></tr></table></div>
+- <strong>执行</strong>：</p>
+<div class="highlight"><pre><span></span><code>- 右键项目→`Run As`→`Maven build...`→Goals输入`clean package`。
+</code></pre></div>
+<ul>
+<li><strong>产物</strong>：<code>target</code>目录下生成<code>${project.name}-${version}.jar</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>Gradle项目</strong></p>
+<ul>
+<li><strong>配置</strong>：<code>build.gradle</code>应用<code>org.springframework.boot</code>插件。</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">'java'</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">'org.springframework.boot'</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">'3.2.0'</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">'io.spring.dependency-management'</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">'1.1.4'</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p><strong>执行</strong>：</p>
+<ul>
+<li>
+<p>右键项目→<code>Run As</code>→<code>Gradle build</code>。</p>
+</li>
+<li>
+<p>或在右侧<code>Gradle</code>视图中，执行<code>bootJar</code>任务。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>产物</strong>：<code>build/libs</code>目录下生成可执行JAR包。</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h3 id="war">传统 WAR 包</h3>
+<p><strong>核心特性</strong></p>
+<ul>
+<li>
+<p>仅包含应用程序代码与依赖，<strong>不包含内嵌容器</strong>。</p>
+</li>
+<li>
+<p>需部署至外部独立Servlet容器（如Tomcat、WebLogic）运行。</p>
+</li>
+<li>
+<p>适用于需集成至现有服务器集群、多应用共享容器的传统企业场景。</p>
+</li>
+</ul>
+<p><strong>STS操作与配置</strong></p>
+<ol>
+<li>
+<p><strong>修改<code>pom.xml</code></strong></p>
+<ul>
+<li>
+<p>将打包方式改为<code>war</code>。</p>
+</li>
+<li>
+<p>将内嵌Tomcat依赖范围设为<code>provided</code>（由外部容器提供）。</p>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span>
+<span class="normal"><a href="#__codelineno-23-8">8</a></span>
+<span class="normal"><a href="#__codelineno-23-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="nt">&lt;packaging&gt;</span>war<span class="nt">&lt;/packaging&gt;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">        </span><span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>修改启动类</strong></p>
+<ul>
+<li>启动类继承<code>SpringBootServletInitializer</code>并重写<code>configure</code> 方法，支持外部容器启动。</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="nd">@SpringBootApplication</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SpringBootServletInitializer</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">SpringApplicationBuilder</span><span class="w"> </span><span class="nf">configure</span><span class="p">(</span><span class="n">SpringApplicationBuilder</span><span class="w"> </span><span class="n">application</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">application</span><span class="p">.</span><span class="na">sources</span><span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">        </span><span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>执行打包</strong></p>
+<ul>
+<li>同JAR包方式，执行<code>clean package</code>，在<code>target</code>目录生成<code>.war</code>文件。</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h3 id="_16">补充：两种特殊打包形态</h3>
+<ol>
+<li>
+<p><strong>普通JAR包（非可执行）</strong></p>
+<ul>
+<li>
+<p>仅打包项目自身代码，不含依赖与内嵌容器，<strong>仅供其他项目依赖使用</strong>。</p>
+</li>
+<li>
+<p>需在<code>spring-boot-maven-plugin</code>中配置<code>classifier</code>以区分可执行JAR。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>多环境Profile打包</strong></p>
+<ul>
+<li>利用Maven Profile或Gradle特性，为开发、测试、生产等不同环境打包不同配置。</li>
+<li>执行命令：<code>clean package -Pprod</code>（指定<code>prod</code>环境）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_17">总结</h3>
+<p>STS中Spring Boot项目的<strong>核心打包方式为两种</strong>：<strong>可执行JAR</strong>（默认，独立运行）与<strong>WAR</strong>（部署到外部容器）。所有操作均基于IDE内置的Maven/Gradle工具链执行，配置与标准Spring Boot项目完全一致。</p>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
