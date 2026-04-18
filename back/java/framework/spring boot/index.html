@@ -938,7 +938,7 @@
 <a class="md-nav__link" href="#spring-boot_1">
 <span class="md-ellipsis">
       
-        Spring Boot程序组织思路
+        Spring Boot组织架构（逻辑视角）
       
     </span>
 </a>
@@ -947,7 +947,16 @@
 <a class="md-nav__link" href="#spring-boot_2">
 <span class="md-ellipsis">
       
-        Spring Boot程序体系结构
+        Spring Boot开发架构（物理视角）
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-boot-starter">
+<span class="md-ellipsis">
+      
+        Spring Boot Starter（业务视角）
       
     </span>
 </a>
@@ -1345,7 +1354,7 @@
 <a class="md-nav__link" href="#spring-boot_1">
 <span class="md-ellipsis">
       
-        Spring Boot程序组织思路
+        Spring Boot组织架构（逻辑视角）
       
     </span>
 </a>
@@ -1354,7 +1363,16 @@
 <a class="md-nav__link" href="#spring-boot_2">
 <span class="md-ellipsis">
       
-        Spring Boot程序体系结构
+        Spring Boot开发架构（物理视角）
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spring-boot-starter">
+<span class="md-ellipsis">
+      
+        Spring Boot Starter（业务视角）
       
     </span>
 </a>
@@ -1606,8 +1624,8 @@
 </li>
 </ol>
 <hr/>
-<h3 id="spring-boot_1">Spring Boot程序组织思路</h3>
-<p>Spring Boot通过<strong>自动装配好了Spring MVC</strong>天然实现了MVC模式，只需分层编写代码即可。具体业务流程如下：</p>
+<h3 id="spring-boot_1">Spring Boot组织架构（逻辑视角）</h3>
+<p>Spring Boot通过<strong>自动装配好了Spring MVC</strong>天然实现了MVC模式，只需分层编（控制层、业务层、持久层、视图层）写代码即可。具体业务流程如下：</p>
 <ol>
 <li>浏览器/前端请求 → <strong>Controller（C）</strong> 接收</li>
 <li>Controller 调用 <strong>Service（M 的业务层）</strong></li>
@@ -1619,14 +1637,14 @@
 <center>
 <div class="mermaid">
 graph TB
-    A[浏览器/前端]:::info --&gt;|1 请求| B[Controller<br/>控制器]:::danger
-    B --&gt;|2 调用| C[Service<br/>业务逻辑层]:::success
-    C --&gt;|3 操作数据库| D[Mapper<br/>数据访问层]:::success
+    A[浏览器/前端]:::info --&gt;|1 请求| B[Controller<br/>控制层]:::danger
+    B --&gt;|2 调用| C[Service<br/>业务层]:::success
+    C --&gt;|3 操作数据库| D[Mapper<br/>持久层]:::success
     D --&gt;|4 返回数据| E[User对象<br/>数据模型]:::success
     E --&gt;|传递| C
     C --&gt;|处理后返回| B
     B --&gt;|5 转为JSON| F[JSON响应]:::info
-    F --&gt;|6 展示| G[前端View<br/>视图]:::primary
+    F --&gt;|6 展示| G[前端View<br/>视图层]:::primary --&gt;A
 </div>
 Spring Boot程序业务流程原理图
 </center>
@@ -1742,7 +1760,14 @@ Spring Boot程序业务流程原理图
 </div>
 </input></input></input></div>
 <hr/>
-<h3 id="spring-boot_2">Spring Boot程序体系结构</h3>
+<h3 id="spring-boot_2">Spring Boot开发架构（物理视角）</h3>
+<p>Spring Boot开发内容主要分为以下几个方面：</p>
+<ul>
+<li><strong>业务代码</strong>：负责处理业务逻辑、数据访问、异常处理等。</li>
+<li><strong>配置与资源</strong>：负责管理应用配置、数据库连接、资源加载等。</li>
+<li><strong>依赖与构建</strong>：负责管理项目依赖、构建项目等。</li>
+<li><strong>测试与资源</strong>：负责编写测试用例、配置测试环境、加载测试资源等。</li>
+</ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><input id="__tabbed_5_4" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">1 业务代码</label><label for="__tabbed_5_2">2 配置与资源</label><label for="__tabbed_5_3">3 依赖与构建</label><label for="__tabbed_5_4">4 测试与资源</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1837,6 +1862,124 @@ Spring Boot程序业务流程原理图
 </div>
 </input></input></input></input></div>
 <hr/>
+<h3 id="spring-boot-starter">Spring Boot Starter（业务视角）</h3>
+<p>Spring Boot Starter支持了后端开发的主要功能场景，主流框架可快速集成。官方遵循<code>spring-boot-starter-xxx</code>命名，第三方多为<code>xxx-spring-boot-starter</code>。以下为官方分类与主流组件速览。</p>
+<table>
+<thead>
+<tr>
+<th>分类名称</th>
+<th>主要开发场景</th>
+<th>内置主流框架/组件说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI</td>
+<td>人工智能、大模型集成、AI应用开发</td>
+<td>Spring AI、向量数据库对接、大模型调用编排能力</td>
+</tr>
+<tr>
+<td>Developer Tools</td>
+<td>本地开发提速、代码辅助、热部署</td>
+<td>DevTools（热重载）、Lombok、配置注解处理器</td>
+</tr>
+<tr>
+<td>Google Cloud</td>
+<td>谷歌云平台云服务对接</td>
+<td>谷歌云全套托管服务、云原生Spring集成</td>
+</tr>
+<tr>
+<td>I/O</td>
+<td>文件读写、异步IO、批量数据输入输出</td>
+<td>底层IO增强、资源异步处理、文件操作支持</td>
+</tr>
+<tr>
+<td>Messaging</td>
+<td>消息队列、异步通信、事件驱动架构</td>
+<td>RabbitMQ、Kafka、ActiveMQ、Artemis、AMQP、JMS</td>
+</tr>
+<tr>
+<td>Microsoft Azure</td>
+<td>微软Azure云平台服务集成</td>
+<td>Azure全栈云服务、Spring与Azure生态打通</td>
+</tr>
+<tr>
+<td>NoSQL</td>
+<td>缓存、文档/键值/图数据库开发</td>
+<td>Redis、MongoDB、Elasticsearch、Neo4j、Cassandra</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>服务监控、链路追踪、日志指标采集</td>
+<td>Micrometer、Prometheus、Grafana、OpenTelemetry</td>
+</tr>
+<tr>
+<td>Ops</td>
+<td>生产运维、应用管控、自动化运维</td>
+<td>应用生命周期管理、运维端点、生产环境运维增强</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>关系型数据库业务持久层开发</td>
+<td>JDBC、Spring Data JPA、<strong>MyBatis</strong>、数据迁移Flyway/Liquibase</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>认证授权、权限控制、应用安全防护</td>
+<td>Spring Security、OAuth2、OIDC、JWT、安全加固能力</td>
+</tr>
+<tr>
+<td>Spring Cloud</td>
+<td>微服务基础通用能力</td>
+<td>微服务开发基础底座、云原生通用能力封装</td>
+</tr>
+<tr>
+<td>Spring Cloud Circuit Breaker</td>
+<td>微服务容错、熔断、降级、限流</td>
+<td>Resilience4j 熔断组件、服务雪崩防护</td>
+</tr>
+<tr>
+<td>Spring Cloud Config</td>
+<td>微服务统一配置中心</td>
+<td>集中外部配置管理、配置热刷新、多环境配置</td>
+</tr>
+<tr>
+<td>Spring Cloud Discovery</td>
+<td>微服务服务注册与发现</td>
+<td>服务注册寻址、负载均衡、服务实例管理</td>
+</tr>
+<tr>
+<td>Spring Cloud Messaging</td>
+<td>微服务间分布式消息驱动</td>
+<td>微服务异步事件、跨服务消息通信</td>
+</tr>
+<tr>
+<td>Spring Cloud Routing</td>
+<td>微服务统一网关、路由转发</td>
+<td>Spring Cloud Gateway、统一入口、网关路由过滤</td>
+</tr>
+<tr>
+<td>Template Engines</td>
+<td>服务端页面渲染、服务端视图开发</td>
+<td>Thymeleaf、<strong>FreeMarker</strong>、Mustache 主流模板引擎</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>单元测试、集成测试、自动化测试全套</td>
+<td>JUnit 5、Mockito、AssertJ、Spring Test、Testcontainers</td>
+</tr>
+<tr>
+<td>VMware Tanzu 系列</td>
+<td>企业级商用PaaS、生产级增强扩展</td>
+<td>企业级生产运行支撑、商用管控与企业扩展能力</td>
+</tr>
+<tr>
+<td>Web</td>
+<td>Web网站、REST接口、前后端交互开发</td>
+<td>Spring Web（<strong>Spring MVC</strong>）、Spring Reactive Web（Spring WebFlux）</td>
+</tr>
+</tbody>
+</table>
 <h2 id="hello-world">Hello World!</h2>
 <h3 id="_3">开发环境</h3>
 <ol>
@@ -2798,7 +2941,7 @@ Hello World执行原理图
 </thead>
 <tbody>
 <tr>
-<td>**依赖引入 **</td>
+<td><strong>依赖引入</strong></td>
 <td>1. 在 <code>pom.xml</code>（Maven）或 <code>build.gradle</code>（Gradle）中添加依赖；<br/>2. 优先使用 <strong>Spring Boot Starter</strong> 自动整合包；<br/>3. 处理版本冲突、依赖排除；<br/>4. 多环境区分依赖（可选）</td>
 <td><a href="integration/dependency.html" target="_blank"><span class="twemoji black"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"></path></svg></span></a></td>
 </tr>
